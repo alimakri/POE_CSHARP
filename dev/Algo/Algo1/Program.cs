@@ -2,32 +2,41 @@
 Random alea = new Random();
 int nombreADeviner = alea.Next(1, 100);
 //Console.WriteLine(nombreADeviner);
-
+// 16:17
 int proposition = 0;
-int nCoup = 0;
-while (proposition != nombreADeviner)
+int nCoup = 0; bool partieFinie = false;
+while (!partieFinie)
 {
-    Console.Write("Proposition : ");
-    var propositionStr = Console.ReadLine();
     nCoup++;
-    if (int.TryParse(propositionStr, out proposition))
+    if (nCoup == 8)
     {
-        if (proposition < nombreADeviner)
-        {
-            Console.WriteLine("Trop petit");
-        }
-        else if (proposition > nombreADeviner)
-        {
-            Console.WriteLine("Trop grand");
-        }
-        else
-        {
-            Console.WriteLine("Gagné");
-        }
+        Console.WriteLine("Perdu");
+        partieFinie = true;
     }
     else
     {
-        Console.WriteLine("Nombre incorrect");
+        Console.Write("Proposition : ");
+        var propositionStr = Console.ReadLine();
+        if (int.TryParse(propositionStr, out proposition))
+        {
+            if (proposition < nombreADeviner)
+            {
+                Console.WriteLine("Trop petit");
+            }
+            else if (proposition > nombreADeviner)
+            {
+                Console.WriteLine("Trop grand");
+            }
+            else
+            {
+                Console.WriteLine("Gagné");
+                partieFinie = true;
+            }
+        }
+        else
+        {
+            Console.WriteLine("Nombre incorrect");
+        }
     }
 }
 Console.ReadLine();
