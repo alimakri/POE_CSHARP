@@ -12,6 +12,7 @@ scores[0] = "André|5";
 scores[1] = "Monique|4";
 index = 2;
 // ----------------------
+
 while (true)
 {
     Console.Write("Votre nom : ");
@@ -55,6 +56,7 @@ while (true)
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine(scores[i]);
                     }
+                    Console.ForegroundColor = ConsoleColor.Gray;
                 }
             }
             else
