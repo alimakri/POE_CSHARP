@@ -1,42 +1,67 @@
-﻿Console.WriteLine("Deviner un nombre compris entre 1 et 99");
-Random alea = new Random();
-int nombreADeviner = alea.Next(1, 100);
-//Console.WriteLine(nombreADeviner);
-// 16:17
+﻿Random alea = new Random();
+string nom = "";
 int proposition = 0;
-int nCoup = 0; bool partieFinie = false;
-while (!partieFinie)
+int nombreADeviner;
+int nCoup;
+bool partieFinie;
+string[] scores = new string[10];
+int index = 0;
+
+// Pour tester ----------
+scores[0] = "André|5";
+scores[1] = "Monique|4";
+index = 2;
+// ----------------------
+while (true)
 {
-    nCoup++;
-    if (nCoup == 8)
+    Console.Write("Votre nom : ");
+    nom = Console.ReadLine();
+
+    Console.WriteLine("{0}, deviner un nombre compris entre 1 et 99", nom);
+    nombreADeviner = alea.Next(1, 100);
+    //Console.WriteLine(nombreADeviner);
+    nCoup = 0; partieFinie = false;
+    while (!partieFinie)
     {
-        Console.WriteLine("Perdu");
-        partieFinie = true;
-    }
-    else
-    {
-        Console.Write("Proposition : ");
-        var propositionStr = Console.ReadLine();
-        if (int.TryParse(propositionStr, out proposition))
+        nCoup++;
+        if (nCoup == 8)
         {
-            if (proposition < nombreADeviner)
-            {
-                Console.WriteLine("Trop petit");
-            }
-            else if (proposition > nombreADeviner)
-            {
-                Console.WriteLine("Trop grand");
-            }
-            else
-            {
-                Console.WriteLine("Gagné");
-                partieFinie = true;
-            }
+            Console.WriteLine("Perdu");
+            partieFinie = true;
         }
         else
         {
-            Console.WriteLine("Nombre incorrect");
+            Console.Write("Proposition {0} : ", nCoup);
+            var propositionStr = Console.ReadLine();
+            if (int.TryParse(propositionStr, out proposition))
+            {
+                if (proposition < nombreADeviner)
+                {
+                    Console.WriteLine("Trop petit");
+                }
+                else if (proposition > nombreADeviner)
+                {
+                    Console.WriteLine("Trop grand");
+                }
+                else
+                {
+                    Console.WriteLine("Gagné");
+                    partieFinie = true;
+                    scores[index] = nom + "|" + nCoup;
+                    index++;
+                    if (index == scores.Length) index = 0;
+                    for(int i = 0; i < scores.Length; i++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine(scores[i]);
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Nombre incorrect");
+            }
         }
     }
+    Console.ReadLine();
 }
-Console.ReadLine();
