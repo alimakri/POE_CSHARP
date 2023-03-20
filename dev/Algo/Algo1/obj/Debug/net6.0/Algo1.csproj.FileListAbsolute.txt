@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\Algo\Algo1\bin\Debug\net6.0\Algo1.exe
+D:\POE_CSHARP\dev\Algo\Algo1\bin\Debug\net6.0\Algo1.deps.json
+D:\POE_CSHARP\dev\Algo\Algo1\bin\Debug\net6.0\Algo1.runtimeconfig.json
+D:\POE_CSHARP\dev\Algo\Algo1\bin\Debug\net6.0\Algo1.dll
+D:\POE_CSHARP\dev\Algo\Algo1\bin\Debug\net6.0\Algo1.pdb
+D:\POE_CSHARP\dev\Algo\Algo1\obj\Debug\net6.0\Algo1.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Algo\Algo1\obj\Debug\net6.0\Algo1.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\Algo\Algo1\obj\Debug\net6.0\Algo1.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\Algo\Algo1\obj\Debug\net6.0\Algo1.AssemblyInfo.cs
+D:\POE_CSHARP\dev\Algo\Algo1\obj\Debug\net6.0\Algo1.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Algo\Algo1\obj\Debug\net6.0\Algo1.dll
+D:\POE_CSHARP\dev\Algo\Algo1\obj\Debug\net6.0\refint\Algo1.dll
+D:\POE_CSHARP\dev\Algo\Algo1\obj\Debug\net6.0\Algo1.pdb
+D:\POE_CSHARP\dev\Algo\Algo1\obj\Debug\net6.0\Algo1.genruntimeconfig.cache
+D:\POE_CSHARP\dev\Algo\Algo1\obj\Debug\net6.0\ref\Algo1.dll
