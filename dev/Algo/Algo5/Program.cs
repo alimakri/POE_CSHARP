@@ -10,7 +10,7 @@ namespace Algo5
     {
         static void Main(string[] args)
         {
-            List<string> personnes = new List<string>();
+            var personnes = new Dictionary<string, string>();
             while(true)
             {
                 Console.Write("Nom : ");
@@ -18,12 +18,12 @@ namespace Algo5
                 if (string.IsNullOrEmpty(nom)) break;
                 Console.Write("Ville : ");
                 var ville = Console.ReadLine();
-                personnes.Add(nom + "|" + ville);
+                personnes.Add(nom, ville);
             }
-            Console.ForegroundColor = ConsoleColor.Cya;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             foreach(var person in personnes)
             {
-                Console.WriteLine(person);
+                Console.WriteLine("{0}\t{1}", person.Key, person.Value );
             }
             Console.ReadLine();
         }
