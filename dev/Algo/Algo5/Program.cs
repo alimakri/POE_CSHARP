@@ -9,16 +9,17 @@ namespace Algo5
 {
     internal class Program
     {
+        static Dictionary<string, string> personnes = new Dictionary<string, string>();
         static void Main(string[] args)
         {
             // Partie 0 : lecture du fichier
-            var personnes = new Dictionary<string, string>();
             var lignes = File.ReadAllLines(@"D:\personnes.csv");
             foreach (var ligne in lignes)
             {
                 var tab = ligne.Split(';');
                 personnes.Add(tab[0], tab[1]);
             }
+            Affichage();
 
             // Partie 1 : saisie
             while (true)

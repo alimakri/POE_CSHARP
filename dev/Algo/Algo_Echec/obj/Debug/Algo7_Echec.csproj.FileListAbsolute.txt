@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Algo\Algo_Echec\bin\Debug\Algo_Echec.exe.config
+D:\POE_CSHARP\dev\Algo\Algo_Echec\bin\Debug\Algo_Echec.exe
+D:\POE_CSHARP\dev\Algo\Algo_Echec\bin\Debug\Algo_Echec.pdb
+D:\POE_CSHARP\dev\Algo\Algo_Echec\obj\Debug\Algo7_Echec.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Algo\Algo_Echec\obj\Debug\Algo7_Echec.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Algo\Algo_Echec\obj\Debug\Algo7_Echec.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Algo\Algo_Echec\obj\Debug\Algo_Echec.exe
+D:\POE_CSHARP\dev\Algo\Algo_Echec\obj\Debug\Algo_Echec.pdb

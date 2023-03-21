@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Algo\Algo6\bin\Debug\Algo6.exe.config
+D:\POE_CSHARP\dev\Algo\Algo6\bin\Debug\Algo6.exe
+D:\POE_CSHARP\dev\Algo\Algo6\bin\Debug\Algo6.pdb
+D:\POE_CSHARP\dev\Algo\Algo6\obj\Debug\Algo6_Exo.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Algo\Algo6\obj\Debug\Algo6_Exo.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Algo\Algo6\obj\Debug\Algo6_Exo.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Algo\Algo6\obj\Debug\Algo6.exe
+D:\POE_CSHARP\dev\Algo\Algo6\obj\Debug\Algo6.pdb
