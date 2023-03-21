@@ -11,6 +11,8 @@ namespace Algo_Echec
         static List<string> echiquier = new List<string>(); string lettre;
         static string cavalier = "A1";
         static List<string> deplacementsPossibles = new List<string> { "1,2", "1,-2", "2,1", "2,-1", "-1,2", "-1,-2", "-2,1", "-2,-1" };
+        static Random alea = new Random();
+
         static void Main(string[] args)
         {
             string lettre;
@@ -27,9 +29,22 @@ namespace Algo_Echec
             Deplacer();
         }
 
-        private static void Deplacer()
+        private static bool Deplacer()
         {
+            var d = alea.Next(1, 9);
+            var depl = deplacementsPossibles[d - 1]; // "-2,1"
+            var tab = depl.Split(',');
+            var deplH = int.Parse(tab[0]);  // -2
+            var deplV = int.Parse(tab[1]);  // -1
+            var cavalierH = cavalier[0];    // A (65)
+            var cavalierV = cavalier[1];    // 1
 
+            cavalierH = (char) ((int)cavalierH + deplH);
+            if (cavalierH < 'A' || cavalierH > 'H') return false;
+            cavalierV = (char)((int)cavalierV + deplV);
+            if((int)cavalierV-48 < 1 || (int)cavalierV-48 > 8) return false;
+            cavalier = cavalierH + cavalierV.ToString();
+            return true;
         }
     }
 }
