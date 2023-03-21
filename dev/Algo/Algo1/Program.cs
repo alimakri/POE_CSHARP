@@ -2,7 +2,7 @@
 string nom = "";
 int proposition = 0;
 int nombreADeviner;
-int nCoup;
+int nCoup = 0;
 bool partieFinie;
 string[] scores = new string[10];
 int index = 0;
@@ -36,14 +36,10 @@ while (true)
             var propositionStr = Console.ReadLine();
             if (int.TryParse(propositionStr, out proposition))
             {
-                if (proposition < nombreADeviner)
-                {
+                if (proposition < nombreADeviner) 
                     Console.WriteLine("Trop petit");
-                }
-                else if (proposition > nombreADeviner)
-                {
+                else if (proposition > nombreADeviner) 
                     Console.WriteLine("Trop grand");
-                }
                 else
                 {
                     Console.WriteLine("Gagné");
@@ -51,7 +47,7 @@ while (true)
                     scores[index] = nom + "|" + nCoup;
                     index++;
                     if (index == scores.Length) index = 0;
-                    for(int i = 0; i < scores.Length; i++)
+                    for (int i = 0; i < scores.Length; i++)
                     {
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine(scores[i]);
@@ -60,9 +56,7 @@ while (true)
                 }
             }
             else
-            {
-                Console.WriteLine("Nombre incorrect");
-            }
+                Console.WriteLine("Saisie incorrecte");
         }
     }
     Console.ReadLine();

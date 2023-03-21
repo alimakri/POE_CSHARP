@@ -1,0 +1,4 @@
+Les langages .Net (C#) sont des langages fortement typés
+Tout est objet
+Un objet, ce sont des propriétés, des méthodes, des évènements
+Un programme ne doit JAMAIS planté
