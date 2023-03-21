@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Algo\Algo3\bin\Debug\Algo3.exe.config
+D:\POE_CSHARP\dev\Algo\Algo3\bin\Debug\Algo3.exe
+D:\POE_CSHARP\dev\Algo\Algo3\bin\Debug\Algo3.pdb
+D:\POE_CSHARP\dev\Algo\Algo3\obj\Debug\Algo3.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Algo\Algo3\obj\Debug\Algo3.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Algo\Algo3\obj\Debug\Algo3.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Algo\Algo3\obj\Debug\Algo3.exe
+D:\POE_CSHARP\dev\Algo\Algo3\obj\Debug\Algo3.pdb

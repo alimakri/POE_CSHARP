@@ -1,4 +1,4 @@
-Les langages .Net (C#) sont des langages fortement typés
-Tout est objet
-Un objet, ce sont des propriétés, des méthodes, des évènements
-Un programme ne doit JAMAIS planté
+1. Les langages .Net (C#) sont des langages fortement typés
+2. Tout est objet
+3. Un objet, ce sont des propriétés, des méthodes, des évènements
+4. Un programme ne doit JAMAIS planté
