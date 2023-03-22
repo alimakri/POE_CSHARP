@@ -20,6 +20,26 @@ namespace Algo8_Distance_Exo
             List<int> lesY = new List<int> { 15, 30, 13, 16, 40 };
 
             // Distance la plus courte
+            string depart; string arrivee; double distanceCourte = double.MaxValue;
+            foreach(string villeD in villes)
+            {
+                foreach (string villeA in villes)
+                {
+                    if (villeD != villeA)
+                    {
+                        var indexD = villes.IndexOf(villeD);
+                        var indexA = villes.IndexOf(villeA);
+
+                        var distanceCalculee = Math.Sqrt(lesX[indexD] * lesX[indexD] - lesY[indexA] * lesY[indexA]);
+
+                        if (distanceCalculee < distanceCourte)
+                        {
+                            depart = villeD; arrivee = villeA; distanceCourte = distanceCalculee;
+                        }
+                    }
+                }
+
+            }
         }
     }
 }

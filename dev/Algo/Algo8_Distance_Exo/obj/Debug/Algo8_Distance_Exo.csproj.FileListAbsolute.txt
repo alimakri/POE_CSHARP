@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Algo\Algo8_Distance_Exo\bin\Debug\Algo8_Distance_Exo.exe.config
+D:\POE_CSHARP\dev\Algo\Algo8_Distance_Exo\bin\Debug\Algo8_Distance_Exo.exe
+D:\POE_CSHARP\dev\Algo\Algo8_Distance_Exo\bin\Debug\Algo8_Distance_Exo.pdb
+D:\POE_CSHARP\dev\Algo\Algo8_Distance_Exo\obj\Debug\Algo8_Distance_Exo.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Algo\Algo8_Distance_Exo\obj\Debug\Algo8_Distance_Exo.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Algo\Algo8_Distance_Exo\obj\Debug\Algo8_Distance_Exo.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Algo\Algo8_Distance_Exo\obj\Debug\Algo8_Distance_Exo.exe
+D:\POE_CSHARP\dev\Algo\Algo8_Distance_Exo\obj\Debug\Algo8_Distance_Exo.pdb
