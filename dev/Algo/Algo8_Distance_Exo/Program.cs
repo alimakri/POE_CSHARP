@@ -11,17 +11,17 @@ namespace Algo8_Distance_Exo
         static void Main(string[] args)
         {
             // Liste de ville 
-            List<string> villes = new List<string> { "Paris","Lyon","Nancy","Strasbourg","Marseille"};
+            List<string> villes = new List<string> { "Paris", "Lyon", "Nancy", "Strasbourg", "Marseille" };
 
             // Liste de x
-            List<int> lesX = new List<int> { 20, 28, 30, 40, 30};
+            List<int> lesX = new List<int> { 20, 28, 30, 40, 30 };
 
             // Liste de y
             List<int> lesY = new List<int> { 15, 30, 13, 16, 40 };
 
             // Distance la plus courte
-            string depart; string arrivee; double distanceCourte = double.MaxValue;
-            foreach(string villeD in villes)
+            string depart = "?"; string arrivee = "?"; double distanceCourte = double.MaxValue;
+            foreach (string villeD in villes)
             {
                 foreach (string villeA in villes)
                 {
@@ -30,7 +30,7 @@ namespace Algo8_Distance_Exo
                         var indexD = villes.IndexOf(villeD);
                         var indexA = villes.IndexOf(villeA);
 
-                        var distanceCalculee = Math.Sqrt(lesX[indexD] * lesX[indexD] - lesY[indexA] * lesY[indexA]);
+                        var distanceCalculee = Math.Sqrt(Math.Pow(lesX[indexA] - lesX[indexD], 2) + Math.Pow(lesY[indexA] - lesY[indexD], 2));
 
                         if (distanceCalculee < distanceCourte)
                         {
@@ -40,6 +40,8 @@ namespace Algo8_Distance_Exo
                 }
 
             }
+            Console.WriteLine("{0} - {1} est la distance la plus courte ({2})", depart, arrivee, distanceCourte);
+            Console.ReadLine();
         }
     }
 }
