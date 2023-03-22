@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\CSharp\Heritage\bin\Debug\Heritage.exe.config
+D:\POE_CSHARP\dev\CSharp\Heritage\bin\Debug\Heritage.exe
+D:\POE_CSHARP\dev\CSharp\Heritage\bin\Debug\Heritage.pdb
+D:\POE_CSHARP\dev\CSharp\Heritage\obj\Debug\CS2_Heritage.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\Heritage\obj\Debug\CS2_Heritage.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\CSharp\Heritage\obj\Debug\CS2_Heritage.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\Heritage\obj\Debug\Heritage.exe
+D:\POE_CSHARP\dev\CSharp\Heritage\obj\Debug\Heritage.pdb

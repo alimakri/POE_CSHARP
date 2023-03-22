@@ -32,7 +32,7 @@ namespace Intro
             patrick.DateNaissance = new DateTime(1949, 4, 6);
             var patrickVille = new PersonneVille { P = patrick, V = "Paris" };
 
-            var freddy = new Interprete();
+            Interprete freddy = new Interprete();
             freddy.Id = 2;
             freddy.Nom = "Bulsara";
             freddy.Prenom = "Farrokh";
