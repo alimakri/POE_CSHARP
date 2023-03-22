@@ -42,8 +42,8 @@ namespace Algo_Echec
 
         private static bool Deplacer()
         {
-            var d = alea.Next(1, 9);
-            var depl = deplacementsPossibles[d - 1]; // "-2,1"
+            var d = alea.Next(0, 8);
+            var depl = deplacementsPossibles[d]; // "-2,1"
             var tab = depl.Split(',');
             var deplH = int.Parse(tab[0]);  // -2
             var deplV = int.Parse(tab[1]);  // -1
