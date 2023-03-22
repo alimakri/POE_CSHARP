@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Intro
 {
+    // Héritage
     public class Interprete : Personne
     {
         //public int Id;
@@ -32,6 +33,7 @@ namespace Intro
         public string MaisonProduction;
     }
 
+    // Agrégation d'objets sous forme de propriétés
     public class Personne
     {
         // Constructeur
