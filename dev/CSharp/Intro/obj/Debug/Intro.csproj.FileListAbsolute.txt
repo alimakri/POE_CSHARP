@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\CSharp\Intro\bin\Debug\Intro.exe.config
+D:\POE_CSHARP\dev\CSharp\Intro\bin\Debug\Intro.exe
+D:\POE_CSHARP\dev\CSharp\Intro\bin\Debug\Intro.pdb
+D:\POE_CSHARP\dev\CSharp\Intro\obj\Debug\Intro.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\Intro\obj\Debug\Intro.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\CSharp\Intro\obj\Debug\Intro.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\Intro\obj\Debug\Intro.exe
+D:\POE_CSHARP\dev\CSharp\Intro\obj\Debug\Intro.pdb
