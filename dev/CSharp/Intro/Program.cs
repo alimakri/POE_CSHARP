@@ -27,17 +27,19 @@ namespace Intro
             // Version 
             var patrick = new Personne();
             patrick.Id = 1;
-            patrick.Nom = "Hernandez";
+            patrick.Nom = "Chirac";
             patrick.Prenom = "Patrick";
             patrick.DateNaissance = new DateTime(1949, 4, 6);
             var patrickVille = new PersonneVille { P = patrick, V = "Paris" };
-            //Personne.Compteur++;
 
-            var freddy = new Personne(2, "Bulsara");
+            var freddy = new Interprete();
+            freddy.Id = 2;
+            freddy.Nom = "Bulsara";
             freddy.Prenom = "Farrokh";
             freddy.DateNaissance = new DateTime(1946, 9, 5);
-            var freddyVille = new PersonneVille { P = freddy, V = "Londres" };
-            //Personne.Compteur++;
+            freddy.Concerts = new List<string> { "Arena","Woodstock","Zenith"};
+            freddy.MaisonProduction = "MGM Records";
+            var freddyVille = new PersonneVille { P = freddy, V = "London" };
 
             var personnes = new List<PersonneVille>();
             personnes.Add(freddyVille);

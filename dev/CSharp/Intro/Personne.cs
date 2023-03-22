@@ -6,6 +6,32 @@ using System.Threading.Tasks;
 
 namespace Intro
 {
+    public class Interprete : Personne
+    {
+        //public int Id;
+        //public string Nom;
+        //public string Prenom;
+        //public DateTime DateNaissance;
+        //public static int Compteur = 0;
+        //public int CalculerAge()
+        //{
+        //    return (int)(DateTime.Now - DateNaissance).TotalDays / 365;
+        //}
+        //public int CalculerAge(char mode)
+        //{
+        //    switch (mode)
+        //    {
+        //        case 'd': return (int)(DateTime.Now - DateNaissance).TotalDays;
+        //        case 'y': return (int)(DateTime.Now - DateNaissance).TotalDays / 365;
+        //        default: return -1;
+        //    }
+        //}
+
+        // -------------------------------
+        public List<string> Concerts;
+        public string MaisonProduction;
+    }
+
     public class Personne
     {
         // Constructeur
