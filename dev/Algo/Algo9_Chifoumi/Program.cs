@@ -12,15 +12,15 @@ namespace Algo9_Chifoumi
         static Random alea = new Random();
         static void Main(string[] args)
         {
-            var compteur = 0;
-            while(compteur != 3)
+            var compteur = 0; int choixInt = 0; Chifoumi choixM, choixU; string choixStr = "";
+            while (compteur < 4)
             {
                 // Choix Machine
-                var choixInt = alea.Next(1, 4);
-                var choixM = (Chifoumi)choixInt;
+                choixInt = alea.Next(1, 4);
+                choixM = (Chifoumi)choixInt;
 
                 // Choix Utilisateur
-                string choixStr = "";
+                choixStr = "";
                 while (choixStr != "1" && choixStr != "2" && choixStr != "3")
                 {
                     Console.WriteLine("Choisissez (1-3) :");
@@ -29,7 +29,7 @@ namespace Algo9_Chifoumi
                     Console.WriteLine("3. Ciseau");
                     choixStr = Console.ReadLine();
                 }
-                var choixU = (Chifoumi)int.Parse(choixStr);
+                choixU = (Chifoumi)int.Parse(choixStr);
 
                 if (choixM == choixU)
                 {
