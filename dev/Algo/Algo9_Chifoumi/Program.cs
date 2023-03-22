@@ -12,6 +12,10 @@ namespace Algo9_Chifoumi
         static Random alea = new Random();
         static void Main(string[] args)
         {
+            // Choix Machine
+            var choixInt = alea.Next(1, 4);
+            var choixM = (Chifoumi)choixInt;
+
             // Choix Utilisateur
             string choixStr = "";
             while (choixStr != "1" && choixStr != "2" && choixStr != "3")
@@ -24,10 +28,6 @@ namespace Algo9_Chifoumi
             }
             var choixU = (Chifoumi)int.Parse(choixStr);
 
-            // Choix Machine
-            var choixInt = alea.Next(1, 4);
-            var choixM = (Chifoumi)choixInt;
-
             if ( choixM == choixU) 
                 Console.WriteLine("Egalité !");
             else if (
@@ -37,7 +37,7 @@ namespace Algo9_Chifoumi
                 )
                 Console.WriteLine("Vous Gagnez !");
             else
-                Console.WriteLine("Je gagne !");
+                Console.WriteLine("Perdu !");
 
             Console.ReadLine();
         }
