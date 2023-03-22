@@ -12,33 +12,45 @@ namespace Algo9_Chifoumi
         static Random alea = new Random();
         static void Main(string[] args)
         {
-            // Choix Machine
-            var choixInt = alea.Next(1, 4);
-            var choixM = (Chifoumi)choixInt;
-
-            // Choix Utilisateur
-            string choixStr = "";
-            while (choixStr != "1" && choixStr != "2" && choixStr != "3")
+            var compteur = 0;
+            while(compteur != 3)
             {
-                Console.WriteLine("Choisissez (1-3) :");
-                Console.WriteLine("1. Pierre");
-                Console.WriteLine("2. Feuille");
-                Console.WriteLine("3. Ciseau");
-                choixStr = Console.ReadLine();
+                // Choix Machine
+                var choixInt = alea.Next(1, 4);
+                var choixM = (Chifoumi)choixInt;
+
+                // Choix Utilisateur
+                string choixStr = "";
+                while (choixStr != "1" && choixStr != "2" && choixStr != "3")
+                {
+                    Console.WriteLine("Choisissez (1-3) :");
+                    Console.WriteLine("1. Pierre");
+                    Console.WriteLine("2. Feuille");
+                    Console.WriteLine("3. Ciseau");
+                    choixStr = Console.ReadLine();
+                }
+                var choixU = (Chifoumi)int.Parse(choixStr);
+
+                if (choixM == choixU)
+                {
+                    compteur = 0;
+                    Console.WriteLine("Egalité ! (score:0)");
+                }
+                else if (
+                    choixU == Chifoumi.Pierre && choixM == Chifoumi.Ciseau ||
+                    choixU == Chifoumi.Feuille && choixM == Chifoumi.Pierre ||
+                    choixU == Chifoumi.Ciseau && choixM == Chifoumi.Feuille
+                    )
+                {
+                    compteur++;
+                    Console.WriteLine("Vous Gagnez ! (score:{0})", compteur);
+                }
+                else
+                {
+                    compteur = 0;
+                    Console.WriteLine("Perdu ! (score:0)" );
+                }
             }
-            var choixU = (Chifoumi)int.Parse(choixStr);
-
-            if ( choixM == choixU) 
-                Console.WriteLine("Egalité !");
-            else if (
-                choixU == Chifoumi.Pierre && choixM == Chifoumi.Ciseau ||
-                choixU == Chifoumi.Feuille && choixM == Chifoumi.Pierre ||
-                choixU == Chifoumi.Ciseau && choixM == Chifoumi.Feuille
-                )
-                Console.WriteLine("Vous Gagnez !");
-            else
-                Console.WriteLine("Perdu !");
-
             Console.ReadLine();
         }
     }
