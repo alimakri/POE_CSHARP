@@ -2,3 +2,4 @@
 2. Tout est objet
 3. Un objet, ce sont des propriétés, des méthodes, des évènements
 4. Un programme ne doit JAMAIS planté
+5. (Re)Nommer correctement 

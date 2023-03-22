@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Algo\Algo9_Chifoumi\bin\Debug\Algo9_Chifoumi.exe.config
+D:\POE_CSHARP\dev\Algo\Algo9_Chifoumi\bin\Debug\Algo9_Chifoumi.exe
+D:\POE_CSHARP\dev\Algo\Algo9_Chifoumi\bin\Debug\Algo9_Chifoumi.pdb
+D:\POE_CSHARP\dev\Algo\Algo9_Chifoumi\obj\Debug\Algo9_Chifoumi.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Algo\Algo9_Chifoumi\obj\Debug\Algo9_Chifoumi.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Algo\Algo9_Chifoumi\obj\Debug\Algo9_Chifoumi.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Algo\Algo9_Chifoumi\obj\Debug\Algo9_Chifoumi.exe
+D:\POE_CSHARP\dev\Algo\Algo9_Chifoumi\obj\Debug\Algo9_Chifoumi.pdb
