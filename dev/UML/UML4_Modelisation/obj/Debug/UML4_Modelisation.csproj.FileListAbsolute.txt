@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\UML\UML4_Modelisation\bin\Debug\UML4_Modelisation.exe.config
+D:\POE_CSHARP\dev\UML\UML4_Modelisation\bin\Debug\UML4_Modelisation.exe
+D:\POE_CSHARP\dev\UML\UML4_Modelisation\bin\Debug\UML4_Modelisation.pdb
+D:\POE_CSHARP\dev\UML\UML4_Modelisation\obj\Debug\UML4_Modelisation.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\UML\UML4_Modelisation\obj\Debug\UML4_Modelisation.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\UML\UML4_Modelisation\obj\Debug\UML4_Modelisation.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\UML\UML4_Modelisation\obj\Debug\UML4_Modelisation.exe
+D:\POE_CSHARP\dev\UML\UML4_Modelisation\obj\Debug\UML4_Modelisation.pdb
