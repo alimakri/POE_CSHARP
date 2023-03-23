@@ -1,8 +1,14 @@
+PHRASES CLES
 1. Tout est objet
 2. Les langages .Net (C#) sont des langages fortement typés
 3. Un objet, ce sont des propriétés, des méthodes, des évènements
 4. Un programme ne doit JAMAIS planté
 5. (Re)Nommer correctement 
 
-
+A RETENIR
 a. Une classe définit un constructeur par défaut sauf si un autre constructeur a été défini.
+
+
+MOTS CLES POUR DEFINIR UNE CLASSE
+class
+enum

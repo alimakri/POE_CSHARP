@@ -22,6 +22,16 @@ namespace UML4_Modelisation
             comptePierre.Decrire();
             comptePaul.Decrire();
 
+            //comptePaul.SetSolde(100000);
+            comptePaul.Solde = 100000;
+
+            //Console.WriteLine(comptePaul.GetSolde());
+            Console.WriteLine(comptePaul.Solde);
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            //Console.WriteLine(comptePierre.GetSolde());
+            Console.WriteLine(comptePierre.Solde);
+            Console.WriteLine(comptePaul.Solde);
             Console.ReadLine();
         }
 
@@ -45,8 +55,8 @@ namespace UML4_Modelisation
     }
     class CompteBancaire
     {
-        public string Devise;
-        public decimal Solde;
+
+        public string Devise = "euros";
         public Client Titulaire;
         public CompteBancaire(decimal montant)
         {
@@ -70,5 +80,34 @@ namespace UML4_Modelisation
         {
             Console.WriteLine("Le compte de {0} présente un solde de {1} {2}", Titulaire.Nom, Solde, Devise);
         }
+
+        //private decimal Solde = 0;
+        //internal void SetSolde(int valeur)
+        //{
+        //    if (valeur > 3000) return;
+        //    Solde = valeur;
+        //}
+
+        //internal decimal GetSolde()
+        //{
+        //    if (Titulaire.Prenom == "Paul") return 0;
+        //    return Solde;
+        //}
+
+        public decimal Solde
+        {
+            get
+            {
+                if (Titulaire.Prenom == "Paul") return 0;
+                return solde;
+            }
+            set
+            {
+                if (value > 3000) return;
+                solde = value;
+            }
+        }
+        private decimal solde;
+
     }
 }
