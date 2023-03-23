@@ -13,7 +13,10 @@ namespace UML7_Interface
             IVehicule v;
             var x = Console.ReadLine();
             if (x.ToUpper() == "A")
+            {
                 v = new Auto();
+                ((Auto)v).Sabriter();
+            }
             else
                 v = new Moto();
 
@@ -25,11 +28,20 @@ namespace UML7_Interface
     {
         void Rouler();
     }
-    public class Auto : IVehicule
+    interface IHabitation
+    {
+        void Sabriter();
+    }
+    public class Auto : IVehicule, IHabitation
     {
         public void Rouler()
         {
             Console.WriteLine("L'auto roule");
+        }
+
+        public void Sabriter()
+        {
+            Console.WriteLine("On s'abrite dans l'auto");
         }
     }
     public class Moto : IVehicule
