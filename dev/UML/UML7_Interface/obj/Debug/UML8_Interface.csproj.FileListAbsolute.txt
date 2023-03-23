@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\UML\UML7_Interface\bin\Debug\UML7_Interface.exe.config
+D:\POE_CSHARP\dev\UML\UML7_Interface\bin\Debug\UML7_Interface.exe
+D:\POE_CSHARP\dev\UML\UML7_Interface\bin\Debug\UML7_Interface.pdb
+D:\POE_CSHARP\dev\UML\UML7_Interface\obj\Debug\UML8_Interface.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\UML\UML7_Interface\obj\Debug\UML8_Interface.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\UML\UML7_Interface\obj\Debug\UML8_Interface.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\UML\UML7_Interface\obj\Debug\UML7_Interface.exe
+D:\POE_CSHARP\dev\UML\UML7_Interface\obj\Debug\UML7_Interface.pdb
