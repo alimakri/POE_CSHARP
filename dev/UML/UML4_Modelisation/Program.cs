@@ -12,4 +12,16 @@ namespace UML4_Modelisation
         {
         }
     }
+    class Client
+    {
+        public int Numero;
+        public string Nom;
+        public string Prenom;
+        public Client(int numero, string nom, string prenom)
+        {
+            Numero = numero;
+            Nom = nom;
+            Prenom = prenom;
+        }
+    }
 }
