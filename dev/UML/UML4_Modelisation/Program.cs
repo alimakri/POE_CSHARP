@@ -56,7 +56,6 @@ namespace UML4_Modelisation
     class CompteBancaire
     {
 
-        public string Devise = "euros";
         public Client Titulaire;
         public CompteBancaire(decimal montant)
         {
@@ -94,6 +93,7 @@ namespace UML4_Modelisation
         //    return Solde;
         //}
 
+        // Encapsulation de propriété (accesseurs get set)
         public decimal Solde
         {
             get
@@ -109,5 +109,8 @@ namespace UML4_Modelisation
         }
         private decimal solde;
 
+        //public string Devise = "euros";
+
+        public string Devise { get; set; }
     }
 }

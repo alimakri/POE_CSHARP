@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\UML\UML5_LaFabrique\bin\Debug\UML5_LaFabrique.exe.config
+D:\POE_CSHARP\dev\UML\UML5_LaFabrique\bin\Debug\UML5_LaFabrique.exe
+D:\POE_CSHARP\dev\UML\UML5_LaFabrique\bin\Debug\UML5_LaFabrique.pdb
+D:\POE_CSHARP\dev\UML\UML5_LaFabrique\obj\Debug\UML5_LaFabrique.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\UML\UML5_LaFabrique\obj\Debug\UML5_LaFabrique.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\UML\UML5_LaFabrique\obj\Debug\UML5_LaFabrique.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\UML\UML5_LaFabrique\obj\Debug\UML5_LaFabrique.exe
+D:\POE_CSHARP\dev\UML\UML5_LaFabrique\obj\Debug\UML5_LaFabrique.pdb
