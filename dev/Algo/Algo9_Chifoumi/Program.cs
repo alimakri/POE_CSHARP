@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Algo9_Chifoumi
 {
     enum Chifoumi { Pierre=1, Feuille=2, Ciseau=3}
+
     internal class Program
     {
         static Random alea = new Random();
@@ -18,6 +19,7 @@ namespace Algo9_Chifoumi
                 // Choix Machine
                 choixInt = alea.Next(1, 4);
                 choixM = (Chifoumi)choixInt;
+
 
                 // Choix Utilisateur
                 choixStr = "";

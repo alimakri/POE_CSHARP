@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\UML\UML3_Agregations\bin\Debug\UML3_Agregations.exe.config
+D:\POE_CSHARP\dev\UML\UML3_Agregations\bin\Debug\UML3_Agregations.exe
+D:\POE_CSHARP\dev\UML\UML3_Agregations\bin\Debug\UML3_Agregations.pdb
+D:\POE_CSHARP\dev\UML\UML3_Agregations\obj\Debug\UML3_Agregations.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\UML\UML3_Agregations\obj\Debug\UML3_Agregations.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\UML\UML3_Agregations\obj\Debug\UML3_Agregations.exe
+D:\POE_CSHARP\dev\UML\UML3_Agregations\obj\Debug\UML3_Agregations.pdb
