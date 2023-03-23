@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UML9_Acces\UML9_1_Acces.csproj">
+      <Project>{B5ADFF21-ABB1-4E3D-9C76-662BA89700D0}</Project>
+      <Name>UML9_1_Acces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

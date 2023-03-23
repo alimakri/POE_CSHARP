@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\UML\UML9_Acces\bin\Debug\UML9_Acces.exe.config
+D:\POE_CSHARP\dev\UML\UML9_Acces\bin\Debug\UML9_Acces.exe
+D:\POE_CSHARP\dev\UML\UML9_Acces\bin\Debug\UML9_Acces.pdb
+D:\POE_CSHARP\dev\UML\UML9_Acces\obj\Debug\UML9_1_Acces.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\UML\UML9_Acces\obj\Debug\UML9_1_Acces.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\UML\UML9_Acces\obj\Debug\UML9_1_Acces.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\UML\UML9_Acces\obj\Debug\UML9_Acces.exe
+D:\POE_CSHARP\dev\UML\UML9_Acces\obj\Debug\UML9_Acces.pdb
