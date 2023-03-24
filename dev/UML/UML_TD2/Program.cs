@@ -10,40 +10,41 @@ namespace UML_TD2
     {
         static void Main(string[] args)
         {
-            var a1 = new A();
-            a1.M1_1();
-            a1.M1_2();
+            var johny = new Interprete();
+            johny.Chanter();
+            johny.SeProduire();
 
             //I1 i = new I1(); // INTERDIT
-            I1 i = new A();
+            IPersonne i = new Interprete();
+            IPersonne j = new Compositeur();
         }
     }
-    public class A : I1
+    public class Interprete : IPersonne
     {
-        public void M1_1() { }
+        public void Chanter() { }
 
-        public void M1_2() { }
+        public void SeProduire() { }
     }
-    public class B : I1
+    public class Compositeur : IPersonne
     {
-        public void M1_1() { }
+        public void Chanter() { }
 
-        public void M1_2() { }
+        public void SeProduire() { }
     }
-    public class C : I2
+    public class Auto : IVehicule
     {
-        public void M2_1()
+        public void Rouler()
         {
             throw new NotImplementedException();
         }
     }
-    public interface I1
+    public interface IPersonne
     {
-        void M1_1();
-        void M1_2();
+        void Chanter();
+        void SeProduire();
     }
-    public interface I2
+    public interface IVehicule
     {
-        void M2_1();
+        void Rouler();
     }
 }
