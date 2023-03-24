@@ -12,23 +12,28 @@ namespace UMLX_1
         {
             var catFromage = new Categorie { Id = Guid.NewGuid(), Libelle = "Fromage" };
             var catSurgele = new Categorie { Id = Guid.NewGuid(), Libelle = "Surgelé" };
+            var catTraiteur = new Categorie { Id = Guid.NewGuid(), Libelle = "Traiteur" };
 
-            var camembert = new Produit { Id = Guid.NewGuid(), Libelle = "Président", Prix = 5.40M, Cat = catFromage };
-            var brie = new Produit { Id = Guid.NewGuid(), Libelle = "Brie", Prix = 4.40M, Cat = catFromage };
-            var pizza = new Produit { Id = Guid.NewGuid(), Libelle = "Vege", Prix = 7.70M, Cat = catSurgele };
+            var camembert = new Produit { Id = Guid.NewGuid(), Libelle = "Président", Prix = 5.40M };
+            var brie = new Produit { Id = Guid.NewGuid(), Libelle = "Brie", Prix = 4.40M };
+            var pizza = new Produit { Id = Guid.NewGuid(), Libelle = "Vege", Prix = 7.70M };
 
             catFromage.Produits.Add(camembert);
             catFromage.Produits.Add(brie);
             catSurgele.Produits.Add(pizza);
 
-            //List<Produit> produits = new List<Produit>();
-            //produits.Add(camembert);
-            //produits.Add(brie);
-            //produits.Add(pizza);
-            //var cat1 = "Fromage";
+            camembert.Categories.Add(catFromage);
+            brie.Categories.Add(catFromage);
+            pizza.Categories.Add(catSurgele);
+            pizza.Categories.Add(catTraiteur);
+
             foreach (var p in catFromage.Produits)
             {
                 Console.WriteLine(p.Libelle);
+            }
+            foreach (var c in pizza.Categories)
+            {
+                Console.WriteLine(c.Libelle);
             }
 
             Console.ReadLine();
@@ -39,7 +44,7 @@ namespace UMLX_1
         public Guid Id;
         public string Libelle;
         public decimal Prix;
-        public Categorie Cat;
+        public List<Categorie> Categories= new List<Categorie>();
     }
     class Categorie
     {
