@@ -17,7 +17,17 @@ namespace UMLX_1
             var brie = new Produit { Id = Guid.NewGuid(), Libelle = "Brie", Prix = 4.40M, Cat = catFromage };
             var pizza = new Produit { Id = Guid.NewGuid(), Libelle = "Vege", Prix = 7.70M, Cat = catSurgele };
 
+            List<Produit> produits = new List<Produit>();
+            produits.Add(camembert);
+            produits.Add(brie);
+            produits.Add(pizza);
             var cat1 = "Fromage";
+            foreach(var p in produits)
+            {
+                if (p.Cat.Libelle == cat1) Console.WriteLine(p.Libelle);
+            }
+
+            Console.ReadLine();
         }
     }
     class Produit
@@ -31,6 +41,7 @@ namespace UMLX_1
     {
         public Guid Id;
         public string Libelle;
+        public List<Produit> Produits;
     }
 
 }
