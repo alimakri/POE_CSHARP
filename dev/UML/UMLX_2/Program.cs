@@ -17,9 +17,11 @@ namespace UMLX_1
             var camembert = new Produit { Id = Guid.NewGuid(), Libelle = "Président", Prix = 5.40M, Reduction = 0.8M };
             var brie = new Produit { Id = Guid.NewGuid(), Libelle = "Brie", Prix = 4.40M, Reduction = 0M };
             var pizza = new Produit { Id = Guid.NewGuid(), Libelle = "Vege", Prix = 7.70M, Reduction = 1.5M };
+            var chevredoux = new Produit("Ok") { Id = Guid.NewGuid(), Libelle = "Au lait de chèvre", Prix = 4.40M, Reduction = 0M };
 
             catFromage.Produits.Add(camembert);
             catFromage.Produits.Add(brie);
+            catFromage.Produits.Add(chevredoux);
             catSurgele.Produits.Add(pizza);
 
             camembert.Categories.Add(catFromage);
@@ -29,7 +31,8 @@ namespace UMLX_1
 
             foreach (Produit p in catFromage.Produits)
             {
-                Console.WriteLine("{0}", p.Libelle);
+                var etoile = p.isBio() ? "*" : "";
+                Console.WriteLine("{0}{1}", p.Libelle, etoile);
             }
             Console.ForegroundColor = ConsoleColor.Green;
             foreach (var c in pizza.Categories)
@@ -61,13 +64,31 @@ namespace UMLX_1
             Console.ReadLine();
         }
     }
-    class Produit
+    class Produit : IBio
     {
+        public Produit()
+        {
+
+        }
+        public Produit(string label)
+        {
+            Label = label;  
+        }
         public Guid Id;
         public string Libelle;
         public decimal Prix;
         public List<Categorie> Categories = new List<Categorie>();
         public decimal Reduction;
+        private string Label = "";
+        public bool isBio()
+        {
+            //if (Label == "") return false; else return true;
+            return Label != "";
+        }
+    }
+    interface IBio
+    {
+        bool isBio();
     }
     class Categorie
     {

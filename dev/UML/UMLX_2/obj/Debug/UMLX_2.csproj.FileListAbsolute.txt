@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\UML\UMLX_2\bin\Debug\UMLX_1.exe.config
+D:\POE_CSHARP\dev\UML\UMLX_2\bin\Debug\UMLX_1.exe
+D:\POE_CSHARP\dev\UML\UMLX_2\bin\Debug\UMLX_1.pdb
+D:\POE_CSHARP\dev\UML\UMLX_2\obj\Debug\UMLX_2.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\UML\UMLX_2\obj\Debug\UMLX_2.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\UML\UMLX_2\obj\Debug\UMLX_2.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\UML\UMLX_2\obj\Debug\UMLX_1.exe
+D:\POE_CSHARP\dev\UML\UMLX_2\obj\Debug\UMLX_1.pdb
