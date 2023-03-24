@@ -45,7 +45,7 @@ namespace UML9_Acces
         public void M()
         {
             var a1 = new A();
-            var x = a1.P1;
+            var x1 = a1.P1;
             var x4 = a1.P4;
             var x11 = A.P11;
         }
