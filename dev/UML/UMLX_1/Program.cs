@@ -17,9 +17,11 @@ namespace UMLX_1
             var camembert = new Produit { Id = Guid.NewGuid(), Libelle = "Président", Prix = 5.40M, Reduction = 0.8M };
             var brie = new Produit { Id = Guid.NewGuid(), Libelle = "Brie", Prix = 4.40M, Reduction = 0M };
             var pizza = new Produit { Id = Guid.NewGuid(), Libelle = "Vege", Prix = 7.70M, Reduction = 1.5M };
+            var frombio = new ProduitBio { Id = Guid.NewGuid(), Libelle = "Au lait de chèvre", Prix = 27.70M, Label="Free pesticide" };
 
             catFromage.Produits.Add(camembert);
             catFromage.Produits.Add(brie);
+            catFromage.Produits.Add(frombio);
             catSurgele.Produits.Add(pizza);
 
             camembert.Categories.Add(catFromage);
@@ -27,9 +29,13 @@ namespace UMLX_1
             pizza.Categories.Add(catSurgele);
             pizza.Categories.Add(catTraiteur);
 
-            foreach (var p in catFromage.Produits)
+            foreach (Produit p in catFromage.Produits)
             {
-                Console.WriteLine(p.Libelle);
+                //var etoile = "";
+                //if (p is ProduitBio) etoile = "*";
+                var etoile = p is ProduitBio ? "*" : "";
+
+                Console.WriteLine("{0}{1}", p.Libelle, etoile);
             }
             Console.ForegroundColor = ConsoleColor.Green;
             foreach (var c in pizza.Categories)
@@ -68,6 +74,10 @@ namespace UMLX_1
         public decimal Prix;
         public List<Categorie> Categories = new List<Categorie>();
         public decimal Reduction;
+    }
+    class ProduitBio : Produit
+    {
+        public string Label;
     }
     class Categorie
     {
