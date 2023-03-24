@@ -14,9 +14,9 @@ namespace UMLX_1
             var catSurgele = new Categorie { Id = Guid.NewGuid(), Libelle = "Surgelé" };
             var catTraiteur = new Categorie { Id = Guid.NewGuid(), Libelle = "Traiteur" };
 
-            var camembert = new Produit { Id = Guid.NewGuid(), Libelle = "Président", Prix = 5.40M };
-            var brie = new Produit { Id = Guid.NewGuid(), Libelle = "Brie", Prix = 4.40M };
-            var pizza = new Produit { Id = Guid.NewGuid(), Libelle = "Vege", Prix = 7.70M };
+            var camembert = new Produit { Id = Guid.NewGuid(), Libelle = "Président", Prix = 5.40M, Reduction = 0.8M };
+            var brie = new Produit { Id = Guid.NewGuid(), Libelle = "Brie", Prix = 4.40M, Reduction = 0M };
+            var pizza = new Produit { Id = Guid.NewGuid(), Libelle = "Vege", Prix = 7.70M, Reduction = 1.5M };
 
             catFromage.Produits.Add(camembert);
             catFromage.Produits.Add(brie);
@@ -31,10 +31,32 @@ namespace UMLX_1
             {
                 Console.WriteLine(p.Libelle);
             }
+            Console.ForegroundColor = ConsoleColor.Green;
             foreach (var c in pizza.Categories)
             {
                 Console.WriteLine(c.Libelle);
             }
+
+            var panier = new Panier();
+            panier.Produits.Add(camembert);
+            panier.Produits.Add(pizza);
+            panier.Produits.Add(pizza);
+            panier.BonsAchat.Add(5);
+            panier.BonsAchat.Add(2);
+
+            var montant = 0M;
+            var montantBa = 0M;
+            foreach (var p in panier.Produits)
+            {
+                montant += (p.Prix - p.Reduction);
+            }
+            foreach (var b in panier.BonsAchat)
+            {
+                montantBa += b;
+            }
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(montant-montantBa);
 
             Console.ReadLine();
         }
@@ -44,13 +66,19 @@ namespace UMLX_1
         public Guid Id;
         public string Libelle;
         public decimal Prix;
-        public List<Categorie> Categories= new List<Categorie>();
+        public List<Categorie> Categories = new List<Categorie>();
+        public decimal Reduction;
     }
     class Categorie
     {
         public Guid Id;
         public string Libelle;
         public List<Produit> Produits = new List<Produit>();
+    }
+    class Panier
+    {
+        public List<Produit> Produits = new List<Produit>();
+        public List<decimal> BonsAchat = new List<decimal>();
     }
 
 }
