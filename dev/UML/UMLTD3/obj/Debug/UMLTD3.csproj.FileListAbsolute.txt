@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\UML\UMLTD3\bin\Debug\UMLTD3.exe.config
+D:\POE_CSHARP\dev\UML\UMLTD3\bin\Debug\UMLTD3.exe
+D:\POE_CSHARP\dev\UML\UMLTD3\bin\Debug\UMLTD3.pdb
+D:\POE_CSHARP\dev\UML\UMLTD3\obj\Debug\UMLTD3.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\UML\UMLTD3\obj\Debug\UMLTD3.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\UML\UMLTD3\obj\Debug\UMLTD3.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\UML\UMLTD3\obj\Debug\UMLTD3.exe
+D:\POE_CSHARP\dev\UML\UMLTD3\obj\Debug\UMLTD3.pdb
