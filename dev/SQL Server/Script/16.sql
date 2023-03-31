@@ -1,0 +1,42 @@
+USE [master]
+GO
+
+/****** Object:  Database [CAC40]    Script Date: 30/03/2023 14:05:46 ******/
+CREATE DATABASE [CAC40]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'CAC40', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\CAC40.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'CAC40_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\CAC40_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+GO
+
+USE CAC40
+
+USE [CAC40]
+GO
+
+/****** Object:  Table [dbo].[Cotation]    Script Date: 30/03/2023 14:08:04 ******/
+
+CREATE TABLE [dbo].[Cotation](
+	[ID] [uniqueidentifier] NOT NULL,
+	[Valeur] [money] NULL,
+ CONSTRAINT [PK_Cotation] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Cotation] ADD  CONSTRAINT [DF_Cotation_ID]  DEFAULT (newid()) FOR [ID]
+GO
+
+DECLARE @i int = 1
+WHILE(@i < 400000)
+BEGIN
+	INSERT INTO Cotation(Valeur) VALUES (15055)
+	WAITFOR DELAY '00:00:00.001'
+END
+
+select * from Cotation
+
+ALTER DATABASE [CAC40] SET RECOVERY SIMPLE
