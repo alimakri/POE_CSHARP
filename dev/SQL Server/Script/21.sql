@@ -1,5 +1,6 @@
--- Liste des produits vendus par les 3 meilleurs vendeurs
-drop table #t
+-- Liste des produits vendus par les 3 meilleurs vendeurs 3 ms
+set statistics time on 
+go
 select top 3
 	h.SalesPersonID vendeur
 into
@@ -27,4 +28,6 @@ where
 	)
 order by
 	produit
-	
+go
+set statistics time off
+

@@ -1,4 +1,4 @@
--- CTE Common table expression 16 ms
+-- CTE Common table expression 0 ms
 -- Liste des produits vendus par les 3 meilleurs vendeurs
 set statistics time on 
 go

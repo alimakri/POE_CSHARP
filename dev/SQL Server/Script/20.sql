@@ -1,4 +1,4 @@
--- Liste des produits vendus par les 3 meilleurs vendeurs
+-- Liste des produits vendus par les 3 meilleurs vendeurs 14 ms
 
 -- les 3 meilleurs vendeurs
 --select top 3
@@ -14,6 +14,8 @@
 --	total desc
 
 -- Liste des produits vendus avec vendeur (nom produit, id vendeur)
+set statistics time on 
+go
 select distinct
 	p.Name produit
 from 
@@ -37,4 +39,7 @@ where
 	)
 order by
 	produit
-	
+go
+set statistics time off
+go
+
