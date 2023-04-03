@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\CSharp\ExceptionDemo\bin\Debug\ExceptionDemo.exe.config
+D:\POE_CSHARP\dev\CSharp\ExceptionDemo\bin\Debug\ExceptionDemo.exe
+D:\POE_CSHARP\dev\CSharp\ExceptionDemo\bin\Debug\ExceptionDemo.pdb
+D:\POE_CSHARP\dev\CSharp\ExceptionDemo\obj\Debug\2_ExceptionDemo.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\ExceptionDemo\obj\Debug\2_ExceptionDemo.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\ExceptionDemo\obj\Debug\ExceptionDemo.exe
+D:\POE_CSHARP\dev\CSharp\ExceptionDemo\obj\Debug\ExceptionDemo.pdb

@@ -1,0 +1,11 @@
+D:\POE_CSHARP\dev\CSharp\ChargeurDeClasse\bin\Debug\ChargeurDeClasse.exe.config
+D:\POE_CSHARP\dev\CSharp\ChargeurDeClasse\bin\Debug\ChargeurDeClasse.exe
+D:\POE_CSHARP\dev\CSharp\ChargeurDeClasse\bin\Debug\ChargeurDeClasse.pdb
+D:\POE_CSHARP\dev\CSharp\ChargeurDeClasse\bin\Debug\ChargeurClasse2.exe
+D:\POE_CSHARP\dev\CSharp\ChargeurDeClasse\bin\Debug\ChargeurClasse2.pdb
+D:\POE_CSHARP\dev\CSharp\ChargeurDeClasse\bin\Debug\ChargeurClasse2.exe.config
+D:\POE_CSHARP\dev\CSharp\ChargeurDeClasse\obj\Debug\3_ChargeurDeClasse.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\ChargeurDeClasse\obj\Debug\3_ChargeurDeClasse.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\ChargeurDeClasse\obj\Debug\3_ChargeurDeClasse.csproj.CopyComplete
+D:\POE_CSHARP\dev\CSharp\ChargeurDeClasse\obj\Debug\ChargeurDeClasse.exe
+D:\POE_CSHARP\dev\CSharp\ChargeurDeClasse\obj\Debug\ChargeurDeClasse.pdb

@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\CSharp\ChargeurClasse2\bin\Debug\ChargeurClasse2.exe.config
+D:\POE_CSHARP\dev\CSharp\ChargeurClasse2\bin\Debug\ChargeurClasse2.exe
+D:\POE_CSHARP\dev\CSharp\ChargeurClasse2\bin\Debug\ChargeurClasse2.pdb
+D:\POE_CSHARP\dev\CSharp\ChargeurClasse2\obj\Debug\3_ChargeurDeClasse2.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\ChargeurClasse2\obj\Debug\3_ChargeurDeClasse2.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\ChargeurClasse2\obj\Debug\ChargeurClasse2.exe
+D:\POE_CSHARP\dev\CSharp\ChargeurClasse2\obj\Debug\ChargeurClasse2.pdb
