@@ -13,7 +13,7 @@ namespace _5_Jessy
             int i = 0;
             while(i < 1000000000)
             {
-                using (var g = new Gros())
+                using (var g = new GrosObjet())
                 {
                     // ----
                     //GC.Collect();
@@ -22,7 +22,7 @@ namespace _5_Jessy
 
         }
     }
-    class Gros : IDisposable
+    class GrosObjet : IDisposable
     {
         public void Dispose()
         {
