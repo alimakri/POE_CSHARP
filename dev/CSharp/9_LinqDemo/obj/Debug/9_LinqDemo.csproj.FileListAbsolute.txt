@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\CSharp\9_LinqDemo\bin\Debug\9_LinqDemo.exe.config
+D:\POE_CSHARP\dev\CSharp\9_LinqDemo\bin\Debug\9_LinqDemo.exe
+D:\POE_CSHARP\dev\CSharp\9_LinqDemo\bin\Debug\9_LinqDemo.pdb
+D:\POE_CSHARP\dev\CSharp\9_LinqDemo\obj\Debug\9_LinqDemo.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\9_LinqDemo\obj\Debug\9_LinqDemo.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\9_LinqDemo\obj\Debug\9_LinqDemo.exe
+D:\POE_CSHARP\dev\CSharp\9_LinqDemo\obj\Debug\9_LinqDemo.pdb

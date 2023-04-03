@@ -7,12 +7,15 @@ PHRASES CLES
 
 A RETENIR
 a. Une classe définit un constructeur par défaut sauf si un autre constructeur a été défini.
-
+b. Une interface ne peut pas être instanciée
 
 MOTS CLES POUR DEFINIR UNE CLASSE
 class
 enum
+struct
 interface
+delegate
+event
 
 
 THEMES DE LA POO
