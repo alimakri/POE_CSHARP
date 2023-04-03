@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace _7_Delegue
 {
-    //  Version 2
-    public delegate void RefroidirDelegue();
+    //  Version 3
+    public delegate void RefroidirDelegue(EventArgsCentrale args);
     class Program
     {
         static void Main(string[] args)
@@ -59,23 +59,29 @@ namespace _7_Delegue
             //    }
             //    else throw new Exception("Grave Erreur");
             //}
+            var args = new EventArgsCentrale { Temperature=3000, Pression=50 };
             foreach(var d in Delegues)
             {
-                d.Invoke();
+                d.Invoke(args);
             }
         }
     }
     class PompeHydraulique
     {
-        public void Refroidir() { Console.WriteLine("La pompe hydraulique est lancée !"); }
+        public void Refroidir(EventArgsCentrale args) { Console.WriteLine("La pompe hydraulique est lancée !"); }
         //public void Refroidir2(int t) { Console.WriteLine("La pompe hydraulique est lancée !"); }
     }
     class PompeElectrique
     {
-        public void Refroidir() { Console.WriteLine("La pompe electrique est lancée !"); }
+        public void Refroidir(EventArgsCentrale args) { Console.WriteLine("La pompe electrique est lancée !"); }
     }
     class PompeManuelle
     {
-        public void Refroidir() { Console.WriteLine("La pompe manuelle est lancée !"); }
+        public void Refroidir(EventArgsCentrale args) { Console.WriteLine("La pompe manuelle est lancée !"); }
+    }
+    class EventArgsCentrale : EventArgs
+    {
+        public int Temperature;
+        public int Pression;
     }
 }
