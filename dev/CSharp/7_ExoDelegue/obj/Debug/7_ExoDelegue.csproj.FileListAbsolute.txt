@@ -1,0 +1,6 @@
+D:\POE_CSHARP\dev\CSharp\7_ExoDelegue\bin\Debug\7_ExoDelegue.exe.config
+D:\POE_CSHARP\dev\CSharp\7_ExoDelegue\bin\Debug\7_ExoDelegue.exe
+D:\POE_CSHARP\dev\CSharp\7_ExoDelegue\bin\Debug\7_ExoDelegue.pdb
+D:\POE_CSHARP\dev\CSharp\7_ExoDelegue\obj\Debug\7_ExoDelegue.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\7_ExoDelegue\obj\Debug\7_ExoDelegue.exe
+D:\POE_CSHARP\dev\CSharp\7_ExoDelegue\obj\Debug\7_ExoDelegue.pdb
