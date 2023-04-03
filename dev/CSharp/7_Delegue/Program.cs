@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace _7_Delegue
 {
-    //  Version 3
+    //  Version 4
     public delegate void RefroidirDelegue(EventArgsCentrale args);
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -18,10 +18,13 @@ namespace _7_Delegue
             Console.ReadLine();
         }
     }
-    class Centrale
+    public class Centrale
     {
+
         //public ArrayList Pompes;
-        public List<RefroidirDelegue> Delegues = new List<RefroidirDelegue>();
+        //public List<RefroidirDelegue> Delegues = new List<RefroidirDelegue>();
+        public event RefroidirDelegue FaitChaud;
+
         public Centrale()
         {
             //Pompes = new ArrayList();
@@ -38,12 +41,23 @@ namespace _7_Delegue
             var p2 = new PompeHydraulique();
             var p3 = new PompeElectrique();
             var p4 = new PompeManuelle();
-            Delegues.Add(p1.Refroidir);
-            Delegues.Add(p2.Refroidir);
-            Delegues.Add(p3.Refroidir);
-            Delegues.Add(p4.Refroidir);
+
+            //var d1 = new RefroidirDelegue(p1.Refroidir);
+            //var d2 = new RefroidirDelegue(p2.Refroidir);
+            //var d3 = new RefroidirDelegue(p3.Refroidir);
+            //var d4 = new RefroidirDelegue(p4.Refroidir);
+
+            //Delegues.Add(d1);
+            //Delegues.Add(d2);
+            //Delegues.Add(d3);
+            //Delegues.Add(d4);
+
             //Delegues.Add(p1.Refroidir2);
 
+            FaitChaud += p1.Refroidir;
+            FaitChaud += p2.Refroidir;
+            FaitChaud += p3.Refroidir;
+            FaitChaud += p4.Refroidir;
         }
         public void RefroidirTout()
         {
@@ -60,10 +74,11 @@ namespace _7_Delegue
             //    else throw new Exception("Grave Erreur");
             //}
             var args = new EventArgsCentrale { Temperature=3000, Pression=50 };
-            foreach(var d in Delegues)
-            {
-                d.Invoke(args);
-            }
+            //foreach (var d in Delegues)
+            //{
+            //    d.Invoke(args);
+            //}
+            FaitChaud(args);
         }
     }
     class PompeHydraulique
@@ -79,7 +94,7 @@ namespace _7_Delegue
     {
         public void Refroidir(EventArgsCentrale args) { Console.WriteLine("La pompe manuelle est lancée !"); }
     }
-    class EventArgsCentrale : EventArgs
+    public class EventArgsCentrale : EventArgs
     {
         public int Temperature;
         public int Pression;
