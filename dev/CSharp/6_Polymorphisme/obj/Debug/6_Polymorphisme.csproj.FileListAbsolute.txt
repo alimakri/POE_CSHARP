@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\CSharp\6_Polymorphisme\bin\Debug\6_Polymorphisme.exe.config
+D:\POE_CSHARP\dev\CSharp\6_Polymorphisme\bin\Debug\6_Polymorphisme.exe
+D:\POE_CSHARP\dev\CSharp\6_Polymorphisme\bin\Debug\6_Polymorphisme.pdb
+D:\POE_CSHARP\dev\CSharp\6_Polymorphisme\obj\Debug\6_Polymorphisme.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\6_Polymorphisme\obj\Debug\6_Polymorphisme.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\6_Polymorphisme\obj\Debug\6_Polymorphisme.exe
+D:\POE_CSHARP\dev\CSharp\6_Polymorphisme\obj\Debug\6_Polymorphisme.pdb
