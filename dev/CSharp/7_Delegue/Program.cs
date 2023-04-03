@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace _7_Delegue
 {
-    //  Version 1
+    //  Version 2
+    public delegate void RefroidirDelegue();
     class Program
     {
         static void Main(string[] args)
@@ -19,38 +20,55 @@ namespace _7_Delegue
     }
     class Centrale
     {
-        public ArrayList Pompes;
+        //public ArrayList Pompes;
+        public List<RefroidirDelegue> Delegues = new List<RefroidirDelegue>();
         public Centrale()
         {
-            Pompes = new ArrayList();
+            //Pompes = new ArrayList();
+            //var p1 = new PompeHydraulique();
+            //var p2 = new PompeHydraulique();
+            //var p3 = new PompeElectrique();
+            //var p4 = new PompeManuelle();
+            //Pompes.Add(p1);
+            //Pompes.Add(p2);
+            //Pompes.Add(p3);
+            //Pompes.Add(p4);
+
             var p1 = new PompeHydraulique();
             var p2 = new PompeHydraulique();
             var p3 = new PompeElectrique();
             var p4 = new PompeManuelle();
-            Pompes.Add(p1);
-            Pompes.Add(p2);
-            Pompes.Add(p3);
-            Pompes.Add(p4);
+            Delegues.Add(p1.Refroidir);
+            Delegues.Add(p2.Refroidir);
+            Delegues.Add(p3.Refroidir);
+            Delegues.Add(p4.Refroidir);
+            //Delegues.Add(p1.Refroidir2);
+
         }
         public void RefroidirTout()
         {
-            foreach (object p in Pompes)
+            //foreach (object p in Pompes)
+            //{
+            //    if (p is PompeHydraulique)
+            //    {
+            //        ((PompeHydraulique)p).Refroidir();
+            //    }
+            //    else if (p is PompeElectrique)
+            //    {
+            //        ((PompeElectrique)p).Refroidir();
+            //    }
+            //    else throw new Exception("Grave Erreur");
+            //}
+            foreach(var d in Delegues)
             {
-                if (p is PompeHydraulique)
-                {
-                    ((PompeHydraulique)p).Refroidir();
-                }
-                else if (p is PompeElectrique)
-                {
-                    ((PompeElectrique)p).Refroidir();
-                }
-                else throw new Exception("Grave Erreur");
+                d.Invoke();
             }
         }
     }
     class PompeHydraulique
     {
         public void Refroidir() { Console.WriteLine("La pompe hydraulique est lancée !"); }
+        //public void Refroidir2(int t) { Console.WriteLine("La pompe hydraulique est lancée !"); }
     }
     class PompeElectrique
     {
