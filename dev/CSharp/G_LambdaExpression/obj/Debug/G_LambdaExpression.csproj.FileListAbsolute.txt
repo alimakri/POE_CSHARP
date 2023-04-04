@@ -4,3 +4,4 @@ D:\POE_CSHARP\dev\CSharp\G_LambdaExpression\bin\Debug\G_LambdaExpression.pdb
 D:\POE_CSHARP\dev\CSharp\G_LambdaExpression\obj\Debug\G_LambdaExpression.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\CSharp\G_LambdaExpression\obj\Debug\G_LambdaExpression.exe
 D:\POE_CSHARP\dev\CSharp\G_LambdaExpression\obj\Debug\G_LambdaExpression.pdb
+D:\POE_CSHARP\dev\CSharp\G_LambdaExpression\obj\Debug\G_LambdaExpression.csproj.AssemblyReference.cache
