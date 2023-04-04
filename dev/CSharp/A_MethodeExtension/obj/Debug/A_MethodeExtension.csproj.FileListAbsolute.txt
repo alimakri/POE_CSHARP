@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\CSharp\A_MethodeExtension\bin\Debug\A_MethodeExtension.exe.config
+D:\POE_CSHARP\dev\CSharp\A_MethodeExtension\bin\Debug\A_MethodeExtension.exe
+D:\POE_CSHARP\dev\CSharp\A_MethodeExtension\bin\Debug\A_MethodeExtension.pdb
+D:\POE_CSHARP\dev\CSharp\A_MethodeExtension\obj\Debug\A_MethodeExtension.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\A_MethodeExtension\obj\Debug\A_MethodeExtension.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\A_MethodeExtension\obj\Debug\A_MethodeExtension.exe
+D:\POE_CSHARP\dev\CSharp\A_MethodeExtension\obj\Debug\A_MethodeExtension.pdb

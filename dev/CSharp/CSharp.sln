@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9_LinqDemo", "9_LinqDemo\9_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9_1_Linq_Exo", "9_Linq_Exo\9_1_Linq_Exo.csproj", "{78EAC1EA-C73A-4B52-A52B-748B31251F5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_MethodeExtension", "A_MethodeExtension\A_MethodeExtension.csproj", "{D5AF1C42-6EAB-4715-8EED-40222ED76960}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{78EAC1EA-C73A-4B52-A52B-748B31251F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78EAC1EA-C73A-4B52-A52B-748B31251F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78EAC1EA-C73A-4B52-A52B-748B31251F5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5AF1C42-6EAB-4715-8EED-40222ED76960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5AF1C42-6EAB-4715-8EED-40222ED76960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5AF1C42-6EAB-4715-8EED-40222ED76960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5AF1C42-6EAB-4715-8EED-40222ED76960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
