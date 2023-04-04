@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_Serialisation", "C_Serial
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_Indexeur", "D_Indexeur\D_Indexeur.csproj", "{FCB5ECA6-A129-498D-9264-3E544C83199F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_ClasseGenerique", "E_ClasseGenerique\E_ClasseGenerique.csproj", "{BE34557F-3E6C-44AA-8762-AACC568D23AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{FCB5ECA6-A129-498D-9264-3E544C83199F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCB5ECA6-A129-498D-9264-3E544C83199F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCB5ECA6-A129-498D-9264-3E544C83199F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE34557F-3E6C-44AA-8762-AACC568D23AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE34557F-3E6C-44AA-8762-AACC568D23AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE34557F-3E6C-44AA-8762-AACC568D23AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE34557F-3E6C-44AA-8762-AACC568D23AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
