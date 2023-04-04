@@ -29,6 +29,7 @@ namespace F_Exos
                                     .Select(animal => new Espece { Nom = animal.Espece, EsperanceDeVie = animal.EsperanceDeVie })
                                     .Distinct(new EspeceComparer())
                                     .ToList();
+            // Classe anonyme
             // Liste d'objets avec les propriétés Nom et age.
             var liste2 = liste
                 .Select(x => new { Nom = x.Nom, Age = Math.Round((DateTime.Now - x.DateNaissance).TotalDays / 365) });

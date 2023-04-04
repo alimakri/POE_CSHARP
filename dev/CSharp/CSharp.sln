@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_ClasseGenerique", "E_Clas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F_Exos", "F_Exos\F_Exos.csproj", "{45092B2D-8050-479E-A59B-47D48A97C6DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G_LambdaExpression", "G_LambdaExpression\G_LambdaExpression.csproj", "{FBE576EF-56DB-434C-8A7B-B8CB13CA0A50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{45092B2D-8050-479E-A59B-47D48A97C6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45092B2D-8050-479E-A59B-47D48A97C6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45092B2D-8050-479E-A59B-47D48A97C6DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE576EF-56DB-434C-8A7B-B8CB13CA0A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE576EF-56DB-434C-8A7B-B8CB13CA0A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE576EF-56DB-434C-8A7B-B8CB13CA0A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE576EF-56DB-434C-8A7B-B8CB13CA0A50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
