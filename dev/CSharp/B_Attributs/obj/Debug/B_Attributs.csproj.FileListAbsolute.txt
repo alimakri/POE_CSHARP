@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\CSharp\B_Attributs\bin\Debug\B_Attributs.exe.config
+D:\POE_CSHARP\dev\CSharp\B_Attributs\bin\Debug\B_Attributs.exe
+D:\POE_CSHARP\dev\CSharp\B_Attributs\bin\Debug\B_Attributs.pdb
+D:\POE_CSHARP\dev\CSharp\B_Attributs\obj\Debug\B_Attributs.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\B_Attributs\obj\Debug\B_Attributs.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\B_Attributs\obj\Debug\B_Attributs.exe
+D:\POE_CSHARP\dev\CSharp\B_Attributs\obj\Debug\B_Attributs.pdb

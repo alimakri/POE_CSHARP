@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\CSharp\C_Serialisation\bin\Debug\C_Serialisation.exe.config
+D:\POE_CSHARP\dev\CSharp\C_Serialisation\bin\Debug\C_Serialisation.exe
+D:\POE_CSHARP\dev\CSharp\C_Serialisation\bin\Debug\C_Serialisation.pdb
+D:\POE_CSHARP\dev\CSharp\C_Serialisation\obj\Debug\C_Serialisation.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\C_Serialisation\obj\Debug\C_Serialisation.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\C_Serialisation\obj\Debug\C_Serialisation.exe
+D:\POE_CSHARP\dev\CSharp\C_Serialisation\obj\Debug\C_Serialisation.pdb
