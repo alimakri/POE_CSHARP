@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\CSharp\F_Exos\bin\Debug\F_Exos.exe.config
+D:\POE_CSHARP\dev\CSharp\F_Exos\bin\Debug\F_Exos.exe
+D:\POE_CSHARP\dev\CSharp\F_Exos\bin\Debug\F_Exos.pdb
+D:\POE_CSHARP\dev\CSharp\F_Exos\obj\Debug\F_Exos.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\F_Exos\obj\Debug\F_Exos.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\F_Exos\obj\Debug\F_Exos.exe
+D:\POE_CSHARP\dev\CSharp\F_Exos\obj\Debug\F_Exos.pdb
