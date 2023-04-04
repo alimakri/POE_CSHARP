@@ -12,6 +12,19 @@ namespace C_Serialisation
     {
         static void Main(string[] args)
         {
+            //SerialisationXML();
+            var liste = DeserialisationXML();
+        }
+
+        private static List<Animal> DeserialisationXML()
+        {
+            var serialiser = new XmlSerializer(typeof(List<Animal>));
+            var crayon = new StreamReader(@"d:\mesAnimaux.txt");
+            return (List<Animal>) serialiser.Deserialize(crayon);
+        }
+
+        private static void SerialisationXML()
+        {
             var liste = new List<Animal>
             {
                 new Animal{Nom="Chien", Espece="Canidé", EsperanceDeVie=15, DateNaissance=new DateTime(2023, 1,25) },
