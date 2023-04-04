@@ -1,0 +1,6 @@
+D:\POE_CSHARP\dev\CSharp\D_Indexeur\bin\Debug\D_Indexeur.exe.config
+D:\POE_CSHARP\dev\CSharp\D_Indexeur\bin\Debug\D_Indexeur.exe
+D:\POE_CSHARP\dev\CSharp\D_Indexeur\bin\Debug\D_Indexeur.pdb
+D:\POE_CSHARP\dev\CSharp\D_Indexeur\obj\Debug\D_Indexeur.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\D_Indexeur\obj\Debug\D_Indexeur.exe
+D:\POE_CSHARP\dev\CSharp\D_Indexeur\obj\Debug\D_Indexeur.pdb

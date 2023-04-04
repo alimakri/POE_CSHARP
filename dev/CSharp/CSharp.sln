@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_Nullable", "B_Nullable\B_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_Serialisation", "C_Serialisation\C_Serialisation.csproj", "{8EB54530-77E6-4983-9CF2-8680076F3206}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_Indexeur", "D_Indexeur\D_Indexeur.csproj", "{FCB5ECA6-A129-498D-9264-3E544C83199F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{8EB54530-77E6-4983-9CF2-8680076F3206}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EB54530-77E6-4983-9CF2-8680076F3206}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EB54530-77E6-4983-9CF2-8680076F3206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB5ECA6-A129-498D-9264-3E544C83199F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB5ECA6-A129-498D-9264-3E544C83199F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB5ECA6-A129-498D-9264-3E544C83199F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB5ECA6-A129-498D-9264-3E544C83199F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

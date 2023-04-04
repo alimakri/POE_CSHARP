@@ -20,7 +20,9 @@ namespace C_Serialisation
         {
             var serialiser = new XmlSerializer(typeof(List<Animal>));
             var crayon = new StreamReader(@"d:\mesAnimaux.txt");
-            return (List<Animal>) serialiser.Deserialize(crayon);
+            var liste = (List<Animal>)serialiser.Deserialize(crayon);
+            crayon.Close();
+            return liste;
         }
 
         private static void SerialisationXML()
