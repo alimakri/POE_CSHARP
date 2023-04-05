@@ -5,3 +5,4 @@ D:\POE_CSHARP\dev\CSharp\H_DevinerVersionClasse\obj\Debug\H_DevinerVersionClasse
 D:\POE_CSHARP\dev\CSharp\H_DevinerVersionClasse\obj\Debug\H_DevinerVersionClasse.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\CSharp\H_DevinerVersionClasse\obj\Debug\H_DevinerVersionClasse.exe
 D:\POE_CSHARP\dev\CSharp\H_DevinerVersionClasse\obj\Debug\H_DevinerVersionClasse.pdb
+D:\POE_CSHARP\dev\CSharp\H_DevinerVersionClasse\obj\Debug\H_DevinerVersionClasse.csproj.SuggestedBindingRedirects.cache
