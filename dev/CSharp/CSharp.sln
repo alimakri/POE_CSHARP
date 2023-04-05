@@ -47,6 +47,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H_DevinerVersionClasse", "H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I_RevisionDelegue", "I_RevisionDelegue\I_RevisionDelegue.csproj", "{B253CC72-3D74-4E44-B09E-61802E653C28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J_RevisionDelegue", "J_RevisionDelegue\J_RevisionDelegue.csproj", "{9315FE6C-04E9-4C3D-94B0-ACCE247C9139}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J_RevisionDelegueV2", "J_RevisionDelegueV2\J_RevisionDelegueV2.csproj", "{919BA660-A587-42C1-900B-791FD93AFB9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +145,14 @@ Global
 		{B253CC72-3D74-4E44-B09E-61802E653C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B253CC72-3D74-4E44-B09E-61802E653C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B253CC72-3D74-4E44-B09E-61802E653C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9315FE6C-04E9-4C3D-94B0-ACCE247C9139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9315FE6C-04E9-4C3D-94B0-ACCE247C9139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9315FE6C-04E9-4C3D-94B0-ACCE247C9139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9315FE6C-04E9-4C3D-94B0-ACCE247C9139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{919BA660-A587-42C1-900B-791FD93AFB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919BA660-A587-42C1-900B-791FD93AFB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{919BA660-A587-42C1-900B-791FD93AFB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{919BA660-A587-42C1-900B-791FD93AFB9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

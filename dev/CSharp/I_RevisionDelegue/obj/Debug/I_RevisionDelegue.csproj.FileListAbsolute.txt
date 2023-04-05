@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\CSharp\I_RevisionDelegue\bin\Debug\I_RevisionDelegue.exe.config
+D:\POE_CSHARP\dev\CSharp\I_RevisionDelegue\bin\Debug\I_RevisionDelegue.exe
+D:\POE_CSHARP\dev\CSharp\I_RevisionDelegue\bin\Debug\I_RevisionDelegue.pdb
+D:\POE_CSHARP\dev\CSharp\I_RevisionDelegue\obj\Debug\I_RevisionDelegue.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\I_RevisionDelegue\obj\Debug\I_RevisionDelegue.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\I_RevisionDelegue\obj\Debug\I_RevisionDelegue.exe
+D:\POE_CSHARP\dev\CSharp\I_RevisionDelegue\obj\Debug\I_RevisionDelegue.pdb
