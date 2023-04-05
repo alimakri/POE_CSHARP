@@ -13,11 +13,12 @@ namespace H_DevinerVersionClasse
             int menu = 0;
             while (menu != 3)
             {
-                var partie = new Partie();
+                Partie partie = null;
                 switch (menu)
                 {
                     case 0:
                     case 1:
+                        partie = new Partie(true);
                         while (partie.PasFinie)
                         {
                             partie.LeJoueur.GetProposition();
@@ -25,13 +26,12 @@ namespace H_DevinerVersionClasse
                             partie.AfficherEtat();
                         }
                         break;
-                    case 2: 
+                    case 2:
                         partie.AfficherMeilleursScores();
-                        menu = 0;
                         break;
                 }
 
-                if (menu != 3) menu = partie.LeJoueur.Rejouer();
+                if (menu != 3 && menu != 2) menu = partie.LeJoueur.Rejouer();
             }
             Console.WriteLine("A bientôt !");
             Console.ReadLine();
@@ -82,18 +82,26 @@ namespace H_DevinerVersionClasse
     }
     class NombreADeviner
     {
+        public bool Triche = false;
         public int Valeur = -1;
         public int Min = -1;
         public int Max = -1;
         public Random Alea = new Random();
-        public NombreADeviner(int min, int max)
+        public NombreADeviner(int min, int max, bool triche = false)
         {
             Min = min;
             Max = max;
+            Triche = triche;
         }
         public void Generer()
         {
             Valeur = Alea.Next(Min, Max + 1);
+            if (Triche)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(Valeur);
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
         }
     }
     enum EtatPartie { None, Gagne, Perdu, TropPetit, TropGrand }
@@ -101,11 +109,12 @@ namespace H_DevinerVersionClasse
     {
         public EtatPartie Etat = EtatPartie.None;
         public Joueur LeJoueur = new Joueur();
-        public NombreADeviner LeNombre = new NombreADeviner(1, 99);
+        public NombreADeviner LeNombre;
         public int NCoupMax = 7;
         public List<Joueur> LesJoueurs = new List<Joueur>();
-        public Partie()
+        public Partie(bool triche)
         {
+            LeNombre = new NombreADeviner(1, 99, triche);
             Console.Clear();
             Console.WriteLine("Devinez un nombre compris entre 1 et 99");
             LeNombre.Generer();
@@ -125,6 +134,7 @@ namespace H_DevinerVersionClasse
         }
         public void AfficherMeilleursScores()
         {
+            Console.WriteLine("Affichage des scores");
             var tousLesScores = LesJoueurs
                                     .SelectMany(j => j.Scores.Select(s => new { Joueur = j.Nom, Score = s }))
                                     .OrderBy(x => x.Score)
