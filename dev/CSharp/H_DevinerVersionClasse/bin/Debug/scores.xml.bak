@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfJoueur xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Joueur>
+    <Nom>Ali</Nom>
+    <Scores>
+      <int>1</int>
+      <int>1</int>
+    </Scores>
+    <Proposition>0</Proposition>
+    <NCoup>0</NCoup>
+  </Joueur>
+  <Joueur>
+    <Nom>Brigitte</Nom>
+    <Scores>
+      <int>1</int>
+    </Scores>
+    <Proposition>0</Proposition>
+    <NCoup>0</NCoup>
+  </Joueur>
+  <Joueur>
+    <Nom>Alain</Nom>
+    <Scores>
+      <int>1</int>
+    </Scores>
+    <Proposition>0</Proposition>
+    <NCoup>0</NCoup>
+  </Joueur>
+</ArrayOfJoueur>

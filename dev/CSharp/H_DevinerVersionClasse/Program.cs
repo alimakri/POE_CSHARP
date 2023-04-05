@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace H_DevinerVersionClasse
 {
@@ -10,10 +10,10 @@ namespace H_DevinerVersionClasse
     {
         static void Main(string[] args)
         {
-            int menu = 0;
+            int menu = 0; Partie partie = null;
             while (menu != 3)
             {
-                Partie partie = new Partie(true, menu);
+                if (menu != 2) partie = new Partie(true, menu);
                 switch (menu)
                 {
                     case 0:
@@ -37,7 +37,7 @@ namespace H_DevinerVersionClasse
             Console.ReadLine();
         }
     }
-    class Joueur
+    public class Joueur
     {
         public string Nom = null;
         public List<int> Scores = new List<int>();
@@ -114,19 +114,19 @@ namespace H_DevinerVersionClasse
         public List<Joueur> LesJoueurs = new List<Joueur>();
         public Partie(bool triche, int menu)
         {
-            if (triche)
-            {
-                var j1 = new Joueur { Nom = "Alain" };
-                j1.Scores.Add(8);
-                j1.Scores.Add(7);
-                j1.Scores.Add(8);
-                var j2 = new Joueur { Nom = "Brigitte" };
-                j2.Scores.Add(5);
-                j2.Scores.Add(8);
-                LesJoueurs.Add(j1);
-                LesJoueurs.Add(j2);
-            }
-
+            //if (triche)
+            //{
+            //    var j1 = new Joueur { Nom = "Alain" };
+            //    j1.Scores.Add(8);
+            //    j1.Scores.Add(7);
+            //    j1.Scores.Add(8);
+            //    var j2 = new Joueur { Nom = "Brigitte" };
+            //    j2.Scores.Add(5);
+            //    j2.Scores.Add(8);
+            //    LesJoueurs.Add(j1);
+            //    LesJoueurs.Add(j2);
+            //}
+            if (File.Exists("scores.xml")) LesJoueurs = LireDansFichier("scores.xml");
             LeNombre = new NombreADeviner(1, 99, triche);
             Console.Clear();
             Console.WriteLine("Devinez un nombre compris entre 1 et 99");
@@ -134,6 +134,8 @@ namespace H_DevinerVersionClasse
             if (menu != 2) LeJoueur.GetNom();
             LeJoueur.NCoup = 0;
         }
+
+
         public void AfficherEtat()
         {
             switch (Etat)
@@ -169,17 +171,34 @@ namespace H_DevinerVersionClasse
 
         public void Enregistrer()
         {
-            var j = LesJoueurs.FirstOrDefault(x=>x.Nom == LeJoueur.Nom);
+            var j = LesJoueurs.FirstOrDefault(x => x.Nom == LeJoueur.Nom);
             if (j == null)
             {
                 j = new Joueur { Nom = LeJoueur.Nom };
-                j.Scores.Add(j.NCoup);
+                j.Scores.Add(LeJoueur.NCoup);
                 LesJoueurs.Add(j);
             }
             else
             {
-                j.Scores.Add(j.NCoup);
+                j.Scores.Add(LeJoueur.NCoup);
             }
+            EnregistrerDansFichier("scores.xml");
+        }
+
+        private void EnregistrerDansFichier(string fichier)
+        {
+            var serialiser = new XmlSerializer(typeof(List<Joueur>));
+            var stream = new StreamWriter(fichier);
+            serialiser.Serialize(stream, LesJoueurs);
+            stream.Close();
+        }
+        private List<Joueur> LireDansFichier(string fichier)
+        {
+            var serialiser = new XmlSerializer(typeof(List<Joueur>));
+            var stream = new StreamReader(fichier);
+            var liste = (List<Joueur>)serialiser.Deserialize(stream);
+            stream.Close();
+            return liste;
         }
 
         public bool PasFinie
