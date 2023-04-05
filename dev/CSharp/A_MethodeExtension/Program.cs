@@ -21,7 +21,7 @@ namespace A_MethodeExtension
     }
     public static class OutilsString
     {
-        public static int NombreDeMots(this StringBuilder s)
+        public static int NombreDeMots(this StringBuilder s )
         {
             return s.ToString().NombreDeMots();
         }

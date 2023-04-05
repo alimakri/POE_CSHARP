@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G_LambdaExpression", "G_Lam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H_DevinerVersionClasse", "H_DevinerVersionClasse\H_DevinerVersionClasse.csproj", "{59E4C31D-A017-4063-8093-0FEF0A4B06EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I_RevisionDelegue", "I_RevisionDelegue\I_RevisionDelegue.csproj", "{B253CC72-3D74-4E44-B09E-61802E653C28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{59E4C31D-A017-4063-8093-0FEF0A4B06EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59E4C31D-A017-4063-8093-0FEF0A4B06EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59E4C31D-A017-4063-8093-0FEF0A4B06EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B253CC72-3D74-4E44-B09E-61802E653C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B253CC72-3D74-4E44-B09E-61802E653C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B253CC72-3D74-4E44-B09E-61802E653C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B253CC72-3D74-4E44-B09E-61802E653C28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
