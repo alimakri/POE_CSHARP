@@ -10,17 +10,28 @@ namespace H_DevinerVersionClasse
     {
         static void Main(string[] args)
         {
-            bool jouer = true;
-            while(jouer)
+            int menu = 0;
+            while (menu != 3)
             {
                 var partie = new Partie();
-                while (partie.PasFinie)
+                switch (menu)
                 {
-                    partie.LeJoueur.GetProposition();
-                    partie.Comparer();
-                    partie.AfficherEtat();
+                    case 0:
+                    case 1:
+                        while (partie.PasFinie)
+                        {
+                            partie.LeJoueur.GetProposition();
+                            partie.Comparer();
+                            partie.AfficherEtat();
+                        }
+                        break;
+                    case 2: 
+                        partie.AfficherMeilleursScores();
+                        menu = 0;
+                        break;
                 }
-                jouer = partie.LeJoueur.Rejouer();
+
+                if (menu != 3) menu = partie.LeJoueur.Rejouer();
             }
             Console.WriteLine("A bientôt !");
             Console.ReadLine();
@@ -53,16 +64,20 @@ namespace H_DevinerVersionClasse
             NCoup++;
         }
 
-        public bool Rejouer()
+        public int Rejouer()
         {
-            string s;
+            string s; int i = 0;
             do
             {
-                Console.Write("Une autre partie ? (O/N) ");
-                s = Console.ReadLine().ToUpper();
+                Console.WriteLine("1. Rejouer ");
+                Console.WriteLine("2. Affichage des scores et rejouer");
+                Console.WriteLine("3. Quitter ");
+                s = Console.ReadLine();
+                int.TryParse(s, out i);
+                if (i < 1 || i > 3) i = 0;
             }
-            while (s.Substring(0,1) != "O" && s.Substring(0,1) != "N");
-            return s.Substring(0, 1) == "O";
+            while (i == 0);
+            return i;
         }
     }
     class NombreADeviner
