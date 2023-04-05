@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\CSharp\K_ADONET\bin\Debug\K_ADONET.exe.config
+D:\POE_CSHARP\dev\CSharp\K_ADONET\bin\Debug\K_ADONET.exe
+D:\POE_CSHARP\dev\CSharp\K_ADONET\bin\Debug\K_ADONET.pdb
+D:\POE_CSHARP\dev\CSharp\K_ADONET\obj\Debug\K_ADONET.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\K_ADONET\obj\Debug\K_ADONET.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\K_ADONET\obj\Debug\K_ADONET.exe
+D:\POE_CSHARP\dev\CSharp\K_ADONET\obj\Debug\K_ADONET.pdb

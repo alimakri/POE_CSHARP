@@ -33,4 +33,13 @@
     <Proposition>0</Proposition>
     <NCoup>0</NCoup>
   </Joueur>
+  <Joueur>
+    <Nom>Ali</Nom>
+    <Scores>
+      <int>1</int>
+      <int>6</int>
+    </Scores>
+    <Proposition>0</Proposition>
+    <NCoup>0</NCoup>
+  </Joueur>
 </ArrayOfJoueur>

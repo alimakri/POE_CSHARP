@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_Portee", "Portee\1_Portee.csproj", "{79DC4B3E-8B46-4D48-91E0-C9AF576343E8}"
 EndProject
@@ -50,6 +50,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J_RevisionDelegue", "J_RevisionDelegue\J_RevisionDelegue.csproj", "{9315FE6C-04E9-4C3D-94B0-ACCE247C9139}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J_RevisionDelegueV2", "J_RevisionDelegueV2\J_RevisionDelegueV2.csproj", "{919BA660-A587-42C1-900B-791FD93AFB9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K_ADONET", "K_ADONET\K_ADONET.csproj", "{54F2951C-0FF4-4105-B9C2-DCE3A336F356}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{919BA660-A587-42C1-900B-791FD93AFB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{919BA660-A587-42C1-900B-791FD93AFB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{919BA660-A587-42C1-900B-791FD93AFB9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F2951C-0FF4-4105-B9C2-DCE3A336F356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F2951C-0FF4-4105-B9C2-DCE3A336F356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F2951C-0FF4-4105-B9C2-DCE3A336F356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F2951C-0FF4-4105-B9C2-DCE3A336F356}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

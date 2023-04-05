@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
@@ -10,10 +11,11 @@ namespace H_DevinerVersionClasse
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), Properties.Settings.Default.Couleur);
             int menu = 0; Partie partie = null;
             while (menu != 3)
             {
-                if (menu != 2) partie = new Partie(true, menu);
+                if (menu != 2) partie = new Partie(menu);
                 switch (menu)
                 {
                     case 0:
@@ -82,25 +84,23 @@ namespace H_DevinerVersionClasse
     }
     class NombreADeviner
     {
-        public bool Triche = false;
         public int Valeur = -1;
         public int Min = -1;
         public int Max = -1;
         public Random Alea = new Random();
-        public NombreADeviner(int min, int max, bool triche = false)
+        public NombreADeviner(int min, int max)
         {
             Min = min;
             Max = max;
-            Triche = triche;
         }
         public void Generer()
         {
             Valeur = Alea.Next(Min, Max + 1);
-            if (Triche)
+            if (Properties.Settings.Default.Triche)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(Valeur);
-                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), Properties.Settings.Default.Couleur);
             }
         }
     }
@@ -110,26 +110,14 @@ namespace H_DevinerVersionClasse
         public EtatPartie Etat = EtatPartie.None;
         public Joueur LeJoueur = new Joueur();
         public NombreADeviner LeNombre;
-        public int NCoupMax = 7;
+        public int NCoupMax = Properties.Settings.Default.NCoupMax;
         public List<Joueur> LesJoueurs = new List<Joueur>();
-        public Partie(bool triche, int menu)
+        public Partie(int menu)
         {
-            //if (triche)
-            //{
-            //    var j1 = new Joueur { Nom = "Alain" };
-            //    j1.Scores.Add(8);
-            //    j1.Scores.Add(7);
-            //    j1.Scores.Add(8);
-            //    var j2 = new Joueur { Nom = "Brigitte" };
-            //    j2.Scores.Add(5);
-            //    j2.Scores.Add(8);
-            //    LesJoueurs.Add(j1);
-            //    LesJoueurs.Add(j2);
-            //}
             if (File.Exists("scores.xml")) LesJoueurs = LireDansFichier("scores.xml");
-            LeNombre = new NombreADeviner(1, 99, triche);
+            LeNombre = new NombreADeviner(Properties.Settings.Default.Min, Properties.Settings.Default.Max);
             Console.Clear();
-            Console.WriteLine("Devinez un nombre compris entre 1 et 99");
+            Console.WriteLine($"Devinez un nombre compris entre {Properties.Settings.Default.Min} et {Properties.Settings.Default.Max}");
             LeNombre.Generer();
             if (menu != 2) LeJoueur.GetNom();
             LeJoueur.NCoup = 0;
@@ -159,7 +147,7 @@ namespace H_DevinerVersionClasse
             {
                 Console.WriteLine("{0} \t {1}", score.Joueur, score.Score);
             }
-            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), Properties.Settings.Default.Couleur);
         }
         public void Comparer()
         {
