@@ -10,7 +10,20 @@ namespace H_DevinerVersionClasse
     {
         static void Main(string[] args)
         {
-            var partie = new Partie();
+            bool jouer = true;
+            while(jouer)
+            {
+                var partie = new Partie();
+                while (partie.PasFinie)
+                {
+                    partie.LeJoueur.GetProposition();
+                    partie.Comparer();
+                    partie.AfficherEtat();
+                }
+                jouer = partie.LeJoueur.Rejouer();
+            }
+            Console.WriteLine("A bientôt !");
+            Console.ReadLine();
         }
     }
     class Joueur
@@ -23,7 +36,7 @@ namespace H_DevinerVersionClasse
         {
             do
             {
-                Console.Write("Veuillez taper votre nom :");
+                Console.Write("Veuillez taper votre nom : ");
                 Nom = Console.ReadLine();
             }
             while (string.IsNullOrEmpty(Nom));
@@ -33,10 +46,23 @@ namespace H_DevinerVersionClasse
             string s;
             do
             {
-                Console.Write("Votre proposition :");
+                Console.Write("Votre proposition : ");
                 s = Console.ReadLine();
             }
             while (!int.TryParse(s, out Proposition));
+            NCoup++;
+        }
+
+        public bool Rejouer()
+        {
+            string s;
+            do
+            {
+                Console.Write("Une autre partie ? (O/N) ");
+                s = Console.ReadLine().ToUpper();
+            }
+            while (s.Substring(0,1) != "O" && s.Substring(0,1) != "N");
+            return s.Substring(0, 1) == "O";
         }
     }
     class NombreADeviner
@@ -63,7 +89,14 @@ namespace H_DevinerVersionClasse
         public NombreADeviner LeNombre = new NombreADeviner(1, 99);
         public int NCoupMax = 7;
         public List<Joueur> LesJoueurs = new List<Joueur>();
-
+        public Partie()
+        {
+            Console.Clear();
+            Console.WriteLine("Devinez un nombre compris entre 1 et 99");
+            LeNombre.Generer();
+            LeJoueur.GetNom();
+            LeJoueur.NCoup = 0;
+        }
         public void AfficherEtat()
         {
             switch (Etat)
@@ -88,16 +121,17 @@ namespace H_DevinerVersionClasse
         }
         public void Comparer()
         {
-            if (LeJoueur.NCoup > NCoupMax) Etat = EtatPartie.Perdu;
+            if (LeJoueur.NCoup >= NCoupMax) Etat = EtatPartie.Perdu;
             else if (LeJoueur.Proposition == LeNombre.Valeur) Etat = EtatPartie.Gagne;
             else if (LeJoueur.Proposition < LeNombre.Valeur) Etat = EtatPartie.TropPetit;
             else Etat = EtatPartie.TropGrand;
         }
-        public void Init()
+        public bool PasFinie
         {
-            LeNombre.Generer();
-            LeJoueur.GetNom();
-            LeJoueur.NCoup = 0;
+            get
+            {
+                return Etat == EtatPartie.None || (Etat != EtatPartie.Gagne && Etat != EtatPartie.Perdu);
+            }
         }
     }
 }
