@@ -62,7 +62,8 @@ namespace K_ADONET
 
             // SqlCommandBuilder
             var cb = new SqlCommandBuilder(da);
-            da.Update(ds);
+            da.Update(ds, "BusinessEntity");
+            da.Update(ds, "Person");
         }
 
         //private static int NewBusinessEntityId()
