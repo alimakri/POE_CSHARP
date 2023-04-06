@@ -70,5 +70,14 @@ namespace H_DevinerVersionClasse.Properties {
                 return ((bool)(this["Triche"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ModeBDD {
+            get {
+                return ((bool)(this["ModeBDD"]));
+            }
+        }
     }
 }

@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\CSharp\L_DataSet\bin\Debug\L_DataSet.exe.config
+D:\POE_CSHARP\dev\CSharp\L_DataSet\bin\Debug\L_DataSet.exe
+D:\POE_CSHARP\dev\CSharp\L_DataSet\bin\Debug\L_DataSet.pdb
+D:\POE_CSHARP\dev\CSharp\L_DataSet\obj\Debug\L_DataSetTypé.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\L_DataSet\obj\Debug\L_DataSetTypé.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\CSharp\L_DataSet\obj\Debug\L_DataSetTypé.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\L_DataSet\obj\Debug\L_DataSet.exe
+D:\POE_CSHARP\dev\CSharp\L_DataSet\obj\Debug\L_DataSet.pdb

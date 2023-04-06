@@ -29,20 +29,20 @@ namespace K_ADONET
         private static void ModeDeconnecteInsert(string nom, string prenom, string type)
         {
             // 1. Récupération de la première table
-            Cmd.CommandText = "select BusinessEntityId, FirstName, LastName, PersonType from Person.Person";
+            Cmd.CommandText = "select BusinessEntityId, FirstName, LastName, PersonType, rowguid, ModifiedDate from Person.Person";
             var da = new SqlDataAdapter();
             da.SelectCommand = Cmd;
             var ds = new DataSet();
-            da.Fill(ds, "Person");
+            da.Fill(ds, "Person.Person");
             da.TableMappings.Add("Person", "Person.Person");
 
             // 2. Récupération de la seconde table
             Cmd.CommandText = "select BusinessEntityID, rowguid, ModifiedDate from Person.BusinessEntity";
-            da.Fill(ds, "BusinessEntity");
+            da.Fill(ds, "Person.BusinessEntity");
             da.TableMappings.Add("BusinessEntity", "Person.BusinessEntity");
 
             // 3. Insertion dans la table Person.BusinessEntity (dans le dataset)
-            var table2 = ds.Tables["BusinessEntity"];
+            var table2 = ds.Tables["Person.BusinessEntity"];
 
             var newRow = table2.NewRow();
             var id = (int)table2.AsEnumerable().Max(x => x["BusinessEntityID"]) + 1;
@@ -52,18 +52,21 @@ namespace K_ADONET
             table2.Rows.Add(newRow);
 
             // 4. Insertion dans la table Person.Person (dans le dataset)
-            var table1 = ds.Tables["Person"];
+            var table1 = ds.Tables["Person.Person"];
             var newRow2 = table1.NewRow();
             newRow2["BusinessEntityID"] = id;
             newRow2["FirstName"] = prenom;
             newRow2["LastName"] = nom;
             newRow2["PersonType"] = type;
+            newRow2["rowguid"] = Guid.NewGuid();
+            newRow2["ModifiedDate"] = DateTime.Now;
             table1.Rows.Add(newRow2);
 
             // SqlCommandBuilder
             var cb = new SqlCommandBuilder(da);
-            da.Update(ds, "BusinessEntity");
-            da.Update(ds, "Person");
+            var changes= ds.GetChanges();
+            da.Update(ds, "Person.BusinessEntity");
+            da.Update(ds, "Person.Person");
         }
 
         //private static int NewBusinessEntityId()

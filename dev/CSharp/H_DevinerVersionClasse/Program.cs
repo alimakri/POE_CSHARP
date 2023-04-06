@@ -114,7 +114,10 @@ namespace H_DevinerVersionClasse
         public List<Joueur> LesJoueurs = new List<Joueur>();
         public Partie(int menu)
         {
-            if (File.Exists("scores.xml")) LesJoueurs = LireDansFichier("scores.xml");
+            if (Properties.Settings.Default.ModeBDD)
+                LesJoueurs = LireDansBDD();
+            else  
+                LesJoueurs = LireDansFichier("scores.xml");
             LeNombre = new NombreADeviner(Properties.Settings.Default.Min, Properties.Settings.Default.Max);
             Console.Clear();
             Console.WriteLine($"Devinez un nombre compris entre {Properties.Settings.Default.Min} et {Properties.Settings.Default.Max}");
@@ -170,7 +173,10 @@ namespace H_DevinerVersionClasse
             {
                 j.Scores.Add(LeJoueur.NCoup);
             }
-            EnregistrerDansFichier("scores.xml");
+            if (Properties.Settings.Default.ModeBDD)
+                EnregistrerDansBDD();
+            else
+                EnregistrerDansFichier("scores.xml");
         }
 
         private void EnregistrerDansFichier(string fichier)
@@ -180,13 +186,22 @@ namespace H_DevinerVersionClasse
             serialiser.Serialize(stream, LesJoueurs);
             stream.Close();
         }
+        private List<Joueur> LireDansBDD()
+        {
+            
+        }
         private List<Joueur> LireDansFichier(string fichier)
         {
-            var serialiser = new XmlSerializer(typeof(List<Joueur>));
-            var stream = new StreamReader(fichier);
-            var liste = (List<Joueur>)serialiser.Deserialize(stream);
-            stream.Close();
-            return liste;
+            if (File.Exists("scores.xml"))
+            {
+                var serialiser = new XmlSerializer(typeof(List<Joueur>));
+                var stream = new StreamReader(fichier);
+                var liste = (List<Joueur>)serialiser.Deserialize(stream);
+                stream.Close();
+                return liste;
+            }
+            else
+                return new List<Joueur>();
         }
 
         public bool PasFinie

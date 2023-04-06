@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetPersonne" targetNamespace="http://tempuri.org/DataSetPersonne.xsd" xmlns:mstns="http://tempuri.org/DataSetPersonne.xsd" xmlns="http://tempuri.org/DataSetPersonne.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetPersonne" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetPersonne" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetPersonne">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Personne" msprop:Generator_RowClassName="PersonneRow" msprop:Generator_RowEvHandlerName="PersonneRowChangeEventHandler" msprop:Generator_RowDeletedName="PersonneRowDeleted" msprop:Generator_RowDeletingName="PersonneRowDeleting" msprop:Generator_RowEvArgName="PersonneRowChangeEvent" msprop:Generator_TablePropName="Personne" msprop:Generator_RowChangedName="PersonneRowChanged" msprop:Generator_UserTableName="Personne" msprop:Generator_RowChangingName="PersonneRowChanging" msprop:Generator_TableClassName="PersonneDataTable" msprop:Generator_TableVarName="tablePersonne">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="Nom" msprop:Generator_UserColumnName="Nom" msprop:Generator_ColumnPropNameInTable="NomColumn" msprop:Generator_ColumnPropNameInRow="Nom" msprop:Generator_ColumnVarNameInTable="columnNom">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ville" msprop:Generator_UserColumnName="Ville" msprop:Generator_ColumnPropNameInTable="VilleColumn" msprop:Generator_ColumnPropNameInRow="Ville" msprop:Generator_ColumnVarNameInTable="columnVille" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Ville" msprop:Generator_RowClassName="VilleRow" msprop:Generator_RowEvHandlerName="VilleRowChangeEventHandler" msprop:Generator_RowDeletedName="VilleRowDeleted" msprop:Generator_RowDeletingName="VilleRowDeleting" msprop:Generator_RowEvArgName="VilleRowChangeEvent" msprop:Generator_TablePropName="Ville" msprop:Generator_RowChangedName="VilleRowChanged" msprop:Generator_UserTableName="Ville" msprop:Generator_RowChangingName="VilleRowChanging" msprop:Generator_TableClassName="VilleDataTable" msprop:Generator_TableVarName="tableVille">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" minOccurs="0" />
+              <xs:element name="Nom" msprop:Generator_UserColumnName="Nom" msprop:Generator_ColumnPropNameInTable="NomColumn" msprop:Generator_ColumnPropNameInRow="Nom" msprop:Generator_ColumnVarNameInTable="columnNom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Personne" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:Personne" />
+      <xs:field xpath="mstns:Ville" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
