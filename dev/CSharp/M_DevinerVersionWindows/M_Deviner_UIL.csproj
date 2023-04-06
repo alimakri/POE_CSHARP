@@ -88,5 +88,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\M_Deviner_BOL\M_Deviner_BOL.csproj">
+      <Project>{BC0CEA44-65DB-4510-8AD9-39EE189939FF}</Project>
+      <Name>M_Deviner_BOL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

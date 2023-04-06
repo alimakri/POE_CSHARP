@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using M_Deviner_BOL;
 using Microsoft.VisualBasic;
 
 namespace M_DevinerVersionWindows
@@ -23,6 +24,8 @@ namespace M_DevinerVersionWindows
         {
             LblReponse.Text = TxtPropo.Text;
             TxtPropo.SelectAll();
+            Proposition = int.Parse(TxtPropo.Text);
+            var x = Metier.Proposer(Proposition);
 
         }
 
@@ -31,7 +34,6 @@ namespace M_DevinerVersionWindows
             var form2 = new PromptForm();
             form2.ShowDialog();
             LblNom.Text = form2.Nom;
-            Proposition = int.Parse(TxtPropo.Text);
         }
 
         private void TxtPropo_KeyPress(object sender, KeyPressEventArgs e)
