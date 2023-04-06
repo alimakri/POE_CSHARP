@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K_ADONET", "K_ADONET\K_ADON
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L_DataSetTypé", "L_DataSet\L_DataSetTypé.csproj", "{D9924930-D97E-4148-A94A-133ED54E4F4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Deviner_UIL", "M_DevinerVersionWindows\M_Deviner_UIL.csproj", "{626F4F75-301C-46B2-9777-A715F8038606}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{D9924930-D97E-4148-A94A-133ED54E4F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9924930-D97E-4148-A94A-133ED54E4F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9924930-D97E-4148-A94A-133ED54E4F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{626F4F75-301C-46B2-9777-A715F8038606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{626F4F75-301C-46B2-9777-A715F8038606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{626F4F75-301C-46B2-9777-A715F8038606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{626F4F75-301C-46B2-9777-A715F8038606}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

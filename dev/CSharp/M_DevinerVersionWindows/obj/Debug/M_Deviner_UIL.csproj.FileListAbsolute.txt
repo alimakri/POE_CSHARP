@@ -1,0 +1,12 @@
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\bin\Debug\M_DevinerVersionWindows.exe.config
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\bin\Debug\M_DevinerVersionWindows.exe
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\bin\Debug\M_DevinerVersionWindows.pdb
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_Deviner_UIL.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_Deviner_UIL.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_DevinerVersionWindows.Properties.Resources.resources
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_Deviner_UIL.csproj.GenerateResource.cache
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_Deviner_UIL.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_DevinerVersionWindows.exe
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_DevinerVersionWindows.pdb
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_DevinerVersionWindows.Form1.resources
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_DevinerVersionWindows.PromptForm.resources

@@ -21,6 +21,8 @@ namespace H_DevinerVersionClasse
                 switch (menu)
                 {
                     case 0:
+                        partie.AfficherMeilleursScores();
+                        break;
                     case 1:
                         while (partie.PasFinie)
                         {
