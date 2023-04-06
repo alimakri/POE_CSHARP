@@ -18,6 +18,13 @@ namespace M_DevinerVersionWindows
         public Form1()
         {
             InitializeComponent();
+            Metier.SetParametres(
+                Properties.Settings.Default.NCoupMax,
+                Properties.Settings.Default.Min,
+                Properties.Settings.Default.Max,
+                Properties.Settings.Default.ModeBDD,
+                Properties.Settings.Default.Triche
+                );
         }
 
         private void BtnOk_Click(object sender, EventArgs e)
@@ -25,7 +32,13 @@ namespace M_DevinerVersionWindows
             LblReponse.Text = TxtPropo.Text;
             TxtPropo.SelectAll();
             Proposition = int.Parse(TxtPropo.Text);
-            var x = Metier.Proposer(Proposition);
+            switch( Metier.Proposer(Proposition))
+            {
+                case 1: LblReponse.Text = "Gagné"; break;
+                case 2: LblReponse.Text = "Perdu"; break;
+                case 3: LblReponse.Text = "Trop petit"; break;
+                case 4: LblReponse.Text = "Trop grand"; break;
+            }
 
         }
 
@@ -34,6 +47,7 @@ namespace M_DevinerVersionWindows
             var form2 = new PromptForm();
             form2.ShowDialog();
             LblNom.Text = form2.Nom;
+            Metier.SetJoueur(form2.Nom);
         }
 
         private void TxtPropo_KeyPress(object sender, KeyPressEventArgs e)

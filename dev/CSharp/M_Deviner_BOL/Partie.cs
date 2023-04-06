@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace M_Deviner_BOL
 {
@@ -11,54 +15,35 @@ namespace M_Deviner_BOL
         public EtatPartie Etat = EtatPartie.None;
         public Joueur LeJoueur = new Joueur();
         public NombreADeviner LeNombre;
-        public int NCoupMax = Properties.Settings.Default.NCoupMax;
+        public int NCoupMax = 0;
+        public bool ModeBDD = false;
+        public bool Triche = false;
         public List<Joueur> LesJoueurs = new List<Joueur>();
-        public Partie(int menu)
+        public string MessageErreur = null;
+        public Partie()
         {
-            if (Properties.Settings.Default.ModeBDD)
+            if (ModeBDD)
             {
                 LesJoueurs = LireDansBDD();
                 if (LesJoueurs == null)
                 {
-                    Console.WriteLine("Pas de Sql Server");
+                    MessageErreur="Pas de Sql Server";
                     LesJoueurs = new List<Joueur>();
                 }
             }
             else
                 LesJoueurs = LireDansFichier("scores.xml");
-            LeNombre = new NombreADeviner(Properties.Settings.Default.Min, Properties.Settings.Default.Max);
-            Console.Clear();
-            Console.WriteLine($"Devinez un nombre compris entre {Properties.Settings.Default.Min} et {Properties.Settings.Default.Max}");
-            LeNombre.Generer();
-            if (menu != 2) LeJoueur.GetNom();
             LeJoueur.NCoup = 0;
         }
 
 
-        public void AfficherEtat()
-        {
-            switch (Etat)
-            {
-                case EtatPartie.Gagne: Console.WriteLine("Bravo ! Vous gagnez."); break;
-                case EtatPartie.Perdu: Console.WriteLine("Vous perdez."); break;
-                case EtatPartie.TropPetit: Console.WriteLine("Trop petit."); break;
-                case EtatPartie.TropGrand: Console.WriteLine("Trop grand."); break;
-                default: Console.WriteLine("Y a un bug !!!"); break;
-            }
-        }
-        public void AfficherMeilleursScores()
+        public IEnumerable<JoueurScore> AfficherMeilleursScores()
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Affichage des scores");
-            var tousLesScores = LesJoueurs
-                                    .SelectMany(j => j.Scores.Select(s => new { Joueur = j.Nom, Score = s }))
-                                    .OrderBy(x => x.Score)
-                                    .Take(5);
-            foreach (var score in tousLesScores)
-            {
-                Console.WriteLine("{0} \t {1}", score.Joueur, score.Score);
-            }
-            Console.ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), Properties.Settings.Default.Couleur);
+            return LesJoueurs.SelectMany(j => j.Scores.Select(s => new JoueurScore { Joueur = j.Nom, Score = s }))
+                             .OrderBy(x => x.Score)
+                             .Take(5);
         }
         public void Comparer()
         {
@@ -81,7 +66,7 @@ namespace M_Deviner_BOL
             {
                 j.Scores.Add(LeJoueur.NCoup);
             }
-            if (Properties.Settings.Default.ModeBDD)
+            if (ModeBDD)
             {
                 if (!EnregistrerDansBDD(j))
                     Console.WriteLine("Enregistrement en BD impossible !");
@@ -219,43 +204,7 @@ namespace M_Deviner_BOL
         public List<int> Scores = new List<int>();
         public int Proposition = 0;
         public int NCoup = 0;
-        public void GetNom()
-        {
-            do
-            {
-                Console.Write("Veuillez taper votre nom : ");
-                Nom = Console.ReadLine();
-            }
-            while (string.IsNullOrEmpty(Nom));
-        }
-        public void GetProposition()
-        {
-            string s;
-            do
-            {
-                Console.Write("Votre proposition : ");
-                s = Console.ReadLine();
-            }
-            while (!int.TryParse(s, out Proposition));
-            NCoup++;
-        }
-
-        public int Rejouer()
-        {
-            string s; int i = 0;
-            do
-            {
-                Console.WriteLine("1. Rejouer ");
-                Console.WriteLine("2. Affichage des scores");
-                Console.WriteLine("3. Quitter ");
-                s = Console.ReadLine();
-                int.TryParse(s, out i);
-                if (i < 1 || i > 3) i = 0;
-            }
-            while (i == 0);
-            return i;
-        }
-    }
+           }
     class NombreADeviner
     {
         public int Valeur = -1;
@@ -270,13 +219,12 @@ namespace M_Deviner_BOL
         public void Generer()
         {
             Valeur = Alea.Next(Min, Max + 1);
-            if (Properties.Settings.Default.Triche)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(Valeur);
-                Console.ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), Properties.Settings.Default.Couleur);
-            }
         }
     }
     enum EtatPartie { None, Gagne, Perdu, TropPetit, TropGrand }
+    public class JoueurScore
+    {
+        public string Joueur;
+        public int Score;
+    }
 }

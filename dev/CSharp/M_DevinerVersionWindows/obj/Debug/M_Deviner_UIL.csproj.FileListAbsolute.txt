@@ -10,3 +10,6 @@ D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_DevinerVersionWindo
 D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_DevinerVersionWindows.pdb
 D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_DevinerVersionWindows.Form1.resources
 D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_DevinerVersionWindows.PromptForm.resources
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\bin\Debug\M_Deviner_BOL.dll
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\bin\Debug\M_Deviner_BOL.pdb
+D:\POE_CSHARP\dev\CSharp\M_DevinerVersionWindows\obj\Debug\M_Deviner_UIL.csproj.CopyComplete
