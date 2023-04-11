@@ -15,6 +15,7 @@ namespace M_DevinerVersionWindows
     public partial class Form1 : Form
     {
         public int Proposition = 0;
+        public PromptForm FormNom;
         public Form1()
         {
             InitializeComponent();
@@ -32,9 +33,12 @@ namespace M_DevinerVersionWindows
             LblReponse.Text = TxtPropo.Text;
             TxtPropo.SelectAll();
             Proposition = int.Parse(TxtPropo.Text);
-            switch( Metier.Proposer(Proposition))
+            switch (Metier.Proposer(Proposition))
             {
-                case 1: LblReponse.Text = "Gagné"; break;
+                case 1:
+                    LblReponse.Text = "Gagné";
+                    if (!Metier.Enregistrer()) MessageBox.Show("Enregistrement impossible", "Erreur");
+                    break;
                 case 2: LblReponse.Text = "Perdu"; break;
                 case 3: LblReponse.Text = "Trop petit"; break;
                 case 4: LblReponse.Text = "Trop grand"; break;
@@ -44,15 +48,15 @@ namespace M_DevinerVersionWindows
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var form2 = new PromptForm();
-            form2.ShowDialog();
-            LblNom.Text = form2.Nom;
-            Metier.SetJoueur(form2.Nom);
+            FormNom = new PromptForm();
+            FormNom.ShowDialog();
+            LblNom.Text = FormNom.Nom;
+            Metier.SetJoueur(FormNom.Nom);
         }
 
         private void TxtPropo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8) e.KeyChar = (char) 0;
+            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8) e.KeyChar = (char)0;
         }
 
         private void BtnOk_KeyUp(object sender, KeyEventArgs e)

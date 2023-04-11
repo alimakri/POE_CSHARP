@@ -21,9 +21,12 @@ namespace M_Deviner_BOL
         public bool Triche = false;
         public List<Joueur> LesJoueurs = new List<Joueur>();
         public string MessageErreur = null;
-        public Partie()
+        public Partie(bool mode, int ncoupMax, bool triche)
         {
-            if (ModeBDD)
+            ModeBDD = mode;
+            NCoupMax = ncoupMax;
+            Triche = triche;
+            if (mode)
             {
                 //LesJoueurs = Donnees.LireDansBDD();
                 var al = Donnees.LireDansBDD();
@@ -35,7 +38,11 @@ namespace M_Deviner_BOL
                 }
             }
             else
-                LesJoueurs = LireDansFichier("scores.xml");
+            {
+                //LesJoueurs = Donnees.LireDansFichier("scores.xml");
+                var al = Donnees.LireDansFichier("scores.xml");
+                LesJoueurs = al.ToListJoueur();
+            }
             LeJoueur.NCoup = 0;
         }
 
@@ -61,7 +68,7 @@ namespace M_Deviner_BOL
                 return Etat == EtatPartie.None || (Etat != EtatPartie.Gagne && Etat != EtatPartie.Perdu);
             }
         }
-        public void Enregistrer()
+        public bool Enregistrer()
         {
             var j = LesJoueurs.FirstOrDefault(x => x.Nom == LeJoueur.Nom);
             if (j == null)
@@ -77,10 +84,11 @@ namespace M_Deviner_BOL
             if (ModeBDD)
             {
                 if (!Donnees.EnregistrerDansBDD(j.Nom, j.NCoup))
-                    Console.WriteLine("Enregistrement en BD impossible !");
+                    return false;
             }
             else
                 Donnees.EnregistrerDansFichier(LesJoueurs.ToArrayList(), "scores.xml");
+            return true;
         }
     }
     public class Joueur

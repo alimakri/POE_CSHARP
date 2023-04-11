@@ -77,7 +77,7 @@ namespace M_Deviner_DAL
             {
                 //var j = liste.FirstOrDefault(x => x.Nom == (string)rd["Joueur"]);
                 string j = null; int i = 0;
-                for(i =0; i < rd.FieldCount; i += 2)
+                for(i =0; i < liste.Count; i += 2)
                 {
                     if ((string)liste[i] == (string)rd["Joueur"])
                     {

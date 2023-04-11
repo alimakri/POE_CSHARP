@@ -33,6 +33,7 @@
             this.BtnOk = new System.Windows.Forms.Button();
             this.LblReponse = new System.Windows.Forms.Label();
             this.LblNom = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
             // 
             // TxtPropo
@@ -52,7 +53,7 @@
             this.LblPropo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPropo.Location = new System.Drawing.Point(52, 104);
             this.LblPropo.Name = "LblPropo";
-            this.LblPropo.Size = new System.Drawing.Size(205, 31);
+            this.LblPropo.Size = new System.Drawing.Size(164, 25);
             this.LblPropo.TabIndex = 1;
             this.LblPropo.Text = "Votre proposition ";
             // 
@@ -74,7 +75,7 @@
             this.LblReponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblReponse.Location = new System.Drawing.Point(51, 183);
             this.LblReponse.Name = "LblReponse";
-            this.LblReponse.Size = new System.Drawing.Size(173, 39);
+            this.LblReponse.Size = new System.Drawing.Size(138, 31);
             this.LblReponse.TabIndex = 3;
             this.LblReponse.Text = "En attente";
             // 
@@ -88,6 +89,15 @@
             this.LblNom.TabIndex = 4;
             this.LblNom.Text = "Bonjour";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(524, 28);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // Form1
             // 
             this.AcceptButton = this.BtnOk;
@@ -100,6 +110,8 @@
             this.Controls.Add(this.BtnOk);
             this.Controls.Add(this.LblPropo);
             this.Controls.Add(this.TxtPropo);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Deviner un nombre";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -115,6 +127,7 @@
         private System.Windows.Forms.Button BtnOk;
         private System.Windows.Forms.Label LblReponse;
         private System.Windows.Forms.Label LblNom;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 
