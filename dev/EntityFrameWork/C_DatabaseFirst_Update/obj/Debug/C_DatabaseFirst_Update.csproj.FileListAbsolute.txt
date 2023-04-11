@@ -1,0 +1,14 @@
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\bin\Debug\C_DatabaseFirst_Update.exe.config
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\bin\Debug\C_DatabaseFirst_Update.exe
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\bin\Debug\C_DatabaseFirst_Update.pdb
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\bin\Debug\EntityFramework.SqlServer.dll
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\bin\Debug\EntityFramework.xml
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\bin\Debug\fr\EntityFramework.resources.dll
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\obj\Debug\C_DatabaseFirst_Update.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\obj\Debug\C_DatabaseFirst_Update.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\obj\Debug\C_DatabaseFirst_Update.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\obj\Debug\C_DatabaseFirst_Update.csproj.CopyComplete
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\obj\Debug\C_DatabaseFirst_Update.exe
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\obj\Debug\C_DatabaseFirst_Update.pdb

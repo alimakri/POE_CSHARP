@@ -49,3 +49,7 @@ insert PersonneVille (Personne, Ville) values(1, 1)
 insert PersonneVille (Personne, Ville) values(1, 2)
 insert PersonneVille (Personne, Ville) values(2, 2)
 
+select * from Personne
+select * from PersonneVille
+
+

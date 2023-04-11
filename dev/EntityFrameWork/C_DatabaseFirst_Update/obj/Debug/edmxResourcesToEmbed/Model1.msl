@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AdventureWorks2017ModelStoreContainer" CdmEntityContainer="AdvContext">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="AdventureWorks2017Model.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="BusinessEntityID" ColumnName="BusinessEntityID" />
+          <ScalarProperty Name="NationalIDNumber" ColumnName="NationalIDNumber" />
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="OrganizationLevel" ColumnName="OrganizationLevel" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="SalariedFlag" ColumnName="SalariedFlag" />
+          <ScalarProperty Name="VacationHours" ColumnName="VacationHours" />
+          <ScalarProperty Name="SickLeaveHours" ColumnName="SickLeaveHours" />
+          <ScalarProperty Name="CurrentFlag" ColumnName="CurrentFlag" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobCandidates">
+      <EntityTypeMapping TypeName="AdventureWorks2017Model.JobCandidate">
+        <MappingFragment StoreEntitySet="JobCandidate">
+          <ScalarProperty Name="JobCandidateID" ColumnName="JobCandidateID" />
+          <ScalarProperty Name="BusinessEntityID" ColumnName="BusinessEntityID" />
+          <ScalarProperty Name="Resume" ColumnName="Resume" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessEntities">
+      <EntityTypeMapping TypeName="AdventureWorks2017Model.BusinessEntity">
+        <MappingFragment StoreEntitySet="BusinessEntity">
+          <ScalarProperty Name="BusinessEntityID" ColumnName="BusinessEntityID" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="AdventureWorks2017Model.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="BusinessEntityID" ColumnName="BusinessEntityID" />
+          <ScalarProperty Name="PersonType" ColumnName="PersonType" />
+          <ScalarProperty Name="NameStyle" ColumnName="NameStyle" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+          <ScalarProperty Name="EmailPromotion" ColumnName="EmailPromotion" />
+          <ScalarProperty Name="AdditionalContactInfo" ColumnName="AdditionalContactInfo" />
+          <ScalarProperty Name="Demographics" ColumnName="Demographics" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

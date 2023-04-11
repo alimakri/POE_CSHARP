@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AdventureWorks2017Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Erreurs détectées durant la génération :
+avertissement 6005: Le type de données 'hierarchyid' n'est actuellement pas pris en charge pour la version Entity Framework cible ; la colonne 'OrganizationNode' de la table 'AdventureWorks2017.HumanResources.Employee' a été exclue.-->
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="BusinessEntityID" />
+          </Key>
+          <Property Name="BusinessEntityID" Type="int" Nullable="false" />
+          <Property Name="NationalIDNumber" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="LoginID" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="OrganizationLevel" Type="smallint" StoreGeneratedPattern="Computed" />
+          <Property Name="JobTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BirthDate" Type="date" Nullable="false" />
+          <Property Name="MaritalStatus" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="Gender" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="HireDate" Type="date" Nullable="false" />
+          <Property Name="SalariedFlag" Type="bit" Nullable="false" />
+          <Property Name="VacationHours" Type="smallint" Nullable="false" />
+          <Property Name="SickLeaveHours" Type="smallint" Nullable="false" />
+          <Property Name="CurrentFlag" Type="bit" Nullable="false" />
+          <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JobCandidate">
+          <Key>
+            <PropertyRef Name="JobCandidateID" />
+          </Key>
+          <Property Name="JobCandidateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BusinessEntityID" Type="int" />
+          <Property Name="Resume" Type="xml" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BusinessEntity">
+          <Key>
+            <PropertyRef Name="BusinessEntityID" />
+          </Key>
+          <Property Name="BusinessEntityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="BusinessEntityID" />
+          </Key>
+          <Property Name="BusinessEntityID" Type="int" Nullable="false" />
+          <Property Name="PersonType" Type="nchar" MaxLength="2" Nullable="false" />
+          <Property Name="NameStyle" Type="bit" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="8" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Suffix" Type="nvarchar" MaxLength="10" />
+          <Property Name="EmailPromotion" Type="int" Nullable="false" />
+          <Property Name="AdditionalContactInfo" Type="xml" />
+          <Property Name="Demographics" Type="xml" />
+          <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Employee_Person_BusinessEntityID">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="BusinessEntityID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="BusinessEntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JobCandidate_Employee_BusinessEntityID">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="JobCandidate" Type="Self.JobCandidate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="BusinessEntityID" />
+            </Principal>
+            <Dependent Role="JobCandidate">
+              <PropertyRef Name="BusinessEntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Person_BusinessEntity_BusinessEntityID">
+          <End Role="BusinessEntity" Type="Self.BusinessEntity" Multiplicity="1" />
+          <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="BusinessEntity">
+              <PropertyRef Name="BusinessEntityID" />
+            </Principal>
+            <Dependent Role="Person">
+              <PropertyRef Name="BusinessEntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AdventureWorks2017ModelStoreContainer">
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="HumanResources" store:Type="Tables" />
+          <EntitySet Name="JobCandidate" EntityType="Self.JobCandidate" Schema="HumanResources" store:Type="Tables" />
+          <EntitySet Name="BusinessEntity" EntityType="Self.BusinessEntity" Schema="Person" store:Type="Tables" />
+          <EntitySet Name="Person" EntityType="Self.Person" Schema="Person" store:Type="Tables" />
+          <AssociationSet Name="FK_Employee_Person_BusinessEntityID" Association="Self.FK_Employee_Person_BusinessEntityID">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JobCandidate_Employee_BusinessEntityID" Association="Self.FK_JobCandidate_Employee_BusinessEntityID">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="JobCandidate" EntitySet="JobCandidate" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Person_BusinessEntity_BusinessEntityID" Association="Self.FK_Person_BusinessEntity_BusinessEntityID">
+            <End Role="BusinessEntity" EntitySet="BusinessEntity" />
+            <End Role="Person" EntitySet="Person" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AdventureWorks2017Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="BusinessEntityID" />
+          </Key>
+          <Property Name="BusinessEntityID" Type="Int32" Nullable="false" />
+          <Property Name="NationalIDNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LoginID" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OrganizationLevel" Type="Int16" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="JobTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="HireDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SalariedFlag" Type="Boolean" Nullable="false" />
+          <Property Name="VacationHours" Type="Int16" Nullable="false" />
+          <Property Name="SickLeaveHours" Type="Int16" Nullable="false" />
+          <Property Name="CurrentFlag" Type="Boolean" Nullable="false" />
+          <Property Name="rowguid" Type="Guid" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Person" Relationship="Self.FK_Employee_Person_BusinessEntityID" FromRole="Employee" ToRole="Person" />
+          <NavigationProperty Name="JobCandidates" Relationship="Self.FK_JobCandidate_Employee_BusinessEntityID" FromRole="Employee" ToRole="JobCandidate" />
+        </EntityType>
+        <EntityType Name="JobCandidate">
+          <Key>
+            <PropertyRef Name="JobCandidateID" />
+          </Key>
+          <Property Name="JobCandidateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BusinessEntityID" Type="Int32" />
+          <Property Name="Resume" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_JobCandidate_Employee_BusinessEntityID" FromRole="JobCandidate" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="BusinessEntity">
+          <Key>
+            <PropertyRef Name="BusinessEntityID" />
+          </Key>
+          <Property Name="BusinessEntityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rowguid" Type="Guid" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Person" Relationship="Self.FK_Person_BusinessEntity_BusinessEntityID" FromRole="BusinessEntity" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="BusinessEntityID" />
+          </Key>
+          <Property Name="BusinessEntityID" Type="Int32" Nullable="false" />
+          <Property Name="PersonType" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="NameStyle" Type="Boolean" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Suffix" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="EmailPromotion" Type="Int32" Nullable="false" />
+          <Property Name="AdditionalContactInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Demographics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rowguid" Type="Guid" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Person_BusinessEntityID" FromRole="Person" ToRole="Employee" />
+          <NavigationProperty Name="BusinessEntity" Relationship="Self.FK_Person_BusinessEntity_BusinessEntityID" FromRole="Person" ToRole="BusinessEntity" />
+        </EntityType>
+        <Association Name="FK_Employee_Person_BusinessEntityID">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="BusinessEntityID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="BusinessEntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JobCandidate_Employee_BusinessEntityID">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="JobCandidate" Type="Self.JobCandidate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="BusinessEntityID" />
+            </Principal>
+            <Dependent Role="JobCandidate">
+              <PropertyRef Name="BusinessEntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Person_BusinessEntity_BusinessEntityID">
+          <End Role="BusinessEntity" Type="Self.BusinessEntity" Multiplicity="1" />
+          <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="BusinessEntity">
+              <PropertyRef Name="BusinessEntityID" />
+            </Principal>
+            <Dependent Role="Person">
+              <PropertyRef Name="BusinessEntityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AdvContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="JobCandidates" EntityType="Self.JobCandidate" />
+          <EntitySet Name="BusinessEntities" EntityType="Self.BusinessEntity" />
+          <EntitySet Name="People" EntityType="Self.Person" />
+          <AssociationSet Name="FK_Employee_Person_BusinessEntityID" Association="Self.FK_Employee_Person_BusinessEntityID">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JobCandidate_Employee_BusinessEntityID" Association="Self.FK_JobCandidate_Employee_BusinessEntityID">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="JobCandidate" EntitySet="JobCandidates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Person_BusinessEntity_BusinessEntityID" Association="Self.FK_Person_BusinessEntity_BusinessEntityID">
+            <End Role="BusinessEntity" EntitySet="BusinessEntities" />
+            <End Role="Person" EntitySet="People" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AdventureWorks2017ModelStoreContainer" CdmEntityContainer="AdvContext">
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="AdventureWorks2017Model.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="BusinessEntityID" ColumnName="BusinessEntityID" />
+                <ScalarProperty Name="NationalIDNumber" ColumnName="NationalIDNumber" />
+                <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+                <ScalarProperty Name="OrganizationLevel" ColumnName="OrganizationLevel" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+                <ScalarProperty Name="SalariedFlag" ColumnName="SalariedFlag" />
+                <ScalarProperty Name="VacationHours" ColumnName="VacationHours" />
+                <ScalarProperty Name="SickLeaveHours" ColumnName="SickLeaveHours" />
+                <ScalarProperty Name="CurrentFlag" ColumnName="CurrentFlag" />
+                <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JobCandidates">
+            <EntityTypeMapping TypeName="AdventureWorks2017Model.JobCandidate">
+              <MappingFragment StoreEntitySet="JobCandidate">
+                <ScalarProperty Name="JobCandidateID" ColumnName="JobCandidateID" />
+                <ScalarProperty Name="BusinessEntityID" ColumnName="BusinessEntityID" />
+                <ScalarProperty Name="Resume" ColumnName="Resume" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BusinessEntities">
+            <EntityTypeMapping TypeName="AdventureWorks2017Model.BusinessEntity">
+              <MappingFragment StoreEntitySet="BusinessEntity">
+                <ScalarProperty Name="BusinessEntityID" ColumnName="BusinessEntityID" />
+                <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="People">
+            <EntityTypeMapping TypeName="AdventureWorks2017Model.Person">
+              <MappingFragment StoreEntitySet="Person">
+                <ScalarProperty Name="BusinessEntityID" ColumnName="BusinessEntityID" />
+                <ScalarProperty Name="PersonType" ColumnName="PersonType" />
+                <ScalarProperty Name="NameStyle" ColumnName="NameStyle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+                <ScalarProperty Name="EmailPromotion" ColumnName="EmailPromotion" />
+                <ScalarProperty Name="AdditionalContactInfo" ColumnName="AdditionalContactInfo" />
+                <ScalarProperty Name="Demographics" ColumnName="Demographics" />
+                <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
