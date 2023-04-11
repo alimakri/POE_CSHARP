@@ -74,11 +74,11 @@ namespace M_Deviner_BOL
             }
             if (ModeBDD)
             {
-                if (!Donnees.EnregistrerDansBDD(j))
+                if (!Donnees.EnregistrerDansBDD(j.Nom, j.NCoup))
                     Console.WriteLine("Enregistrement en BD impossible !");
             }
             else
-                Donnees.EnregistrerDansFichier("scores.xml");
+                Donnees.EnregistrerDansFichier(LesJoueurs.ToArrayList(), "scores.xml");
         }
     }
     public class Joueur
