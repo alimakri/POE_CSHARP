@@ -15,8 +15,7 @@ namespace A_DatabaseFirst
     
     public partial class AdvContext : DbContext
     {
-        public AdvContext()
-            : base("name=AdvContext")
+        public AdvContext() : base("name=AdvContext")
         {
         }
     

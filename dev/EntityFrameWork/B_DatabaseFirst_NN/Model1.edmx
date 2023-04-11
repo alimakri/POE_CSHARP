@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HabitantDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Personne">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'HabitantDB.dbo.PersonneVille' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+        <EntityType Name="PersonneVille">
+          <Key>
+            <PropertyRef Name="Personne" />
+            <PropertyRef Name="Ville" />
+          </Key>
+          <Property Name="Personne" Type="bigint" Nullable="false" />
+          <Property Name="Ville" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ville">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_PersonneVille_Personne">
+          <End Role="Personne" Type="Self.Personne" Multiplicity="1" />
+          <End Role="PersonneVille" Type="Self.PersonneVille" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personne">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonneVille">
+              <PropertyRef Name="Personne" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonneVille_Ville">
+          <End Role="Ville" Type="Self.Ville" Multiplicity="1" />
+          <End Role="PersonneVille" Type="Self.PersonneVille" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ville">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonneVille">
+              <PropertyRef Name="Ville" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HabitantDBModelStoreContainer">
+          <EntitySet Name="Personne" EntityType="Self.Personne" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ville" EntityType="Self.Ville" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonneVille" EntityType="Self.PersonneVille" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PersonneVille].[Personne] AS [Personne], 
+    [PersonneVille].[Ville] AS [Ville]
+    FROM [dbo].[PersonneVille] AS [PersonneVille]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_PersonneVille_Personne" Association="Self.FK_PersonneVille_Personne">
+            <End Role="Personne" EntitySet="Personne" />
+            <End Role="PersonneVille" EntitySet="PersonneVille" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonneVille_Ville" Association="Self.FK_PersonneVille_Ville">
+            <End Role="Ville" EntitySet="Ville" />
+            <End Role="PersonneVille" EntitySet="PersonneVille" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HabitantDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Personne">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Villes" Relationship="Self.PersonneVille" FromRole="Personne" ToRole="Ville" />
+        </EntityType>
+        <EntityType Name="Ville">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Personnes" Relationship="Self.PersonneVille" FromRole="Ville" ToRole="Personne" />
+        </EntityType>
+        <Association Name="PersonneVille">
+          <End Role="Personne" Type="Self.Personne" Multiplicity="*" />
+          <End Role="Ville" Type="Self.Ville" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="HabitantContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Personnes" EntityType="Self.Personne" />
+          <EntitySet Name="Villes" EntityType="Self.Ville" />
+          <AssociationSet Name="PersonneVille" Association="Self.PersonneVille">
+            <End Role="Personne" EntitySet="Personnes" />
+            <End Role="Ville" EntitySet="Villes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HabitantDBModelStoreContainer" CdmEntityContainer="HabitantContext">
+          <EntitySetMapping Name="Personnes">
+            <EntityTypeMapping TypeName="HabitantDBModel.Personne">
+              <MappingFragment StoreEntitySet="Personne">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nom" ColumnName="Nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Villes">
+            <EntityTypeMapping TypeName="HabitantDBModel.Ville">
+              <MappingFragment StoreEntitySet="Ville">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nom" ColumnName="Nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="PersonneVille" TypeName="HabitantDBModel.PersonneVille" StoreEntitySet="PersonneVille">
+            <EndProperty Name="Personne">
+              <ScalarProperty Name="Id" ColumnName="Personne" />
+            </EndProperty>
+            <EndProperty Name="Ville">
+              <ScalarProperty Name="Id" ColumnName="Ville" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

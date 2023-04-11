@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HabitantDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Personne">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Villes" Relationship="Self.PersonneVille" FromRole="Personne" ToRole="Ville" />
+  </EntityType>
+  <EntityType Name="Ville">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Personnes" Relationship="Self.PersonneVille" FromRole="Ville" ToRole="Personne" />
+  </EntityType>
+  <Association Name="PersonneVille">
+    <End Role="Personne" Type="Self.Personne" Multiplicity="*" />
+    <End Role="Ville" Type="Self.Ville" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="HabitantContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Personnes" EntityType="Self.Personne" />
+    <EntitySet Name="Villes" EntityType="Self.Ville" />
+    <AssociationSet Name="PersonneVille" Association="Self.PersonneVille">
+      <End Role="Personne" EntitySet="Personnes" />
+      <End Role="Ville" EntitySet="Villes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

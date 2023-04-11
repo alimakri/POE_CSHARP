@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HabitantDBModelStoreContainer" CdmEntityContainer="HabitantContext">
+    <EntitySetMapping Name="Personnes">
+      <EntityTypeMapping TypeName="HabitantDBModel.Personne">
+        <MappingFragment StoreEntitySet="Personne">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Villes">
+      <EntityTypeMapping TypeName="HabitantDBModel.Ville">
+        <MappingFragment StoreEntitySet="Ville">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="PersonneVille" TypeName="HabitantDBModel.PersonneVille" StoreEntitySet="PersonneVille">
+      <EndProperty Name="Personne">
+        <ScalarProperty Name="Id" ColumnName="Personne" />
+      </EndProperty>
+      <EndProperty Name="Ville">
+        <ScalarProperty Name="Id" ColumnName="Ville" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
