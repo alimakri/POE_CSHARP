@@ -68,5 +68,16 @@ namespace M_DevinerVersionWindows
             BtnOk.Enabled = TxtPropo.Text.Length > 0;
 
         }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void affichageDesScoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formScore = new FormScore();
+            formScore.ShowDialog();
+        }
     }
 }

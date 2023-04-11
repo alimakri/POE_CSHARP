@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace M_Deviner_BOL
             MaPartie.LeNombre = new NombreADeviner(min, max);
             MaPartie.LeNombre.Generer();
 
+        }
+
+        public static ArrayList GetMeilleursScores()
+        {
+            return MaPartie.GetMeilleursScores().ToArrayList();
         }
 
         public static void SetJoueur(string nom)

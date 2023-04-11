@@ -24,5 +24,11 @@ namespace M_Deviner_BOL
             }
             return liste;
         }
+        public static ArrayList ToArrayList(this List<JoueurScore> liste)
+        {
+            var al = new ArrayList();
+            liste.ForEach(x => { al.Add(x.Joueur); al.Add(x.Score); });
+            return al;
+        }
     }
 }
