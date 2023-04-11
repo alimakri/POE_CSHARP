@@ -45,5 +45,11 @@
     <Compile Include="Partie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\M_Deviner_DAL\M_Deviner_DAL.csproj">
+      <Project>{f7281eb4-60d1-4533-b5ba-2e9ca207e67f}</Project>
+      <Name>M_Deviner_DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
