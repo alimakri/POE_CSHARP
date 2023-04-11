@@ -1,0 +1,2 @@
+D:\POE_CSHARP\dev\CSharp\M_Deviner_DAL\obj\Debug\M_Deviner_DAL.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\M_Deviner_DAL\obj\Debug\M_Deviner_DAL.csproj.CoreCompileInputs.cache

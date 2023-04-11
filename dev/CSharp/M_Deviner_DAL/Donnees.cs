@@ -97,27 +97,6 @@ namespace M_Deviner_DAL
             rd.Close();
             return liste;
         }
-        public static void Enregistrer()
-        {
-            var j = LesJoueurs.FirstOrDefault(x => x.Nom == LeJoueur.Nom);
-            if (j == null)
-            {
-                j = new Joueur { Nom = LeJoueur.Nom, NCoup = LeJoueur.NCoup };
-                j.Scores.Add(LeJoueur.NCoup);
-                LesJoueurs.Add(j);
-            }
-            else
-            {
-                j.Scores.Add(LeJoueur.NCoup);
-            }
-            if (ModeBDD)
-            {
-                if (!EnregistrerDansBDD(j))
-                    Console.WriteLine("Enregistrement en BD impossible !");
-            }
-            else
-                EnregistrerDansFichier("scores.xml");
-        }
 
         public static bool EnregistrerDansBDD(string nom, int nCoup)
         {

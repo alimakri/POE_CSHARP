@@ -28,7 +28,7 @@ namespace M_Deviner_BOL
                 LesJoueurs = Donnees.LireDansBDD();
                 if (LesJoueurs == null)
                 {
-                    MessageErreur="Pas de Sql Server";
+                    MessageErreur = "Pas de Sql Server";
                     LesJoueurs = new List<Joueur>();
                 }
             }
@@ -59,6 +59,27 @@ namespace M_Deviner_BOL
                 return Etat == EtatPartie.None || (Etat != EtatPartie.Gagne && Etat != EtatPartie.Perdu);
             }
         }
+        public void Enregistrer()
+        {
+            var j = LesJoueurs.FirstOrDefault(x => x.Nom == LeJoueur.Nom);
+            if (j == null)
+            {
+                j = new Joueur { Nom = LeJoueur.Nom, NCoup = LeJoueur.NCoup };
+                j.Scores.Add(LeJoueur.NCoup);
+                LesJoueurs.Add(j);
+            }
+            else
+            {
+                j.Scores.Add(LeJoueur.NCoup);
+            }
+            if (ModeBDD)
+            {
+                if (!Donnees.EnregistrerDansBDD(j))
+                    Console.WriteLine("Enregistrement en BD impossible !");
+            }
+            else
+                Donnees.EnregistrerDansFichier("scores.xml");
+        }
     }
     public class Joueur
     {
@@ -66,7 +87,7 @@ namespace M_Deviner_BOL
         public List<int> Scores = new List<int>();
         public int Proposition = 0;
         public int NCoup = 0;
-           }
+    }
     class NombreADeviner
     {
         public int Valeur = -1;
