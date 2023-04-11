@@ -10,6 +10,10 @@ namespace D_CodeFirst1
     {
         static void Main(string[] args)
         {
+            var context = new HabitantContext();
+            var p1 = context.Personnes.FirstOrDefault();
+            
+            // Insert personne
         }
     }
 }

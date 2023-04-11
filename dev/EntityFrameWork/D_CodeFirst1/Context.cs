@@ -20,6 +20,7 @@ namespace D_CodeFirst1
     {
         public long Id { get; set; }
         public string Nom { get; set; }
+        public string Prenom { get; set; }
 
         public List<Ville> Villes { get; set; }
     }
