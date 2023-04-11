@@ -25,7 +25,9 @@ namespace M_Deviner_BOL
         {
             if (ModeBDD)
             {
-                LesJoueurs = Donnees.LireDansBDD();
+                //LesJoueurs = Donnees.LireDansBDD();
+                var al = Donnees.LireDansBDD();
+                LesJoueurs = al.ToListJoueur();
                 if (LesJoueurs == null)
                 {
                     MessageErreur = "Pas de Sql Server";

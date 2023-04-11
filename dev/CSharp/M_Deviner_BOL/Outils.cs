@@ -15,5 +15,14 @@ namespace M_Deviner_BOL
             liste.ForEach(x => { al.Add(x.Nom); al.Add(x.Scores); });
             return al;
         }
+        public static List<Joueur> ToListJoueur(this ArrayList al)
+        {
+            var liste = new List<Joueur>();
+            for(int i=0; i < al.Count; i+=2)
+            {
+                liste.Add(new Joueur { Nom = (string) al[i], Scores = (List<int>) al[i + 1] });
+            }
+            return liste;
+        }
     }
 }
