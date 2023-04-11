@@ -1,0 +1,14 @@
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\bin\Debug\A_DatabaseFirst.exe.config
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\bin\Debug\A_DatabaseFirst.exe
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\bin\Debug\A_DatabaseFirst.pdb
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\bin\Debug\EntityFramework.SqlServer.dll
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\bin\Debug\EntityFramework.xml
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\bin\Debug\fr\EntityFramework.resources.dll
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\obj\Debug\A_DatabaseFirst.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\obj\Debug\A_DatabaseFirst.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\obj\Debug\A_DatabaseFirst.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\obj\Debug\A_DatabaseFirst.csproj.CopyComplete
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\obj\Debug\A_DatabaseFirst.exe
+D:\POE_CSHARP\dev\EntityFrameWork\A_DatabaseFirst\obj\Debug\A_DatabaseFirst.pdb

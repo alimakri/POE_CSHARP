@@ -47,6 +47,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\M_Deviner_DAL2\M_Deviner_DAL2.csproj">
+      <Project>{552e9e4c-6957-429d-9563-75c1d2d680c8}</Project>
+      <Name>M_Deviner_DAL2</Name>
+    </ProjectReference>
     <ProjectReference Include="..\M_Deviner_DAL\M_Deviner_DAL.csproj">
       <Project>{f7281eb4-60d1-4533-b5ba-2e9ca207e67f}</Project>
       <Name>M_Deviner_DAL</Name>

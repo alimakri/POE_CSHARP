@@ -29,7 +29,7 @@ namespace M_Deviner_BOL
             if (mode)
             {
                 //LesJoueurs = Donnees.LireDansBDD();
-                var al = Donnees.LireDansBDD();
+                var al = M_Deviner_DAL.Donnees.LireDansBDD();
                 LesJoueurs = al.ToListJoueur();
                 if (LesJoueurs == null)
                 {
@@ -40,18 +40,19 @@ namespace M_Deviner_BOL
             else
             {
                 //LesJoueurs = Donnees.LireDansFichier("scores.xml");
-                var al = Donnees.LireDansFichier("scores.xml");
+                var al = M_Deviner_DAL2.Donnees.LireDansFichier("scores.xml");
                 LesJoueurs = al.ToListJoueur();
             }
             LeJoueur.NCoup = 0;
         }
 
 
-        public IEnumerable<JoueurScore> GetMeilleursScores()
+        public List<JoueurScore> GetMeilleursScores()
         {
             return LesJoueurs.SelectMany(j => j.Scores.Select(s => new JoueurScore { Joueur = j.Nom, Score = s }))
                              .OrderBy(x => x.Score)
-                             .Take(5);
+                             .Take(5)
+                             .ToList();
         }
         public void Comparer()
         {
@@ -87,7 +88,7 @@ namespace M_Deviner_BOL
                     return false;
             }
             else
-                Donnees.EnregistrerDansFichier(LesJoueurs.ToArrayList(), "scores.xml");
+                M_Deviner_DAL2.Donnees.EnregistrerDansFichier(LesJoueurs.ToArrayList(), "scores.xml");
             return true;
         }
     }

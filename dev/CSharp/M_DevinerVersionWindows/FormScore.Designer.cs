@@ -33,11 +33,12 @@
             // 
             // LbxScore
             // 
+            this.LbxScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbxScore.FormattingEnabled = true;
-            this.LbxScore.ItemHeight = 16;
+            this.LbxScore.ItemHeight = 25;
             this.LbxScore.Location = new System.Drawing.Point(12, 12);
             this.LbxScore.Name = "LbxScore";
-            this.LbxScore.Size = new System.Drawing.Size(425, 356);
+            this.LbxScore.Size = new System.Drawing.Size(531, 429);
             this.LbxScore.TabIndex = 0;
             // 
             // FormScore
@@ -47,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(456, 389);
             this.Controls.Add(this.LbxScore);
             this.Name = "FormScore";
-            this.Text = "FormScore";
+            this.Text = "Les scores";
             this.Load += new System.EventHandler(this.FormScore_Load);
             this.ResumeLayout(false);
 
