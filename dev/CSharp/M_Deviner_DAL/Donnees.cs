@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -12,7 +13,7 @@ namespace M_Deviner_DAL
 {
     public static class Donnees
     {
-        public static List<Joueur> LireDansBDD()
+        public static ArrayList LireDansBDD()
         {
             // Check SQL Server
             var cnx = new SqlConnection();
@@ -70,16 +71,28 @@ namespace M_Deviner_DAL
             }
 
             // Construire la liste
-            var liste = new List<Joueur>();
+            //var liste = new List<Joueur>();
+            var liste = new ArrayList();
             while (rd.Read())
             {
-                var j = liste.FirstOrDefault(x => x.Nom == (string)rd["Joueur"]);
+                //var j = liste.FirstOrDefault(x => x.Nom == (string)rd["Joueur"]);
+                string j = null; int i = 0;
+                for(i =0; i < rd.FieldCount; i += 2)
+                {
+                    if ((string)liste[i] == (string)rd["Joueur"])
+                    {
+                        j = (string)liste[i];
+                        break;
+                    }
+                }
                 if (j == null)
                 {
-                    j = new Joueur { Nom = (string)rd["Joueur"], Scores = new List<int>() };
-                    liste.Add(j);
+                    //j = new Joueur { Nom = (string)rd["Joueur"], Scores = new List<int>() };
+                    //liste.Add(j);
+                    liste.Add((string)rd["Joueur"]);
+                    liste.Add(new List<int>());
                 }
-                j.Scores.Add((int)(byte)rd["Score"]);
+                ((List<int>)liste[i+1]).Add((int)(byte)rd["Score"]);
             }
             rd.Close();
             return liste;
@@ -106,7 +119,7 @@ namespace M_Deviner_DAL
                 EnregistrerDansFichier("scores.xml");
         }
 
-        public static bool EnregistrerDansBDD(Joueur j)
+        public static bool EnregistrerDansBDD(string nom, int nCoup)
         {
             var cnx = new SqlConnection();
             cnx.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=jeuBD;Integrated Security=True";
@@ -119,7 +132,7 @@ namespace M_Deviner_DAL
             var cmd = new SqlCommand();
             cmd.Connection = cnx;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"insert into Score (Joueur, Score) values('{j.Nom}', {j.NCoup})";
+            cmd.CommandText = $"insert into Score (Joueur, Score) values('{nom}', {nCoup})";
             try
             {
                 cmd.ExecuteNonQuery();
@@ -128,25 +141,25 @@ namespace M_Deviner_DAL
             return true;
         }
 
-        public static void EnregistrerDansFichier(string fichier)
+        public static void EnregistrerDansFichier(ArrayList lesJoueurs, string fichier)
         {
-            var serialiser = new XmlSerializer(typeof(List<Joueur>));
+            var serialiser = new XmlSerializer(typeof(ArrayList));
             var stream = new StreamWriter(fichier);
-            serialiser.Serialize(stream, LesJoueurs);
+            serialiser.Serialize(stream, lesJoueurs);
             stream.Close();
         }
-        public static List<Joueur> LireDansFichier(string fichier)
+        public static ArrayList LireDansFichier(string fichier)
         {
             if (File.Exists("scores.xml"))
             {
-                var serialiser = new XmlSerializer(typeof(List<Joueur>));
+                var serialiser = new XmlSerializer(typeof(ArrayList));
                 var stream = new StreamReader(fichier);
-                var liste = (List<Joueur>)serialiser.Deserialize(stream);
+                var liste = (ArrayList)serialiser.Deserialize(stream);
                 stream.Close();
                 return liste;
             }
             else
-                return new List<Joueur>();
+                return new ArrayList();
         }
     }
 }
