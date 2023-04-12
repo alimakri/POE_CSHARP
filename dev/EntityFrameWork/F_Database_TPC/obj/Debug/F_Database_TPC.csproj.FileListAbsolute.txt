@@ -1,0 +1,13 @@
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\bin\Debug\F_Database_TPC.exe.config
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\bin\Debug\F_Database_TPC.exe
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\bin\Debug\F_Database_TPC.pdb
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\bin\Debug\EntityFramework.SqlServer.dll
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\bin\Debug\EntityFramework.xml
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\obj\Debug\F_Database_TPC.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\obj\Debug\F_Database_TPC.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\obj\Debug\F_Database_TPC.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\obj\Debug\F_Database_TPC.csproj.CopyComplete
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\obj\Debug\F_Database_TPC.exe
+D:\POE_CSHARP\dev\EntityFrameWork\F_Database_TPC\obj\Debug\F_Database_TPC.pdb

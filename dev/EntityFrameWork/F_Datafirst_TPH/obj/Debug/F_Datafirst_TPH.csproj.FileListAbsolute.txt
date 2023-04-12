@@ -1,0 +1,13 @@
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\bin\Debug\F_Datafirst_TPH.exe.config
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\bin\Debug\F_Datafirst_TPH.exe
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\bin\Debug\F_Datafirst_TPH.pdb
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\bin\Debug\EntityFramework.SqlServer.dll
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\bin\Debug\EntityFramework.xml
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\obj\Debug\F_Datafirst_TPH.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\obj\Debug\F_Datafirst_TPH.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\obj\Debug\F_Datafirst_TPH.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\obj\Debug\F_Datafirst_TPH.csproj.CopyComplete
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\obj\Debug\F_Datafirst_TPH.exe
+D:\POE_CSHARP\dev\EntityFrameWork\F_Datafirst_TPH\obj\Debug\F_Datafirst_TPH.pdb
