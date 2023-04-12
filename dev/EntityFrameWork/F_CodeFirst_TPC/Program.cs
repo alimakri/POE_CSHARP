@@ -16,13 +16,17 @@ namespace F_Database_TPC
         {
             using (var context = new EntityContext())
             {
+                var n = context.People<Student>.Max(x=>x.Id);
                 var student = new Student()
                 {
+                    Id = n+1,
                     FullName = "Mark",
                     EnrollmentDate = DateTime.Now
                 };
+                n = context.People<Teacher>.Max(x => x.Id);
                 var teacher = new Teacher()
                 {
+                    Id = n+1,
                     FullName = "John",
                     HireDate = DateTime.Now
                 };
