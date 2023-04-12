@@ -16,17 +16,22 @@ namespace F_Database_TPC
         {
             using (var context = new EntityContext())
             {
-                var n = context.People<Student>.Max(x=>x.Id);
+                int max1 = 0;
+                if (context.People.OfType<Student>().Count() != 0)
+                    max1 = context.People.OfType<Student>().Max(x => x.Id);
+                int max2 = 0;
+                if (context.People.OfType<Teacher>().Count() != 0)
+                    max2 = context.People.OfType<Teacher>().Max(x => x.Id);
+                int max = Math.Max(max1, max2);
                 var student = new Student()
                 {
-                    Id = n+1,
+                    Id = max + 1,
                     FullName = "Mark",
                     EnrollmentDate = DateTime.Now
                 };
-                n = context.People<Teacher>.Max(x => x.Id);
                 var teacher = new Teacher()
                 {
-                    Id = n+1,
+                    Id = max + 2,
                     FullName = "John",
                     HireDate = DateTime.Now
                 };
