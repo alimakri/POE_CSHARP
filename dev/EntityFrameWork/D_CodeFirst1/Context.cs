@@ -49,6 +49,7 @@ namespace D_CodeFirst1
         [StringLength(50)]
         public string Prenom { get; set; }
         public int Age { get; set; }
+        [Column(TypeName = "datetime2")] 
         public DateTime DateNaissance { get; set; }
         [NotMapped]
         public decimal Argent { get; set; }
