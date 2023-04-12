@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdventureWorks2017Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Erreurs détectées durant la génération :
+avertissement 6005: Le type de données 'hierarchyid' n'est actuellement pas pris en charge pour la version Entity Framework cible ; la colonne 'OrganizationNode' de la table 'AdventureWorks2017.HumanResources.Employee' a été exclue.-->
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="BusinessEntityID" />
+    </Key>
+    <Property Name="BusinessEntityID" Type="int" Nullable="false" />
+    <Property Name="NationalIDNumber" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="LoginID" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="OrganizationLevel" Type="smallint" StoreGeneratedPattern="Computed" />
+    <Property Name="JobTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthDate" Type="date" Nullable="false" />
+    <Property Name="MaritalStatus" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="Gender" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="HireDate" Type="date" Nullable="false" />
+    <Property Name="SalariedFlag" Type="bit" Nullable="false" />
+    <Property Name="VacationHours" Type="smallint" Nullable="false" />
+    <Property Name="SickLeaveHours" Type="smallint" Nullable="false" />
+    <Property Name="CurrentFlag" Type="bit" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Function Name="uspGetEmployeeManagers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BusinessEntityID" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="AdventureWorks2017ModelStoreContainer">
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="HumanResources" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

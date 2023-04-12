@@ -11,8 +11,12 @@ namespace D_CodeFirst1
         static void Main(string[] args)
         {
             var context = new HabitantContext();
-            var p1 = context.Personnes.FirstOrDefault();
-            
+            //var p1 = context.Personnes.FirstOrDefault();
+
+
+            Console.WriteLine("Ok");
+            Console.ReadLine();
+
             // Insert personne
         }
     }
