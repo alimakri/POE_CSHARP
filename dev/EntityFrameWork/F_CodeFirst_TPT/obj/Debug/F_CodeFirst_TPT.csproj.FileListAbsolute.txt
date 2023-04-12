@@ -1,0 +1,12 @@
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\bin\Debug\F_CodeFirst_TPT.exe.config
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\bin\Debug\F_CodeFirst_TPT.exe
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\bin\Debug\F_CodeFirst_TPT.pdb
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\bin\Debug\EntityFramework.SqlServer.dll
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\bin\Debug\EntityFramework.xml
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\obj\Debug\F_CodeFirst_TPT.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\obj\Debug\F_CodeFirst_TPT.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\obj\Debug\F_CodeFirst_TPT.csproj.CopyComplete
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\obj\Debug\F_CodeFirst_TPT.exe
+D:\POE_CSHARP\dev\EntityFrameWork\F_CodeFirst_TPT\obj\Debug\F_CodeFirst_TPT.pdb

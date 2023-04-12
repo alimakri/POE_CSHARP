@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace F_Database_TPC
 {
-    // Tables Per Class
+    // Table per Concrete class (TPC)
 
     internal class Program
     {
