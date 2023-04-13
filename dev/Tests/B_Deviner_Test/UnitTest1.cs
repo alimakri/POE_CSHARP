@@ -30,18 +30,18 @@ namespace B_Deviner_Test
             var cmd = new SqlCommand();
             cmd.Connection = cnx;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"select Joueur, Score from JeuBDTest.dbo.Score order by Joueur";
+            cmd.CommandText = $"select Count(*) n from sys.sysdatabases where name='JeuBDTest'";
             try
             {
                 rd = cmd.ExecuteReader();
+                if (rd.Read()) dbExists = (int)rd[0] == 1;
                 rd.Close();
-                dbExists = true;
             }
             catch (Exception) { }
 
             if (dbExists)
             {
-                cmd.CommandText = $"DROP DATABASE JeuBDTest";
+                cmd.CommandText = $"alter database JeuBDTest set single_user with rollback immediate;DROP DATABASE JeuBDTest";
                 cmd.ExecuteNonQuery();
             }
             Donnees.LireDansBDD("JeuBdTest");
