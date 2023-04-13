@@ -1,0 +1,13 @@
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\bin\Debug\G_CodeFirst_Exo1.exe.config
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\bin\Debug\G_CodeFirst_Exo1.exe
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\bin\Debug\G_CodeFirst_Exo1.pdb
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\bin\Debug\EntityFramework.SqlServer.dll
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\bin\Debug\EntityFramework.xml
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\obj\Debug\G_CodeFirst_Exo1.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\obj\Debug\G_CodeFirst_Exo1.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\obj\Debug\G_CodeFirst_Exo1.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\obj\Debug\G_CodeFirst_Exo1.csproj.CopyComplete
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\obj\Debug\G_CodeFirst_Exo1.exe
+D:\POE_CSHARP\dev\EntityFrameWork\G_CodeFirst_Exo1\obj\Debug\G_CodeFirst_Exo1.pdb
