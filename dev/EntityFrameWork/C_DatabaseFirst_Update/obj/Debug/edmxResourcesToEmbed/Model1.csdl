@@ -60,7 +60,6 @@
     <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Person_BusinessEntityID" FromRole="Person" ToRole="Employee" />
     <NavigationProperty Name="BusinessEntity" Relationship="Self.FK_Person_BusinessEntity_BusinessEntityID" FromRole="Person" ToRole="BusinessEntity" />
-    <Property Name="FullName" Type="String" Nullable="false" />
   </EntityType>
   <Association Name="FK_Employee_Person_BusinessEntityID">
     <End Role="Person" Type="Self.Person" Multiplicity="1" />

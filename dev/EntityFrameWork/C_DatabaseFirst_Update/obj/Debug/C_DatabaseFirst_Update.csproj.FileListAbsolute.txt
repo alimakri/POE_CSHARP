@@ -12,3 +12,4 @@ D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\obj\Debug\C_DatabaseFir
 D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\obj\Debug\C_DatabaseFirst_Update.csproj.CopyComplete
 D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\obj\Debug\C_DatabaseFirst_Update.exe
 D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\obj\Debug\C_DatabaseFirst_Update.pdb
+D:\POE_CSHARP\dev\EntityFrameWork\C_DatabaseFirst_Update\bin\Debug\fr\EntityFramework.SqlServer.resources.dll

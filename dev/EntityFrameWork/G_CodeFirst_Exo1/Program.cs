@@ -13,10 +13,11 @@ namespace G_CodeFirst_Exo1
     {
         static void Main(string[] args)
         {
+
             var context = new OccupationContext();
             var p1 = new Piscine { Nom = "Piscine 1", Capacite = 250 };
             var p2 = new Piscine { Nom = "Piscine 2", Capacite = 410 };
-            var a1 = new Acces { Type = "Bus 45", LesPiscines = new List<Piscine> { p1, p2} };
+            var a1 = new Acces { Nom = "Bus 45", LesPiscines = new List<Piscine> { p1, p2} };
             p1.LAcces = a1;
             context.LesPiscines.Add(p1);
             context.LesPiscines.Add(p2);
@@ -24,6 +25,9 @@ namespace G_CodeFirst_Exo1
             context.SaveChanges();
         }
     }
+
+    #region Les entités
+    [Table("LesPiscines")]
     public class Piscine
     {
         public int Id { get; set; }
@@ -33,14 +37,16 @@ namespace G_CodeFirst_Exo1
         public Acces LAcces { get; set; }
         public List<Activite> LesActivites { get; set; }
     }
+    [Table("LesAcces")]
     public class Acces
     {
         public int Id { get; set; }
         [Required]
-        public string Type { get; set; }
+        public string Nom { get; set; }
         [Required]
         public List<Piscine> LesPiscines { get; set; }
     }
+    [Table("LesActivites")]
     public class Activite
     {
         public int Id { get; set; }
@@ -65,4 +71,5 @@ namespace G_CodeFirst_Exo1
         public DbSet<Acces> LesAcces { get; set; }
         public DbSet<Piscine> LesPiscines { get; set; }
     }
+    #endregion
 }
