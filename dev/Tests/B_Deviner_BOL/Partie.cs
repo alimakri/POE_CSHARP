@@ -29,7 +29,7 @@ namespace M_Deviner_BOL
             if (mode)
             {
                 //LesJoueurs = Donnees.LireDansBDD();
-                var al = M_Deviner_DAL.Donnees.LireDansBDD();
+                var al = M_Deviner_DAL.Donnees.LireDansBDD("JeuBD");
                 LesJoueurs = al.ToListJoueur();
                 if (LesJoueurs == null)
                 {

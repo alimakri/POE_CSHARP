@@ -17,3 +17,4 @@ D:\POE_CSHARP\dev\Tests\B_Deviner_UIL\obj\Debug\B_Deviner_UIL.csproj.CoreCompile
 D:\POE_CSHARP\dev\Tests\B_Deviner_UIL\obj\Debug\B_Deviner_UIL.csproj.CopyComplete
 D:\POE_CSHARP\dev\Tests\B_Deviner_UIL\obj\Debug\M_DevinerVersionWindows.exe
 D:\POE_CSHARP\dev\Tests\B_Deviner_UIL\obj\Debug\M_DevinerVersionWindows.pdb
+D:\POE_CSHARP\dev\Tests\B_Deviner_UIL\obj\Debug\B_Deviner_UIL.csproj.SuggestedBindingRedirects.cache

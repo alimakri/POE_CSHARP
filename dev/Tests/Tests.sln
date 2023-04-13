@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Calculatrice", "A_Calculatrice\A_Calculatrice.csproj", "{D5F252C2-CC42-4349-AE6A-3839249ADAEA}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_Deviner_DAL", "B_Deviner_DAL\B_Deviner_DAL.csproj", "{F7281EB4-60D1-4533-B5BA-2E9CA207E67F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_Deviner_DAL2", "B_Deviner_DAL2\B_Deviner_DAL2.csproj", "{552E9E4C-6957-429D-9563-75C1D2D680C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_Deviner_Test", "B_Deviner_Test\B_Deviner_Test.csproj", "{E6B6A25B-DAF1-466E-8476-96769D573209}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{552E9E4C-6957-429D-9563-75C1D2D680C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{552E9E4C-6957-429D-9563-75C1D2D680C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{552E9E4C-6957-429D-9563-75C1D2D680C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6B6A25B-DAF1-466E-8476-96769D573209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6B6A25B-DAF1-466E-8476-96769D573209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6B6A25B-DAF1-466E-8476-96769D573209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6B6A25B-DAF1-466E-8476-96769D573209}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

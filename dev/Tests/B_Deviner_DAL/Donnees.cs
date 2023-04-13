@@ -13,7 +13,7 @@ namespace M_Deviner_DAL
 {
     public static class Donnees
     {
-        public static ArrayList LireDansBDD()
+        public static ArrayList LireDansBDD(string baseJeu)
         {
             // Check SQL Server
             var cnx = new SqlConnection();
@@ -24,12 +24,12 @@ namespace M_Deviner_DAL
             }
             catch (Exception) { return null; }
 
-            // Check BD JeuBD
+            // Check BD 
             var dbExists = false; SqlDataReader rd = null;
             var cmd = new SqlCommand();
             cmd.Connection = cnx;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select Joueur, Score from JeuBD.dbo.Score order by Joueur";
+            cmd.CommandText = $"select Joueur, Score from {baseJeu}.dbo.Score order by Joueur";
             try
             {
                 rd = cmd.ExecuteReader();
@@ -40,23 +40,23 @@ namespace M_Deviner_DAL
             // Create database 
             if (!dbExists)
             {
-                cmd.CommandText = @"
-                            CREATE DATABASE [JeuBD]  ON  PRIMARY 
+                cmd.CommandText = $@"
+                            CREATE DATABASE {baseJeu} ON PRIMARY 
                             ( 
-	                            NAME = N'JeuBD', 
-	                            FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\JeuBD.mdf' , 
+	                            NAME = N'{baseJeu}', 
+	                            FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\{baseJeu}.mdf' , 
                                 SIZE = 8192KB , FILEGROWTH = 65536KB 
                             )
                             LOG ON 
                             ( 
-	                            NAME = N'JeuBD_log', 
-	                            FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\JeuBD_log.ldf' , 
+	                            NAME = N'{baseJeu}_log', 
+	                            FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\{baseJeu}_log.ldf' , 
                                 SIZE = 8192KB , FILEGROWTH = 65536KB 
                             );";
                 try
                 {
                     cmd.ExecuteNonQuery();
-                    cmd.CommandText = @"USE [JeuBD];
+                    cmd.CommandText = $@"USE {baseJeu};
                             CREATE TABLE Score
                             (
 	                            [Id] [bigint] IDENTITY(1,1) NOT NULL,
@@ -64,7 +64,7 @@ namespace M_Deviner_DAL
 	                            [Score] [tinyint] NOT NULL,
 	                            CONSTRAINT [PK_Score] PRIMARY KEY CLUSTERED ([Id] ASC)
                             );
-                            select Joueur, Score from JeuBD.dbo.Score order by Joueur";
+                            select Joueur, Score from {baseJeu}.dbo.Score order by Joueur";
                     rd = cmd.ExecuteReader();
                 }
                 catch (Exception) { return null; }

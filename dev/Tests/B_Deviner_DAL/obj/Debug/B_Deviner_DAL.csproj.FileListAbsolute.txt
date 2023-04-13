@@ -1,0 +1,6 @@
+D:\POE_CSHARP\dev\Tests\B_Deviner_DAL\bin\Debug\M_Deviner_DAL.dll
+D:\POE_CSHARP\dev\Tests\B_Deviner_DAL\bin\Debug\M_Deviner_DAL.pdb
+D:\POE_CSHARP\dev\Tests\B_Deviner_DAL\obj\Debug\B_Deviner_DAL.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Tests\B_Deviner_DAL\obj\Debug\B_Deviner_DAL.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Tests\B_Deviner_DAL\obj\Debug\M_Deviner_DAL.dll
+D:\POE_CSHARP\dev\Tests\B_Deviner_DAL\obj\Debug\M_Deviner_DAL.pdb
