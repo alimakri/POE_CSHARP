@@ -9,12 +9,12 @@ namespace M_Deviner_BOL
 {
     public static class Metier
     {
-        private static Partie MaPartie;
+        public static Partie MaPartie;
         public static int Proposer(int proposition)
         {
             MaPartie.LeJoueur.Proposition = proposition;
-            MaPartie.Comparer();
             MaPartie.LeJoueur.NCoup++;
+            MaPartie.Comparer();
             return (int) MaPartie.Etat;
         }
 

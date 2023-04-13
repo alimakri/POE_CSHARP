@@ -48,6 +48,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
@@ -57,9 +58,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\B_Deviner_BOL\B_Deviner_BOL.csproj">
+      <Project>{bc0cea44-65db-4510-8ad9-39ee189939ff}</Project>
+      <Name>B_Deviner_BOL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\B_Deviner_DAL\B_Deviner_DAL.csproj">
       <Project>{f7281eb4-60d1-4533-b5ba-2e9ca207e67f}</Project>
       <Name>B_Deviner_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\B_Deviner_UIL\B_Deviner_UIL.csproj">
+      <Project>{626f4f75-301c-46b2-9777-a715f8038606}</Project>
+      <Name>B_Deviner_UIL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

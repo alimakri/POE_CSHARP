@@ -153,10 +153,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TxtPropo;
+        public System.Windows.Forms.TextBox TxtPropo;
         private System.Windows.Forms.Label LblPropo;
         private System.Windows.Forms.Button BtnOk;
-        private System.Windows.Forms.Label LblReponse;
+        public System.Windows.Forms.Label LblReponse;
         private System.Windows.Forms.Label LblNom;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;

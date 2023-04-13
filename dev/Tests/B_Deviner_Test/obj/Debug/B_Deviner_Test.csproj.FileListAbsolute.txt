@@ -21,3 +21,10 @@ D:\POE_CSHARP\dev\Tests\B_Deviner_Test\obj\Debug\B_Deviner_Test.csproj.CoreCompi
 D:\POE_CSHARP\dev\Tests\B_Deviner_Test\obj\Debug\B_Deviner_Test.csproj.CopyComplete
 D:\POE_CSHARP\dev\Tests\B_Deviner_Test\obj\Debug\B_Deviner_Test.dll
 D:\POE_CSHARP\dev\Tests\B_Deviner_Test\obj\Debug\B_Deviner_Test.pdb
+D:\POE_CSHARP\dev\Tests\B_Deviner_Test\bin\Debug\M_DevinerVersionWindows.exe
+D:\POE_CSHARP\dev\Tests\B_Deviner_Test\bin\Debug\M_Deviner_BOL.dll
+D:\POE_CSHARP\dev\Tests\B_Deviner_Test\bin\Debug\M_Deviner_DAL2.dll
+D:\POE_CSHARP\dev\Tests\B_Deviner_Test\bin\Debug\M_DevinerVersionWindows.pdb
+D:\POE_CSHARP\dev\Tests\B_Deviner_Test\bin\Debug\M_DevinerVersionWindows.exe.config
+D:\POE_CSHARP\dev\Tests\B_Deviner_Test\bin\Debug\M_Deviner_BOL.pdb
+D:\POE_CSHARP\dev\Tests\B_Deviner_Test\bin\Debug\M_Deviner_DAL2.pdb

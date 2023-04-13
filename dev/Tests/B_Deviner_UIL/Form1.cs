@@ -28,7 +28,7 @@ namespace M_DevinerVersionWindows
                 );
         }
 
-        private void BtnOk_Click(object sender, EventArgs e)
+        public void BtnOk_Click(object sender, EventArgs e)
         {
             LblReponse.Text = TxtPropo.Text;
             TxtPropo.SelectAll();

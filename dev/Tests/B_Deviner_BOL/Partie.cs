@@ -11,7 +11,7 @@ using System.Xml.Serialization;
 
 namespace M_Deviner_BOL
 {
-    class Partie
+    public class Partie
     {
         public EtatPartie Etat = EtatPartie.None;
         public Joueur LeJoueur = new Joueur();
@@ -56,10 +56,10 @@ namespace M_Deviner_BOL
         }
         public void Comparer()
         {
-            if (LeJoueur.NCoup >= NCoupMax) Etat = EtatPartie.Perdu;
-            else if (LeJoueur.Proposition == LeNombre.Valeur) Etat = EtatPartie.Gagne;
+            if (LeJoueur.Proposition == LeNombre.Valeur) Etat = EtatPartie.Gagne;
             else if (LeJoueur.Proposition < LeNombre.Valeur) Etat = EtatPartie.TropPetit;
             else Etat = EtatPartie.TropGrand;
+            if (Etat != EtatPartie.Gagne && LeJoueur.NCoup >= NCoupMax) Etat = EtatPartie.Perdu;
         }
 
         public bool PasFinie
@@ -99,7 +99,7 @@ namespace M_Deviner_BOL
         public int Proposition = 0;
         public int NCoup = 0;
     }
-    class NombreADeviner
+    public class NombreADeviner
     {
         public int Valeur = -1;
         public int Min = -1;
@@ -115,7 +115,7 @@ namespace M_Deviner_BOL
             Valeur = Alea.Next(Min, Max + 1);
         }
     }
-    enum EtatPartie { None, Gagne, Perdu, TropPetit, TropGrand }
+    public enum EtatPartie { None, Gagne, Perdu, TropPetit, TropGrand }
     public class JoueurScore
     {
         public string Joueur;
