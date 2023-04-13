@@ -56,7 +56,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\A_UnitTest1\A_Calculatrice.csproj">
+    <ProjectReference Include="..\A_Calculatrice\A_Calculatrice.csproj">
       <Project>{D5F252C2-CC42-4349-AE6A-3839249ADAEA}</Project>
       <Name>A_Calculatrice</Name>
     </ProjectReference>

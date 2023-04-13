@@ -1,0 +1,11 @@
+D:\POE_CSHARP\dev\CSharp\M_Deviner_BOL\bin\Debug\M_Deviner_BOL.dll
+D:\POE_CSHARP\dev\CSharp\M_Deviner_BOL\bin\Debug\M_Deviner_BOL.pdb
+D:\POE_CSHARP\dev\CSharp\M_Deviner_BOL\obj\Debug\M_Deviner_BOL.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\M_Deviner_BOL\obj\Debug\M_Deviner_BOL.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\M_Deviner_BOL\obj\Debug\M_Deviner_BOL.dll
+D:\POE_CSHARP\dev\CSharp\M_Deviner_BOL\obj\Debug\M_Deviner_BOL.pdb
+D:\POE_CSHARP\dev\CSharp\M_Deviner_BOL\bin\Debug\M_Deviner_DAL.dll
+D:\POE_CSHARP\dev\CSharp\M_Deviner_BOL\bin\Debug\M_Deviner_DAL.pdb
+D:\POE_CSHARP\dev\CSharp\M_Deviner_BOL\obj\Debug\M_Deviner_BOL.csproj.CopyComplete
+D:\POE_CSHARP\dev\CSharp\M_Deviner_BOL\bin\Debug\M_Deviner_DAL2.dll
+D:\POE_CSHARP\dev\CSharp\M_Deviner_BOL\bin\Debug\M_Deviner_DAL2.pdb
