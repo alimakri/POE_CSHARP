@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Tests\A_UnitTest1\bin\Debug\A_UnitTest1.exe.config
+D:\POE_CSHARP\dev\Tests\A_UnitTest1\bin\Debug\A_UnitTest1.exe
+D:\POE_CSHARP\dev\Tests\A_UnitTest1\bin\Debug\A_UnitTest1.pdb
+D:\POE_CSHARP\dev\Tests\A_UnitTest1\obj\Debug\A_UnitTest1.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Tests\A_UnitTest1\obj\Debug\A_UnitTest1.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Tests\A_UnitTest1\obj\Debug\A_UnitTest1.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Tests\A_UnitTest1\obj\Debug\A_UnitTest1.exe
+D:\POE_CSHARP\dev\Tests\A_UnitTest1\obj\Debug\A_UnitTest1.pdb
