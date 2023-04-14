@@ -8,6 +8,7 @@ namespace D_Exo1
 {
     public class Directeur
     {
+        public decimal Prime = 1.2;
         public void GetSalaire()
         {
             return 2000;
@@ -15,6 +16,7 @@ namespace D_Exo1
     }
     public class Employe
     {
+        public decimal Prime = 1;
         public void GetSalaire()
         {
             return 2000;
