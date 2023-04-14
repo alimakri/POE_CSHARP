@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\bin\Debug\net6.0\A_Singleton.exe
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\bin\Debug\net6.0\A_Singleton.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\bin\Debug\net6.0\A_Singleton.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\bin\Debug\net6.0\A_Singleton.dll
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\bin\Debug\net6.0\A_Singleton.pdb
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\obj\Debug\net6.0\A_Singleton.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\obj\Debug\net6.0\A_Singleton.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\obj\Debug\net6.0\A_Singleton.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\obj\Debug\net6.0\A_Singleton.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\obj\Debug\net6.0\A_Singleton.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\obj\Debug\net6.0\A_Singleton.dll
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\obj\Debug\net6.0\refint\A_Singleton.dll
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\obj\Debug\net6.0\A_Singleton.pdb
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\obj\Debug\net6.0\A_Singleton.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\A_Singleton\obj\Debug\net6.0\ref\A_Singleton.dll
