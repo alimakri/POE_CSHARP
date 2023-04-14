@@ -15,9 +15,11 @@ namespace D_Exo1
     {
         public Directeur(decimal prime)
         {
-
+            Prime = prime;
         }
-        public decimal Prime => 1.2M;
+
+        public decimal Prime { get; set; }
+
         public decimal GetSalaire() => 5000 * Prime;
 
     }
@@ -25,10 +27,16 @@ namespace D_Exo1
     {
         public Employe(decimal prime)
         {
-
+            Prime = prime;
         }
-        public decimal Prime => 1;
+        public decimal Prime { get; set; }
         public decimal GetSalaire() => 2000 * Prime;
     }
     //  ChefdeProjet
+    public class ChefdeProjet : ISalarie
+    {
+        public decimal Prime { get; set; }
+
+        public decimal GetSalaire() => 3000 * Prime;
+    }
 }
