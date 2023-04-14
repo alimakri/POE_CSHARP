@@ -6,21 +6,29 @@ using System.Threading.Tasks;
 
 namespace D_Exo1
 {
-    public class Directeur
+    public interface ISalarie
     {
-        public decimal Prime = 1.2;
-        public void GetSalaire()
-        {
-            return 2000;
-        }
+        decimal GetSalaire();
+        decimal Prime { get; }
     }
-    public class Employe
+    public class Directeur : ISalarie
     {
-        public decimal Prime = 1;
-        public void GetSalaire()
+        public Directeur(decimal prime)
         {
-            return 2000;
+
         }
+        public decimal Prime => 1.2M;
+        public decimal GetSalaire() => 5000 * Prime;
+
+    }
+    public class Employe : ISalarie
+    {
+        public Employe(decimal prime)
+        {
+
+        }
+        public decimal Prime => 1;
+        public decimal GetSalaire() => 2000 * Prime;
     }
     //  ChefdeProjet
 }
