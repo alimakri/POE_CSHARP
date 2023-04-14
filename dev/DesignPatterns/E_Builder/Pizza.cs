@@ -20,8 +20,8 @@ namespace E_Builder
         }
         public override string ToString()
         {
-            return $"Pizza {Nom} - Ingrédients {string.Join(',', Ingredients)}";
-        }
+            return $"Pizza {Nom} - Ingrédients {string.Join(", ", Ingredients)}";
+        } 
     }
     public abstract class PizzaBuilder
     {
