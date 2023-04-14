@@ -13,9 +13,30 @@ namespace C_AbstractFactory
     public class ShoppingCart
     {
         public readonly IVIPShoppingFactory Factory;
+        public ShoppingCart(IVIPShoppingFactory factory)
+        {
+            Factory = factory;
+        }
+        public void PasserCommande()
+        {
+            var priorite = Factory.GetPriorite();
+            var pourcent = Factory.GetReduction();
+
+            Console.WriteLine("Priorité = " + priorite.Priorite);
+            Console.WriteLine("pourcent = " + pourcent.Pourcentage);
+        }
     }
+    #region interfaces
     public interface IPourCentReduction { decimal Pourcentage { get; } }
     public interface IPrioriteCommande { int Priorite { get; } }
+    public interface IVIPShoppingFactory
+    {
+        IPourCentReduction GetReduction();
+        IPrioriteCommande GetPriorite();
+    }
+    #endregion
+
+    #region classes
     public class StandardPourCentReduction : IPourCentReduction
     {
         public decimal Pourcentage => 1M;
@@ -33,11 +54,9 @@ namespace C_AbstractFactory
     {
         public int Priorite => 1;
     }
-    public interface IVIPShoppingFactory
-    {
-        IPourCentReduction GetReduction();
-        IPrioriteCommande GetPriorite();
-    }
+    #endregion
+
+    #region Factories
     public class VIPShoppingFactory : IVIPShoppingFactory
     {
         public IPrioriteCommande GetPriorite() => new VIPPrioriteCommande();
@@ -50,4 +69,5 @@ namespace C_AbstractFactory
 
         public IPourCentReduction GetReduction() => new StandardPourCentReduction();
     }
+    #endregion
 }
