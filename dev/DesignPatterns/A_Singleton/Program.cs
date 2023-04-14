@@ -8,5 +8,3 @@ var d = cache2.Get("test");
 
 Console.WriteLine(d);
 Console.WriteLine(Object.ReferenceEquals(cache2, cache1));
-
-
