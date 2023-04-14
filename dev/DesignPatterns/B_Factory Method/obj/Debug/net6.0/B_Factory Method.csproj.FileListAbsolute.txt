@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\obj\Debug\net6.0\B_Factory Method.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\obj\Debug\net6.0\B_Factory Method.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\obj\Debug\net6.0\B_Factory Method.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\obj\Debug\net6.0\B_Factory Method.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\obj\Debug\net6.0\B_Factory Method.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\bin\Debug\net6.0\B_Factory Method.exe
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\bin\Debug\net6.0\B_Factory Method.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\bin\Debug\net6.0\B_Factory Method.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\bin\Debug\net6.0\B_Factory Method.dll
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\bin\Debug\net6.0\B_Factory Method.pdb
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\obj\Debug\net6.0\B_Factory Method.dll
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\obj\Debug\net6.0\refint\B_Factory Method.dll
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\obj\Debug\net6.0\B_Factory Method.pdb
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\obj\Debug\net6.0\B_Factory Method.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\B_Factory Method\obj\Debug\net6.0\ref\B_Factory Method.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "B_Factory Method/1.0.0": {
+        "runtime": {
+          "B_Factory Method.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "B_Factory Method/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
