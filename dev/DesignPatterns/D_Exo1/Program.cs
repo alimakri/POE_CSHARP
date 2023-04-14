@@ -2,7 +2,7 @@
 
 Directeur albert = new Directeur(1.2M);
 var alfred = new Employe(1);
-ChefdeProjet aymeric = new ChefdeProjet();
+ChefdeProjet aymeric = new ChefdeProjet(1.1M);
 
 var salaire1 = albert.GetSalaire();
 var salaire2 = alfred.GetSalaire();
