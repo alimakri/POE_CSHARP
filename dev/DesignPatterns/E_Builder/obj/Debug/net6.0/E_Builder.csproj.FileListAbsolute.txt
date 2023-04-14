@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\bin\Debug\net6.0\E_Builder.exe
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\bin\Debug\net6.0\E_Builder.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\bin\Debug\net6.0\E_Builder.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\bin\Debug\net6.0\E_Builder.dll
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\bin\Debug\net6.0\E_Builder.pdb
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\obj\Debug\net6.0\E_Builder.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\obj\Debug\net6.0\E_Builder.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\obj\Debug\net6.0\E_Builder.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\obj\Debug\net6.0\E_Builder.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\obj\Debug\net6.0\E_Builder.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\obj\Debug\net6.0\E_Builder.dll
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\obj\Debug\net6.0\refint\E_Builder.dll
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\obj\Debug\net6.0\E_Builder.pdb
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\obj\Debug\net6.0\E_Builder.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\E_Builder\obj\Debug\net6.0\ref\E_Builder.dll
