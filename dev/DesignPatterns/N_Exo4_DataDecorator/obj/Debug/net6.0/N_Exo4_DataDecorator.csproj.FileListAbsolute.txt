@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\bin\Debug\net6.0\N_Exo4_DataDecorator.exe
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\bin\Debug\net6.0\N_Exo4_DataDecorator.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\bin\Debug\net6.0\N_Exo4_DataDecorator.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\bin\Debug\net6.0\N_Exo4_DataDecorator.dll
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\bin\Debug\net6.0\N_Exo4_DataDecorator.pdb
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\obj\Debug\net6.0\N_Exo4_DataDecorator.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\obj\Debug\net6.0\N_Exo4_DataDecorator.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\obj\Debug\net6.0\N_Exo4_DataDecorator.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\obj\Debug\net6.0\N_Exo4_DataDecorator.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\obj\Debug\net6.0\N_Exo4_DataDecorator.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\obj\Debug\net6.0\N_Exo4_DataDecorator.dll
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\obj\Debug\net6.0\refint\N_Exo4_DataDecorator.dll
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\obj\Debug\net6.0\N_Exo4_DataDecorator.pdb
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\obj\Debug\net6.0\N_Exo4_DataDecorator.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\N_Exo4_DataDecorator\obj\Debug\net6.0\ref\N_Exo4_DataDecorator.dll
