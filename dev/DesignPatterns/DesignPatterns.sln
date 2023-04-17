@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K_Composite", "K_Composite\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L_DataDecorator", "L_Decorator\L_DataDecorator.csproj", "{1AAA6C75-A188-4FA1-92D7-2BFAE1FFA2C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_BehaviorDecorator", "M_BehaviorDecorator\M_BehaviorDecorator.csproj", "{71DBB93F-A5F6-4D54-A248-A0855CB50372}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{1AAA6C75-A188-4FA1-92D7-2BFAE1FFA2C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AAA6C75-A188-4FA1-92D7-2BFAE1FFA2C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AAA6C75-A188-4FA1-92D7-2BFAE1FFA2C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71DBB93F-A5F6-4D54-A248-A0855CB50372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71DBB93F-A5F6-4D54-A248-A0855CB50372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71DBB93F-A5F6-4D54-A248-A0855CB50372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71DBB93F-A5F6-4D54-A248-A0855CB50372}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +108,7 @@ Global
 		{F61141CD-9A51-4FC1-9598-96447843B6BD} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
 		{CB708A11-18EA-45E7-8002-D954A84B77E9} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
 		{1AAA6C75-A188-4FA1-92D7-2BFAE1FFA2C1} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
+		{71DBB93F-A5F6-4D54-A248-A0855CB50372} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5B5755A-2119-44B9-A0BD-3022286D1A73}
