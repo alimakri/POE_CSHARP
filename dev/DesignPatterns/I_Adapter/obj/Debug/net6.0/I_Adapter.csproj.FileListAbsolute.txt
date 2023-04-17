@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\bin\Debug\net6.0\I_Adapter.exe
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\bin\Debug\net6.0\I_Adapter.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\bin\Debug\net6.0\I_Adapter.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\bin\Debug\net6.0\I_Adapter.dll
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\bin\Debug\net6.0\I_Adapter.pdb
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\obj\Debug\net6.0\I_Adapter.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\obj\Debug\net6.0\I_Adapter.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\obj\Debug\net6.0\I_Adapter.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\obj\Debug\net6.0\I_Adapter.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\obj\Debug\net6.0\I_Adapter.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\obj\Debug\net6.0\I_Adapter.dll
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\obj\Debug\net6.0\refint\I_Adapter.dll
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\obj\Debug\net6.0\I_Adapter.pdb
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\obj\Debug\net6.0\I_Adapter.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\I_Adapter\obj\Debug\net6.0\ref\I_Adapter.dll
