@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\POE_CSHARP\\dev\\DesignPatterns\\D_Exo1\\D_Exo1.csproj",
-      "projectName": "D_Exo1",
-      "projectPath": "D:\\POE_CSHARP\\dev\\DesignPatterns\\D_Exo1\\D_Exo1.csproj",
+      "projectUniqueName": "D:\\POE_CSHARP\\dev\\DesignPatterns\\D_Exo1\\D_Exo1_SugarSyntax.csproj",
+      "projectName": "D_Exo1_SugarSyntax",
+      "projectPath": "D:\\POE_CSHARP\\dev\\DesignPatterns\\D_Exo1\\D_Exo1_SugarSyntax.csproj",
       "packagesPath": "C:\\Users\\alima\\.nuget\\packages\\",
       "outputPath": "D:\\POE_CSHARP\\dev\\DesignPatterns\\D_Exo1\\obj\\",
       "projectStyle": "PackageReference",

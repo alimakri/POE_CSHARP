@@ -8,10 +8,20 @@ namespace A_Singleton
 {
     public class MemoryCache
     {
+        public static MemoryCache Instance
+        {
+            get
+            {
+                return Cache;
+            }
+        }
+        private static MemoryCache Cache = new MemoryCache();
+        private MemoryCache()
+        {
+            CacheObjects = new Dictionary<string, object>();
+        }
+
         private Dictionary<string, object> CacheObjects;
-        private static MemoryCache Cache = new();
-        public static MemoryCache Instance => Cache;
-        private MemoryCache() => CacheObjects = new();
 
         public void Add(string key, object valeur) => CacheObjects.Add(key, valeur);
         public object? Get(string key)

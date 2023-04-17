@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tDP+/SmVSEWvk+6D/8LFZ9pFC6uCU3EHhW23JFWbZXeoDK+WEmjW5cHlqzm9tu7uA7vhjCYOsrjRZDn+6Zr6RQ==",
+  "dgSpecHash": "aCHahAe+7j66fY0h0do4T0VvASzchB/1u70xbcH3WNJqEvX3GQYpdqdJG8AIm45Oe0q6962Qv9QV/VQp8V6CxA==",
   "success": true,
-  "projectFilePath": "D:\\POE_CSHARP\\dev\\DesignPatterns\\D_Exo1\\D_Exo1.csproj",
+  "projectFilePath": "D:\\POE_CSHARP\\dev\\DesignPatterns\\D_Exo1\\D_Exo1_SugarSyntax.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
