@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\bin\Debug\net6.0\H_Exo3_AbstractFactory.exe
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\bin\Debug\net6.0\H_Exo3_AbstractFactory.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\bin\Debug\net6.0\H_Exo3_AbstractFactory.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\bin\Debug\net6.0\H_Exo3_AbstractFactory.dll
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\bin\Debug\net6.0\H_Exo3_AbstractFactory.pdb
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\obj\Debug\net6.0\H_Exo3_AbstractFactory.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\obj\Debug\net6.0\H_Exo3_AbstractFactory.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\obj\Debug\net6.0\H_Exo3_AbstractFactory.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\obj\Debug\net6.0\H_Exo3_AbstractFactory.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\obj\Debug\net6.0\H_Exo3_AbstractFactory.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\obj\Debug\net6.0\H_Exo3_AbstractFactory.dll
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\obj\Debug\net6.0\refint\H_Exo3_AbstractFactory.dll
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\obj\Debug\net6.0\H_Exo3_AbstractFactory.pdb
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\obj\Debug\net6.0\H_Exo3_AbstractFactory.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\H_Exo3_AbstractFactory\obj\Debug\net6.0\ref\H_Exo3_AbstractFactory.dll

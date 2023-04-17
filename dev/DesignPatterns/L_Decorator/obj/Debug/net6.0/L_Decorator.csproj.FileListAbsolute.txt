@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\bin\Debug\net6.0\L_Decorator.exe
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\bin\Debug\net6.0\L_Decorator.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\bin\Debug\net6.0\L_Decorator.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\bin\Debug\net6.0\L_Decorator.dll
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\bin\Debug\net6.0\L_Decorator.pdb
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\obj\Debug\net6.0\L_Decorator.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\obj\Debug\net6.0\L_Decorator.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\obj\Debug\net6.0\L_Decorator.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\obj\Debug\net6.0\L_Decorator.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\obj\Debug\net6.0\L_Decorator.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\obj\Debug\net6.0\L_Decorator.dll
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\obj\Debug\net6.0\refint\L_Decorator.dll
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\obj\Debug\net6.0\L_Decorator.pdb
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\obj\Debug\net6.0\L_Decorator.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\L_Decorator\obj\Debug\net6.0\ref\L_Decorator.dll

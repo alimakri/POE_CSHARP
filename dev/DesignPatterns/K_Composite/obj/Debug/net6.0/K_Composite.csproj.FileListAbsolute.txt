@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\bin\Debug\net6.0\K_Composite.exe
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\bin\Debug\net6.0\K_Composite.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\bin\Debug\net6.0\K_Composite.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\bin\Debug\net6.0\K_Composite.dll
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\bin\Debug\net6.0\K_Composite.pdb
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\obj\Debug\net6.0\K_Composite.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\obj\Debug\net6.0\K_Composite.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\obj\Debug\net6.0\K_Composite.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\obj\Debug\net6.0\K_Composite.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\obj\Debug\net6.0\K_Composite.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\obj\Debug\net6.0\K_Composite.dll
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\obj\Debug\net6.0\refint\K_Composite.dll
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\obj\Debug\net6.0\K_Composite.pdb
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\obj\Debug\net6.0\K_Composite.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\K_Composite\obj\Debug\net6.0\ref\K_Composite.dll

@@ -8,7 +8,7 @@ namespace K_Composite
 {
     public abstract class FileSystemElement
     {
-        public abstract int GetCount { get; }
+        public abstract int Count { get; }
         public string Name { get; set; }
         public FileSystemElement(string name)
         {
@@ -24,6 +24,13 @@ namespace K_Composite
         public void Add(FileSystemElement element) => Elements.Add(element);
         public void Remove(FileSystemElement element) => Elements.RemoveAll(x => x.Name == element.Name);
 
-        public override int GetCount => throw new NotImplementedException();
+        public override int Count => Elements.Sum(x=>x.Count);
+    }
+    public class FileElement : FileSystemElement
+    {
+        public FileElement(string name) : base(name)
+        {
+        }
+        public override int Count => 1;
     }
 }
