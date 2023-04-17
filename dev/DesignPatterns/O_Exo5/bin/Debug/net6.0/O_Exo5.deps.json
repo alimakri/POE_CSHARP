@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "O_Exo5/1.0.0": {
+        "runtime": {
+          "O_Exo5.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "O_Exo5/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

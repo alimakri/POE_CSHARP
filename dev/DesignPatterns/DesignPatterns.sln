@@ -37,6 +37,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpAvance", "CSharpAvanc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_Exo4_DataDecorator", "N_Exo4_DataDecorator\N_Exo4_DataDecorator.csproj", "{60A27415-B9A7-4D3C-9155-9430A8B80C74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "O_Exo5", "O_Exo5\O_Exo5.csproj", "{657147C3-84AB-4BA2-ACAF-BD95DDFDB993}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{60A27415-B9A7-4D3C-9155-9430A8B80C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60A27415-B9A7-4D3C-9155-9430A8B80C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60A27415-B9A7-4D3C-9155-9430A8B80C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{657147C3-84AB-4BA2-ACAF-BD95DDFDB993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657147C3-84AB-4BA2-ACAF-BD95DDFDB993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657147C3-84AB-4BA2-ACAF-BD95DDFDB993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{657147C3-84AB-4BA2-ACAF-BD95DDFDB993}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +124,7 @@ Global
 		{1AAA6C75-A188-4FA1-92D7-2BFAE1FFA2C1} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
 		{71DBB93F-A5F6-4D54-A248-A0855CB50372} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
 		{60A27415-B9A7-4D3C-9155-9430A8B80C74} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
+		{657147C3-84AB-4BA2-ACAF-BD95DDFDB993} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5B5755A-2119-44B9-A0BD-3022286D1A73}

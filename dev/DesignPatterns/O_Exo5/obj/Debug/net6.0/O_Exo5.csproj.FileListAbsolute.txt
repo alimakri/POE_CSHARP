@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\bin\Debug\net6.0\O_Exo5.exe
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\bin\Debug\net6.0\O_Exo5.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\bin\Debug\net6.0\O_Exo5.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\bin\Debug\net6.0\O_Exo5.dll
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\bin\Debug\net6.0\O_Exo5.pdb
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\obj\Debug\net6.0\O_Exo5.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\obj\Debug\net6.0\O_Exo5.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\obj\Debug\net6.0\O_Exo5.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\obj\Debug\net6.0\O_Exo5.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\obj\Debug\net6.0\O_Exo5.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\obj\Debug\net6.0\O_Exo5.dll
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\obj\Debug\net6.0\refint\O_Exo5.dll
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\obj\Debug\net6.0\O_Exo5.pdb
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\obj\Debug\net6.0\O_Exo5.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\O_Exo5\obj\Debug\net6.0\ref\O_Exo5.dll
