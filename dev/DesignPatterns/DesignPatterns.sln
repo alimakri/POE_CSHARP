@@ -17,21 +17,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E_Builder", "E_Builder\E_Bu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F_Prototype", "F_Prototype\F_Prototype.csproj", "{0BC7E3F3-467D-4803-BF71-B7F26C468BC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G_Exo2_Singleton", "G_Exo2_Singleton\G_Exo2_Singleton.csproj", "{23067632-C09D-45E8-9717-F2288E80D5FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "G_Exo2_Singleton", "G_Exo2_Singleton\G_Exo2_Singleton.csproj", "{23067632-C09D-45E8-9717-F2288E80D5FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H_Exo3_AbstractFactory", "H_Exo3_AbstractFactory\H_Exo3_AbstractFactory.csproj", "{BDE5CC0F-547E-4772-BA88-AD7051DD2646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H_Exo3_AbstractFactory", "H_Exo3_AbstractFactory\H_Exo3_AbstractFactory.csproj", "{BDE5CC0F-547E-4772-BA88-AD7051DD2646}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_Structure Pattern", "2_Structure Pattern", "{5232692D-03FF-4C0D-BEDC-6269F03A48E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I_Adapter", "I_Adapter\I_Adapter.csproj", "{9F5ECCD0-6F3D-4F90-907F-DF16E0732CA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "I_Adapter", "I_Adapter\I_Adapter.csproj", "{9F5ECCD0-6F3D-4F90-907F-DF16E0732CA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J_Bridge", "J_Bridge\J_Bridge.csproj", "{F61141CD-9A51-4FC1-9598-96447843B6BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "J_Bridge", "J_Bridge\J_Bridge.csproj", "{F61141CD-9A51-4FC1-9598-96447843B6BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K_Composite", "K_Composite\K_Composite.csproj", "{CB708A11-18EA-45E7-8002-D954A84B77E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "K_Composite", "K_Composite\K_Composite.csproj", "{CB708A11-18EA-45E7-8002-D954A84B77E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L_DataDecorator", "L_Decorator\L_DataDecorator.csproj", "{1AAA6C75-A188-4FA1-92D7-2BFAE1FFA2C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L_DataDecorator", "L_Decorator\L_DataDecorator.csproj", "{1AAA6C75-A188-4FA1-92D7-2BFAE1FFA2C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_BehaviorDecorator", "M_BehaviorDecorator\M_BehaviorDecorator.csproj", "{71DBB93F-A5F6-4D54-A248-A0855CB50372}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M_BehaviorDecorator", "M_BehaviorDecorator\M_BehaviorDecorator.csproj", "{71DBB93F-A5F6-4D54-A248-A0855CB50372}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpAvance", "CSharpAvance", "{86B4C1A5-079E-4360-8F67-AEA137DDBA88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_Exo4_DataDecorator", "N_Exo4_DataDecorator\N_Exo4_DataDecorator.csproj", "{60A27415-B9A7-4D3C-9155-9430A8B80C74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +95,10 @@ Global
 		{71DBB93F-A5F6-4D54-A248-A0855CB50372}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71DBB93F-A5F6-4D54-A248-A0855CB50372}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71DBB93F-A5F6-4D54-A248-A0855CB50372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60A27415-B9A7-4D3C-9155-9430A8B80C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A27415-B9A7-4D3C-9155-9430A8B80C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A27415-B9A7-4D3C-9155-9430A8B80C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A27415-B9A7-4D3C-9155-9430A8B80C74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +117,7 @@ Global
 		{CB708A11-18EA-45E7-8002-D954A84B77E9} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
 		{1AAA6C75-A188-4FA1-92D7-2BFAE1FFA2C1} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
 		{71DBB93F-A5F6-4D54-A248-A0855CB50372} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
+		{60A27415-B9A7-4D3C-9155-9430A8B80C74} = {5232692D-03FF-4C0D-BEDC-6269F03A48E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5B5755A-2119-44B9-A0BD-3022286D1A73}

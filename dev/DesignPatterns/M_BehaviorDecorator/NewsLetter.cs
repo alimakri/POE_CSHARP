@@ -12,8 +12,9 @@ namespace M_BehaviorDecorator
     }
     public class AzureNewsLetterSender : INewsLetterSender
     {
-        public bool SendNewsLetter(string content)
+        public virtual bool SendNewsLetter(string content)
         {
+            Thread.Sleep(5000);
             Console.WriteLine("Mails envoyés avec succès depuis Azure" + content);
             return true;
         }
