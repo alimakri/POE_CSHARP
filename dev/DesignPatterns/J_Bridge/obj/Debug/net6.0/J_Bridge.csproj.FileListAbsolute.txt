@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\bin\Debug\net6.0\J_Bridge.exe
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\bin\Debug\net6.0\J_Bridge.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\bin\Debug\net6.0\J_Bridge.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\bin\Debug\net6.0\J_Bridge.dll
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\bin\Debug\net6.0\J_Bridge.pdb
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\obj\Debug\net6.0\J_Bridge.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\obj\Debug\net6.0\J_Bridge.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\obj\Debug\net6.0\J_Bridge.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\obj\Debug\net6.0\J_Bridge.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\obj\Debug\net6.0\J_Bridge.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\obj\Debug\net6.0\J_Bridge.dll
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\obj\Debug\net6.0\refint\J_Bridge.dll
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\obj\Debug\net6.0\J_Bridge.pdb
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\obj\Debug\net6.0\J_Bridge.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\J_Bridge\obj\Debug\net6.0\ref\J_Bridge.dll
