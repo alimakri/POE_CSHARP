@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DtoDonnees.cs" />
-    <Compile Include="ModeleEntite.cs" />
+    <Compile Include="Entites.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

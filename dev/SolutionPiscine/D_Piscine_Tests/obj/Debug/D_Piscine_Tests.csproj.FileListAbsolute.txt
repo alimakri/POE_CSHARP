@@ -21,3 +21,8 @@ D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\obj\Debug\D_Piscine_Tests.cspr
 D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\obj\Debug\D_Piscine_Tests.csproj.CopyComplete
 D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\obj\Debug\D_Piscine_Tests.dll
 D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\obj\Debug\D_Piscine_Tests.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\Piscine_DAL.dll
+D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\Piscine_DAL.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\Piscine_DAL.dll.config
+D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\EntityFramework.xml
