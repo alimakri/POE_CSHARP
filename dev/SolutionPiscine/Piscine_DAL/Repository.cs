@@ -14,11 +14,12 @@ namespace Piscine_DAL
         {
             Context.LesPiscines.AddRange(alPiscines.ToListPiscine());
             Context.LesAcces.AddRange(alAccess.ToListAcces());
+            Context.SaveChanges();
         }
 
-        public static List<Piscine> GetAllPiscines()
+        internal static List<Piscine> GetAllPiscines()
         {
-            throw new NotImplementedException();
+            return Context.LesPiscines.ToList();
         }
     }
 }

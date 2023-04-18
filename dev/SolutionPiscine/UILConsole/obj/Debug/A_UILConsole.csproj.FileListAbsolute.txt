@@ -9,3 +9,8 @@ D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\obj\Debug\A_UILConsole.csproj.CoreC
 D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\obj\Debug\A_UILConsole.csproj.CopyComplete
 D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\obj\Debug\UILConsole.exe
 D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\obj\Debug\UILConsole.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\Piscine_DAL.dll
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\Piscine_DAL.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\Piscine_DAL.dll.config
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\EntityFramework.xml
