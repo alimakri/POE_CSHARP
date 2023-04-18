@@ -1,0 +1,12 @@
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\bin\Debug\Piscine_BOL.dll
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\bin\Debug\Piscine_BOL.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\bin\Debug\Piscine_DAL.dll
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\bin\Debug\Piscine_DAL.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\bin\Debug\Piscine_DAL.dll.config
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\bin\Debug\EntityFramework.xml
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\obj\Debug\B_Piscine_BOL.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\obj\Debug\B_Piscine_BOL.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\obj\Debug\B_Piscine_BOL.csproj.CopyComplete
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\obj\Debug\Piscine_BOL.dll
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_BOL\obj\Debug\Piscine_BOL.pdb

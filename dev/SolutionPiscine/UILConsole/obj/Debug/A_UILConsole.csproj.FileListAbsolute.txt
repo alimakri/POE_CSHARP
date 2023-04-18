@@ -1,0 +1,11 @@
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\UILConsole.exe.config
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\UILConsole.exe
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\UILConsole.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\Piscine_BOL.dll
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\Piscine_BOL.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\obj\Debug\A_UILConsole.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\obj\Debug\A_UILConsole.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\obj\Debug\A_UILConsole.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\obj\Debug\A_UILConsole.csproj.CopyComplete
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\obj\Debug\UILConsole.exe
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\obj\Debug\UILConsole.pdb

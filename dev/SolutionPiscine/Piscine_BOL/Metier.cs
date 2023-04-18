@@ -1,24 +1,37 @@
-﻿using System;
+﻿using Piscine_DAL;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Piscine_BOL
 {
     public static class Metier
     {
-        private static List<Piscine> Piscines = new List<Piscine>();
+        private static List<Piscine> LesPiscines = new List<Piscine>();
+        private static List<Acces> LesAcces = new List<Acces>();
         public static void NouvellePiscine(int id, string nom, int capacite)
         {
-            Piscines.Add(new Piscine { Id = id, Nom = nom, Capacite = capacite });
+            LesPiscines.Add(new Piscine { Id = id, Nom = nom, Capacite = capacite });
         }
 
-        public static void NouvelAcces(int id,string nom, int[] piscines)
+        public static void Enregistrer()
+        {
+            Repository.Enregistrer(LesPiscines.ToArrayList(), LesAcces.ToArrayList());
+        }
+
+        public static void NouvelAcces(int id, string nom, int[] piscines)
         {
             var a = new Acces { Id = id, Nom = nom };
-            a.Piscines = Piscines.Where(x => piscines.Contains(x.Id));
+            a.Piscines = LesPiscines.Where(x => piscines.Contains(x.Id));
+            LesAcces.Add(a);
         }
+        #region Tests unitaires
+        public static IEnumerable<string> TestAcces1(string nomAcces)
+        {
+            var a = LesAcces.FirstOrDefault(x => x.Nom == nomAcces);
+            if (a == null) return new List<string>();
+            return a.Piscines.Select(x => x.Nom);
+        }
+        #endregion
     }
     public class Piscine
     {
@@ -30,6 +43,6 @@ namespace Piscine_BOL
     {
         public int Id;
         public string Nom;
-        public List<Piscine> Piscines;
+        public IEnumerable<Piscine> Piscines;
     }
 }

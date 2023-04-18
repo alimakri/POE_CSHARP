@@ -13,8 +13,10 @@ namespace UILConsole
         {
             Metier.NouvellePiscine(1, "Piscine 1", 250);
             Metier.NouvellePiscine(2, "Piscine 2", 410);
+            Metier.NouvellePiscine(3, "Piscine 3", 210);
             Metier.NouvelAcces(1, "Bus 45", new int[] { 1, 2});
 
+            Metier.Enregistrer();
             //var context = new OccupationContext();
             //var p1 = new Piscine { Nom = "Piscine 1", Capacite = 250 };
             //var p2 = new Piscine { Nom = "Piscine 2", Capacite = 410 };

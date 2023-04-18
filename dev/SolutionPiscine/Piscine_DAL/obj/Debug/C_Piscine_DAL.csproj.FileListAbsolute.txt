@@ -1,0 +1,12 @@
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\bin\Debug\Piscine_DAL.dll.config
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\bin\Debug\Piscine_DAL.dll
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\bin\Debug\Piscine_DAL.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\bin\Debug\EntityFramework.xml
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\obj\Debug\C_Piscine_DAL.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\obj\Debug\C_Piscine_DAL.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\obj\Debug\C_Piscine_DAL.csproj.CopyComplete
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\obj\Debug\Piscine_DAL.dll
+D:\POE_CSHARP\dev\SolutionPiscine\Piscine_DAL\obj\Debug\Piscine_DAL.pdb
