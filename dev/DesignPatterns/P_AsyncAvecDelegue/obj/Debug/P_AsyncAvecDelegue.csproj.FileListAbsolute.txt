@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\DesignPatterns\P_AsyncAvecDelegue\obj\Debug\P_AsyncAvecDelegue.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\P_AsyncAvecDelegue\obj\Debug\P_AsyncAvecDelegue.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\DesignPatterns\P_AsyncAvecDelegue\obj\Debug\P_AsyncAvecDelegue.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\P_AsyncAvecDelegue\bin\Debug\P_AsyncAvecDelegue.exe.config
+D:\POE_CSHARP\dev\DesignPatterns\P_AsyncAvecDelegue\bin\Debug\P_AsyncAvecDelegue.exe
+D:\POE_CSHARP\dev\DesignPatterns\P_AsyncAvecDelegue\bin\Debug\P_AsyncAvecDelegue.pdb
+D:\POE_CSHARP\dev\DesignPatterns\P_AsyncAvecDelegue\obj\Debug\P_AsyncAvecDelegue.exe
+D:\POE_CSHARP\dev\DesignPatterns\P_AsyncAvecDelegue\obj\Debug\P_AsyncAvecDelegue.pdb
