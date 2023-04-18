@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\bin\Debug\net6.0\Q_AsyncTask.exe
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\bin\Debug\net6.0\Q_AsyncTask.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\bin\Debug\net6.0\Q_AsyncTask.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\bin\Debug\net6.0\Q_AsyncTask.dll
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\bin\Debug\net6.0\Q_AsyncTask.pdb
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\obj\Debug\net6.0\Q_AsyncTask.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\obj\Debug\net6.0\Q_AsyncTask.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\obj\Debug\net6.0\Q_AsyncTask.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\obj\Debug\net6.0\Q_AsyncTask.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\obj\Debug\net6.0\Q_AsyncTask.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\obj\Debug\net6.0\Q_AsyncTask.dll
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\obj\Debug\net6.0\refint\Q_AsyncTask.dll
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\obj\Debug\net6.0\Q_AsyncTask.pdb
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\obj\Debug\net6.0\Q_AsyncTask.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask\obj\Debug\net6.0\ref\Q_AsyncTask.dll

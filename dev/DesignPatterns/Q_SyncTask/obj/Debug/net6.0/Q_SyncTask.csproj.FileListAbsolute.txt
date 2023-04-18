@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\bin\Debug\net6.0\Q_SyncTask.exe
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\bin\Debug\net6.0\Q_SyncTask.deps.json
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\bin\Debug\net6.0\Q_SyncTask.runtimeconfig.json
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\bin\Debug\net6.0\Q_SyncTask.dll
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\bin\Debug\net6.0\Q_SyncTask.pdb
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\obj\Debug\net6.0\Q_SyncTask.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\obj\Debug\net6.0\Q_SyncTask.GeneratedMSBuildEditorConfig.editorconfig
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\obj\Debug\net6.0\Q_SyncTask.AssemblyInfoInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\obj\Debug\net6.0\Q_SyncTask.AssemblyInfo.cs
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\obj\Debug\net6.0\Q_SyncTask.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\obj\Debug\net6.0\Q_SyncTask.dll
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\obj\Debug\net6.0\refint\Q_SyncTask.dll
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\obj\Debug\net6.0\Q_SyncTask.pdb
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\obj\Debug\net6.0\Q_SyncTask.genruntimeconfig.cache
+D:\POE_CSHARP\dev\DesignPatterns\Q_SyncTask\obj\Debug\net6.0\ref\Q_SyncTask.dll

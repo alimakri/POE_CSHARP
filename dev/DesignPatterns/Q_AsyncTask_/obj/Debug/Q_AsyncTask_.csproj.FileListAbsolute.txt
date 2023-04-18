@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask_\bin\Debug\Q_AsyncTask_.exe.config
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask_\bin\Debug\Q_AsyncTask_.exe
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask_\bin\Debug\Q_AsyncTask_.pdb
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask_\obj\Debug\Q_AsyncTask_.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask_\obj\Debug\Q_AsyncTask_.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask_\obj\Debug\Q_AsyncTask_.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask_\obj\Debug\Q_AsyncTask_.exe
+D:\POE_CSHARP\dev\DesignPatterns\Q_AsyncTask_\obj\Debug\Q_AsyncTask_.pdb
