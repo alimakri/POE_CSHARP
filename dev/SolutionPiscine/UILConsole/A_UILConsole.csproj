@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Piscine_BOL\B_Piscine_BOL.csproj">
+      <Project>{312ca14e-2cc6-4da7-942b-3da6ea3a1b20}</Project>
+      <Name>B_Piscine_BOL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

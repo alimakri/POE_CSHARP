@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Piscine_BOL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,10 @@ namespace UILConsole
     {
         static void Main(string[] args)
         {
+            Metier.NouvellePiscine(1, "Piscine 1", 250);
+            Metier.NouvellePiscine(2, "Piscine 2", 410);
+            Metier.NouvelAcces(1, "Bus 45", new int[] { 1, 2});
+
             //var context = new OccupationContext();
             //var p1 = new Piscine { Nom = "Piscine 1", Capacite = 250 };
             //var p2 = new Piscine { Nom = "Piscine 2", Capacite = 410 };
