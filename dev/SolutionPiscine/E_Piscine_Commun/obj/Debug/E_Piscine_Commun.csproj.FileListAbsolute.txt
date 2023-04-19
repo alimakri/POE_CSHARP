@@ -1,0 +1,6 @@
+D:\POE_CSHARP\dev\SolutionPiscine\E_Piscine_Commun\bin\Debug\E_Piscine_Commun.dll
+D:\POE_CSHARP\dev\SolutionPiscine\E_Piscine_Commun\bin\Debug\E_Piscine_Commun.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\E_Piscine_Commun\obj\Debug\E_Piscine_Commun.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\SolutionPiscine\E_Piscine_Commun\obj\Debug\E_Piscine_Commun.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\SolutionPiscine\E_Piscine_Commun\obj\Debug\E_Piscine_Commun.dll
+D:\POE_CSHARP\dev\SolutionPiscine\E_Piscine_Commun\obj\Debug\E_Piscine_Commun.pdb

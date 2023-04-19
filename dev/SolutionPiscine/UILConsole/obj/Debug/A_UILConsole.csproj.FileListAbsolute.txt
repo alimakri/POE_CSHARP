@@ -16,3 +16,5 @@ D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\Piscine_DAL.dll.config
 D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\EntityFramework.xml
 D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\EntityFramework.SqlServer.dll
 D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\E_Piscine_Commun.dll
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\E_Piscine_Commun.pdb

@@ -11,7 +11,7 @@ namespace UILConsole
     {
         static void Main(string[] args)
         {
-            var premiereFois = true;
+            var premiereFois = false;
             if (premiereFois)
             {
                 var p1 = Metier.NouvellePiscine("Piscine 1", 250);
@@ -20,7 +20,8 @@ namespace UILConsole
                 var a1 = Metier.NouvelAcces("Bus 45", new int[] { p1, p2 });
 
                 int c1 = Metier.NouvelleActivite("20230501", "20230930", "Yoga Paddle", p1);
-                //Metier.Enregistrer();// AM 20230419 Correction
+                int c2 = Metier.NouvelleActivite("20220901", "20230630", "AquaBoxing", p1);
+                int c3 = Metier.NouvelleActivite("20220901", "20230630", "AquaBike", p1);
             }
             var recherchePiscinesBus45 = new Recherche { IdAcces = 1 };
             recherchePiscinesBus45.Find();

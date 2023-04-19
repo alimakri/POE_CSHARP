@@ -41,8 +41,6 @@ namespace Piscine_DAL
 
         public static ArrayList GetPiscines(int idAcces)
         {
-            var a = Context.LesPiscines.ToList();
-            var b = Context.LesAcces.ToList();
             var resultat = new List<Piscine>();
             var acces = Context.LesAcces.Include("LesPiscines").FirstOrDefault(x => x.Id == idAcces);
             if (acces != null) resultat = acces.LesPiscines;
