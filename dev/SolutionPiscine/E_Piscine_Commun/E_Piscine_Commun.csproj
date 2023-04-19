@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{312CA14E-2CC6-4DA7-942B-3DA6EA3A1B20}</ProjectGuid>
+    <ProjectGuid>{76E504DA-BA85-4F32-B83B-5C1E682C5FA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Piscine_BOL</RootNamespace>
-    <AssemblyName>Piscine_BOL</AssemblyName>
+    <RootNamespace>E_Piscine_Commun</RootNamespace>
+    <AssemblyName>E_Piscine_Commun</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,19 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DtoMetier.cs" />
-    <Compile Include="Metier.cs" />
+    <Compile Include="Outils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\E_Piscine_Commun\E_Piscine_Commun.csproj">
-      <Project>{76E504DA-BA85-4F32-B83B-5C1E682C5FA5}</Project>
-      <Name>E_Piscine_Commun</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Piscine_DAL\C_Piscine_DAL.csproj">
-      <Project>{87ca0b74-796c-4b9d-ad0e-cc723cfc7ad0}</Project>
-      <Name>C_Piscine_DAL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

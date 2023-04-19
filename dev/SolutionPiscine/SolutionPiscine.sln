@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_Piscine_DAL", "Piscine_DA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_Piscine_Tests", "D_Piscine_Tests\D_Piscine_Tests.csproj", "{F55E762C-03FF-473C-BE7D-63AC57F15F9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_Piscine_Commun", "E_Piscine_Commun\E_Piscine_Commun.csproj", "{76E504DA-BA85-4F32-B83B-5C1E682C5FA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F55E762C-03FF-473C-BE7D-63AC57F15F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F55E762C-03FF-473C-BE7D-63AC57F15F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F55E762C-03FF-473C-BE7D-63AC57F15F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76E504DA-BA85-4F32-B83B-5C1E682C5FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E504DA-BA85-4F32-B83B-5C1E682C5FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E504DA-BA85-4F32-B83B-5C1E682C5FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E504DA-BA85-4F32-B83B-5C1E682C5FA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

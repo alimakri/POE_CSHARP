@@ -1,4 +1,5 @@
-﻿using Piscine_DAL;
+﻿using Piscine_Commun;
+using Piscine_DAL;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -26,9 +27,15 @@ namespace Piscine_BOL
 
         public static int NouvelleActivite(string d1, string d2, string nom, int idPiscine)
         {
-            var c = new Activite { DateDebut = Outils.ConvertToDateTime(d1), DateFin = Outils.ConvertToDateTime(d2), Nom = nom,  Piscine = LesPiscines.FirstOrDefault(x=>x.Id==idPiscine)};
+            var c = new Activite
+            {
+                DateDebut = Outils.ConvertToDateTime(FormatDateEnum.yyyyMMdd, d1),
+                DateFin = Outils.ConvertToDateTime(FormatDateEnum.yyyyMMdd, d2),
+                Nom = nom,
+                Piscine = LesPiscines.FirstOrDefault(x => x.Id == idPiscine)
+            };
             LesActivites.Add(c);
-            c.Id = EnregistrerActivite(c); 
+            c.Id = EnregistrerActivite(c);
             return c.Id;
         }
 
