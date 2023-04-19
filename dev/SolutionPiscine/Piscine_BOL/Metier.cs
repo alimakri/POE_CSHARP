@@ -8,7 +8,6 @@ namespace Piscine_BOL
     {
         private static List<Piscine> LesPiscines = new List<Piscine>();
         private static List<Acces> LesAcces = new List<Acces>();
-        public static string DatabaseName = "PiscineDB";
 
         public static void NouvellePiscine(int id, string nom, int capacite)
         {
@@ -17,7 +16,7 @@ namespace Piscine_BOL
 
         public static void Enregistrer()
         {
-            Repository.Enregistrer(DatabaseName, LesPiscines.ToArrayList(), LesAcces.ToArrayList());
+            Repository.Enregistrer(LesPiscines.ToArrayList(), LesAcces.ToArrayList());
         }
 
         public static void NouvelAcces(int id, string nom, int[] piscines)

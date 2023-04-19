@@ -30,10 +30,10 @@ namespace D_Piscine_Tests
         public void CreateDatabase()
         {
             DropDatabase("PiscineDBTest");
-            Metier.DatabaseName = "PiscineDBTest";
             Metier.NouvellePiscine(1, "PisCine 1", 250);
             Metier.Enregistrer();
             Assert.IsTrue(CheckDatabase());
+            DropDatabase("PiscineDBTest");
         }
 
         private bool CheckDatabase()
@@ -76,10 +76,10 @@ namespace D_Piscine_Tests
                 rd = cmd.ExecuteReader();
                 if (rd.Read() && (int)rd[0] == 1)
                 {
-                    cmd.CommandText = $"alter database JeuBDTest set single_user with rollback immediate;DROP DATABASE JeuBDTest";
+                    rd.Close();
+                    cmd.CommandText = $"alter database PiscineDBTest set single_user with rollback immediate;DROP DATABASE PiscineDBTest";
                     cmd.ExecuteNonQuery();
                 }
-                rd.Close();
             }
             catch (Exception) { Assert.Fail("Erreur"); }
         }
