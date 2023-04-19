@@ -11,14 +11,17 @@ namespace UILConsole
     {
         static void Main(string[] args)
         {
-            Metier.NouvellePiscine(1, "Piscine 1", 250);
-            Metier.NouvellePiscine(2, "Piscine 2", 410);
-            Metier.NouvellePiscine(3, "Piscine 3", 210);
-            Metier.NouvelAcces(1, "Bus 45", new int[] { 1, 2 });
+            var premiereFois = false;
+            if (premiereFois)
+            {
+                Metier.NouvellePiscine(1, "Piscine 1", 250);
+                Metier.NouvellePiscine(2, "Piscine 2", 410);
+                Metier.NouvellePiscine(3, "Piscine 3", 210);
+                Metier.NouvelAcces(1, "Bus 45", new int[] { 1, 2 });
 
 
-            Metier.Enregistrer();
-
+                Metier.Enregistrer();
+            }
             var recherchePiscinesBus45 = new Recherche { IdAcces = 1 };
             recherchePiscinesBus45.Find();
 
@@ -27,6 +30,7 @@ namespace UILConsole
             {
                 Console.WriteLine(p.Nom);
             }
+            Console.ReadLine();
         }
 
     }
