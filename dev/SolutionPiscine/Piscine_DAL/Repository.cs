@@ -50,5 +50,12 @@ namespace Piscine_DAL
             return resultat.ToArrayList();
         }
 
+        public static int EnregistrerActivite(ArrayList alActivite)
+        {
+            var newA = alActivite.ToActivite();
+            Context.LesActivites.Add(newA);
+            Context.SaveChanges();
+            return newA.Id;
+        }
     }
 }

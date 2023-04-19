@@ -9,18 +9,31 @@ namespace Piscine_DAL
 {
     public static class DtoDonnees
     {
-        internal static Acces ToAcces(this ArrayList al)
+        internal static Activite ToActivite(this ArrayList al)
         {
             var toutesLesPiscines = Repository.GetAllPiscines();
-            Acces resultat =
-                new Acces
+            var resultat =
+                new Activite
                 {
-                    Nom = (string)al[0],
-                    LesPiscines = toutesLesPiscines.Where(x=>((int[])al[1]).Contains(x.Id)).ToList() // AM 20230419 Correction
+                    DateDebut = (DateTime)al[0],
+                    DateFin = (DateTime)al[1],
+                    Type = (string)al[2],
+                    UnePiscine = toutesLesPiscines.FirstOrDefault(x => x.Id == (int)al[3])
                 };
             return resultat;
         }
-        internal static Piscine ToPiscine(this ArrayList al) 
+        internal static Acces ToAcces(this ArrayList al)
+        {
+            var toutesLesPiscines = Repository.GetAllPiscines();
+            var resultat =
+                new Acces
+                {
+                    Nom = (string)al[0],
+                    LesPiscines = toutesLesPiscines.Where(x => ((int[])al[1]).Contains(x.Id)).ToList() // AM 20230419 Correction
+                };
+            return resultat;
+        }
+        internal static Piscine ToPiscine(this ArrayList al)
         {
             Piscine resultat =
                 new Piscine

@@ -9,9 +9,10 @@ namespace Piscine_BOL
 {
     public static class Metier
     {
-        private static List<Piscine> LesPiscines = new List<Piscine>();
-        private static List<Acces> LesAcces = new List<Acces>();
 
+        #region Piscine
+
+        private static List<Piscine> LesPiscines = new List<Piscine>();
         public static int NouvellePiscine(string nom, int capacite)
         {
             var p = new Piscine { Nom = nom, Capacite = capacite };
@@ -19,12 +20,35 @@ namespace Piscine_BOL
             p.Id = EnregistrerPiscine(p); // AM 20230419 Correction
             return p.Id;
         }
-
+        public static ArrayList GetPiscines(ArrayList recherche)
+        {
+            return Repository.GetPiscines((int)recherche[0]);
+        }
         public static int EnregistrerPiscine(Piscine p)
         {
             return Repository.EnregistrerPiscine(p.ToArrayList());
         }
 
+        #endregion
+
+        #region Acces
+
+        private static List<Acces> LesAcces = new List<Acces>();
+        public static int NouvelAcces(string nom, int[] piscines)
+        {
+            var a = new Acces { Nom = nom };
+            a.Piscines = LesPiscines.Where(x => piscines.Contains(x.Id));
+            LesAcces.Add(a);
+            return EnregistrerAcces(a);
+        }
+        private static int EnregistrerAcces(Acces a)
+        {
+            return Repository.EnregistrerAcces(a.ToArrayList());
+        }
+        #endregion
+
+        #region Activite
+        private static List<Activite> LesActivites = new List<Activite>();
         public static int NouvelleActivite(string d1, string d2, string nom, int idPiscine)
         {
             var c = new Activite
@@ -39,28 +63,22 @@ namespace Piscine_BOL
             return c.Id;
         }
 
+        private static int EnregistrerActivite(Activite c)
+        {
+            return Repository.EnregistrerActivite(c.ToArrayList());
+        }
+
+        #endregion
+
+
+        #region Test
         public static void Enregistrer()
         {
             Repository.Enregistrer(LesPiscines.ToArrayList(), LesAcces.ToArrayList());
         }
+        #endregion
 
-        public static ArrayList GetPiscines(ArrayList recherche)
-        {
-            return Repository.GetPiscines((int)recherche[0]);
-        }
 
-        public static int NouvelAcces(string nom, int[] piscines)
-        {
-            var a = new Acces { Nom = nom };
-            a.Piscines = LesPiscines.Where(x => piscines.Contains(x.Id));
-            LesAcces.Add(a);
-            return EnregistrerAcces(a);
-        }
-
-        private static int EnregistrerAcces(Acces a)
-        {
-            return Repository.EnregistrerAcces(a.ToArrayList());
-        }
         #region Tests unitaires
         public static IEnumerable<string> TestAcces1(string nomAcces)
         {
@@ -70,6 +88,8 @@ namespace Piscine_BOL
         }
         #endregion
     }
+
+    #region Classes de base
     public class Piscine
     {
         public int Id;
@@ -91,4 +111,6 @@ namespace Piscine_BOL
 
         public Piscine Piscine;
     }
+    #endregion
+
 }
