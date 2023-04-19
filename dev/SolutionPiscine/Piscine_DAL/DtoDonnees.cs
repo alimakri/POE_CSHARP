@@ -20,7 +20,7 @@ namespace Piscine_DAL
                 };
             return resultat;
         }
-        internal static Piscine ToPiscine(this ArrayList al)
+        internal static Piscine ToPiscine(this ArrayList al) 
         {
             Piscine resultat =
                 new Piscine

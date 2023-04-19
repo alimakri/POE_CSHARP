@@ -39,7 +39,7 @@ namespace UILConsole
         public int IdAcces;
         public int IdPiscine;
         public List<Piscine> ResultatPiscine;
-        public List<Acces> ResultatAcces;
+        public List<Acces> ResultatAcces; // TODO : faire ......
 
         public void Find()
         {
