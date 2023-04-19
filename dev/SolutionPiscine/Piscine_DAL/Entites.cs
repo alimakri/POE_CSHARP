@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Piscine_DAL
 {
     [Table("LesPiscines")]
-    public class Piscine
+    internal class Piscine
     {
         public int Id { get; set; }
         [Required]
@@ -20,7 +20,7 @@ namespace Piscine_DAL
         public List<Activite> LesActivites { get; set; }
     }
     [Table("LesAcces")]
-    public class Acces
+    internal class Acces
     {
         public int Id { get; set; }
         [Required]
@@ -29,7 +29,7 @@ namespace Piscine_DAL
         public List<Piscine> LesPiscines { get; set; }
     }
     [Table("LesActivites")]
-    public class Activite
+    internal class Activite
     {
         public int Id { get; set; }
         [Required]
@@ -43,7 +43,7 @@ namespace Piscine_DAL
         [Required]
         public Piscine UnePiscine { get; set; }
     }
-    public class OccupationContext : DbContext
+    internal class OccupationContext : DbContext
     {
         public OccupationContext() : base("name=OccupationConfig")
         {

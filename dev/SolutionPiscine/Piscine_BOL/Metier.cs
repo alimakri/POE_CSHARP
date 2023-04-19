@@ -1,4 +1,6 @@
 ﻿using Piscine_DAL;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,6 +19,11 @@ namespace Piscine_BOL
         public static void Enregistrer()
         {
             Repository.Enregistrer(LesPiscines.ToArrayList(), LesAcces.ToArrayList());
+        }
+
+        public static ArrayList GetPiscines(ArrayList recherche)
+        {
+            return Repository.GetPiscines((int)recherche[0]);
         }
 
         public static void NouvelAcces(int id, string nom, int[] piscines)

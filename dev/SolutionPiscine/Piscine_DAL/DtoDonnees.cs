@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Piscine_DAL
 {
-    public static class DataTransferObject
+    public static class DtoDonnees
     {
-        public static List<Piscine> ToListPiscine(this ArrayList al)
+        internal static List<Piscine> ToListPiscine(this ArrayList al)
         {
             List<Piscine> resultat = new List<Piscine>();
             for (int i = 0; i < al.Count; i += 3)
@@ -23,7 +23,7 @@ namespace Piscine_DAL
             }
             return resultat;
         }
-        public static List<Acces> ToListAcces(this ArrayList al)
+        internal static List<Acces> ToListAcces(this ArrayList al)
         {
             List<Acces> resultat = new List<Acces>();
             var toutesLesPiscines = Repository.GetAllPiscines();
@@ -42,6 +42,13 @@ namespace Piscine_DAL
                     LesPiscines = piscines
                 });
             }
+            return resultat;
+        }
+        internal static ArrayList ToArrayList(this List<Piscine> liste)
+        {
+            var resultat = new ArrayList();
+            if (liste == null) return resultat;
+            liste.ForEach(x => { resultat.Add(x.Id); resultat.Add(x.Nom); resultat.Add(x.Capacite); });
             return resultat;
         }
     }

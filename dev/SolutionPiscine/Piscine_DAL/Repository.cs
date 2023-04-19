@@ -21,5 +21,14 @@ namespace Piscine_DAL
         {
             return Context.LesPiscines.ToList();
         }
+
+        public static ArrayList GetPiscines(int idAcces)
+        {
+            var resultat = new List<Piscine>();
+            var acces = Context.LesAcces.FirstOrDefault(x => x.Id == idAcces);
+            if (acces != null) resultat = acces.LesPiscines;
+
+            return resultat.ToArrayList();
+        }
     }
 }
