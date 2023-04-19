@@ -19,7 +19,7 @@ namespace UILConsole
                 var p3 = Metier.NouvellePiscine("Piscine 3", 210);
                 var a1 = Metier.NouvelAcces("Bus 45", new int[] { p1, p2 });
 
-
+                int c1 = Metier.NouvelleActivite("20230501", "20230930", "Yoga Paddle", p1);
                 //Metier.Enregistrer();// AM 20230419 Correction
             }
             var recherchePiscinesBus45 = new Recherche { IdAcces = 1 };

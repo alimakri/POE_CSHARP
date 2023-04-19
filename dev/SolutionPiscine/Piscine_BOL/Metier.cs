@@ -23,6 +23,15 @@ namespace Piscine_BOL
         {
             return Repository.EnregistrerPiscine(p.ToArrayList());
         }
+
+        public static int NouvelleActivite(string d1, string d2, string nom, int idPiscine)
+        {
+            var c = new Activite { DateDebut = Outils.ConvertToDateTime(d1), DateFin = Outils.ConvertToDateTime(d2), Nom = nom,  Piscine = LesPiscines.FirstOrDefault(x=>x.Id==idPiscine)};
+            LesActivites.Add(c);
+            c.Id = EnregistrerActivite(c); 
+            return c.Id;
+        }
+
         public static void Enregistrer()
         {
             Repository.Enregistrer(LesPiscines.ToArrayList(), LesAcces.ToArrayList());
@@ -65,5 +74,14 @@ namespace Piscine_BOL
         public int Id;
         public string Nom;
         public IEnumerable<Piscine> Piscines;
+    }
+    public class Activite
+    {
+        public int Id;
+        public DateTime DateDebut;
+        public DateTime DateFin;
+        public string Nom;
+
+        public Piscine Piscine;
     }
 }

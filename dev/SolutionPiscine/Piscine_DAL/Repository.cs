@@ -37,7 +37,6 @@ namespace Piscine_DAL
             Context.LesPiscines.Add(newP);
             Context.SaveChanges();
             return newP.Id;
-
         }
 
         public static ArrayList GetPiscines(int idAcces)

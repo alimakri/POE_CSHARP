@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Piscine_BOL
 {
-    public static class DataTransferObject
+    public static class DtoMetier
     {
         public static ArrayList ToArrayList(this Acces x)
         {
