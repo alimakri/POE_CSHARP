@@ -23,6 +23,22 @@ namespace Piscine_DAL
             var n = Context.LesPiscines.ToList();
             return n;
         }
+        public static int EnregistrerAcces(ArrayList alAcces)
+        {
+            var newA = alAcces.ToAcces();
+            Context.LesAcces.Add(newA);
+            Context.SaveChanges();
+            return newA.Id;
+        }
+
+        public static int EnregistrerPiscine(ArrayList alPiscine)
+        {
+            var newP = alPiscine.ToPiscine();
+            Context.LesPiscines.Add(newP);
+            Context.SaveChanges();
+            return newP.Id;
+
+        }
 
         public static ArrayList GetPiscines(int idAcces)
         {
@@ -34,5 +50,6 @@ namespace Piscine_DAL
 
             return resultat.ToArrayList();
         }
+
     }
 }

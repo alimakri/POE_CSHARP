@@ -11,11 +11,18 @@ namespace Piscine_BOL
         private static List<Piscine> LesPiscines = new List<Piscine>();
         private static List<Acces> LesAcces = new List<Acces>();
 
-        public static void NouvellePiscine(int id, string nom, int capacite)
+        public static int NouvellePiscine(string nom, int capacite)
         {
-            LesPiscines.Add(new Piscine { Id = id, Nom = nom, Capacite = capacite });
+            var p = new Piscine { Nom = nom, Capacite = capacite };
+            LesPiscines.Add(p);
+            p.Id = EnregistrerPiscine(p); // AM 20230419 Correction
+            return p.Id;
         }
 
+        public static int EnregistrerPiscine(Piscine p)
+        {
+            return Repository.EnregistrerPiscine(p.ToArrayList());
+        }
         public static void Enregistrer()
         {
             Repository.Enregistrer(LesPiscines.ToArrayList(), LesAcces.ToArrayList());
@@ -26,11 +33,17 @@ namespace Piscine_BOL
             return Repository.GetPiscines((int)recherche[0]);
         }
 
-        public static void NouvelAcces(int id, string nom, int[] piscines)
+        public static int NouvelAcces(string nom, int[] piscines)
         {
-            var a = new Acces { Id = id, Nom = nom };
+            var a = new Acces { Nom = nom };
             a.Piscines = LesPiscines.Where(x => piscines.Contains(x.Id));
             LesAcces.Add(a);
+            return EnregistrerAcces(a);
+        }
+
+        private static int EnregistrerAcces(Acces a)
+        {
+            return Repository.EnregistrerAcces(a.ToArrayList());
         }
         #region Tests unitaires
         public static IEnumerable<string> TestAcces1(string nomAcces)

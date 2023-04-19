@@ -9,6 +9,27 @@ namespace Piscine_DAL
 {
     public static class DtoDonnees
     {
+        internal static Acces ToAcces(this ArrayList al)
+        {
+            var toutesLesPiscines = Repository.GetAllPiscines();
+            Acces resultat =
+                new Acces
+                {
+                    Nom = (string)al[0],
+                    LesPiscines = toutesLesPiscines.Where(x=>((int[])al[1]).Contains(x.Id)).ToList() // AM 20230419 Correction
+                };
+            return resultat;
+        }
+        internal static Piscine ToPiscine(this ArrayList al)
+        {
+            Piscine resultat =
+                new Piscine
+                {
+                    Nom = (string)al[0],
+                    Capacite = (int)al[1]
+                };
+            return resultat;
+        }
         internal static List<Piscine> ToListPiscine(this ArrayList al)
         {
             List<Piscine> resultat = new List<Piscine>();

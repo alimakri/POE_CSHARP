@@ -11,22 +11,22 @@ namespace UILConsole
     {
         static void Main(string[] args)
         {
-            var premiereFois = false;
+            var premiereFois = true;
             if (premiereFois)
             {
-                Metier.NouvellePiscine(1, "Piscine 1", 250);
-                Metier.NouvellePiscine(2, "Piscine 2", 410);
-                Metier.NouvellePiscine(3, "Piscine 3", 210);
-                Metier.NouvelAcces(1, "Bus 45", new int[] { 1, 2 });
+                var p1 = Metier.NouvellePiscine("Piscine 1", 250);
+                var p2 = Metier.NouvellePiscine("Piscine 2", 410);
+                var p3 = Metier.NouvellePiscine("Piscine 3", 210);
+                var a1 = Metier.NouvelAcces("Bus 45", new int[] { p1, p2 });
 
 
-                Metier.Enregistrer();
+                //Metier.Enregistrer();// AM 20230419 Correction
             }
             var recherchePiscinesBus45 = new Recherche { IdAcces = 1 };
             recherchePiscinesBus45.Find();
 
             Console.WriteLine("Les piscines accessibles par le Bus 45 sont :");
-            foreach(var p in recherchePiscinesBus45.ResultatPiscine)
+            foreach (var p in recherchePiscinesBus45.ResultatPiscine)
             {
                 Console.WriteLine(p.Nom);
             }
