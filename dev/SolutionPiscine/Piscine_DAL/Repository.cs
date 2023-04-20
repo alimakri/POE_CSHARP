@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Piscine_DAL
 {
@@ -18,37 +15,12 @@ namespace Piscine_DAL
             Context.SaveChanges();
         }
 
-        internal static Activite GetActivite(int idActivite)
-        {
-            return Context.LesActivites.FirstOrDefault(x => x.Id == idActivite);
-        }
-
-        internal static List<DetailActivite> GetDetailsActivites(int idActivite)
-        {
-            return Context.LesActivites.FirstOrDefault(x => x.Id == idActivite).LesDetails;
-        }
-
+        #region Piscine
         internal static List<Piscine> GetAllPiscines()
         {
             var n = Context.LesPiscines.ToList();
             return n;
         }
-        public static int EnregistrerAcces(ArrayList alAcces)
-        {
-            var newA = alAcces.ToAcces();
-            Context.LesAcces.Add(newA);
-            Context.SaveChanges();
-            return newA.Id;
-        }
-
-        public static int EnregistrerPiscine(ArrayList alPiscine)
-        {
-            var newP = alPiscine.ToPiscine();
-            Context.LesPiscines.Add(newP);
-            Context.SaveChanges();
-            return newP.Id;
-        }
-
         public static ArrayList GetPiscines(int idAcces)
         {
             var resultat = new List<Piscine>();
@@ -57,7 +29,34 @@ namespace Piscine_DAL
 
             return resultat.ToArrayList();
         }
+        public static int EnregistrerPiscine(ArrayList alPiscine)
+        {
+            var newP = alPiscine.ToPiscine();
+            Context.LesPiscines.Add(newP);
+            Context.SaveChanges();
+            return newP.Id;
+        }
+        #endregion
 
+        #region Acces
+        public static int EnregistrerAcces(ArrayList alAcces)
+        {
+            var newA = alAcces.ToAcces();
+            Context.LesAcces.Add(newA);
+            Context.SaveChanges();
+            return newA.Id;
+        }
+        #endregion
+
+        #region Activite
+        internal static Activite GetActivite(int idActivite)
+        {
+            return Context.LesActivites.FirstOrDefault(x => x.Id == idActivite);
+        }
+        internal static List<DetailActivite> GetDetailsActivites(int idActivite)
+        {
+            return Context.LesActivites.FirstOrDefault(x => x.Id == idActivite).LesDetails;
+        }
         public static int EnregistrerActivite(ArrayList alActivite)
         {
             var newA = alActivite.ToActivite();
@@ -65,13 +64,13 @@ namespace Piscine_DAL
             Context.SaveChanges();
             return newA.Id;
         }
-
         public static void EnregistrerDetailActivite(int idActivite, ArrayList alActivite)
         {
             var newD = alActivite.ToActiviteAvecDetail(idActivite);
-            var activite = Context.LesActivites.FirstOrDefault(x=>x.Id==idActivite);
+            var activite = Context.LesActivites.FirstOrDefault(x => x.Id == idActivite);
             activite.LesDetails.Add(newD);
             Context.SaveChanges();
         }
+        #endregion
     }
 }

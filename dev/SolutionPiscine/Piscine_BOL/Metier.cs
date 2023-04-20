@@ -9,7 +9,6 @@ namespace Piscine_BOL
 {
     public static class Metier
     {
-
         #region Piscine
 
         private static List<Piscine> LesPiscines = new List<Piscine>();
@@ -90,14 +89,12 @@ namespace Piscine_BOL
 
         #endregion
 
-
         #region Test
         public static void Enregistrer()
         {
             Repository.Enregistrer(LesPiscines.ToArrayList(), LesAcces.ToArrayList());
         }
         #endregion
-
 
         #region Tests unitaires
         public static IEnumerable<string> TestAcces1(string nomAcces)
