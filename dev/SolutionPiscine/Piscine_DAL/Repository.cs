@@ -18,6 +18,11 @@ namespace Piscine_DAL
             Context.SaveChanges();
         }
 
+        internal static Activite GetActivite(int idActivite)
+        {
+            return Context.LesActivites.FirstOrDefault(x => x.Id == idActivite);
+        }
+
         internal static List<DetailActivite> GetDetailsActivites(int idActivite)
         {
             return Context.LesActivites.FirstOrDefault(x => x.Id == idActivite).LesDetails;
@@ -59,6 +64,13 @@ namespace Piscine_DAL
             Context.LesActivites.Add(newA);
             Context.SaveChanges();
             return newA.Id;
+        }
+
+        public static void EnregistrerDetailActivite(ArrayList alActivite)
+        {
+            var newA = alActivite.ToActiviteAvecDetail();
+            Context.LesActivites.Add(newA);
+            Context.SaveChanges();
         }
     }
 }

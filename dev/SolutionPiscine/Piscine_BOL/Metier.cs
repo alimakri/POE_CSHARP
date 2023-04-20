@@ -57,7 +57,8 @@ namespace Piscine_BOL
                 DateDebut = Outils.ConvertToDateTime(FormatDateEnum.yyyyMMdd, d1),
                 DateFin = Outils.ConvertToDateTime(FormatDateEnum.yyyyMMdd, d2),
                 Nom = nom,
-                Piscine = LesPiscines.FirstOrDefault(x => x.Id == idPiscine)
+                Piscine = LesPiscines.FirstOrDefault(x => x.Id == idPiscine),
+                LesDetails = new List<DetailActivite>()
             };
             LesActivites.Add(c);
             c.Id = EnregistrerActivite(c);
@@ -79,7 +80,12 @@ namespace Piscine_BOL
                 LActvite = c
             };
             c.LesDetails.Add(d);
-            EnregistrerActivite(c);
+            EnregistrerDetailActivite(c);
+        }
+
+        private static void EnregistrerDetailActivite(Activite c)
+        {
+            Repository.EnregistrerDetailActivite(c.ToArrayList());
         }
 
         #endregion

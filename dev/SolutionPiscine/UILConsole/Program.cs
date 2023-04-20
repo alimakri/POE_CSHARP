@@ -15,7 +15,7 @@ namespace UILConsole
         //DROP DATABASE PiscineDB
         static void Main(string[] args)
         {
-            var premiereFois = false;
+            var premiereFois = true;
             if (premiereFois)
             {
                 var p1 = Metier.NouvellePiscine("Piscine 1", 250);

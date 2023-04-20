@@ -9,11 +9,24 @@ namespace Piscine_DAL
 {
     public static class DtoDonnees
     {
-        internal static Activite ToActivite(this ArrayList al)
+        internal static Activite ToActiviteAvecDetail(this ArrayList al)
         {
             var idActivite = (int)al[0];
-            var lesDetails = new List<DetailActivite>();
-            if (idActivite != 0) lesDetails = Repository.GetDetailsActivites(idActivite);
+            Activite activite = Repository.GetActivite(idActivite);
+            foreach (int idDetail in (int[])al[5])
+            {
+                activite.LesDetails.Add(new DetailActivite
+                {
+                    DateDebut = (DateTime)al[1],
+                    DateFin = (DateTime)al[2],
+                    NombrePersonne = (int)al[3],
+                    LActivite = activite
+                });
+            }
+            return activite;
+        }
+        internal static Activite ToActivite(this ArrayList al)
+        {
             var toutesLesPiscines = Repository.GetAllPiscines();
             var resultat =
                 new Activite
@@ -22,7 +35,7 @@ namespace Piscine_DAL
                     DateFin = (DateTime)al[2],
                     Type = (string)al[3],
                     UnePiscine = toutesLesPiscines.FirstOrDefault(x => x.Id == (int)al[4]),
-                    LesDetails = lesDetails.ToList()
+                    LesDetails = new List<DetailActivite>()
                 };
             return resultat;
         }

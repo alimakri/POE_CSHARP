@@ -12,6 +12,7 @@ namespace Piscine_BOL
         public static ArrayList ToArrayList(this Activite x)
         {
             var resultat = new ArrayList();
+            resultat.Add(x.Id);
             resultat.Add(x.DateDebut);
             resultat.Add(x.DateFin);
             resultat.Add(x.Nom);
