@@ -77,15 +77,15 @@ namespace Piscine_BOL
                 DateDebut = Outils.ConvertToDateTime(FormatDateEnum.dd_MM_yyyy_HH_mm, d1),
                 DateFin = Outils.ConvertToDateTime(FormatDateEnum.dd_MM_yyyy_HH_mm, d2),
                 NombrePersonne = n,
-                LActvite = c
+                LActivite = c
             };
             c.LesDetails.Add(d);
-            EnregistrerDetailActivite(c);
+            EnregistrerDetailActivite(c, d);
         }
 
-        private static void EnregistrerDetailActivite(Activite c)
+        private static void EnregistrerDetailActivite(Activite c, DetailActivite d)
         {
-            Repository.EnregistrerDetailActivite(c.ToArrayList());
+            Repository.EnregistrerDetailActivite(c.Id, d.ToArrayList());
         }
 
         #endregion
@@ -139,7 +139,7 @@ namespace Piscine_BOL
         public DateTime DateFin;
         public int NombrePersonne;
 
-        public Activite LActvite;
+        public Activite LActivite;
     }
     #endregion
 

@@ -41,7 +41,16 @@ namespace Piscine_DAL
         public string Type { get; set; }
         [Required]
         public Piscine UnePiscine { get; set; }
-        public List<DetailActivite> LesDetails;
+        public List<DetailActivite> LesDetails { get; set; }
+    }
+    internal class DetailActivite
+    {
+        public int Id { get; set; }
+        public DateTime DateDebut { get; set; }
+        public DateTime DateFin { get; set; }
+        public int NombrePersonne { get; set; }
+
+        public Activite LActivite { get; set; }
     }
     internal class OccupationContext : DbContext
     {
@@ -52,15 +61,6 @@ namespace Piscine_DAL
         public DbSet<Activite> LesActivites { get; set; }
         public DbSet<Acces> LesAcces { get; set; }
         public DbSet<Piscine> LesPiscines { get; set; }
-    }
-    internal class DetailActivite
-    {
-        public int Id;
-        public DateTime DateDebut;
-        public DateTime DateFin;
-        public int NombrePersonne;
-
-        public Activite LActivite;
     }
 
 }

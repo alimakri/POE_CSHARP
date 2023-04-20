@@ -9,21 +9,16 @@ namespace Piscine_DAL
 {
     public static class DtoDonnees
     {
-        internal static Activite ToActiviteAvecDetail(this ArrayList al)
+        internal static DetailActivite ToActiviteAvecDetail(this ArrayList al, int idActivite)
         {
-            var idActivite = (int)al[0];
             Activite activite = Repository.GetActivite(idActivite);
-            foreach (int idDetail in (int[])al[5])
+            return new DetailActivite
             {
-                activite.LesDetails.Add(new DetailActivite
-                {
-                    DateDebut = (DateTime)al[1],
-                    DateFin = (DateTime)al[2],
-                    NombrePersonne = (int)al[3],
-                    LActivite = activite
-                });
-            }
-            return activite;
+                DateDebut = (DateTime)al[1],
+                DateFin = (DateTime)al[2],
+                NombrePersonne = (int)al[3],
+                LActivite = activite
+            };
         }
         internal static Activite ToActivite(this ArrayList al)
         {

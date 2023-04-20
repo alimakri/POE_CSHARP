@@ -9,6 +9,16 @@ namespace Piscine_BOL
 {
     public static class DtoMetier
     {
+        public static ArrayList ToArrayList(this DetailActivite x)
+        {
+            var resultat = new ArrayList();
+            resultat.Add(x.Id);
+            resultat.Add(x.DateDebut);
+            resultat.Add(x.DateFin);
+            resultat.Add(x.NombrePersonne);
+            resultat.Add(x.LActivite.Id);
+            return resultat;
+        }
         public static ArrayList ToArrayList(this Activite x)
         {
             var resultat = new ArrayList();
@@ -17,7 +27,7 @@ namespace Piscine_BOL
             resultat.Add(x.DateFin);
             resultat.Add(x.Nom);
             resultat.Add(x.Piscine.Id);
-            resultat.Add(x.LesDetails.Select(y => y.Id).ToArray()); 
+            resultat.Add(x.LesDetails.Select(y => y.Id).ToArray());
             return resultat;
         }
         public static ArrayList ToArrayList(this Acces x)

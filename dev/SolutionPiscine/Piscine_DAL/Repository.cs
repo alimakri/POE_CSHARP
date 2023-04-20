@@ -66,10 +66,11 @@ namespace Piscine_DAL
             return newA.Id;
         }
 
-        public static void EnregistrerDetailActivite(ArrayList alActivite)
+        public static void EnregistrerDetailActivite(int idActivite, ArrayList alActivite)
         {
-            var newA = alActivite.ToActiviteAvecDetail();
-            Context.LesActivites.Add(newA);
+            var newD = alActivite.ToActiviteAvecDetail(idActivite);
+            var activite = Context.LesActivites.FirstOrDefault(x=>x.Id==idActivite);
+            activite.LesDetails.Add(newD);
             Context.SaveChanges();
         }
     }
