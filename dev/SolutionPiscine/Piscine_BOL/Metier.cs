@@ -29,6 +29,7 @@ namespace Piscine_BOL
             return Repository.EnregistrerPiscine(p.ToArrayList());
         }
 
+
         #endregion
 
         #region Acces
@@ -66,6 +67,19 @@ namespace Piscine_BOL
         private static int EnregistrerActivite(Activite c)
         {
             return Repository.EnregistrerActivite(c.ToArrayList());
+        }
+        public static void NouveauDetailActivite(string d1, string d2, int n, int idActivite)
+        {
+            var c = LesActivites.FirstOrDefault(x => x.Id == idActivite);
+            var d = new DetailActivite
+            {
+                DateDebut = Outils.ConvertToDateTime(FormatDateEnum.dd_MM_yyyy_HH_mm, d1),
+                DateFin = Outils.ConvertToDateTime(FormatDateEnum.dd_MM_yyyy_HH_mm, d2),
+                NombrePersonne = n,
+                LActvite = c
+            };
+            c.LesDetails.Add(d);
+            EnregistrerActivite(c);
         }
 
         #endregion
@@ -110,6 +124,16 @@ namespace Piscine_BOL
         public string Nom;
 
         public Piscine Piscine;
+        public List<DetailActivite> LesDetails; 
+    }
+    public class DetailActivite
+    {
+        public int Id;
+        public DateTime DateDebut;
+        public DateTime DateFin;
+        public int NombrePersonne;
+
+        public Activite LActvite;
     }
     #endregion
 

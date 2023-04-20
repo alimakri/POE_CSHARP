@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Piscine_Commun
 {
-    public enum FormatDateEnum { yyyyMMdd, dd_MM_yyyy }
+    public enum FormatDateEnum
+    {
+        yyyyMMdd, dd_MM_yyyy, dd_MM_yyyy_HH_mm
+    }
     public static class Outils
     {
         /// <summary>
@@ -21,6 +24,7 @@ namespace Piscine_Commun
             {
                 case FormatDateEnum.yyyyMMdd: return DateTime.ParseExact(dateString, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
                 case FormatDateEnum.dd_MM_yyyy: return DateTime.ParseExact(dateString, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                case FormatDateEnum.dd_MM_yyyy_HH_mm: return DateTime.ParseExact(dateString, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
             }
             return default;
         }

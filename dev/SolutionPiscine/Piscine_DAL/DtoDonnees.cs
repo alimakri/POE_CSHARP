@@ -11,14 +11,18 @@ namespace Piscine_DAL
     {
         internal static Activite ToActivite(this ArrayList al)
         {
+            var idActivite = (int)al[0];
+            var lesDetails = new List<DetailActivite>();
+            if (idActivite != 0) lesDetails = Repository.GetDetailsActivites(idActivite);
             var toutesLesPiscines = Repository.GetAllPiscines();
             var resultat =
                 new Activite
                 {
-                    DateDebut = (DateTime)al[0],
-                    DateFin = (DateTime)al[1],
-                    Type = (string)al[2],
-                    UnePiscine = toutesLesPiscines.FirstOrDefault(x => x.Id == (int)al[3])
+                    DateDebut = (DateTime)al[1],
+                    DateFin = (DateTime)al[2],
+                    Type = (string)al[3],
+                    UnePiscine = toutesLesPiscines.FirstOrDefault(x => x.Id == (int)al[4]),
+                    LesDetails = lesDetails.ToList()
                 };
             return resultat;
         }

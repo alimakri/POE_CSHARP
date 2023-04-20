@@ -16,13 +16,14 @@ namespace Piscine_BOL
             resultat.Add(x.DateFin);
             resultat.Add(x.Nom);
             resultat.Add(x.Piscine.Id);
+            resultat.Add(x.LesDetails.Select(y => y.Id).ToArray()); 
             return resultat;
         }
         public static ArrayList ToArrayList(this Acces x)
         {
             var resultat = new ArrayList();
             resultat.Add(x.Nom);
-            resultat.Add(x.Piscines.Select(y => y.Id).ToArray()); // AM 20230419 Correction
+            resultat.Add(x.Piscines.Select(y => y.Id).ToArray()); 
             return resultat;
         }
         public static ArrayList ToArrayList(this Piscine x)

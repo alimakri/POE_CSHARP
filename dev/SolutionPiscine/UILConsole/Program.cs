@@ -9,6 +9,10 @@ namespace UILConsole
 {
     internal class Program
     {
+        //USE[master];
+        //alter database PiscineDB set single_user with rollback immediate;
+        //GO
+        //DROP DATABASE PiscineDB
         static void Main(string[] args)
         {
             var premiereFois = false;
@@ -22,6 +26,8 @@ namespace UILConsole
                 int c1 = Metier.NouvelleActivite("20230501", "20230930", "Yoga Paddle", p1);
                 int c2 = Metier.NouvelleActivite("20220901", "20230630", "AquaBoxing", p1);
                 int c3 = Metier.NouvelleActivite("20220901", "20230630", "AquaBike", p1);
+
+                Metier.NouveauDetailActivite("01/06/2023 10:00", "01/06/2023 12:00", 20, c1);
             }
             var recherchePiscinesBus45 = new Recherche { IdAcces = 1 };
             recherchePiscinesBus45.Find();

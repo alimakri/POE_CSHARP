@@ -18,6 +18,11 @@ namespace Piscine_DAL
             Context.SaveChanges();
         }
 
+        internal static List<DetailActivite> GetDetailsActivites(int idActivite)
+        {
+            return Context.LesActivites.FirstOrDefault(x => x.Id == idActivite).LesDetails;
+        }
+
         internal static List<Piscine> GetAllPiscines()
         {
             var n = Context.LesPiscines.ToList();
