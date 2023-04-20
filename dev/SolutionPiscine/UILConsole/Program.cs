@@ -28,7 +28,7 @@ namespace UILConsole
                 int c3 = Metier.NouvelleActivite("20220901", "20230630", "AquaBike", p1);
 
                 Metier.NouveauDetailActivite("01/06/2023 10:00", "01/06/2023 12:00", 20, c1);
-                Metier.NouveauDetailActivite("01/06/2023 10:00", "01/06/2023 12:00", 20, c1);
+                Metier.NouveauDetailActivite("01/07/2023 10:00", "01/07/2023 12:00", 12, c1);
             }
             var recherchePiscinesBus45 = new Recherche { IdAcces = 1 };
             recherchePiscinesBus45.Find();
