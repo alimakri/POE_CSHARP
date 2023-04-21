@@ -11,9 +11,15 @@ namespace A_InterfaceWCF
         static void Main(string[] args)
         {
             string s = "Ali Makri";
-            string t = s.ToUpper();
+            string t = Majuscule(s);
+
+
             Console.WriteLine(t);
             Console.ReadLine();
+        }
+        static string Majuscule(string s)
+        {
+            return s.ToUpper();
         }
     }
 }

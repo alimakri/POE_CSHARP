@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Communication\A_InterfaceWCF\bin\Debug\A_InterfaceWCF.exe.config
+D:\POE_CSHARP\dev\Communication\A_InterfaceWCF\bin\Debug\A_InterfaceWCF.exe
+D:\POE_CSHARP\dev\Communication\A_InterfaceWCF\bin\Debug\A_InterfaceWCF.pdb
+D:\POE_CSHARP\dev\Communication\A_InterfaceWCF\obj\Debug\A_InterfaceWCF.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Communication\A_InterfaceWCF\obj\Debug\A_InterfaceWCF.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Communication\A_InterfaceWCF\obj\Debug\A_InterfaceWCF.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Communication\A_InterfaceWCF\obj\Debug\A_InterfaceWCF.exe
+D:\POE_CSHARP\dev\Communication\A_InterfaceWCF\obj\Debug\A_InterfaceWCF.pdb
