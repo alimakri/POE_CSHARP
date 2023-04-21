@@ -9,23 +9,21 @@ namespace Piscine_BOL
 {
     public static class Metier
     {
+        #region Propriétés
+        private static Piscines LesPiscines = new Piscines();
+        private static List<Acces> LesAcces = new List<Acces>();
+        private static List<Activite> LesActivites = new List<Activite>();
+        #endregion
+
         #region Piscine
 
-        private static List<Piscine> LesPiscines = new List<Piscine>();
         public static int NouvellePiscine(string nom, int capacite)
         {
-            var p = new Piscine { Nom = nom, Capacite = capacite };
-            LesPiscines.Add(p);
-            p.Id = EnregistrerPiscine(p); // AM 20230419 Correction
-            return p.Id;
+            return LesPiscines.Add(nom, capacite);
         }
         public static ArrayList GetPiscines(ArrayList recherche)
         {
-            return Repository.GetPiscines((int)recherche[0]);
-        }
-        public static int EnregistrerPiscine(Piscine p)
-        {
-            return Repository.EnregistrerPiscine(p.ToArrayList());
+            return LesPiscines.GetPiscines(recherche);
         }
 
 
@@ -33,7 +31,6 @@ namespace Piscine_BOL
 
         #region Acces
 
-        private static List<Acces> LesAcces = new List<Acces>();
         public static int NouvelAcces(string nom, int[] piscines)
         {
             var a = new Acces { Nom = nom };
@@ -48,7 +45,6 @@ namespace Piscine_BOL
         #endregion
 
         #region Activite
-        private static List<Activite> LesActivites = new List<Activite>();
         public static int NouvelleActivite(string d1, string d2, string nom, int idPiscine)
         {
             var c = new Activite
@@ -137,6 +133,27 @@ namespace Piscine_BOL
         public int NombrePersonne;
 
         public Activite LActivite;
+    }
+    #endregion
+
+    #region Piscine
+    internal class Piscines : List<Piscine>
+    {
+        internal int Add(string nom, int capacite)
+        {
+            var p = new Piscine { Nom = nom, Capacite = capacite };
+            Add(p);
+            p.Id = EnregistrerPiscine(p); 
+            return p.Id;
+        }
+        public int EnregistrerPiscine(Piscine p)
+        {
+            return Repository.EnregistrerPiscine(p.ToArrayList());
+        }
+        public ArrayList GetPiscines(ArrayList recherche)
+        {
+            return Repository.GetPiscines((int)recherche[0]);
+        }
     }
     #endregion
 

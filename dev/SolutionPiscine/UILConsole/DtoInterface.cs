@@ -9,10 +9,15 @@ namespace UILConsole
 {
     internal static class DtoInterface
     {
+        #region Sortant
         public static ArrayList ToArrayList(this Recherche r)
         {
             return new ArrayList { r.IdAcces, r.IdPiscine };
         }
+        #endregion
+
+        #region Entrant
+        // Piscines -> ArrayList 
         internal static List<Piscine> ToListPiscine(this ArrayList al)
         {
             List<Piscine> resultat = new List<Piscine>();
@@ -27,5 +32,6 @@ namespace UILConsole
             }
             return resultat;
         }
+        #endregion
     }
 }

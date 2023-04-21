@@ -9,6 +9,7 @@ namespace Piscine_BOL
 {
     public static class DtoMetier
     {
+        #region Sortant
         public static ArrayList ToArrayList(this DetailActivite x)
         {
             var resultat = new ArrayList();
@@ -60,6 +61,6 @@ namespace Piscine_BOL
             });
             return resultat;
         }
-
+        #endregion
     }
 }
