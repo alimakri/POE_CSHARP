@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A_Service1WCF
+namespace A_HostWCF
 {
-    public class Service1
+    internal class Program
     {
-        public string Majuscule(string s)
+        static void Main(string[] args)
         {
-            return s.ToUpper();
         }
     }
 }

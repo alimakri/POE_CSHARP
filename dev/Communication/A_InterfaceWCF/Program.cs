@@ -1,7 +1,8 @@
-﻿using A_Service1WCF;
+﻿using A_ContratWCF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +14,12 @@ namespace A_InterfaceWCF
         {
             string s = "Ali Makri";
 
-            Service1 svc1 = new Service1();
+            IService1 svc1;
+
+            // Demande d'instance à WCF équivalent svc1=new Service1().
+            var canal = new ChannelFactory<IService1>(new NetTcpBinding(), "net.tcp://localhost:1234/serviceMajuscule");
+            svc1 = canal.CreateChannel(); 
+
             string t = svc1.Majuscule(s);
 
 
