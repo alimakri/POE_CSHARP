@@ -1,4 +1,5 @@
-﻿using System;
+﻿using A_Service1WCF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,15 +12,13 @@ namespace A_InterfaceWCF
         static void Main(string[] args)
         {
             string s = "Ali Makri";
-            string t = Majuscule(s);
+
+            Service1 svc1 = new Service1();
+            string t = svc1.Majuscule(s);
 
 
             Console.WriteLine(t);
             Console.ReadLine();
-        }
-        static string Majuscule(string s)
-        {
-            return s.ToUpper();
         }
     }
 }
