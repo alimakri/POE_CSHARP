@@ -1,0 +1,6 @@
+D:\POE_CSHARP\dev\Communication\A_ContratWCF\bin\Debug\A_ContratWCF.dll
+D:\POE_CSHARP\dev\Communication\A_ContratWCF\bin\Debug\A_ContratWCF.pdb
+D:\POE_CSHARP\dev\Communication\A_ContratWCF\obj\Debug\A_ContratWCF.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Communication\A_ContratWCF\obj\Debug\A_ContratWCF.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Communication\A_ContratWCF\obj\Debug\A_ContratWCF.dll
+D:\POE_CSHARP\dev\Communication\A_ContratWCF\obj\Debug\A_ContratWCF.pdb

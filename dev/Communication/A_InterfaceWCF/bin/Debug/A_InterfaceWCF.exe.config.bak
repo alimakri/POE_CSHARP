@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<startup>
+		<supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8" />
+	</startup>
+	<system.serviceModel>
+		<client>
+			<endpoint name="Main"
+					  address="net.tcp://localhost:1234/serviceMajuscule"
+					  binding="netTcpBinding" 
+					  contract="A_ContratWCF.IService1"  />
+			<endpoint  name="http"
+					   address="http://localhost:8080/serviceMajuscule" 
+					   binding="basicHttpBinding"
+					   contract="A_ContratWCF.IService1" />
+		</client>
+	</system.serviceModel>
+</configuration>

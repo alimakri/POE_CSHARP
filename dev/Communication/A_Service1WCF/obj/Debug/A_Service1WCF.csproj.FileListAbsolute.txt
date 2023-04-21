@@ -4,3 +4,6 @@ D:\POE_CSHARP\dev\Communication\A_Service1WCF\obj\Debug\A_Service1WCF.csproj.Ass
 D:\POE_CSHARP\dev\Communication\A_Service1WCF\obj\Debug\A_Service1WCF.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\Communication\A_Service1WCF\obj\Debug\A_Service1WCF.dll
 D:\POE_CSHARP\dev\Communication\A_Service1WCF\obj\Debug\A_Service1WCF.pdb
+D:\POE_CSHARP\dev\Communication\A_Service1WCF\bin\Debug\A_ContratWCF.dll
+D:\POE_CSHARP\dev\Communication\A_Service1WCF\bin\Debug\A_ContratWCF.pdb
+D:\POE_CSHARP\dev\Communication\A_Service1WCF\obj\Debug\A_Service1WCF.csproj.CopyComplete
