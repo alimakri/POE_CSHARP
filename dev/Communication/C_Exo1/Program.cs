@@ -10,9 +10,11 @@ namespace C_Exo1
     {
         static void Main(string[] args)
         {
-            //
+            // Code à insérer ----------------------------------------------
 
-            //
+
+
+            // -------------------------------------------------------------
 
             // Ne pas changer
             Console.WriteLine("Liste des pays parlant français");
