@@ -14,28 +14,47 @@ namespace D_WebApiPost_Serveur.Controllers
         private List<Opticien> ListeOpticiens;
         public OpticienController()
         {
-
-            //ListeOpticiens = new List<Opticien>
-            //{
-            //    new Opticien{ Nom="Strasbourg", Ville="Krys" },
-            //    new Opticien{ Nom="Optic 2000", Ville="Lyon" },
-            //    new Opticien{ Nom="Afflelou", Ville="Nancy" },
-            //};
+            ListeOpticiens = DeserialisationXML();
 
         }
         public IEnumerable<Opticien> Get()
         {
             return ListeOpticiens;
         }
-        public void Post(string nom, string ville)
+        [HttpPost]
+        public void Post(int id, string nom, string ville)
         {
-           //ListeOpticiens.Add(new Opticien{ Nom=nom, Ville=ville });
+            ListeOpticiens.Add(new Opticien { Id = id, Nom = nom, Ville = ville });
+            SerialisationXML();
         }
-        private void SerialisationXML(List<Opticien> liste)
+        public void Post(Opticien opticien)
+        {
+            ListeOpticiens.Add(opticien);
+            SerialisationXML();
+        }
+        public void PostUpdate(int id, Opticien newOpticien)
+        {
+            var opticien = ListeOpticiens.FirstOrDefault(x => x.Id == id);
+            if (opticien != null)
+            {
+                opticien.Ville = newOpticien.Ville;
+            }
+            SerialisationXML();
+        }
+        public void Post(int delete)
+        {
+            var opticien = ListeOpticiens.FirstOrDefault(x => x.Id == delete);
+            if (opticien != null)
+            {
+                ListeOpticiens.Remove(opticien);
+                SerialisationXML();
+            }
+        }
+        private void SerialisationXML()
         {
             var serialiser = new XmlSerializer(typeof(List<Opticien>));
             var flux = new StreamWriter(@"d:\lesOpticiens.txt");
-            serialiser.Serialize(flux, liste);
+            serialiser.Serialize(flux, ListeOpticiens);
             flux.Close();
         }
         private List<Opticien> DeserialisationXML()
@@ -49,7 +68,8 @@ namespace D_WebApiPost_Serveur.Controllers
     }
     public class Opticien
     {
-        public string Nom;
-        public string Ville;
+        public int Id { get; set; }
+        public string Nom { get; set; }
+        public string Ville { get; set; }
     }
 }
