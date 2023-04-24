@@ -1,0 +1,11 @@
+D:\POE_CSHARP\dev\Communication\B_ClientRest\bin\Debug\B_ClientRest.exe.config
+D:\POE_CSHARP\dev\Communication\B_ClientRest\bin\Debug\B_ClientRest.exe
+D:\POE_CSHARP\dev\Communication\B_ClientRest\bin\Debug\B_ClientRest.pdb
+D:\POE_CSHARP\dev\Communication\B_ClientRest\obj\Debug\B_ClientRest.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Communication\B_ClientRest\obj\Debug\B_ClientRest.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Communication\B_ClientRest\obj\Debug\B_ClientRest.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Communication\B_ClientRest\obj\Debug\B_ClientRest.exe
+D:\POE_CSHARP\dev\Communication\B_ClientRest\obj\Debug\B_ClientRest.pdb
+D:\POE_CSHARP\dev\Communication\B_ClientRest\bin\Debug\Newtonsoft.Json.dll
+D:\POE_CSHARP\dev\Communication\B_ClientRest\bin\Debug\Newtonsoft.Json.xml
+D:\POE_CSHARP\dev\Communication\B_ClientRest\obj\Debug\B_ClientRest.csproj.CopyComplete

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_ContratWCF", "A_ContratWC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_HostWCF", "A_HostWCF\A_HostWCF.csproj", "{19AA2A77-D42C-4AE5-8ADB-5E0AE0FC0C20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_ClientRest", "B_ClientRest\B_ClientRest.csproj", "{BCA1E5A1-0C0B-447D-ADA8-CD30221D1396}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{19AA2A77-D42C-4AE5-8ADB-5E0AE0FC0C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19AA2A77-D42C-4AE5-8ADB-5E0AE0FC0C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19AA2A77-D42C-4AE5-8ADB-5E0AE0FC0C20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA1E5A1-0C0B-447D-ADA8-CD30221D1396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA1E5A1-0C0B-447D-ADA8-CD30221D1396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA1E5A1-0C0B-447D-ADA8-CD30221D1396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA1E5A1-0C0B-447D-ADA8-CD30221D1396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
