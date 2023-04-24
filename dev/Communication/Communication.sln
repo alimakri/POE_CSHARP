@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_ClientRest", "B_ClientRes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_Exo1", "C_Exo1\C_Exo1.csproj", "{E6D88363-D851-42E6-939A-91A0448966E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_WebApiPost_Client", "D_WebApiPost_Client\D_WebApiPost_Client.csproj", "{2BA82BFA-03A2-4A22-9D6C-CC89BB6E8AD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_WebApiPost_Serveur", "D_WebApiPost_Serveur\D_WebApiPost_Serveur.csproj", "{9B19CB4E-1D09-4F78-BD46-E3327F2D9262}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{E6D88363-D851-42E6-939A-91A0448966E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6D88363-D851-42E6-939A-91A0448966E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6D88363-D851-42E6-939A-91A0448966E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA82BFA-03A2-4A22-9D6C-CC89BB6E8AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA82BFA-03A2-4A22-9D6C-CC89BB6E8AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA82BFA-03A2-4A22-9D6C-CC89BB6E8AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA82BFA-03A2-4A22-9D6C-CC89BB6E8AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B19CB4E-1D09-4F78-BD46-E3327F2D9262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B19CB4E-1D09-4F78-BD46-E3327F2D9262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B19CB4E-1D09-4F78-BD46-E3327F2D9262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B19CB4E-1D09-4F78-BD46-E3327F2D9262}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,11 @@
+D:\POE_CSHARP\dev\Communication\C_Exo1\obj\Debug\C_Exo1.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Communication\C_Exo1\obj\Debug\C_Exo1.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Communication\C_Exo1\obj\Debug\C_Exo1.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Communication\C_Exo1\bin\Debug\C_Exo1.exe.config
+D:\POE_CSHARP\dev\Communication\C_Exo1\bin\Debug\C_Exo1.exe
+D:\POE_CSHARP\dev\Communication\C_Exo1\bin\Debug\C_Exo1.pdb
+D:\POE_CSHARP\dev\Communication\C_Exo1\bin\Debug\Newtonsoft.Json.dll
+D:\POE_CSHARP\dev\Communication\C_Exo1\bin\Debug\Newtonsoft.Json.xml
+D:\POE_CSHARP\dev\Communication\C_Exo1\obj\Debug\C_Exo1.csproj.CopyComplete
+D:\POE_CSHARP\dev\Communication\C_Exo1\obj\Debug\C_Exo1.exe
+D:\POE_CSHARP\dev\Communication\C_Exo1\obj\Debug\C_Exo1.pdb

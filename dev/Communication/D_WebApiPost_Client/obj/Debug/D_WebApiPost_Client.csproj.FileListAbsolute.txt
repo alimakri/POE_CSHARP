@@ -1,0 +1,11 @@
+D:\POE_CSHARP\dev\Communication\D_WebApiPost_Client\bin\Debug\D_WebApiPost_Client.exe.config
+D:\POE_CSHARP\dev\Communication\D_WebApiPost_Client\bin\Debug\D_WebApiPost_Client.exe
+D:\POE_CSHARP\dev\Communication\D_WebApiPost_Client\bin\Debug\D_WebApiPost_Client.pdb
+D:\POE_CSHARP\dev\Communication\D_WebApiPost_Client\bin\Debug\Newtonsoft.Json.dll
+D:\POE_CSHARP\dev\Communication\D_WebApiPost_Client\bin\Debug\Newtonsoft.Json.xml
+D:\POE_CSHARP\dev\Communication\D_WebApiPost_Client\obj\Debug\D_WebApiPost_Client.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Communication\D_WebApiPost_Client\obj\Debug\D_WebApiPost_Client.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Communication\D_WebApiPost_Client\obj\Debug\D_WebApiPost_Client.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Communication\D_WebApiPost_Client\obj\Debug\D_WebApiPost_Client.csproj.CopyComplete
+D:\POE_CSHARP\dev\Communication\D_WebApiPost_Client\obj\Debug\D_WebApiPost_Client.exe
+D:\POE_CSHARP\dev\Communication\D_WebApiPost_Client\obj\Debug\D_WebApiPost_Client.pdb
