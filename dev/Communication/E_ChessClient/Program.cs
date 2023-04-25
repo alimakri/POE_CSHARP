@@ -87,24 +87,37 @@ namespace E_ChessClient
         }
     }
 
-    internal class ServiceApi
+    internal class ClientServiceApi
     {
-        internal ClientChess AttenteAdversaire(ClientChess adv)
+        private static WebClient ClientApi = new WebClient();
+        private string BaseUrl = "http://localhost:52508/api/chess/";
+        internal ClientChess AttenteAdversaire(ClientChess advAller)
         {
-            // Recherche (nom, couleur) - (AMoiDeJouer)
+            //Recherche (Nom, Couleur)  - (AMoiDeJouer)
+            ClientApi.Headers.Add("Content-Type", "application/json");
+            var json = ClientApi.UploadString(BaseUrl, "POST", JsonConvert.SerializeObject(advAller));
+            var advRetour = JsonConvert.DeserializeObject<ClientChess>(json);
+            return advRetour;
         }
+
+
 
         internal bool Jouer(string coup)
         {
-            
+            var url = $"{BaseUrl}?coup={coup}";
+            var json = ClientApi.DownloadString(url);
+            return json == "true";
         }
+
+
 
         internal bool Sinscrire(string nom)
         {
-            
+            var url = $"{BaseUrl}?nom={nom}";
+            var json = ClientApi.DownloadString(url);
+            return json == "true";
         }
     }
-
     internal enum EtatPartieEnum
     {
         None,
