@@ -27,7 +27,8 @@ namespace D_WebApiPost_Serveur.Controllers
             ListeOpticiens.Add(new Opticien { Id = id, Nom = nom, Ville = ville });
             SerialisationXML();
         }
-        public void Post(Opticien opticien)
+        [HttpPost]
+        public void Insert(Opticien opticien)
         {
             ListeOpticiens.Add(opticien);
             SerialisationXML();
