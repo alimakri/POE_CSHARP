@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,30 +19,23 @@ namespace E_ChessClient
             if (client.AttenteAdversaire())// il retrouvera en prop Client si il est noir ou blanc
             {
                 Console.WriteLine("Vous allez jouer contre {0}. Vous êtes les {1}", client.Adversaire, client.CouleurBlanc);// Adversaire & Couleur des prop de la classe Client
-
-
-
-                while (client.Resultat == EtatPartieEnum.Continuer) // Résultat : blanc gangé /noir gagné /égaux /continuer == la partie n'a pas finie 
+                while (client.Etat == EtatPartieEnum.Continuer) // Résultat : blanc gangé /noir gagné /égaux /continuer == la partie n'a pas finie 
                 {
                     client.Attente();
                     client.Jouer(); // couleur blanche au debut  ou C'EST SON TOUR 
                 }
-                Console.WriteLine("{0}", client.Resultat);
+                Console.WriteLine("{0}", client.Etat);
             }
             else
             {
                 Console.WriteLine("Aucun Adversaire n'a été trouvé");
-
-
-
-
             }
             Console.ReadLine();
         }
     }
     internal class ClientChess
     {
-        private ServiceApi service = new ServiceApi();
+        private ClientServiceApi service = new ClientServiceApi();
 
         public string Nom;
         internal ClientChess Adversaire;
@@ -63,7 +58,7 @@ namespace E_ChessClient
             int compteur = 0;
             while (Adversaire == null && compteur < 121)// 2 min
             {
-                Adversaire = service.AttenteAdversaire();
+                Adversaire = service.AttenteAdversaire(this);
                 Thread.Sleep(1000);// pause
                 compteur++;
             }
@@ -73,7 +68,8 @@ namespace E_ChessClient
         internal void Jouer()
         {
             Console.Write("Déplacement : ");
-            service.Jouer(Console.ReadLine().ToLower());
+            var coup = Console.ReadLine().ToLower();
+            service.Jouer(Nom, coup);
         }
 
         internal void Attente()
@@ -90,7 +86,7 @@ namespace E_ChessClient
     internal class ClientServiceApi
     {
         private static WebClient ClientApi = new WebClient();
-        private string BaseUrl = "http://localhost:52508/api/chess/";
+        private string BaseUrl = Properties.Settings.Default.Url;
         internal ClientChess AttenteAdversaire(ClientChess advAller)
         {
             //Recherche (Nom, Couleur)  - (AMoiDeJouer)
@@ -99,18 +95,12 @@ namespace E_ChessClient
             var advRetour = JsonConvert.DeserializeObject<ClientChess>(json);
             return advRetour;
         }
-
-
-
-        internal bool Jouer(string coup)
+        internal bool Jouer(string nom, string coup)
         {
-            var url = $"{BaseUrl}?coup={coup}";
+            var url = $"{BaseUrl}?coup={coup}&nom={nom}";
             var json = ClientApi.DownloadString(url);
             return json == "true";
         }
-
-
-
         internal bool Sinscrire(string nom)
         {
             var url = $"{BaseUrl}?nom={nom}";

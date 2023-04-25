@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_WebApiPost_Serveur", "D_W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_ChessClient", "E_ChessClient\E_ChessClient.csproj", "{DCB77545-0596-44B7-A92F-DEAFF404C1E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_ChessService", "E_ChessService\E_ChessService.csproj", "{69D56AD1-1C2A-4E21-856E-3933FD77A434}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_ChessService", "E_ChessService\E_ChessService.csproj", "{E4AC3F55-6ADD-499E-812B-EA6B2A4AB91D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,10 +65,10 @@ Global
 		{DCB77545-0596-44B7-A92F-DEAFF404C1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCB77545-0596-44B7-A92F-DEAFF404C1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCB77545-0596-44B7-A92F-DEAFF404C1E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69D56AD1-1C2A-4E21-856E-3933FD77A434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69D56AD1-1C2A-4E21-856E-3933FD77A434}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69D56AD1-1C2A-4E21-856E-3933FD77A434}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69D56AD1-1C2A-4E21-856E-3933FD77A434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4AC3F55-6ADD-499E-812B-EA6B2A4AB91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4AC3F55-6ADD-499E-812B-EA6B2A4AB91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4AC3F55-6ADD-499E-812B-EA6B2A4AB91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4AC3F55-6ADD-499E-812B-EA6B2A4AB91D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
