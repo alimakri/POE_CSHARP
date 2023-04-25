@@ -45,7 +45,7 @@ namespace E_ChessClient
         public string Nom;
         internal ClientChess Adversaire;
         internal bool CouleurBlanc;
-        internal EtatPartieEnum Resultat;
+        internal EtatPartieEnum Etat;
         internal bool AMoiDeJouer = false;
 
         public void GetNom()
@@ -70,8 +70,6 @@ namespace E_ChessClient
             return Adversaire != null;
         }
 
-
-
         internal void Jouer()
         {
             Console.Write("Déplacement : ");
@@ -82,7 +80,7 @@ namespace E_ChessClient
         {
             while (!AMoiDeJouer)
             {
-                Adversaire = service.AttenteAdversaire();
+                Adversaire = service.AttenteAdversaire(Adversaire);
                 AMoiDeJouer = !Adversaire.AMoiDeJouer;
                 Thread.Sleep(1000);// pause
             }
@@ -91,19 +89,19 @@ namespace E_ChessClient
 
     internal class ServiceApi
     {
-        internal ClientChess AttenteAdversaire()
+        internal ClientChess AttenteAdversaire(ClientChess adv)
         {
-            throw new NotImplementedException();
+            // Recherche (nom, couleur) - (AMoiDeJouer)
         }
 
-        internal void Jouer(string v)
+        internal bool Jouer(string coup)
         {
-            throw new NotImplementedException();
+            
         }
 
         internal bool Sinscrire(string nom)
         {
-            throw new NotImplementedException();
+            
         }
     }
 
