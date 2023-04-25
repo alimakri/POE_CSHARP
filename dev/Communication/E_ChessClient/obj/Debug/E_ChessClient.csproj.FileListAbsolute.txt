@@ -1,0 +1,11 @@
+D:\POE_CSHARP\dev\Communication\E_ChessClient\bin\Debug\E_ChessClient.exe.config
+D:\POE_CSHARP\dev\Communication\E_ChessClient\bin\Debug\E_ChessClient.exe
+D:\POE_CSHARP\dev\Communication\E_ChessClient\bin\Debug\E_ChessClient.pdb
+D:\POE_CSHARP\dev\Communication\E_ChessClient\bin\Debug\Newtonsoft.Json.dll
+D:\POE_CSHARP\dev\Communication\E_ChessClient\bin\Debug\Newtonsoft.Json.xml
+D:\POE_CSHARP\dev\Communication\E_ChessClient\obj\Debug\E_ChessClient.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Communication\E_ChessClient\obj\Debug\E_ChessClient.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Communication\E_ChessClient\obj\Debug\E_ChessClient.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Communication\E_ChessClient\obj\Debug\E_ChessClient.csproj.CopyComplete
+D:\POE_CSHARP\dev\Communication\E_ChessClient\obj\Debug\E_ChessClient.exe
+D:\POE_CSHARP\dev\Communication\E_ChessClient\obj\Debug\E_ChessClient.pdb

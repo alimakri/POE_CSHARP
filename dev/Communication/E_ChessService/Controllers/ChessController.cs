@@ -20,13 +20,24 @@ namespace E_ChessService.Controllers
         [HttpPost]
         public Joueur AttenteAdversaire(Joueur demandeur)
         {
+            var adv = ListeJoueur.FirstOrDefault(x => x.Nom != demandeur.Nom && x.AMoiDeJouer == AMoiDeJouerEnum.JouePas);
+            if (adv == null) return null;
 
-            //return ListeJoueur.FirstOrDefault(x => x.Nom != demandeur.Nom && x.AMoiDeJouer == AMoiDeJouerEnum.JouePas);
+            demandeur.CouleurBlanc = true;
+            adv.CouleurBlanc = false;
+            demandeur.AMoiDeJouer = AMoiDeJouerEnum.Moi;
+            adv.AMoiDeJouer = AMoiDeJouerEnum.Lautre;
+            adv.EtatPartie = demandeur.EtatPartie = EtatPartieEnum.Continuer;
+            SerialisationXML();
+            demandeur.Adversaire = adv;
+            return demandeur;
         }
         [HttpGet]
-        public bool Jouer(string nom, string coup)
+        public bool Jouer(string nom, string coup, string nomAdv)
         {
             var joueur = ListeJoueur.FirstOrDefault(x => x.Nom == nom);
+            joueur.Adversaire = ListeJoueur.FirstOrDefault(x => x.Nom == nomAdv);
+
             if (joueur == null) return false;
             var etat = Alea.Next(1, 15);
             switch (etat)
@@ -35,23 +46,23 @@ namespace E_ChessService.Controllers
                     return false;
                 case 2:
                     // je gagne
-                    joueur.Adversaire.Etat = joueur.Etat = joueur.CouleurBlanc ? EtatPartieEnum.MatBlanc : EtatPartieEnum.MatNoir;
+                    joueur.Adversaire.EtatPartie = joueur.EtatPartie = joueur.CouleurBlanc ? EtatPartieEnum.MatBlanc : EtatPartieEnum.MatNoir;
                     joueur.Adversaire.AMoiDeJouer = joueur.AMoiDeJouer = AMoiDeJouerEnum.JouePas;
-                    joueur.Adversaire.Etat = joueur.Etat;
+                    joueur.Adversaire.EtatPartie = joueur.EtatPartie;
                     break;
                 case 3:
                     // je perds
-                    joueur.Adversaire.Etat = joueur.Etat = !joueur.CouleurBlanc ? EtatPartieEnum.MatBlanc : EtatPartieEnum.MatNoir;
+                    joueur.Adversaire.EtatPartie = joueur.EtatPartie = !joueur.CouleurBlanc ? EtatPartieEnum.MatBlanc : EtatPartieEnum.MatNoir;
                     joueur.Adversaire.AMoiDeJouer = joueur.AMoiDeJouer = AMoiDeJouerEnum.JouePas;
                     break;
                 case 4:
                     // Pat
-                    joueur.Adversaire.Etat = joueur.Etat = EtatPartieEnum.Pat;
+                    joueur.Adversaire.EtatPartie = joueur.EtatPartie = EtatPartieEnum.Pat;
                     joueur.Adversaire.AMoiDeJouer = joueur.AMoiDeJouer = AMoiDeJouerEnum.JouePas;
                     break;
                 default:
                     // Continue
-                    joueur.Adversaire.Etat = joueur.Etat = EtatPartieEnum.Continuer;
+                    joueur.Adversaire.EtatPartie = joueur.EtatPartie = EtatPartieEnum.Continuer;
                     joueur.AMoiDeJouer = AMoiDeJouerEnum.Lautre;
                     joueur.Adversaire.AMoiDeJouer = AMoiDeJouerEnum.Moi;
                     break;
@@ -63,7 +74,7 @@ namespace E_ChessService.Controllers
         {
             var joueur = new Joueur { Nom = nom, AMoiDeJouer = AMoiDeJouerEnum.JouePas };
             var j = ListeJoueur.FirstOrDefault(x => x.Nom == nom);
-            if (j != null) return false;
+            if (j != null) return true;
             ListeJoueur.Add(joueur);
             SerialisationXML();
             return true;
@@ -77,24 +88,28 @@ namespace E_ChessService.Controllers
         }
         private List<Joueur> DeserialisationXML()
         {
-            var serialiser = new XmlSerializer(typeof(List<Joueur>));
-            var flux = new StreamReader(@"d:\lesJoueurs.txt");
-            var liste = (List<Joueur>)serialiser.Deserialize(flux);
-            flux.Close();
+            List<Joueur> liste = new List<Joueur>();
+            if (File.Exists(@"d:\lesJoueurs.txt"))
+            {
+                var serialiser = new XmlSerializer(typeof(List<Joueur>));
+                var flux = new StreamReader(@"d:\lesJoueurs.txt");
+                liste = (List<Joueur>)serialiser.Deserialize(flux);
+                flux.Close();
+            }
             return liste;
         }
     }
     public class Joueur
     {
-        public string Nom;
-        internal Joueur Adversaire;
-        internal bool CouleurBlanc;
-        internal EtatPartieEnum Etat;
-        internal AMoiDeJouerEnum AMoiDeJouer = AMoiDeJouerEnum.JouePas;
+        public string Nom { get; set; }
+        public Joueur Adversaire { get; set; }
+        public bool CouleurBlanc { get; set; }
+        public EtatPartieEnum EtatPartie { get; set; }
+        public AMoiDeJouerEnum AMoiDeJouer { get; set; } = AMoiDeJouerEnum.JouePas;
 
     }
-    internal enum AMoiDeJouerEnum { None, Moi, Lautre, JouePas }
-    internal enum EtatPartieEnum
+    public enum AMoiDeJouerEnum { None, Moi, Lautre, JouePas }
+    public enum EtatPartieEnum
     {
         None,
         MatBlanc,

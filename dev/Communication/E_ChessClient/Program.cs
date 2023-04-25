@@ -15,20 +15,28 @@ namespace E_ChessClient
         {
             var client = new ClientChess();// définir un client 
             client.GetNom();
-            client.Sinscrire(); //supposant un nom unique pr chaque jouer
-            if (client.AttenteAdversaire())// il retrouvera en prop Client si il est noir ou blanc
-            {
-                Console.WriteLine("Vous allez jouer contre {0}. Vous êtes les {1}", client.Adversaire, client.CouleurBlanc);// Adversaire & Couleur des prop de la classe Client
-                while (client.Etat == EtatPartieEnum.Continuer) // Résultat : blanc gangé /noir gagné /égaux /continuer == la partie n'a pas finie 
-                {
-                    client.Attente();
-                    client.Jouer(); // couleur blanche au debut  ou C'EST SON TOUR 
-                }
-                Console.WriteLine("{0}", client.Etat);
+            if (client.Sinscrire())
+            {  //supposant un nom unique pr chaque jouer
+                if (client.AttenteAdversaire())// il retrouvera en prop Client si il est noir ou blanc
+                {
+                    Console.WriteLine("Vous allez jouer contre {0}. Vous êtes les {1}", // Adversaire & Couleur des prop de la classe Client
+                        client.Adversaire.Nom,
+                        client.CouleurBlanc ? "blancs" : "noirs");
+                    while (client.EtatPartie == EtatPartieEnum.Continuer) // Résultat : blanc gangé /noir gagné /égaux /continuer == la partie n'a pas finie 
+                    {
+                        client.Attente();
+                        client.Jouer(); // couleur blanche au debut  ou C'EST SON TOUR 
+                    }
+                    Console.WriteLine("{0}", client.EtatPartie);
+                }
+                else
+                {
+                    Console.WriteLine("Aucun Adversaire n'a été trouvé");
+                }
             }
             else
             {
-                Console.WriteLine("Aucun Adversaire n'a été trouvé");
+                Console.WriteLine("Vous êtes déja inscrit");
             }
             Console.ReadLine();
         }
@@ -38,10 +46,10 @@ namespace E_ChessClient
         private ClientServiceApi service = new ClientServiceApi();
 
         public string Nom;
-        internal ClientChess Adversaire;
-        internal bool CouleurBlanc;
-        internal EtatPartieEnum Etat;
-        internal bool AMoiDeJouer = false;
+        public ClientChess Adversaire;
+        public bool CouleurBlanc;
+        public EtatPartieEnum EtatPartie;
+        public bool AMoiDeJouer = false;
 
         public void GetNom()
         {
@@ -58,21 +66,29 @@ namespace E_ChessClient
             int compteur = 0;
             while (Adversaire == null && compteur < 121)// 2 min
             {
-                Adversaire = service.AttenteAdversaire(this);
+                ClientChess mesInfos = service.AttenteAdversaire(this);
+                if (mesInfos != null)
+                {
+                    Nom = mesInfos.Nom;
+                    Adversaire = mesInfos.Adversaire;
+                    CouleurBlanc = mesInfos.CouleurBlanc;
+                    EtatPartie = mesInfos.EtatPartie;
+                    AMoiDeJouer = mesInfos.AMoiDeJouer;
+                }
                 Thread.Sleep(1000);// pause
                 compteur++;
             }
             return Adversaire != null;
         }
 
-        internal void Jouer()
+        public void Jouer()
         {
             Console.Write("Déplacement : ");
             var coup = Console.ReadLine().ToLower();
             service.Jouer(Nom, coup);
         }
 
-        internal void Attente()
+        public void Attente()
         {
             while (!AMoiDeJouer)
             {
