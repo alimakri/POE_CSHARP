@@ -20,7 +20,8 @@ namespace E_ChessService.Controllers
         [HttpPost]
         public Joueur AttenteAdversaire(Joueur demandeur)
         {
-            return ListeJoueur.FirstOrDefault(x => x.Nom != demandeur.Nom && x.AMoiDeJouer == AMoiDeJouerEnum.JouePas);
+
+            //return ListeJoueur.FirstOrDefault(x => x.Nom != demandeur.Nom && x.AMoiDeJouer == AMoiDeJouerEnum.JouePas);
         }
         [HttpGet]
         public bool Jouer(string nom, string coup)
@@ -60,6 +61,11 @@ namespace E_ChessService.Controllers
         [HttpGet]
         public bool Sinscrire(string nom)
         {
+            var joueur = new Joueur { Nom = nom, AMoiDeJouer = AMoiDeJouerEnum.JouePas };
+            var j = ListeJoueur.FirstOrDefault(x => x.Nom == nom);
+            if (j != null) return false;
+            ListeJoueur.Add(joueur);
+            SerialisationXML();
             return true;
         }
         private void SerialisationXML()
