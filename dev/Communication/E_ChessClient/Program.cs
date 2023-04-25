@@ -85,7 +85,7 @@ namespace E_ChessClient
         {
             Console.Write("Déplacement : ");
             var coup = Console.ReadLine().ToLower();
-            service.Jouer(Nom, coup);
+            service.Jouer(Nom, Adversaire.Nom, coup);
         }
 
         public void Attente()
@@ -111,9 +111,9 @@ namespace E_ChessClient
             var advRetour = JsonConvert.DeserializeObject<ClientChess>(json);
             return advRetour;
         }
-        internal bool Jouer(string nom, string coup)
+        internal bool Jouer(string nom, string nomAdv, string coup)
         {
-            var url = $"{BaseUrl}?coup={coup}&nom={nom}";
+            var url = $"{BaseUrl}?coup={coup}&nom={nom}&nomAdv={nomAdv}";
             var json = ClientApi.DownloadString(url);
             return json == "true";
         }
