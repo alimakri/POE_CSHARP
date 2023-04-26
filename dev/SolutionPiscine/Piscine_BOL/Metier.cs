@@ -131,7 +131,12 @@ namespace Piscine_BOL
 
         internal void Init()
         {
-            var piscines = Api.GetAllPiscines();
+            int capacite;
+            foreach(var item in Api.GetAllPiscines())
+            {
+                if (!int.TryParse(item.Value.ToString(), out capacite)) capacite = -1;
+                Add(item.Key, capacite);
+            }
         }
     }
     #endregion
@@ -213,10 +218,10 @@ namespace Piscine_BOL
     internal class ServiceApi
     {
         private WebClient Client = new WebClient();
-        internal List<string> GetAllPiscines()
+        internal Dictionary<string, object> GetAllPiscines()
         {
-            var s = Client.DownloadString("http://localhost:57974/api/piscine/?op=all");
-            return JsonConvert.DeserializeObject<List<string>>(s);
+            var s = Client.DownloadString("http://localhost:57974/api/piscine/get/capacite");
+            return JsonConvert.DeserializeObject<Dictionary<string, object>>(s);
         }
     }
     #endregion

@@ -26,25 +26,15 @@ namespace F_Piscine_WebApi.Controllers
                 File.WriteAllText(DataFile, CodeHtml);
             }
         }
-        public string Get() { return CodeHtml; }
-        public List<string> GetAllPiscines(string op)
-        {
-            switch (op)
-            {
-                case "all":
-                    Regex reg = new Regex(@"<td class=""place-name"">([^<]+)");
-                    var reponse = reg.Matches(CodeHtml).Cast<Match>().Select(x => x.Groups[1].Value.Replace("\n", "").Replace("\t", "").Trim()).ToList();
-                    return reponse;
-            }
-            return null;
-        }
-        // http://localhost:57974/api/piscine/?op=occupation&piscine=CENTRE%20NAUTIQUE%20DE%20SCHILTIGHEIM
-        public Dictionary<string, object> GetOcupation(string op, string piscine)
+        public string GetCodeHtml() { return CodeHtml; }
+        
+        public Dictionary<string, object> Get(string op)
         {
             var dico = new Dictionary<string, object>();
             switch (op)
             {
                 case "occupation":
+                    // http://localhost:57974/api/get/occupation
                     Regex reg1 = new Regex(@"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>([^<]+)<");
                     var reponses1 = reg1
                         .Matches(CodeHtml).Cast<Match>()
@@ -55,6 +45,7 @@ namespace F_Piscine_WebApi.Controllers
                     }
                     break;
                 case "capacite":
+                    // http://localhost:57974/api/get/capacite
                     Regex reg2 = new Regex(@"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>[^<]+<[^<]+<[^<]+<[^<]+<[^>]+>[^:]*:  ([0-9]*)");
                     var reponses2 = reg2
                         .Matches(CodeHtml).Cast<Match>()
