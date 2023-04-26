@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,6 +10,61 @@ using System.Threading.Tasks;
 
 namespace Piscine_DAL
 {
+    internal class OccupationContext : DbContext
+    {
+        public DbSet<Activite> LesActivites { get; set; }
+        public DbSet<Acces> LesAcces { get; set; }
+        public DbSet<Piscine> LesPiscines { get; set; }
+
+        public OccupationContext() : base("name=OccupationConfig")
+        {
+
+        }
+
+        internal int EnregistrerActivite(ArrayList alActivite)
+        {
+            var newA = alActivite.ToActivite();
+            LesActivites.Add(newA);
+            SaveChanges();
+            return newA.Id;
+        }
+
+        internal void EnregistrerDetailActivite(int idActivite, ArrayList alActivite)
+        {
+            var newD = alActivite.ToActiviteAvecDetail(idActivite);
+            var activite = LesActivites.FirstOrDefault(x => x.Id == idActivite);
+            activite.LesDetails.Add(newD);
+            SaveChanges();
+        }
+
+        internal int EnregistrerAcces(ArrayList alAcces)
+        {
+            var newA = alAcces.ToAcces();
+            LesAcces.Add(newA);
+            SaveChanges();
+            return newA.Id;
+        }
+
+        internal int EnregistrerPiscine(ArrayList alPiscine)
+        {
+            var newP = alPiscine.ToPiscine();
+            LesPiscines.Add(newP);
+            SaveChanges();
+            return newP.Id;
+        }
+
+        #region Piscine
+        internal ArrayList GetPiscines(int idAcces)
+        {
+            var resultat = new List<Piscine>();
+            var acces = LesAcces.Include("LesPiscines").FirstOrDefault(x => x.Id == idAcces);
+            if (acces != null) resultat = acces.LesPiscines;
+
+            return resultat.ToArrayList();
+        }
+        #endregion
+    }
+
     [Table("LesPiscines")]
     internal class Piscine
     {
@@ -51,16 +107,6 @@ namespace Piscine_DAL
         public int NombrePersonne { get; set; }
 
         public Activite LActivite { get; set; }
-    }
-    internal class OccupationContext : DbContext
-    {
-        public OccupationContext() : base("name=OccupationConfig")
-        {
-
-        }
-        public DbSet<Activite> LesActivites { get; set; }
-        public DbSet<Acces> LesAcces { get; set; }
-        public DbSet<Piscine> LesPiscines { get; set; }
     }
 
 }

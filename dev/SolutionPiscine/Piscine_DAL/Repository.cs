@@ -7,6 +7,8 @@ namespace Piscine_DAL
     public static class Repository
     {
         private static OccupationContext Context = new OccupationContext();
+
+        #region Test
         public static void Enregistrer(ArrayList alPiscines, ArrayList alAccess)
         {
             Context.LesPiscines.AddRange(alPiscines.ToListPiscine());
@@ -14,37 +16,27 @@ namespace Piscine_DAL
             Context.LesAcces.AddRange(alAccess.ToListAcces());
             Context.SaveChanges();
         }
+        #endregion
 
         #region Piscine
         internal static List<Piscine> GetAllPiscines()
         {
-            var n = Context.LesPiscines.ToList();
-            return n;
+            return Context.LesPiscines.ToList();
         }
         public static ArrayList GetPiscines(int idAcces)
         {
-            var resultat = new List<Piscine>();
-            var acces = Context.LesAcces.Include("LesPiscines").FirstOrDefault(x => x.Id == idAcces);
-            if (acces != null) resultat = acces.LesPiscines;
-
-            return resultat.ToArrayList();
+            return Context.GetPiscines(idAcces);
         }
         public static int EnregistrerPiscine(ArrayList alPiscine)
         {
-            var newP = alPiscine.ToPiscine();
-            Context.LesPiscines.Add(newP);
-            Context.SaveChanges();
-            return newP.Id;
+            return Context.EnregistrerPiscine(alPiscine);
         }
         #endregion
 
         #region Acces
         public static int EnregistrerAcces(ArrayList alAcces)
         {
-            var newA = alAcces.ToAcces();
-            Context.LesAcces.Add(newA);
-            Context.SaveChanges();
-            return newA.Id;
+            return Context.EnregistrerAcces(alAcces);
         }
         #endregion
 
@@ -59,17 +51,11 @@ namespace Piscine_DAL
         }
         public static int EnregistrerActivite(ArrayList alActivite)
         {
-            var newA = alActivite.ToActivite();
-            Context.LesActivites.Add(newA);
-            Context.SaveChanges();
-            return newA.Id;
+            return Context.EnregistrerActivite(alActivite);
         }
         public static void EnregistrerDetailActivite(int idActivite, ArrayList alActivite)
         {
-            var newD = alActivite.ToActiviteAvecDetail(idActivite);
-            var activite = Context.LesActivites.FirstOrDefault(x => x.Id == idActivite);
-            activite.LesDetails.Add(newD);
-            Context.SaveChanges();
+            Context.EnregistrerDetailActivite(idActivite, alActivite);
         }
         #endregion
     }
