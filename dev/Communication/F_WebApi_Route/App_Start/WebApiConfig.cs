@@ -17,9 +17,15 @@ namespace F_WebApi_Route
             // api/livre/ref
             // api/livre/ref/1
             config.Routes.MapHttpRoute(
+                name: "SansController",
+                routeTemplate: "api/{test}",
+                defaults: new { controller = "Livre" }
+            );
+            config.Routes.MapHttpRoute(
                 name: "reference",
                 routeTemplate: "api/{controller}/ref/{reference}",
-                constraints: new {  reference = "[0-9]+"}
+                constraints: new { reference = "[0-9]+" },
+                defaults: null
             );
             // exemple : api/livre/c/12
             config.Routes.MapHttpRoute(

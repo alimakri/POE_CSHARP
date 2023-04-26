@@ -40,8 +40,13 @@ namespace F_WebApi_Route.Controllers
         }
         public string GetLivreRouteReference(int reference)
         {
-            var s = reference == null ? "pas de valeur" : reference.ToString();
+            //var s = reference == null ? "pas de valeur" : reference.ToString();
+            var s = reference.ToString();
             return $"Passage par la route nommée reference avec comme paramètre la valeur ({s})";
+        }
+        public string GetSansController(string test)
+        {
+            return $"Passage par la route nommée SansController";
         }
         #endregion
 
