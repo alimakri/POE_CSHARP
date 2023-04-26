@@ -7,6 +7,7 @@ namespace Piscine_DAL
 {
     public static class DtoDonnees
     {
+        #region Entrant
         internal static DetailActivite ToActiviteAvecDetail(this ArrayList al, int idActivite)
         {
             Activite activite = Repository.GetActivite(idActivite);
@@ -88,6 +89,9 @@ namespace Piscine_DAL
             }
             return resultat;
         }
+        #endregion
+
+        #region Sortant
         internal static ArrayList ToArrayList(this List<Piscine> liste)
         {
             var resultat = new ArrayList();
@@ -95,5 +99,6 @@ namespace Piscine_DAL
             liste.ForEach(x => { resultat.Add(x.Id); resultat.Add(x.Nom); resultat.Add(x.Capacite); });
             return resultat;
         }
+        #endregion
     }
 }
