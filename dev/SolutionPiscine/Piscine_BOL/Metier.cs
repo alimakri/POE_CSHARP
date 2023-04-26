@@ -7,12 +7,13 @@ using System.Linq;
 
 namespace Piscine_BOL
 {
+    #region Entête
     public static class Metier
     {
         #region Propriétés
         private static Piscines LesPiscines = new Piscines();
-        private static List<Acces> LesAcces = new List<Acces>();
-        private static List<Activite> LesActivites = new List<Activite>();
+        private static Access LesAcces = new Access();
+        private static Activites LesActivites = new Activites();
         #endregion
 
         #region Piscine
@@ -33,76 +34,39 @@ namespace Piscine_BOL
 
         public static int NouvelAcces(string nom, int[] piscines)
         {
-            var a = new Acces { Nom = nom };
-            a.Piscines = LesPiscines.Where(x => piscines.Contains(x.Id));
-            LesAcces.Add(a);
-            return EnregistrerAcces(a);
-        }
-        private static int EnregistrerAcces(Acces a)
-        {
-            return Repository.EnregistrerAcces(a.ToArrayList());
+            return LesAcces.NouvelAcces(LesPiscines, nom, piscines);
+
         }
         #endregion
 
         #region Activite
         public static int NouvelleActivite(string d1, string d2, string nom, int idPiscine)
         {
-            var c = new Activite
-            {
-                DateDebut = Outils.ConvertToDateTime(FormatDateEnum.yyyyMMdd, d1),
-                DateFin = Outils.ConvertToDateTime(FormatDateEnum.yyyyMMdd, d2),
-                Nom = nom,
-                Piscine = LesPiscines.FirstOrDefault(x => x.Id == idPiscine),
-                LesDetails = new List<DetailActivite>()
-            };
-            LesActivites.Add(c);
-            c.Id = EnregistrerActivite(c);
-            return c.Id;
+            return LesActivites.NouvelleActivite(LesPiscines, LesActivites, d1, d2, nom, idPiscine);
         }
 
-        private static int EnregistrerActivite(Activite c)
-        {
-            return Repository.EnregistrerActivite(c.ToArrayList());
-        }
         public static void NouveauDetailActivite(string d1, string d2, int n, int idActivite)
         {
-            var c = LesActivites.FirstOrDefault(x => x.Id == idActivite);
-            var d = new DetailActivite
-            {
-                DateDebut = Outils.ConvertToDateTime(FormatDateEnum.dd_MM_yyyy_HH_mm, d1),
-                DateFin = Outils.ConvertToDateTime(FormatDateEnum.dd_MM_yyyy_HH_mm, d2),
-                NombrePersonne = n,
-                LActivite = c
-            };
-            c.LesDetails.Add(d);
-            EnregistrerDetailActivite(c, d);
+            LesActivites.NouveauDetailActivite(d1,d2,n,idActivite);
         }
 
-        private static void EnregistrerDetailActivite(Activite c, DetailActivite d)
-        {
-            Repository.EnregistrerDetailActivite(c.Id, d.ToArrayList());
-        }
 
         #endregion
 
         #region Test
         public static void Enregistrer()
         {
-            Repository.Enregistrer(LesPiscines.ToArrayList(), LesAcces.ToArrayList());
+            LesActivites.Enregistrer(LesPiscines, LesAcces);
         }
-        #endregion
-
-        #region Tests unitaires
         public static IEnumerable<string> TestAcces1(string nomAcces)
         {
-            var a = LesAcces.FirstOrDefault(x => x.Nom == nomAcces);
-            if (a == null) return new List<string>();
-            return a.Piscines.Select(x => x.Nom);
-        }
+           return LesAcces.TestAcces1(nomAcces);
+        } 
         #endregion
     }
+    #endregion
 
-    #region Classes de base
+    #region Classes Métier de base
     public class Piscine
     {
         public int Id;
@@ -123,7 +87,7 @@ namespace Piscine_BOL
         public string Nom;
 
         public Piscine Piscine;
-        public List<DetailActivite> LesDetails; 
+        public List<DetailActivite> LesDetails;
     }
     public class DetailActivite
     {
@@ -136,6 +100,7 @@ namespace Piscine_BOL
     }
     #endregion
 
+    #region Body
     #region Piscine
     internal class Piscines : List<Piscine>
     {
@@ -143,7 +108,7 @@ namespace Piscine_BOL
         {
             var p = new Piscine { Nom = nom, Capacite = capacite };
             Add(p);
-            p.Id = EnregistrerPiscine(p); 
+            p.Id = EnregistrerPiscine(p);
             return p.Id;
         }
         public int EnregistrerPiscine(Piscine p)
@@ -157,4 +122,76 @@ namespace Piscine_BOL
     }
     #endregion
 
+    #region Acces
+    internal class Access : List<Acces>
+    {
+        internal int NouvelAcces(Piscines lesPiscines, string nom, int[] piscines)
+        {
+            var a = new Acces { Nom = nom };
+            a.Piscines = lesPiscines.Where(x => piscines.Contains(x.Id));
+            Add(a);
+            return EnregistrerAcces(a);
+        }
+        private static int EnregistrerAcces(Acces a)
+        {
+            return Repository.EnregistrerAcces(a.ToArrayList());
+        }
+
+        internal IEnumerable<string> TestAcces1(string nomAcces)
+        {
+            var a = this.FirstOrDefault(x => x.Nom == nomAcces);
+            if (a == null) return new List<string>();
+            return a.Piscines.Select(x => x.Nom);
+        }
+    }
+    #endregion
+
+    #region Activites
+    internal class Activites : List<Activite>
+    {
+        internal void Enregistrer(Piscines lesPiscines, Access  lesAcces)
+        {
+            Repository.Enregistrer(lesPiscines.ToArrayList(), lesAcces.ToArrayList());
+        }
+
+        internal void NouveauDetailActivite(string d1, string d2, int n, int idActivite)
+        {
+            var c = this.FirstOrDefault(x => x.Id == idActivite);
+            var d = new DetailActivite
+            {
+                DateDebut = Outils.ConvertToDateTime(FormatDateEnum.dd_MM_yyyy_HH_mm, d1),
+                DateFin = Outils.ConvertToDateTime(FormatDateEnum.dd_MM_yyyy_HH_mm, d2),
+                NombrePersonne = n,
+                LActivite = c
+            };
+            c.LesDetails.Add(d);
+            EnregistrerDetailActivite(c, d);
+        }
+        private static void EnregistrerDetailActivite(Activite c, DetailActivite d)
+        {
+            Repository.EnregistrerDetailActivite(c.Id, d.ToArrayList());
+        }
+
+        internal int NouvelleActivite(Piscines lesPiscines, Activites lesActivites, string d1, string d2, string nom, int idPiscine)
+        {
+            var c = new Activite
+            {
+                DateDebut = Outils.ConvertToDateTime(FormatDateEnum.yyyyMMdd, d1),
+                DateFin = Outils.ConvertToDateTime(FormatDateEnum.yyyyMMdd, d2),
+                Nom = nom,
+                Piscine = lesPiscines.FirstOrDefault(x => x.Id == idPiscine),
+                LesDetails = new List<DetailActivite>()
+            };
+            lesActivites.Add(c);
+            c.Id = EnregistrerActivite(c);
+            return c.Id;
+        }
+        private static int EnregistrerActivite(Activite c)
+        {
+            return Repository.EnregistrerActivite(c.ToArrayList());
+        }
+    }
+    #endregion
+
+    #endregion
 }

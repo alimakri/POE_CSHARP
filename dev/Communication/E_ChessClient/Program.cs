@@ -83,7 +83,7 @@ namespace E_ChessClient
 
         public void Jouer()
         {
-            Console.Write("Déplacement : ");
+            Console.Write("{0}: ", Nom);
             var coup = Console.ReadLine().ToLower();
             service.Jouer(Nom, Adversaire.Nom, coup);
         }

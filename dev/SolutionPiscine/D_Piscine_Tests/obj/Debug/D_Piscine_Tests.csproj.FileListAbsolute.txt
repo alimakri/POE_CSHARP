@@ -29,3 +29,5 @@ D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\EntityFramework.xml
 D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\D_Piscine_Tests.dll.config
 D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\EntityFramework.SqlServer.dll
 D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\E_Piscine_Commun.dll
+D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\E_Piscine_Commun.pdb
