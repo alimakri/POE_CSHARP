@@ -17,7 +17,7 @@ namespace F_Piscine_WebApi
             // api/piscine/all
             config.Routes.MapHttpRoute(
                 name: "op",
-                routeTemplate: "api/{controller}/{op}"
+                routeTemplate: "api/{controller}/{op}/{piscine}"
             );
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

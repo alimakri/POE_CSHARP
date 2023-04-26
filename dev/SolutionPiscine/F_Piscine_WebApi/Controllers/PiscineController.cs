@@ -33,10 +33,30 @@ namespace F_Piscine_WebApi.Controllers
             {
                 case "all":
                     Regex reg = new Regex(@"<td class=""place-name"">([^<]+)");
-                    var reponse = reg.Matches(CodeHtml).Cast<Match>().Select(x => x.Groups[1].Value.Replace("\n","").Replace("\t", "").Trim()).ToList();
+                    var reponse = reg.Matches(CodeHtml).Cast<Match>().Select(x => x.Groups[1].Value.Replace("\n", "").Replace("\t", "").Trim()).ToList();
                     return reponse;
             }
             return null;
+        }
+        // api/piscine/occupation/CENTRE%20NAUTIQUE%20DE%20SCHILTIGHEIM
+        public int GetOcupation(string op, string piscine)
+        {
+            switch (op)
+            {
+                case "occupation":
+                    Regex reg = new Regex(@"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>([^<]+)<");
+                    var reponses = reg.Matches(CodeHtml).Cast<Match>().Select(x => 
+                        new
+                        {
+                            Nom = x.Groups[1].Value.Replace("\n", "").Replace("\t", "").Trim(),
+                            Occupation = x.Groups[2].Value.Replace("\n", "").Replace("\t", "").Trim()
+                        }).ToList();
+                    var n = reponses.FirstOrDefault(x=>x.Nom.ToUpper() == piscine.ToUpper())?.Occupation;
+                    int o = -1;
+                    int.TryParse(n, out o);
+                    return o;
+            }
+            return -1;
         }
     }
 }
