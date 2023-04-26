@@ -38,25 +38,34 @@ namespace F_Piscine_WebApi.Controllers
             }
             return null;
         }
-        // api/piscine/occupation/CENTRE%20NAUTIQUE%20DE%20SCHILTIGHEIM
-        public int GetOcupation(string op, string piscine)
+        // http://localhost:57974/api/piscine/?op=occupation&piscine=CENTRE%20NAUTIQUE%20DE%20SCHILTIGHEIM
+        public Dictionary<string, object> GetOcupation(string op, string piscine)
         {
+            var dico = new Dictionary<string, object>();
             switch (op)
             {
                 case "occupation":
-                    Regex reg = new Regex(@"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>([^<]+)<");
-                    var reponses = reg.Matches(CodeHtml).Cast<Match>().Select(x => 
-                        new
-                        {
-                            Nom = x.Groups[1].Value.Replace("\n", "").Replace("\t", "").Trim(),
-                            Occupation = x.Groups[2].Value.Replace("\n", "").Replace("\t", "").Trim()
-                        }).ToList();
-                    var n = reponses.FirstOrDefault(x=>x.Nom.ToUpper() == piscine.ToUpper())?.Occupation;
-                    int o = -1;
-                    int.TryParse(n, out o);
-                    return o;
+                    Regex reg1 = new Regex(@"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>([^<]+)<");
+                    var reponses1 = reg1
+                        .Matches(CodeHtml).Cast<Match>()
+                        .ToList();
+                    foreach(var x in reponses1)
+                    {
+                        dico.Add(x.Groups[1].Value.Replace("\n", "").Replace("\t", "").Trim(), x.Groups[2].Value.Replace("\n", "").Replace("\t", "").Trim());
+                    }
+                    break;
+                case "capacite":
+                    Regex reg2 = new Regex(@"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>[^<]+<[^<]+<[^<]+<[^<]+<[^>]+>[^:]*:  ([0-9]*)");
+                    var reponses2 = reg2
+                        .Matches(CodeHtml).Cast<Match>()
+                        .ToList();
+                    foreach(var x in reponses2)
+                    {
+                        dico.Add(x.Groups[1].Value.Replace("\n", "").Replace("\t", "").Trim(), x.Groups[2].Value.Replace("\n", "").Replace("\t", "").Trim());
+                    }
+                    break;
             }
-            return -1;
+            return dico;
         }
     }
 }

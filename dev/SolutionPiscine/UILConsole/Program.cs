@@ -15,29 +15,30 @@ namespace UILConsole
         //DROP DATABASE PiscineDB
         static void Main(string[] args)
         {
-            var premiereFois = true;
-            if (premiereFois)
-            {
-                var p1 = Metier.NouvellePiscine("Piscine 1", 250);
-                var p2 = Metier.NouvellePiscine("Piscine 2", 410);
-                var p3 = Metier.NouvellePiscine("Piscine 3", 210);
-                var a1 = Metier.NouvelAcces("Bus 45", new int[] { p1, p2 });
+            Metier.Init();
+            //var premiereFois = true;
+            //if (premiereFois)
+            //{
+                //var p1 = Metier.NouvellePiscine("Piscine 1", 250);
+                //var p2 = Metier.NouvellePiscine("Piscine 2", 410);
+                //var p3 = Metier.NouvellePiscine("Piscine 3", 210);
+                //var a1 = Metier.NouvelAcces("Bus 45", new int[] { p1, p2 });
 
-                int c1 = Metier.NouvelleActivite("20230501", "20230930", "Yoga Paddle", p1);
-                int c2 = Metier.NouvelleActivite("20220901", "20230630", "AquaBoxing", p1);
-                int c3 = Metier.NouvelleActivite("20220901", "20230630", "AquaBike", p1);
+                //int c1 = Metier.NouvelleActivite("20230501", "20230930", "Yoga Paddle", p1);
+                //int c2 = Metier.NouvelleActivite("20220901", "20230630", "AquaBoxing", p1);
+                //int c3 = Metier.NouvelleActivite("20220901", "20230630", "AquaBike", p1);
 
-                Metier.NouveauDetailActivite("01/06/2023 10:00", "01/06/2023 12:00", 20, c1);
-                Metier.NouveauDetailActivite("01/07/2023 10:00", "01/07/2023 12:00", 12, c1);
-            }
-            var recherchePiscinesBus45 = new Recherche { IdAcces = 1 };
-            recherchePiscinesBus45.Find();
+                //Metier.NouveauDetailActivite("01/06/2023 10:00", "01/06/2023 12:00", 20, c1);
+                //Metier.NouveauDetailActivite("01/07/2023 10:00", "01/07/2023 12:00", 12, c1);
+            //}
+            //var recherchePiscinesBus45 = new Recherche { IdAcces = 1 };
+            //recherchePiscinesBus45.Find();
 
-            Console.WriteLine("Les piscines accessibles par le Bus 45 sont :");
-            foreach (var p in recherchePiscinesBus45.ResultatPiscine)
-            {
-                Console.WriteLine(p.Nom);
-            }
+            //Console.WriteLine("Les piscines accessibles par le Bus 45 sont :");
+            //foreach (var p in recherchePiscinesBus45.ResultatPiscine)
+            //{
+            //    Console.WriteLine(p.Nom);
+            //}
             Console.ReadLine();
         }
 

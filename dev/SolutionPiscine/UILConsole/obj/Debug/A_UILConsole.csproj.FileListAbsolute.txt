@@ -18,3 +18,5 @@ D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\EntityFramework.SqlServer
 D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\EntityFramework.SqlServer.xml
 D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\E_Piscine_Commun.dll
 D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\E_Piscine_Commun.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\Newtonsoft.Json.dll
+D:\POE_CSHARP\dev\SolutionPiscine\UILConsole\bin\Debug\Newtonsoft.Json.xml

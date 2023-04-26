@@ -1,9 +1,11 @@
-﻿using Piscine_Commun;
+﻿using Newtonsoft.Json;
+using Piscine_Commun;
 using Piscine_DAL;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 
 namespace Piscine_BOL
 {
@@ -14,6 +16,11 @@ namespace Piscine_BOL
         private static Piscines LesPiscines = new Piscines();
         private static Access LesAcces = new Access();
         private static Activites LesActivites = new Activites();
+
+        public static void Init()
+        {
+            LesPiscines.Init();
+        }
         #endregion
 
         #region Piscine
@@ -47,7 +54,7 @@ namespace Piscine_BOL
 
         public static void NouveauDetailActivite(string d1, string d2, int n, int idActivite)
         {
-            LesActivites.NouveauDetailActivite(d1,d2,n,idActivite);
+            LesActivites.NouveauDetailActivite(d1, d2, n, idActivite);
         }
 
 
@@ -60,8 +67,8 @@ namespace Piscine_BOL
         }
         public static IEnumerable<string> TestAcces1(string nomAcces)
         {
-           return LesAcces.TestAcces1(nomAcces);
-        } 
+            return LesAcces.TestAcces1(nomAcces);
+        }
         #endregion
     }
     #endregion
@@ -104,6 +111,8 @@ namespace Piscine_BOL
     #region Piscine
     internal class Piscines : List<Piscine>
     {
+        private static ServiceApi Api = new ServiceApi();
+
         internal int Add(string nom, int capacite)
         {
             var p = new Piscine { Nom = nom, Capacite = capacite };
@@ -118,6 +127,11 @@ namespace Piscine_BOL
         public ArrayList GetPiscines(ArrayList recherche)
         {
             return Repository.GetPiscines((int)recherche[0]);
+        }
+
+        internal void Init()
+        {
+            var piscines = Api.GetAllPiscines();
         }
     }
     #endregion
@@ -149,7 +163,7 @@ namespace Piscine_BOL
     #region Activites
     internal class Activites : List<Activite>
     {
-        internal void Enregistrer(Piscines lesPiscines, Access  lesAcces)
+        internal void Enregistrer(Piscines lesPiscines, Access lesAcces)
         {
             Repository.Enregistrer(lesPiscines.ToArrayList(), lesAcces.ToArrayList());
         }
@@ -193,5 +207,17 @@ namespace Piscine_BOL
     }
     #endregion
 
+    #endregion
+
+    #region WebAPi
+    internal class ServiceApi
+    {
+        private WebClient Client = new WebClient();
+        internal List<string> GetAllPiscines()
+        {
+            var s = Client.DownloadString("http://localhost:57974/api/piscine/?op=all");
+            return JsonConvert.DeserializeObject<List<string>>(s);
+        }
+    }
     #endregion
 }
