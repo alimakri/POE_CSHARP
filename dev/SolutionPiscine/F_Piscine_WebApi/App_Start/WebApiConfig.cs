@@ -14,6 +14,11 @@ namespace F_Piscine_WebApi
             // Itinéraires de l'API Web
             config.MapHttpAttributeRoutes();
 
+            // api/piscine/all
+            config.Routes.MapHttpRoute(
+                name: "op",
+                routeTemplate: "api/{controller}/{op}"
+            );
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
