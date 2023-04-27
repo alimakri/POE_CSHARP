@@ -31,8 +31,9 @@ namespace F_Piscine_WebApi.Controllers
         }
         public string GetCodeHtml() { return CodeHtml; }
         
-        public Dictionary<string, object> Get(string op)
+        public Dictionary<string, object> Post(string regex, [FromBody] string body)
         {
+            string op = "";
             var dico = new Dictionary<string, object>();
             Regex reg1 = new Regex(op);
             var reponses1 = reg1

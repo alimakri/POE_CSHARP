@@ -16,8 +16,8 @@ namespace F_Piscine_WebApi
 
             // api/piscine/all
             config.Routes.MapHttpRoute(
-                name: "get",
-                routeTemplate: "api/{controller}/get/{op}"
+                name: "regex",
+                routeTemplate: "api/{controller}/{regex}/"
             );
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
