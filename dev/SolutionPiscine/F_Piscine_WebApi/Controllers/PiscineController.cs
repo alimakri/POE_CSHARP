@@ -34,7 +34,7 @@ namespace F_Piscine_WebApi.Controllers
             switch (op)
             {
                 case "occupation":
-                    // http://localhost:57974/api/get/occupation
+                    // http://localhost:57974/api/piscine/get/occupation
                     Regex reg1 = new Regex(@"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>([^<]+)<");
                     var reponses1 = reg1
                         .Matches(CodeHtml).Cast<Match>()
