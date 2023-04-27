@@ -61,6 +61,7 @@ namespace UILConsole
         public int Id;
         public string Nom;
         public int Capacite;
+        public int Occupation;
     }
     internal class Acces
     {
