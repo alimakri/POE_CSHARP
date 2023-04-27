@@ -19,10 +19,6 @@ namespace Piscine_DAL
 
         public OccupationContext() : base("name=OccupationConfig")
         {
-
-            //LesConfigs.Add(new Config { Nom = "Capacite", Regex = @"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>[^<]+<[^<]+<[^<]+<[^<]+<[^>]+>[^:]*:  ([0-9]*)" });
-            //LesConfigs.Add(new Config { Nom = "Occupation", Regex = @"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>([^<]+)<" });
-            //SaveChanges();
         }
 
         internal int EnregistrerActivite(ArrayList alActivite)

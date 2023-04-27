@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\CSharp\O_ExoXsl\bin\Debug\O_ExoXsl.exe.config
+D:\POE_CSHARP\dev\CSharp\O_ExoXsl\bin\Debug\O_ExoXsl.exe
+D:\POE_CSHARP\dev\CSharp\O_ExoXsl\bin\Debug\O_ExoXsl.pdb
+D:\POE_CSHARP\dev\CSharp\O_ExoXsl\obj\Debug\O_ExoXsl.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\O_ExoXsl\obj\Debug\O_ExoXsl.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\CSharp\O_ExoXsl\obj\Debug\O_ExoXsl.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\O_ExoXsl\obj\Debug\O_ExoXsl.exe
+D:\POE_CSHARP\dev\CSharp\O_ExoXsl\obj\Debug\O_ExoXsl.pdb

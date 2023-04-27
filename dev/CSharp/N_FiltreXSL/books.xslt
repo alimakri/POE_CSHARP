@@ -21,6 +21,40 @@
 			</body>
 		</html>
 	</xsl:template>
+	<xsl:template match="book[genre='Romance']">
+		<tr style="background-color:pink">
+			<td>
+				<xsl:value-of select="@id"/>
+			</td>
+			<td>
+				<xsl:value-of select="author"/>
+			</td>
+			<td>
+				<xsl:value-of select="title"/>
+			</td>
+			<td>
+				<xsl:value-of select="price"/>
+			</td>
+		</tr>
+
+	</xsl:template>
+	<xsl:template match="book[genre='Computer']">
+		<tr style="background-color:cyan">
+			<td>
+				<xsl:value-of select="@id"/>
+			</td>
+			<td>
+				<xsl:value-of select="author"/>
+			</td>
+			<td>
+				<xsl:value-of select="title"/>
+			</td>
+			<td>
+				<xsl:value-of select="price"/>
+			</td>
+		</tr>
+
+	</xsl:template>
 	<xsl:template match="book">
 		<tr style="background-color:white">
 			<td>
