@@ -65,6 +65,11 @@ namespace Piscine_DAL
         {
             return Context.EnregistrerConfig(alConfig);
         }
+
+        public static string GetRegex(string nom)
+        {
+            return Context.LesConfigs.FirstOrDefault(x=>x.Nom== nom).Regex;
+        }
         #endregion
     }
 }

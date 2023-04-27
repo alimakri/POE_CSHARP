@@ -15,10 +15,16 @@ namespace UILConsole
         //DROP DATABASE PiscineDB
         static void Main(string[] args)
         {
+            #region Admin
+            //Metier.NouveauRegex("Capacite", @"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>[^<]+<[^<]+<[^<]+<[^<]+<[^>]+>[^:]*:  ([0-9]*)");
+            //Metier.NouveauRegex("Occupation", @"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>([^<]+)<");
+            Metier.NouveauRegex("Activites", @"");
+            Metier.NouvellesActivites("https://www.strasbourg.eu/lieu/-/entity/sig/401_SPO_2/centre-nautique-de-schiltigheim");
+            Metier.NouvellesActivites("https://www.strasbourg.eu/lieu/-/entity/sig/402_SPO_3/piscine-de-hautepierre");
+            #endregion
+
             Metier.Init();
 
-            Metier.NouveauRegex("Capacite", @"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>[^<]+<[^<]+<[^<]+<[^<]+<[^>]+>[^:]*:  ([0-9]*)");
-            Metier.NouveauRegex("Occupation", @"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>([^<]+)<");
 
             //var premiereFois = true;
             //if (premiereFois)

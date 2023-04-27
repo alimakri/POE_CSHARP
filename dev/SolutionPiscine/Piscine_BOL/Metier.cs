@@ -6,6 +6,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Text;
 
 namespace Piscine_BOL
 {
@@ -148,9 +150,10 @@ namespace Piscine_BOL
         internal void Init()
         {
             int capacite, occupation;
-            var dicoOccupation = Api.GetAllPiscines("occupation");
+            var dicoOccupation = Api.GetPiscines(Repository.GetRegex("Occupation"));
+            var dicoCapacite = Api.GetPiscines(Repository.GetRegex("Capacite"));
 
-            foreach (var item in Api.GetAllPiscines("capacite"))
+            foreach (var item in dicoCapacite)
             {
                 if (!int.TryParse(item.Value.ToString(), out capacite)) capacite = -1;
                 if (!int.TryParse(dicoOccupation[item.Key].ToString(), out occupation)) occupation = -1;
@@ -258,9 +261,11 @@ namespace Piscine_BOL
     internal class ServiceApi
     {
         private WebClient Client = new WebClient();
-        internal Dictionary<string, object> GetAllPiscines(string cas)
+        internal Dictionary<string, object> GetPiscines(string regex)
         {
-            var s = Client.DownloadString($"http://localhost:57974/api/piscine/get/{cas}");
+            //Client.Headers.Add("Content-Type", "text/plain");
+            new StringContent(regex, Encoding.UTF8, "text/plain");
+            var s = Client.UploadString($"http://localhost:57974/api/piscine", "POST", regex);
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(s);
         }
     }

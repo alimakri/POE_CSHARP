@@ -29,6 +29,7 @@ namespace F_Piscine_WebApi.Controllers
                 File.WriteAllText(DataFile, CodeHtml);
             }
         }
+
         public string GetCodeHtml() { return CodeHtml; }
         
         public Dictionary<string, object> Post([FromBody] string regex)

@@ -10,16 +10,8 @@ namespace F_Piscine_WebApi
     {
         public static void Register(HttpConfiguration config)
         {
-            // Configuration et services de l'API Web
-
-            // Itinéraires de l'API Web
             config.MapHttpAttributeRoutes();
-            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/octet-stream"));
-            // api/piscine/all
-            //config.Routes.MapHttpRoute(
-            //    name: "regex",
-            //    routeTemplate: "api/{controller}/{regex}/"
-            //);
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
