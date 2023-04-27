@@ -263,9 +263,8 @@ namespace Piscine_BOL
         private WebClient Client = new WebClient();
         internal Dictionary<string, object> GetPiscines(string regex)
         {
-            //Client.Headers.Add("Content-Type", "text/plain");
-            new StringContent(regex, Encoding.UTF8, "text/plain");
-            var s = Client.UploadString($"http://localhost:57974/api/piscine", "POST", regex);
+            Client.Headers.Add("Content-Type", "application/json");
+            var s = Client.UploadString($"http://localhost:57974/api/piscine", "POST", "\"" + regex.Replace("\"", @"\""") + "\"");
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(s);
         }
     }

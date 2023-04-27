@@ -35,13 +35,16 @@ namespace F_Piscine_WebApi.Controllers
         public Dictionary<string, object> Post([FromBody] string regex)
         {
             var dico = new Dictionary<string, object>();
-            Regex reg1 = new Regex(regex);
-            var reponses1 = reg1
-                .Matches(CodeHtml).Cast<Match>()
-                .ToList();
-            foreach (var x in reponses1)
+            if (regex != null)
             {
-                dico.Add(x.Groups[1].Value.Replace("\n", "").Replace("\t", "").Trim(), x.Groups[2].Value.Replace("\n", "").Replace("\t", "").Trim());
+                Regex reg1 = new Regex(regex);
+                var reponses1 = reg1
+                    .Matches(CodeHtml).Cast<Match>()
+                    .ToList();
+                foreach (var x in reponses1)
+                {
+                    dico.Add(x.Groups[1].Value.Replace("\n", "").Replace("\t", "").Trim(), x.Groups[2].Value.Replace("\n", "").Replace("\t", "").Trim());
+                }
             }
             return dico;
         }
