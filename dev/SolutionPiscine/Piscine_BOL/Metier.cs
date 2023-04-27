@@ -16,10 +16,19 @@ namespace Piscine_BOL
         private static Piscines LesPiscines = new Piscines();
         private static Access LesAcces = new Access();
         private static Activites LesActivites = new Activites();
+        private static Configurations LesConfigurations = new Configurations();
+
 
         public static void Init()
         {
             LesPiscines.Init();
+
+        }
+        #endregion
+        #region Config
+        public static void NouveauRegex(string nom, string regex)
+        {
+            LesConfigurations.Add(nom, regex);
         }
         #endregion
 
@@ -87,6 +96,12 @@ namespace Piscine_BOL
         public string Nom;
         public IEnumerable<Piscine> Piscines;
     }
+    public class Configuration
+    {
+        public int Id;
+        public string Nom;
+        public string Regex;
+    }
     public class Activite
     {
         public int Id;
@@ -140,7 +155,7 @@ namespace Piscine_BOL
                 if (!int.TryParse(item.Value.ToString(), out capacite)) capacite = -1;
                 if (!int.TryParse(dicoOccupation[item.Key].ToString(), out occupation)) occupation = -1;
 
-                var p = new Piscine { Nom=item.Key, Capacite= capacite, Occupation =  occupation};
+                var p = new Piscine { Nom = item.Key, Capacite = capacite, Occupation = occupation };
                 Add(p);
                 EnregistrerPiscine(p);
             }
@@ -168,6 +183,24 @@ namespace Piscine_BOL
             var a = this.FirstOrDefault(x => x.Nom == nomAcces);
             if (a == null) return new List<string>();
             return a.Piscines.Select(x => x.Nom);
+        }
+    }
+    #endregion
+
+    #region Configurations
+    internal class Configurations : List<Configuration>
+    {
+        internal int Add(string nom, string regex)
+        {
+            var p = new Configuration { Nom = nom, Regex = regex };
+            Add(p);
+            p.Id = EnregistrerConfig(p);
+            return p.Id;
+        }
+
+        private int EnregistrerConfig(Configuration p)
+        {
+            return Repository.EnregistrerConfig(p.ToArrayList());
         }
     }
     #endregion

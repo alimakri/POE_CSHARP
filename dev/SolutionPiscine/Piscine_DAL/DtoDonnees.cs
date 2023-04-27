@@ -55,6 +55,16 @@ namespace Piscine_DAL
                 };
             return resultat;
         }
+        internal static Config ToConfig(this ArrayList al)
+        {
+            Config resultat =
+                new Config
+                {
+                    Nom = (string)al[0],
+                    Regex = (string)al[1]
+                };
+            return resultat;
+        }
         internal static List<Piscine> ToListPiscine(this ArrayList al)
         {
             List<Piscine> resultat = new List<Piscine>();

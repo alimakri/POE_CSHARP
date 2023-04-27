@@ -15,10 +15,14 @@ namespace Piscine_DAL
         public DbSet<Activite> LesActivites { get; set; }
         public DbSet<Acces> LesAcces { get; set; }
         public DbSet<Piscine> LesPiscines { get; set; }
+        public DbSet<Config> LesConfigs { get; set; }
 
         public OccupationContext() : base("name=OccupationConfig")
         {
 
+            //LesConfigs.Add(new Config { Nom = "Capacite", Regex = @"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>[^<]+<[^<]+<[^<]+<[^<]+<[^>]+>[^:]*:  ([0-9]*)" });
+            //LesConfigs.Add(new Config { Nom = "Occupation", Regex = @"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>([^<]+)<" });
+            //SaveChanges();
         }
 
         internal int EnregistrerActivite(ArrayList alActivite)
@@ -61,6 +65,14 @@ namespace Piscine_DAL
             if (acces != null) resultat = acces.LesPiscines;
 
             return resultat.ToArrayList();
+        }
+
+        internal int EnregistrerConfig(ArrayList alConfig)
+        {
+            var newP = alConfig.ToConfig();
+            LesConfigs.Add(newP);
+            SaveChanges();
+            return newP.Id;
         }
         #endregion
     }
@@ -108,6 +120,12 @@ namespace Piscine_DAL
         public int NombrePersonne { get; set; }
 
         public Activite LActivite { get; set; }
+    }
+    internal class Config
+    {
+        public int Id { get; set; }
+        public string Nom { get; set; }
+        public string Regex { get; set; }
     }
 
 }

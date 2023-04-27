@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -56,6 +57,13 @@ namespace Piscine_DAL
         public static void EnregistrerDetailActivite(int idActivite, ArrayList alActivite)
         {
             Context.EnregistrerDetailActivite(idActivite, alActivite);
+        }
+
+        #endregion
+        #region Config
+        public static int EnregistrerConfig(ArrayList alConfig)
+        {
+            return Context.EnregistrerConfig(alConfig);
         }
         #endregion
     }

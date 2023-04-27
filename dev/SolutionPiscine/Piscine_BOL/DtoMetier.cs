@@ -46,6 +46,13 @@ namespace Piscine_BOL
             resultat.Add(x.Occupation);
             return resultat;
         }
+        public static ArrayList ToArrayList(this Configuration x)
+        {
+            var resultat = new ArrayList();
+            resultat.Add(x.Nom);
+            resultat.Add(x.Regex);
+            return resultat;
+        }
         public static ArrayList ToArrayList(this List<Piscine> liste)
         {
             var resultat = new ArrayList();
