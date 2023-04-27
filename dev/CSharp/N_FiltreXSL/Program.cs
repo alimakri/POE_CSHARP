@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Xsl;
 
 namespace N_FiltreXSL
 {
@@ -10,6 +11,9 @@ namespace N_FiltreXSL
     {
         static void Main(string[] args)
         {
+            var transformer = new XslCompiledTransform();
+            transformer.Load(@"..\..\books.xslt");
+            transformer.Transform(@"..\..\books.xml", @"..\..\books.html");
         }
     }
 }
