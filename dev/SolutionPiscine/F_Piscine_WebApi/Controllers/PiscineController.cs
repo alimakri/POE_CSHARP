@@ -31,11 +31,10 @@ namespace F_Piscine_WebApi.Controllers
         }
         public string GetCodeHtml() { return CodeHtml; }
         
-        public Dictionary<string, object> Post(string regex, [FromBody] string body)
+        public Dictionary<string, object> Post([FromBody] string regex)
         {
-            string op = "";
             var dico = new Dictionary<string, object>();
-            Regex reg1 = new Regex(op);
+            Regex reg1 = new Regex(regex);
             var reponses1 = reg1
                 .Matches(CodeHtml).Cast<Match>()
                 .ToList();
@@ -43,32 +42,6 @@ namespace F_Piscine_WebApi.Controllers
             {
                 dico.Add(x.Groups[1].Value.Replace("\n", "").Replace("\t", "").Trim(), x.Groups[2].Value.Replace("\n", "").Replace("\t", "").Trim());
             }
-
-            //switch (op)
-            //{
-            //    case "occupation":
-            //        // http://localhost:57974/api/piscine/get/occupation
-            //        Regex reg1 = new Regex(regex);
-            //        var reponses1 = reg1
-            //            .Matches(CodeHtml).Cast<Match>()
-            //            .ToList();
-            //        foreach(var x in reponses1)
-            //        {
-            //            dico.Add(x.Groups[1].Value.Replace("\n", "").Replace("\t", "").Trim(), x.Groups[2].Value.Replace("\n", "").Replace("\t", "").Trim());
-            //        }
-            //        break;
-            //    case "capacite":
-            //        // http://localhost:57974/api/get/capacite
-            //        Regex reg2 = new Regex(regex);
-            //        var reponses2 = reg2
-            //            .Matches(CodeHtml).Cast<Match>()
-            //            .ToList();
-            //        foreach(var x in reponses2)
-            //        {
-            //            dico.Add(x.Groups[1].Value.Replace("\n", "").Replace("\t", "").Trim(), x.Groups[2].Value.Replace("\n", "").Replace("\t", "").Trim());
-            //        }
-            //        break;
-            //}
             return dico;
         }
     }

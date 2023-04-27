@@ -74,7 +74,8 @@ namespace Piscine_DAL
                 {
                     Id = (int)al[i],
                     Nom = (string)al[i + 1],
-                    Capacite = (int)al[i + 2]
+                    Capacite = (int)al[i + 2],
+                    Occupation = (int)al[i + 3]
                 });
             }
             return resultat;
