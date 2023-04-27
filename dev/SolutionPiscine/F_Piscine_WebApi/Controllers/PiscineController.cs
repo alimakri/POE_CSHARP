@@ -11,8 +11,11 @@ namespace F_Piscine_WebApi.Controllers
 {
     public class PiscineController : ApiController
     {
+        #region Propriétés
         private const string DataFile = @"d:\horaires-frequentation-piscines.txt";
         private readonly string CodeHtml;
+        #endregion
+
         public PiscineController()
         {
             if (File.Exists(DataFile))

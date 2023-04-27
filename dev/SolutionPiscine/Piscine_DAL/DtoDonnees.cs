@@ -50,7 +50,8 @@ namespace Piscine_DAL
                 new Piscine
                 {
                     Nom = (string)al[0],
-                    Capacite = (int)al[1]
+                    Capacite = (int)al[1],
+                    Occupation = (int)al[2]
                 };
             return resultat;
         }

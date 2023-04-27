@@ -72,6 +72,7 @@ namespace Piscine_DAL
         [Required]
         public string Nom { get; set; }
         public int Capacite { get; set; }
+        public int Occupation { get; set; }
         public List<Activite> LesActivites { get; set; }
     }
     [Table("LesAcces")]

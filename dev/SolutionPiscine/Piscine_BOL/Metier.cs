@@ -79,6 +79,7 @@ namespace Piscine_BOL
         public int Id;
         public string Nom;
         public int Capacite;
+        public int Occupation;
     }
     public class Acces
     {
@@ -131,11 +132,17 @@ namespace Piscine_BOL
 
         internal void Init()
         {
-            int capacite;
-            foreach(var item in Api.GetAllPiscines())
+            int capacite, occupation;
+            var dicoOccupation = Api.GetAllPiscines("occupation");
+
+            foreach (var item in Api.GetAllPiscines("capacite"))
             {
                 if (!int.TryParse(item.Value.ToString(), out capacite)) capacite = -1;
-                Add(item.Key, capacite);
+                if (!int.TryParse(dicoOccupation[item.Key].ToString(), out occupation)) occupation = -1;
+
+                var p = new Piscine { Nom=item.Key, Capacite= capacite, Occupation =  occupation};
+                Add(p);
+                EnregistrerPiscine(p);
             }
         }
     }
@@ -218,9 +225,9 @@ namespace Piscine_BOL
     internal class ServiceApi
     {
         private WebClient Client = new WebClient();
-        internal Dictionary<string, object> GetAllPiscines()
+        internal Dictionary<string, object> GetAllPiscines(string cas)
         {
-            var s = Client.DownloadString("http://localhost:57974/api/piscine/get/capacite");
+            var s = Client.DownloadString($"http://localhost:57974/api/piscine/get/{cas}");
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(s);
         }
     }

@@ -41,7 +41,9 @@ namespace Piscine_BOL
         public static ArrayList ToArrayList(this Piscine x)
         {
             var resultat = new ArrayList();
-            resultat.Add(x.Nom); resultat.Add(x.Capacite);
+            resultat.Add(x.Nom);
+            resultat.Add(x.Capacite);
+            resultat.Add(x.Occupation);
             return resultat;
         }
         public static ArrayList ToArrayList(this List<Piscine> liste)
