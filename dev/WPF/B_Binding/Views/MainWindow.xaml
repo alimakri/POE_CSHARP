@@ -15,12 +15,19 @@
             <Setter Property="Foreground" Value="Navy"/>
             <Setter Property="FontSize" Value="26"/>
             <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Margin" Value="2"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="Black">
+                        <Border BorderBrush="{TemplateBinding Foreground}" BorderThickness="2" 
+                                Background="{TemplateBinding Background}">
                             <Grid>
-                                <Path x:Name="PathIcon" Width="15" Height="25" Stretch="Fill" Fill="#4C87B3" HorizontalAlignment="Left" Margin="17,0,0,0" Data="F1 M 30.0833,22.1667L 50.6665,37.6043L 50.6665,38.7918L 30.0833,53.8333L 30.0833,22.1667 Z "/>
+                                <Path x:Name="PathIcon" Width="15" Height="25" Stretch="Fill" Fill="{TemplateBinding Foreground}" HorizontalAlignment="Left" Margin="17,0,0,0" Data="F1 M 30.0833,22.1667L 50.6665,37.6043L 50.6665,38.7918L 30.0833,53.8333L 30.0833,22.1667 Z "/>
+                                <ContentPresenter Content="{TemplateBinding Content}" 
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"
+                                                  Margin="5"/>
+
                             </Grid>
                         </Border>
                     </ControlTemplate>
@@ -59,9 +66,15 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Content="1" Style="{StaticResource SimpleButton}" />
-                <Button Grid.Column="1" Content="2" Style="{StaticResource SimpleButton}" />
-                <Button Grid.Column="2" Content="3" Style="{StaticResource SimpleButton}" />
+                <Button Grid.Column="0" Style="{StaticResource SimpleButton}" Background="Blue" Foreground="Black" >
+                    <Button.Content>
+                        <Grid>
+                            <TextBlock Text="Mot 1"/>
+                        </Grid>
+                    </Button.Content>
+                </Button>
+                <Button Grid.Column="1" Content="2" Style="{StaticResource SimpleButton}" Background="White" Foreground="Orange" />
+                <Button Grid.Column="2" Content="3" Style="{StaticResource SimpleButton}" Background="Red" Foreground="Purple" />
             </Grid>
 
         </Grid>
@@ -72,7 +85,6 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Button Background="{StaticResource Couleur1}" ToolTip="Présentation de la rose" 
-                        Style="{StaticResource GrosBouton}"
                         BorderBrush="{StaticResource Couleur1}">
                     <Grid>
                         <Grid.ColumnDefinitions>
