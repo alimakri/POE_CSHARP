@@ -15,43 +15,33 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <Button Grid.Column="1" Background="White" ToolTip="Présentation de la rose">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock TextAlignment="Left" Text="{Binding Fleur2.Nom}" VerticalAlignment="Center" FontSize="16" Foreground="{Binding Fleur2.Couleur}" />
+                <Image HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Source="{Binding Fleur2.Image}" Width="80" />
+            </Grid>
+        </Button>
         <Button Grid.Column="1" Grid.Row="1" Background="White">
             <Button.ToolTip>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Présentation de cette fleur" VerticalAlignment="Center" FontSize="16" Foreground="Purple" />
-                    <Image Source="/images/lila.png" Width="100" />
+                    <TextBlock Padding="0 0 5 0" Text="Présentation de cette fleur" VerticalAlignment="Center" FontSize="16" Foreground="{Binding Fleur1.Couleur}" />
+                    <Image Source="{Binding Fleur1.Image}" Width="100" />
                 </StackPanel>
             </Button.ToolTip>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding Fleur1}" VerticalAlignment="Center" FontSize="16" Foreground="Purple" />
-                <Image Source="/images/lila.png" Width="100" />
-            </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{Binding Fleur1.Nom}" TextAlignment="Left" FontSize="16" Foreground="{Binding Fleur1.Couleur}" />
+                <Image Grid.Column="1" VerticalAlignment="Center" Source="{Binding Fleur1.Image}" Width="80" />
+            </Grid>
         </Button>
-        <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background="#458044" FontSize="22">
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/images/logo.png" Width="20" Margin="5,0"/>
-                    <TextBlock Text="Rosier rose tendre"/>
-                </StackPanel>
-            </ListBoxItem>
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/images/logo.png" Width="20" Margin="5,0"/>
-                    <TextBlock Text="Rythme bonzaï"/>
-                </StackPanel>
-            </ListBoxItem>
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/images/logo.png" Width="20" Margin="5,0"/>
-                    <TextBlock Text="Ambiance rose"/>
-                </StackPanel>
-            </ListBoxItem>
+        <ListBox ItemsSource="{Binding Magasins}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background="#458044" FontSize="22">
         </ListBox>
-        <Button Grid.Column="1" Background="White" ToolTip="Présentation de la rose">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding Fleur2}" VerticalAlignment="Center" FontSize="16" Foreground="Red" />
-                <Image Source="/images/rose.png" Width="50" />
-            </StackPanel>
-        </Button>
     </Grid>
 </Window>
