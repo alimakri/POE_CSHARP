@@ -15,3 +15,4 @@ D:\POE_CSHARP\dev\WPF\A_Introduction\obj\Debug\A_Introduction.pdb
 D:\POE_CSHARP\dev\WPF\A_Introduction\obj\Debug\Window1.g.cs
 D:\POE_CSHARP\dev\WPF\A_Introduction\obj\Debug\Window1.baml
 D:\POE_CSHARP\dev\WPF\A_Introduction\obj\Debug\A_Introduction.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\WPF\A_Introduction\obj\Debug\A_Introduction.csproj.SuggestedBindingRedirects.cache

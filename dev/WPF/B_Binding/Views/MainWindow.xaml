@@ -5,57 +5,101 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:B_Binding"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Name="G1">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+        Title="MainWindow" 
+        Height="600" Width="800" MinWidth="600" MinHeight="500">
+    <Window.Resources>
+        <SolidColorBrush x:Key="Couleur1" Color="Transparent"/>
+        <SolidColorBrush x:Key="Couleur2" Color="lightGreen"/>
+        <Style TargetType="{x:Type Button}" x:Key="SimpleButton">
+            <Setter Property="Background" Value="LightGreen"/>
+            <Setter Property="Foreground" Value="Navy"/>
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="Black">
+                            <Grid>
+                                <Path x:Name="PathIcon" Width="15" Height="25" Stretch="Fill" Fill="#4C87B3" HorizontalAlignment="Left" Margin="17,0,0,0" Data="F1 M 30.0833,22.1667L 50.6665,37.6043L 50.6665,38.7918L 30.0833,53.8333L 30.0833,22.1667 Z "/>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>  
+    <Grid Margin="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Column="1" Background="White" ToolTip="Présentation de la rose">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock TextAlignment="Left" Text="{Binding Fleur2.Nom}" VerticalAlignment="Center" FontSize="16" Foreground="{Binding Fleur2.Couleur}" />
-                <Image HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Source="{Binding Fleur2.Image}" Width="80" />
-            </Grid>
-        </Button>
-        <Button Grid.Column="1" Grid.Row="1" Background="White">
-            <Button.ToolTip>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Padding="0 0 5 0" Text="Présentation de cette fleur" VerticalAlignment="Center" FontSize="16" Foreground="{Binding Fleur1.Couleur}" />
-                    <Image Source="{Binding Fleur1.Image}" Width="100" />
-                </StackPanel>
-            </Button.ToolTip>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="{Binding Fleur1.Nom}" TextAlignment="Left" FontSize="16" Foreground="{Binding Fleur1.Couleur}" />
-                <Image Grid.Column="1" VerticalAlignment="Center" Source="{Binding Fleur1.Image}" Width="80" />
-            </Grid>
-        </Button>
-        <!--DisplayMemberPath="Nom"-->
-        <ListBox ItemsSource="{Binding Magasins}" 
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ListBox ItemsSource="{Binding Magasins}" AlternationCount="2" 
                  Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" 
                  Background="#458044" FontSize="22">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <Canvas>
-                            <Ellipse Width="15" Height="15" Fill="{Binding Couleur}" Margin="0 7" 
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Canvas>
+                                <Ellipse Width="15" Height="15" Fill="{Binding Couleur}" Margin="0 7" 
                                      Stroke="DarkGreen" StrokeThickness="2"/>
-                        </Canvas>
-                        <TextBlock Text="{Binding Nom}" Margin="20 0 0 0"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+                            </Canvas>
+                            <TextBlock Text="{Binding Nom}" Margin="20 0 0 0"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="1" Style="{StaticResource SimpleButton}" />
+                <Button Grid.Column="1" Content="2" Style="{StaticResource SimpleButton}" />
+                <Button Grid.Column="2" Content="3" Style="{StaticResource SimpleButton}" />
+            </Grid>
+
+        </Grid>
+        <Border Grid.Column="1" BorderBrush="Red" BorderThickness="2" CornerRadius="20" Margin="5">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button Background="{StaticResource Couleur1}" ToolTip="Présentation de la rose" 
+                        Style="{StaticResource GrosBouton}"
+                        BorderBrush="{StaticResource Couleur1}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock TextAlignment="Left" Text="{Binding Fleur2.Nom}" VerticalAlignment="Center" FontSize="16" Foreground="{Binding Fleur2.Couleur}" />
+                        <Image HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Source="{Binding Fleur2.Image}" Width="80" />
+                    </Grid>
+                </Button>
+                <Button Grid.Row="1" Background="{StaticResource Couleur1}"  BorderBrush="{StaticResource Couleur1}">
+                    <Button.ToolTip>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Padding="0 0 5 0" Text="Présentation de cette fleur" VerticalAlignment="Center" FontSize="16" Foreground="{Binding Fleur1.Couleur}" />
+                            <Image Source="{Binding Fleur1.Image}" Width="100" />
+                        </StackPanel>
+                    </Button.ToolTip>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Fleur1.Nom}" TextAlignment="Left" FontSize="16" Foreground="{Binding Fleur1.Couleur}" />
+                        <Image Grid.Column="1" VerticalAlignment="Center" Source="{Binding Fleur1.Image}" Width="80" />
+                    </Grid>
+                </Button>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
