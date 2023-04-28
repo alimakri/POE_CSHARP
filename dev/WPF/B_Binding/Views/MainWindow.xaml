@@ -77,8 +77,8 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <!--Command="{Binding AjouterCommand}"-->
-                <Button Grid.Column="0" Background="Maroon" Content="Ajouter" Click="Button_Click"
+                <!---->
+                <Button Grid.Column="0" Background="Maroon" Content="Ajouter" Command="{Binding AjouterCommand}"
                         Foreground="Black" />
                 <Button Grid.Column="1" Content="2" Style="{StaticResource SimpleButton}" Background="White" Foreground="Orange" />
                 <Button Grid.Column="2" Content="3" Style="{StaticResource SimpleButton}" Background="Red" Foreground="Purple" />

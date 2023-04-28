@@ -20,7 +20,7 @@ namespace B_Binding.ViewModels
         #endregion
 
         #region Command
-        ICommand AjouterCommand;
+        public ICommand AjouterCommand { get; set; }
         #endregion
         public MainWindowViewModel()
         {
@@ -29,7 +29,7 @@ namespace B_Binding.ViewModels
             Fleur2 = new Fleur { Id = 2, Nom = "Lila de mai", Couleur = "Purple", Image = "/images/lila.png" };
 
             // Command
-            AjouterCommand = new RelayCommand(OnAjouterCommand);
+            AjouterCommand = new RelayCommand(AjouterCommandExecute, AjouterCommandCanExecute);
             Magasins = new List<Magasin>
             {
                 new Magasin{Id=1, Nom= "Rosier rose tendre", Couleur="Orange"},
@@ -40,10 +40,16 @@ namespace B_Binding.ViewModels
             };
         }
 
-        public void OnAjouterCommand(object obj)
+        private void AjouterCommandExecute(object obj)
         {
             MessageBox.Show("Hello");
         }
+
+        private bool AjouterCommandCanExecute(object obj)
+        {
+            return true;
+        }
+
     }
     public class Fleur
     {

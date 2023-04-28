@@ -10,6 +10,5 @@ D:\POE_CSHARP\dev\WPF\B_Binding\obj\Debug\B_Binding.csproj.GenerateResource.cach
 D:\POE_CSHARP\dev\WPF\B_Binding\obj\Debug\B_Binding.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\WPF\B_Binding\obj\Debug\B_Binding.exe
 D:\POE_CSHARP\dev\WPF\B_Binding\obj\Debug\B_Binding.pdb
-D:\POE_CSHARP\dev\WPF\B_Binding\obj\Debug\B_Binding.csproj.AssemblyReference.cache
 D:\POE_CSHARP\dev\WPF\B_Binding\obj\Debug\Views\MainWindow.g.cs
 D:\POE_CSHARP\dev\WPF\B_Binding\obj\Debug\Views\MainWindow.baml
