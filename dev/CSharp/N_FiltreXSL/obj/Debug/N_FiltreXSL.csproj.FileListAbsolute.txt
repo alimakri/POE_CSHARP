@@ -2,7 +2,6 @@ D:\POE_CSHARP\dev\CSharp\N_FiltreXSL\bin\Debug\N_FiltreXSL.exe.config
 D:\POE_CSHARP\dev\CSharp\N_FiltreXSL\bin\Debug\N_FiltreXSL.exe
 D:\POE_CSHARP\dev\CSharp\N_FiltreXSL\bin\Debug\N_FiltreXSL.pdb
 D:\POE_CSHARP\dev\CSharp\N_FiltreXSL\obj\Debug\N_FiltreXSL.csproj.AssemblyReference.cache
-D:\POE_CSHARP\dev\CSharp\N_FiltreXSL\obj\Debug\N_FiltreXSL.csproj.SuggestedBindingRedirects.cache
 D:\POE_CSHARP\dev\CSharp\N_FiltreXSL\obj\Debug\N_FiltreXSL.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\CSharp\N_FiltreXSL\obj\Debug\N_FiltreXSL.exe
 D:\POE_CSHARP\dev\CSharp\N_FiltreXSL\obj\Debug\N_FiltreXSL.pdb

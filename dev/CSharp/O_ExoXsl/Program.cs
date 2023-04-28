@@ -13,7 +13,7 @@ namespace O_ExoXsl
         {
             var transformer = new XslCompiledTransform();
             transformer.Load(@"..\..\piscine.xslt");
-            transformer.Transform(@"..\..\piscine.html", @"..\..\pscine.xml");
+            transformer.Transform(@"..\..\piscine.html", @"..\..\piscine.xml");
         }
     }
 }

@@ -1,0 +1,31 @@
+﻿<Window x:Class="A_Introduction.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A_Introduction"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="900" Background="Green">
+    <Grid Name="G1">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Lila" Grid.Column="1" Grid.Row="1"/>
+        <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background="LightYellow" FontSize="22">
+            <ListBoxItem Content="Les fleurs de mars"/>
+            <ListBoxItem Content="Les fleurs du mal"/>
+            <ListBoxItem Content="Les jolies fleurs"/>
+        </ListBox>
+        <Button Grid.Column="1" Background="White">
+            <StackPanel>
+            <Image Source="/images/rose.png" Width="50" />
+            <TextBlock Text="Rose"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>

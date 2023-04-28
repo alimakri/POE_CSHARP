@@ -7,6 +7,7 @@
 		<xsl:apply-templates select="button[class='tab-toggle']"/>
 			</periodes>
 	</xsl:template>
+	
 	<xsl:template match="button[class='tab-toggle']">
 		<periode>
 			<xsl:value-of select="."/>
