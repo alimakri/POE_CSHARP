@@ -15,16 +15,42 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content="Lila" Grid.Column="1" Grid.Row="1"/>
-        <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background="LightYellow" FontSize="22">
-            <ListBoxItem Content="Les fleurs de mars"/>
-            <ListBoxItem Content="Les fleurs du mal"/>
-            <ListBoxItem Content="Les jolies fleurs"/>
+        <Button Grid.Column="1" Grid.Row="1" Background="White">
+            <Button.ToolTip>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Lila" VerticalAlignment="Center" FontSize="16" Foreground="Purple" />
+                    <Image Source="/images/lila.png" Width="100" />
+                </StackPanel>
+            </Button.ToolTip>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Lila" VerticalAlignment="Center" FontSize="16" Foreground="Purple" />
+                <Image Source="/images/lila.png" Width="100" />
+            </StackPanel>
+        </Button>
+        <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background="#458044" FontSize="22">
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/images/rose.png" Width="20" Margin="5,0"/>
+                    <TextBlock Text="Le muguet de mai"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/images/rose.png" Width="20" Margin="5,0"/>
+                    <TextBlock Text="Les fleurs du mal"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/images/rose.png" Width="20" Margin="5,0"/>
+                    <TextBlock Text="Les jolies fleurs"/>
+                </StackPanel>
+            </ListBoxItem>
         </ListBox>
-        <Button Grid.Column="1" Background="White">
-            <StackPanel>
-            <Image Source="/images/rose.png" Width="50" />
-            <TextBlock Text="Rose"/>
+        <Button Grid.Column="1" Background="White" ToolTip="Présentation de la rose">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Rose" VerticalAlignment="Center" FontSize="16" Foreground="Red" />
+                <Image Source="/images/rose.png" Width="50" />
             </StackPanel>
         </Button>
     </Grid>
