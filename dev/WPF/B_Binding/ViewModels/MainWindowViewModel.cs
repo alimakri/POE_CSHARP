@@ -19,6 +19,8 @@ namespace B_Binding.ViewModels
             {
                 new Magasin{Id=1, Nom= "Rosier rose tendre", Couleur="Orange"},
                 new Magasin{Id=2, Nom= "Rythme bonzaï", Couleur="Orange"},
+                new Magasin{Id=2, Nom= "Histoire de fleur", Couleur="cyan"},
+                new Magasin{Id=2, Nom= "Aero fleur", Couleur="lightcyan"},
                 new Magasin{Id=1, Nom= "Ambiance rose", Couleur="Yellow"}
             };
         }

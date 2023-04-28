@@ -41,7 +41,21 @@
                 <Image Grid.Column="1" VerticalAlignment="Center" Source="{Binding Fleur1.Image}" Width="80" />
             </Grid>
         </Button>
-        <ListBox ItemsSource="{Binding Magasins}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background="#458044" FontSize="22">
+        <!--DisplayMemberPath="Nom"-->
+        <ListBox ItemsSource="{Binding Magasins}" 
+                 Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" 
+                 Background="#458044" FontSize="22">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Canvas>
+                            <Ellipse Width="15" Height="15" Fill="{Binding Couleur}" Margin="0 7" 
+                                     Stroke="DarkGreen" StrokeThickness="2"/>
+                        </Canvas>
+                        <TextBlock Text="{Binding Nom}" Margin="20 0 0 0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
     </Grid>
 </Window>
