@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:B_Binding.Views"
         mc:Ignorable="d"
+        Visibility="{Binding FormMagasinVisibility}"
         Title="Formulaire Magasin" Height="300" Width="400">
     <Window.Resources>
         <Style TargetType="TextBlock">

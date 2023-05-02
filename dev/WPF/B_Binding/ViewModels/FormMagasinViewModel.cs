@@ -1,15 +1,23 @@
 ﻿using B_Binding.CommunViewModels;
 using Installation.CommunViewModels;
 using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Input;
 
 namespace B_Binding.MagasinViewModels
 {
     public class FormMagasinViewModel : ViewModelBase
     {
-        
+
+        public Visibility FormMagasinVisibility
+        {
+            get { return formMagasinVisibility; }
+            set { formMagasinVisibility = value; OnPropertyChanged("FormMagasinVisibility"); }
+        }
+        private Visibility formMagasinVisibility = Visibility.Hidden;
+
         public MagasinViewModel CurrentMagasin { get; set; }
-        public ICommand EnregistrerCommand{ get; set; }
+        public ICommand EnregistrerCommand { get; set; }
         public FormMagasinViewModel()
         {
             EnregistrerCommand = new RelayCommand(EnregistrerCommandExecute, EnregistrerCommandCanExecute);
@@ -23,7 +31,7 @@ namespace B_Binding.MagasinViewModels
 
         private void EnregistrerCommandExecute(object obj)
         {
-            
+
         }
     }
     public class MagasinViewModel : ViewModelBase

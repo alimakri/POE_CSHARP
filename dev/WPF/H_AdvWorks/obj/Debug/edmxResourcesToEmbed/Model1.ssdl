@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdventureWorks2017Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductNumber" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="MakeFlag" Type="bit" Nullable="false" />
+    <Property Name="FinishedGoodsFlag" Type="bit" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="15" />
+    <Property Name="SafetyStockLevel" Type="smallint" Nullable="false" />
+    <Property Name="ReorderPoint" Type="smallint" Nullable="false" />
+    <Property Name="StandardCost" Type="money" Nullable="false" />
+    <Property Name="ListPrice" Type="money" Nullable="false" />
+    <Property Name="Size" Type="nvarchar" MaxLength="5" />
+    <Property Name="SizeUnitMeasureCode" Type="nchar" MaxLength="3" />
+    <Property Name="WeightUnitMeasureCode" Type="nchar" MaxLength="3" />
+    <Property Name="Weight" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="DaysToManufacture" Type="int" Nullable="false" />
+    <Property Name="ProductLine" Type="nchar" MaxLength="2" />
+    <Property Name="Class" Type="nchar" MaxLength="2" />
+    <Property Name="Style" Type="nchar" MaxLength="2" />
+    <Property Name="ProductSubcategoryID" Type="int" />
+    <Property Name="ProductModelID" Type="int" />
+    <Property Name="SellStartDate" Type="datetime" Nullable="false" />
+    <Property Name="SellEndDate" Type="datetime" />
+    <Property Name="DiscontinuedDate" Type="datetime" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="ProductCategoryID" />
+    </Key>
+    <Property Name="ProductCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductSubcategory">
+    <Key>
+      <PropertyRef Name="ProductSubcategoryID" />
+    </Key>
+    <Property Name="ProductSubcategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductCategoryID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Product_ProductSubcategory_ProductSubcategoryID">
+    <End Role="ProductSubcategory" Type="Self.ProductSubcategory" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductSubcategory">
+        <PropertyRef Name="ProductSubcategoryID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductSubcategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductSubcategory_ProductCategory_ProductCategoryID">
+    <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="1" />
+    <End Role="ProductSubcategory" Type="Self.ProductSubcategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="ProductCategoryID" />
+      </Principal>
+      <Dependent Role="ProductSubcategory">
+        <PropertyRef Name="ProductCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AdventureWorks2017ModelStoreContainer">
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="Production" store:Type="Tables" />
+    <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" Schema="Production" store:Type="Tables" />
+    <EntitySet Name="ProductSubcategory" EntityType="Self.ProductSubcategory" Schema="Production" store:Type="Tables" />
+    <AssociationSet Name="FK_Product_ProductSubcategory_ProductSubcategoryID" Association="Self.FK_Product_ProductSubcategory_ProductSubcategoryID">
+      <End Role="ProductSubcategory" EntitySet="ProductSubcategory" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductSubcategory_ProductCategory_ProductCategoryID" Association="Self.FK_ProductSubcategory_ProductCategory_ProductCategoryID">
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+      <End Role="ProductSubcategory" EntitySet="ProductSubcategory" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
