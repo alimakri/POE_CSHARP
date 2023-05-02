@@ -1,0 +1,5 @@
+﻿<local:CustomerCollection xmlns:local="clr-namespace:G_CollectionBindings.Data" >
+    <local:Customer FirstName="Aaaaabbbbc" LastName="Deeggh" Age="23" CustomerID="E7181DC6-3F9E-45A4-A5F7-AC0B119D1FD8" />
+    <local:Customer FirstName="Iiiikkkklm" LastName="Nnoppp" Age="55" CustomerID="BB638D72-8B72-495A-B0F9-79F37964BBAE" />
+    <local:Customer FirstName="Qqqqrsstuv" LastName="Wxyyyz" Age="17" CustomerID="B168D811-5548-4D28-8171-318F9A4D7219" />
+</local:CustomerCollection>

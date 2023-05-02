@@ -1,0 +1,16 @@
+D:\POE_CSHARP\dev\WPF\F_Binding\bin\Debug\F_Binding.exe.config
+D:\POE_CSHARP\dev\WPF\F_Binding\bin\Debug\F_Binding.exe
+D:\POE_CSHARP\dev\WPF\F_Binding\bin\Debug\F_Binding.pdb
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\F_Binding.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\MainWindow.g.cs
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\App.g.cs
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\F_Binding_MarkupCompile.cache
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\F_Binding_MarkupCompile.lref
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\MainWindow.baml
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\F_Binding.g.resources
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\F_Binding.Properties.Resources.resources
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\F_Binding.csproj.GenerateResource.cache
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\F_Binding.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\F_Binding.exe
+D:\POE_CSHARP\dev\WPF\F_Binding\obj\Debug\F_Binding.pdb

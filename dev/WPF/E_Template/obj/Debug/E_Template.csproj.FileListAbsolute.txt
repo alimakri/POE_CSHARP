@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\WPF\E_Template\bin\Debug\E_Template.exe.config
+D:\POE_CSHARP\dev\WPF\E_Template\bin\Debug\E_Template.exe
+D:\POE_CSHARP\dev\WPF\E_Template\bin\Debug\E_Template.pdb
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\E_Template.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\MainWindow.g.cs
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\App.g.cs
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\E_Template_MarkupCompile.cache
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\E_Template_MarkupCompile.lref
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\MainWindow.baml
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\E_Template.g.resources
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\E_Template.Properties.Resources.resources
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\E_Template.csproj.GenerateResource.cache
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\E_Template.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\E_Template.exe
+D:\POE_CSHARP\dev\WPF\E_Template\obj\Debug\E_Template.pdb
