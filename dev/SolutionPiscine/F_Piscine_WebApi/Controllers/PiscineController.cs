@@ -30,8 +30,6 @@ namespace F_Piscine_WebApi.Controllers
             }
         }
 
-        public string GetCodeHtml() { return CodeHtml; }
-        
         public Dictionary<string, object> Post([FromBody] string regex)
         {
             var dico = new Dictionary<string, object>();
