@@ -1,11 +1,13 @@
 ﻿using B_Binding.CommunViewModels;
 using Installation.CommunViewModels;
+using System.Collections.Generic;
 using System.Windows.Input;
 
 namespace B_Binding.MagasinViewModels
 {
     public class FormMagasinViewModel : ViewModelBase
     {
+        
         public MagasinViewModel CurrentMagasin { get; set; }
         public ICommand EnregistrerCommand{ get; set; }
         public FormMagasinViewModel()

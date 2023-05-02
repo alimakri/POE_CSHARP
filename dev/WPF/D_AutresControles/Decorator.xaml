@@ -1,0 +1,34 @@
+﻿<Window x:Class="D_AutresControles.Decorator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:D_AutresControles"
+        mc:Ignorable="d"
+        Title="Decorator" Height="450" Width="800">
+    <Grid>
+        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="400">
+            <Border BorderThickness="10">
+                <Border.BorderBrush>
+                    <LinearGradientBrush>
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0" Color="Black"/>
+                            <GradientStop Offset="1" Color="White"/>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Rectangle Height="100" Width="150">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush>
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0" Color="LightBlue"/>
+                            <GradientStop Offset="1" Color="Blue"/>
+                        </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Border>
+            
+        </Button>
+    </Grid>
+</Window>
