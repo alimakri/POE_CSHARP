@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace B_Binding.Commun
+namespace B_Binding.CommunViewModels
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {

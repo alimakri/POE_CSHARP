@@ -5,8 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:B_Binding.Views"
         mc:Ignorable="d"
-        Title="FormMagasin" Height="450" Width="800">
+        Title="Formulaire Magasin" Height="300" Width="400">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Text="Id"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CurrentMagasin.Id, UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBlock Grid.Row="1" Text="Nom"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding CurrentMagasin.Nom, UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBlock Grid.Row="2" Text="Couleur"/>
+        <ComboBox Grid.Row="2" Grid.Column="1" FontSize="14" Margin="5 20 " SelectedItem="{Binding CurrentMagasin.Couleur, UpdateSourceTrigger=PropertyChanged}">
+            <ComboBoxItem Content="Vert"/>
+            <ComboBoxItem Content="Rouge"/>
+            <ComboBoxItem Content="Bleu"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Marron"/>
+            <ComboBoxItem Content="Violet"/>
+        </ComboBox>
         
+        <Button Grid.Row="3" Grid.ColumnSpan="2" Content="Enregistrer" 
+                Command="{Binding EnregistrerCommand}"
+                Margin="5" FontSize="14"/>
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
 ﻿using B_Binding.ViewModels;
+using B_Binding.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,5 +28,10 @@ namespace B_Binding
             DataContext = new MainWindowViewModel();
         }
 
+        private void Ajouter_Click(object sender, RoutedEventArgs e)
+        {
+            var f = new FormMagasin();
+            f.ShowDialog();
+        }
     }
 }

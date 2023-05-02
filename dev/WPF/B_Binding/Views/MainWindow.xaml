@@ -92,7 +92,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <!---->
-                <Button Grid.Column="0" Background="WhiteSmoke" Content="Supprimer" Command="{Binding AjouterCommand}" FontSize="18" Padding="5"
+                <Button Grid.Column="0" Background="WhiteSmoke" Content="Ajouter" Command="{Binding AjouterCommand}" FontSize="18" Padding="5" Click="Ajouter_Click"
                         Foreground="Black" />
                 <Button Grid.Column="1" Style="{StaticResource SimpleButton}" Background="White" Foreground="Orange" Command="{Binding UnselectCommand}">
                     <StackPanel>

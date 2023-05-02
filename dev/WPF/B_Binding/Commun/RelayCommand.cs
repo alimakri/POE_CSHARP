@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Installation.ViewModels
+namespace Installation.CommunViewModels
 {
     public class RelayCommand : ICommand
     {

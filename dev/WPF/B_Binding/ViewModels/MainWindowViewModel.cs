@@ -1,5 +1,5 @@
-﻿using B_Binding.Commun;
-using Installation.ViewModels;
+﻿using B_Binding.CommunViewModels;
+using Installation.CommunViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,7 +49,7 @@ namespace B_Binding.ViewModels
 
         private void AjouterCommandExecute(object obj)
         {
-
+            
         }
 
 
