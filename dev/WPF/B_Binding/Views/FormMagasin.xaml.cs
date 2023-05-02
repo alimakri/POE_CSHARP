@@ -11,21 +11,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace B_Binding
+namespace B_Binding.Views
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour FormMagasin.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class FormMagasin : Window
     {
-        public MainWindow()
+        public FormMagasin()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+            DataContext = new FormMagasinViewModel();
         }
-
     }
 }
