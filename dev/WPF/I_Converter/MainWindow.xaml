@@ -7,10 +7,11 @@
         mc:Ignorable="d"
         Title="Converter" Height="450" Width="800">
     <Window.Resources>
-        <ColorConverter x:Key="CombineColorsConverter"/>
+        <local:CombineColorConverter x:Key="CombineColorsConverterKey"/>
+        <local:ToIntConverter x:Key="ToIntConverterKey"/>
     </Window.Resources>
     <Window.Background>
-        <MultiBinding Converter="{StaticResource CombineColorsConverter}">
+        <MultiBinding Converter="{StaticResource CombineColorsConverterKey}">
             <Binding ElementName="SliderRed" Path="Value"/>
             <Binding ElementName="SliderGreen" Path="Value"/>
             <Binding ElementName="SliderBlue" Path="Value"/>
@@ -28,16 +29,16 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18">Rouge</Label>
-        <Label Foreground="Green" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Grid.Column="1">Vert</Label>
-        <Label Foreground="Blue" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Grid.Column="2">Bleu</Label>
+        <Label Foreground="Red" Background="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18">Rouge</Label>
+        <Label Foreground="Green"  Background="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Grid.Column="1">Vert</Label>
+        <Label Foreground="Blue"  Background="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Grid.Column="2">Bleu</Label>
 
         <Slider x:Name="SliderRed" Grid.Row="1" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center" />
         <Slider x:Name="SliderGreen" Grid.Row="1" Grid.Column="1" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center"/>
         <Slider x:Name="SliderBlue" Grid.Row="1" Grid.Column="2" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center"/>
 
-        <TextBlock Grid.Row="2" Text="{Binding ElementName=SliderRed, Path=Value}" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding ElementName=SliderGreen, Path=Value}" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding ElementName=SliderBlue, Path=Value}" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Background="White" Text="{Binding ElementName=SliderRed, Path=Value, Converter={StaticResource ToIntConverterKey}}" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Background="White" Grid.Column="1" Text="{Binding ElementName=SliderGreen, Path=Value, Converter={StaticResource ToIntConverterKey}}" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Background="White" Grid.Column="2" Text="{Binding ElementName=SliderBlue, Path=Value, StringFormat=N0}" HorizontalAlignment="Center"/>
     </Grid>
 </Window>

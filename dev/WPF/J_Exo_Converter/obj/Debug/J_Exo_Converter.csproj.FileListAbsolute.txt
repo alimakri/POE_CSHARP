@@ -1,0 +1,15 @@
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\bin\Debug\J_Exo_Converter.exe.config
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\bin\Debug\J_Exo_Converter.exe
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\bin\Debug\J_Exo_Converter.pdb
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\MainWindow.g.cs
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\App.g.cs
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\J_Exo_Converter_MarkupCompile.cache
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\J_Exo_Converter_MarkupCompile.lref
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\MainWindow.baml
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\J_Exo_Converter.g.resources
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\J_Exo_Converter.Properties.Resources.resources
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\J_Exo_Converter.csproj.GenerateResource.cache
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\J_Exo_Converter.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\J_Exo_Converter.exe
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\J_Exo_Converter.pdb
+D:\POE_CSHARP\dev\WPF\J_Exo_Converter\obj\Debug\GeneratedInternalTypeHelper.g.cs

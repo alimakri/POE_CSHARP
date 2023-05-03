@@ -13,3 +13,4 @@ D:\POE_CSHARP\dev\WPF\I_Converter\obj\Debug\I_Converter.csproj.GenerateResource.
 D:\POE_CSHARP\dev\WPF\I_Converter\obj\Debug\I_Converter.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\WPF\I_Converter\obj\Debug\I_Converter.exe
 D:\POE_CSHARP\dev\WPF\I_Converter\obj\Debug\I_Converter.pdb
+D:\POE_CSHARP\dev\WPF\I_Converter\obj\Debug\GeneratedInternalTypeHelper.g.cs
