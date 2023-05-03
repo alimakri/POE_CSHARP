@@ -27,6 +27,7 @@ namespace Piscine_BOL
 
         }
         #endregion
+
         #region Config
         public static void NouveauRegex(string nom, string regex)
         {

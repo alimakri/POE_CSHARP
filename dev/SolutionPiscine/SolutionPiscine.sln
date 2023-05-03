@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32616.157
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_UILConsole", "UILConsole\A_UILConsole.csproj", "{23D10D18-B01D-4E88-9E5F-E5582B988A45}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_Piscine_Commun", "E_Piscine_Commun\E_Piscine_Commun.csproj", "{76E504DA-BA85-4F32-B83B-5C1E682C5FA5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F_Piscine_WebApi", "F_Piscine_WebApi\F_Piscine_WebApi.csproj", "{0253C970-75D2-496C-9BF2-C2ACDFDCF659}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G_UILWpf", "G_UILWpf\G_UILWpf.csproj", "{10A85AA6-2C52-49F5-A806-311F3CA6E967}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{0253C970-75D2-496C-9BF2-C2ACDFDCF659}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0253C970-75D2-496C-9BF2-C2ACDFDCF659}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0253C970-75D2-496C-9BF2-C2ACDFDCF659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10A85AA6-2C52-49F5-A806-311F3CA6E967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A85AA6-2C52-49F5-A806-311F3CA6E967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A85AA6-2C52-49F5-A806-311F3CA6E967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A85AA6-2C52-49F5-A806-311F3CA6E967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

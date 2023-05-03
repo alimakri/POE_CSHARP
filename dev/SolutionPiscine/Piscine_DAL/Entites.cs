@@ -57,9 +57,13 @@ namespace Piscine_DAL
         internal ArrayList GetPiscines(int idAcces)
         {
             var resultat = new List<Piscine>();
-            var acces = LesAcces.Include("LesPiscines").FirstOrDefault(x => x.Id == idAcces);
-            if (acces != null) resultat = acces.LesPiscines;
-
+            if (idAcces == 0) 
+                resultat = LesPiscines.ToList();
+            else
+            {
+                var acces = LesAcces.Include("LesPiscines").FirstOrDefault(x => x.Id == idAcces);
+                if (acces != null) resultat = acces.LesPiscines;
+            }
             return resultat.ToArrayList();
         }
 
