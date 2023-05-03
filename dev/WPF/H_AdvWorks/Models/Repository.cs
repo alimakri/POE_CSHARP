@@ -10,12 +10,16 @@ namespace H_AdvWorks.Models
     public class Repository
     {
         private AdvContext Context = new AdvContext();
-        public List<ProductCategory> GetCategories()
+        public List<CategorieViewModel> GetCategories()
         {
-            return Context.ProductCategories.ToList();
+            return Context.ProductCategories.Select(x => new CategorieViewModel
+            {
+                Id = x.ProductCategoryID,
+                Nom = x.Name
+            }).ToList();
         }
 
-        internal List<ProduitViewModel> GetProducts(int productCategoryID)
+        public List<ProduitViewModel> GetProducts(int productCategoryID)
         {
             var produits = Context.Products
                 .Where(x => x.ProductSubcategory.ProductCategory.ProductCategoryID == productCategoryID);

@@ -11,7 +11,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListBox ItemsSource="{Binding Categories}" DisplayMemberPath="Name" SelectedItem="{Binding CurrentCategory}"/>
+        <ListBox ItemsSource="{Binding Categories}" DisplayMemberPath="Nom" SelectedItem="{Binding CurrentCategory}"/>
         <ListBox Grid.Column="1" ItemsSource="{Binding Products, UpdateSourceTrigger=PropertyChanged}">
             <ListBox.ItemTemplate>
                 <DataTemplate>

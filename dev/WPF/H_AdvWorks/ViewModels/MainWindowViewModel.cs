@@ -21,7 +21,7 @@ namespace H_AdvWorks.ViewModels
             get { return categories; }
             set { categories = value; }
         }
-        private List<ProductCategory> categories;
+        private List<CategorieViewModel> categories;
         public List<ProduitViewModel> Products
         {
             get { return products; }
@@ -34,12 +34,19 @@ namespace H_AdvWorks.ViewModels
             set
             {
                 currentCategory = value;
-                Products = Repo.GetProducts(currentCategory.ProductCategoryID);
+                Products = Repo.GetProducts(currentCategory.Id);
             }
         }
         private CategorieViewModel currentCategory;
 
     }
+
+    public class CategorieViewModel
+    {
+        public int Id { get; set; }
+        public string Nom { get; set; }
+    }
+
     public class ProduitViewModel
     {
 
