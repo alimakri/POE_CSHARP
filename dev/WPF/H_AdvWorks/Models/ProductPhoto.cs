@@ -7,25 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace H_AdvWorks
+namespace H_AdvWorks.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ProductCategory
+    public partial class ProductPhoto
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ProductCategory()
+        public ProductPhoto()
         {
-            this.ProductSubcategories = new HashSet<ProductSubcategory>();
+            this.ProductProductPhotoes = new HashSet<ProductProductPhoto>();
         }
     
-        public int ProductCategoryID { get; set; }
-        public string Name { get; set; }
-        public System.Guid rowguid { get; set; }
+        public int ProductPhotoID { get; set; }
+        public byte[] ThumbNailPhoto { get; set; }
+        public string ThumbnailPhotoFileName { get; set; }
+        public byte[] LargePhoto { get; set; }
+        public string LargePhotoFileName { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductSubcategory> ProductSubcategories { get; set; }
+        public virtual ICollection<ProductProductPhoto> ProductProductPhotoes { get; set; }
     }
 }

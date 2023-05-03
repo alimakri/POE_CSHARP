@@ -4,12 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e9bd98aec5db41eb9fa6448b29c89c8e" Name="Diagram1">
+      <Diagram DiagramId="b96dad53cf6046cd8b5c6f243a92ce92" Name="Diagram1">
         <EntityTypeShape EntityType="AdventureWorks2017Model.Product" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2017Model.ProductCategory" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2017Model.ProductSubcategory" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
         <AssociationConnector Association="AdventureWorks2017Model.FK_Product_ProductSubcategory_ProductSubcategoryID" ManuallyRouted="false" />
         <AssociationConnector Association="AdventureWorks2017Model.FK_ProductSubcategory_ProductCategory_ProductCategoryID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AdventureWorks2017Model.ProductPhoto" Width="1.5" PointX="12.25" PointY="3.625" />
+        <EntityTypeShape EntityType="AdventureWorks2017Model.ProductProductPhoto" Width="1.5" PointX="9.125" PointY="3.125" />
+        <AssociationConnector Association="AdventureWorks2017Model.FK_ProductProductPhoto_Product_ProductID" />
+        <AssociationConnector Association="AdventureWorks2017Model.FK_ProductProductPhoto_ProductPhoto_ProductPhotoID" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

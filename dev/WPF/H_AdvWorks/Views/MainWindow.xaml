@@ -5,14 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:H_AdvWorks"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Adventure Works" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <ListBox ItemsSource="{Binding Categories}" DisplayMemberPath="Name" SelectedItem="{Binding CurrentCategory}"/>
-        <ListBox Grid.Column="1" ItemsSource="{Binding Products, UpdateSourceTrigger=PropertyChanged}"  DisplayMemberPath="Name"/>
-
+        <ListBox Grid.Column="1" ItemsSource="{Binding Products, UpdateSourceTrigger=PropertyChanged}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Image Source="{Binding Vignette}" Grid.RowSpan="2" Margin="5"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Reference}"/>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Nom}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>

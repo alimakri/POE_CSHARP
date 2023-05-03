@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace H_AdvWorks
+namespace H_AdvWorks.Models
 {
     using System;
     using System.Collections.Generic;

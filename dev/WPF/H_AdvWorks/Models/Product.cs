@@ -7,13 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace H_AdvWorks
+namespace H_AdvWorks.Models
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Product
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Product()
+        {
+            this.ProductProductPhotoes = new HashSet<ProductProductPhoto>();
+        }
+    
         public int ProductID { get; set; }
         public string Name { get; set; }
         public string ProductNumber { get; set; }
@@ -41,5 +47,7 @@ namespace H_AdvWorks
         public System.DateTime ModifiedDate { get; set; }
     
         public virtual ProductSubcategory ProductSubcategory { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductProductPhoto> ProductProductPhotoes { get; set; }
     }
 }

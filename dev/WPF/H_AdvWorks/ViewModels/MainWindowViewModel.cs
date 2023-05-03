@@ -1,4 +1,6 @@
-﻿using System;
+﻿using H_AdvWorks.CommunViewModels;
+using H_AdvWorks.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,36 +8,65 @@ using System.Threading.Tasks;
 
 namespace H_AdvWorks.ViewModels
 {
-    public class MainWindowViewModel
+    public class MainWindowViewModel : ViewModelBase
     {
-        private AdvContext Context = new AdvContext();
+        private Repository Repo = new Repository();
         public MainWindowViewModel()
         {
-            Categories = Context.ProductCategories.ToList();
+            Categories = Repo.GetCategories();
         }
 
-        public List<ProductCategory> Categories
+        public List<CategorieViewModel> Categories
         {
             get { return categories; }
             set { categories = value; }
         }
         private List<ProductCategory> categories;
-        public List<Product> Products
+        public List<ProduitViewModel> Products
         {
             get { return products; }
-            set { products = value; }
+            set { products = value; OnPropertyChanged("Products"); }
         }
-        private List<Product> products;
-        public ProductCategory CurrentCategory
+        private List<ProduitViewModel> products;
+        public CategorieViewModel CurrentCategory
         {
             get { return currentCategory; }
             set
             {
                 currentCategory = value;
-                Products = Context.Products.Where(x => x.ProductSubcategory.ProductCategory.ProductCategoryID == currentCategory.ProductCategoryID).ToList();
+                Products = Repo.GetProducts(currentCategory.ProductCategoryID);
             }
         }
-        private ProductCategory currentCategory;
+        private CategorieViewModel currentCategory;
+
+    }
+    public class ProduitViewModel
+    {
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        private int id;
+        public string Nom
+        {
+            get { return nom; }
+            set { nom = value; }
+        }
+        private string nom;
+        public string Reference
+        {
+            get { return reference; }
+            set { reference = value; }
+        }
+        private string reference;
+        public byte[] Vignette
+        {
+            get { return vignette; }
+            set { vignette = value; }
+        }
+        private byte[] vignette;
 
     }
 }

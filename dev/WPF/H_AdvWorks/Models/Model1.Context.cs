@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace H_AdvWorks
+namespace H_AdvWorks.Models
 {
     using System;
     using System.Data.Entity;
@@ -28,5 +28,7 @@ namespace H_AdvWorks
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
         public virtual DbSet<ProductSubcategory> ProductSubcategories { get; set; }
+        public virtual DbSet<ProductPhoto> ProductPhotoes { get; set; }
+        public virtual DbSet<ProductProductPhoto> ProductProductPhotoes { get; set; }
     }
 }
