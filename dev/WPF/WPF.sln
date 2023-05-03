@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G_CollectionBindings", "G_C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H_AdvWorks", "H_AdvWorks\H_AdvWorks.csproj", "{E42F6B95-3BE1-4F88-BFC1-EB4FF52904BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I_Converter", "I_Converter\I_Converter.csproj", "{E95C6B3C-9E0C-482A-A26E-CE56AFF56028}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{E42F6B95-3BE1-4F88-BFC1-EB4FF52904BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E42F6B95-3BE1-4F88-BFC1-EB4FF52904BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E42F6B95-3BE1-4F88-BFC1-EB4FF52904BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E95C6B3C-9E0C-482A-A26E-CE56AFF56028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E95C6B3C-9E0C-482A-A26E-CE56AFF56028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E95C6B3C-9E0C-482A-A26E-CE56AFF56028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E95C6B3C-9E0C-482A-A26E-CE56AFF56028}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

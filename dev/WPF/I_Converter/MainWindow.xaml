@@ -1,0 +1,43 @@
+﻿<Window x:Class="I_Converter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:I_Converter"
+        mc:Ignorable="d"
+        Title="Converter" Height="450" Width="800">
+    <Window.Resources>
+        <ColorConverter x:Key="CombineColorsConverter"/>
+    </Window.Resources>
+    <Window.Background>
+        <MultiBinding Converter="{StaticResource CombineColorsConverter}">
+            <Binding ElementName="SliderRed" Path="Value"/>
+            <Binding ElementName="SliderGreen" Path="Value"/>
+            <Binding ElementName="SliderBlue" Path="Value"/>
+        </MultiBinding>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18">Rouge</Label>
+        <Label Foreground="Green" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Grid.Column="1">Vert</Label>
+        <Label Foreground="Blue" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Grid.Column="2">Bleu</Label>
+
+        <Slider x:Name="SliderRed" Grid.Row="1" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center" />
+        <Slider x:Name="SliderGreen" Grid.Row="1" Grid.Column="1" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center"/>
+        <Slider x:Name="SliderBlue" Grid.Row="1" Grid.Column="2" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="2" Text="{Binding ElementName=SliderRed, Path=Value}" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding ElementName=SliderGreen, Path=Value}" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding ElementName=SliderBlue, Path=Value}" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>
