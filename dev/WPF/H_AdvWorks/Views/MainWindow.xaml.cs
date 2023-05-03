@@ -26,5 +26,6 @@ namespace H_AdvWorks
             InitializeComponent();
             DataContext = new MainWindowViewModel();
         }
+
     }
 }

@@ -39,6 +39,28 @@ namespace H_AdvWorks.ViewModels
         }
         private CategorieViewModel currentCategory;
 
+        //public ProduitViewModel CurrentProduct;
+
+        public ProduitViewModel CurrentProduct
+        {
+            get { return currentProduct; }
+            set
+            {
+                currentProduct = value;
+                CurrentIndexOnglet = 1;
+            }
+        }
+        private ProduitViewModel currentProduct;
+
+        //public ProduitViewModel CurrentProduct { get; set; }
+
+
+        public int CurrentIndexOnglet
+        {
+            get { return currentIndexOnglet; }
+            set { currentIndexOnglet = value; OnPropertyChanged("CurrentIndexOnglet"); }
+        }
+        private int currentIndexOnglet;
     }
 
     public class CategorieViewModel
