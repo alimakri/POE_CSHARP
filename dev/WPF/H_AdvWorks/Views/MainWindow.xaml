@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:H_AdvWorks"
         mc:Ignorable="d"
+        xmlns:sysglb="clr-namespace:System.Globalization;assembly=mscorlib"
         Title="Adventure Works" Height="450" Width="800">
     <TabControl SelectedIndex="{Binding CurrentIndexOnglet, UpdateSourceTrigger=PropertyChanged}">
         <TabItem >
@@ -43,8 +44,17 @@
                 </ListBox>
             </Grid>
         </TabItem>
-        <TabItem Header="Description">
-            
+        <TabItem Header="Description" IsEnabled="{Binding Onglet2Enabled, UpdateSourceTrigger=PropertyChanged}">
+            <DockPanel LastChildFill="True">
+                <TextBlock Text="{Binding CurrentProduct.Nom, UpdateSourceTrigger=PropertyChanged}" FontSize="24" 
+                           HorizontalAlignment="Center"/>
+                <TextBlock DockPanel.Dock="Right" 
+                           FontSize="24" HorizontalAlignment="Center">
+                    <Run Text="{Binding CurrentProduct.Prix, StringFormat=N2, UpdateSourceTrigger=PropertyChanged, ConverterCulture={x:Static sysglb:CultureInfo.CurrentUICulture}}" />
+                    <Run Text="€"/>
+                </TextBlock>
+                <Image Width="450" Source="{Binding CurrentProduct.Photo, UpdateSourceTrigger=PropertyChanged}"/>
+            </DockPanel>
         </TabItem>
     </TabControl>
 </Window>

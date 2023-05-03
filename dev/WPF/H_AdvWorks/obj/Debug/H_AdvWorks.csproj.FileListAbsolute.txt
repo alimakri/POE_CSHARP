@@ -1,4 +1,3 @@
-D:\POE_CSHARP\dev\WPF\H_AdvWorks\obj\Debug\H_AdvWorks.csproj.AssemblyReference.cache
 D:\POE_CSHARP\dev\WPF\H_AdvWorks\obj\Debug\Views\MainWindow.g.cs
 D:\POE_CSHARP\dev\WPF\H_AdvWorks\obj\Debug\App.g.cs
 D:\POE_CSHARP\dev\WPF\H_AdvWorks\obj\Debug\H_AdvWorks_MarkupCompile.cache

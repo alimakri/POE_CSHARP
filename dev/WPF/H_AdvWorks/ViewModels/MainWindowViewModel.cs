@@ -47,7 +47,9 @@ namespace H_AdvWorks.ViewModels
             set
             {
                 currentProduct = value;
-                CurrentIndexOnglet = 1;
+                OnPropertyChanged("CurrentProduct");
+                if (currentProduct != null) CurrentIndexOnglet = 1;
+                Onglet2Enabled = currentProduct != null;
             }
         }
         private ProduitViewModel currentProduct;
@@ -61,6 +63,15 @@ namespace H_AdvWorks.ViewModels
             set { currentIndexOnglet = value; OnPropertyChanged("CurrentIndexOnglet"); }
         }
         private int currentIndexOnglet;
+
+
+        public bool Onglet2Enabled
+        {
+            get { return onglet2Enabled; }
+            set { onglet2Enabled = value; OnPropertyChanged("Onglet2Enabled"); }
+        }
+        private bool onglet2Enabled;
+
     }
 
     public class CategorieViewModel
@@ -96,6 +107,18 @@ namespace H_AdvWorks.ViewModels
             set { vignette = value; }
         }
         private byte[] vignette;
+        public byte[] Photo
+        {
+            get { return photo; }
+            set { photo = value; }
+        }
+        private byte[] photo;
+        public decimal Prix
+        {
+            get { return prix; }
+            set { prix = value; }
+        }
+        private decimal prix;
 
     }
 }

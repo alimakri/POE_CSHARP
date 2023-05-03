@@ -25,7 +25,9 @@ namespace H_AdvWorks.Models
                 Id = x.ProductID,
                 Nom = x.Name,
                 Reference = x.ProductNumber,
-                Vignette = x.ProductProductPhotoes.FirstOrDefault() == null ? null : x.ProductProductPhotoes.FirstOrDefault().ProductPhoto.ThumbNailPhoto
+                Vignette = x.ProductProductPhotoes.FirstOrDefault() == null ? null : x.ProductProductPhotoes.FirstOrDefault().ProductPhoto.ThumbNailPhoto,
+                Photo = x.ProductProductPhotoes.FirstOrDefault() == null ? null : x.ProductProductPhotoes.FirstOrDefault().ProductPhoto.LargePhoto,
+                Prix = x.ListPrice
             }).ToList();
         }
     }
