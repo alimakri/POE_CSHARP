@@ -68,7 +68,16 @@ namespace Piscine_DAL
 
         public static string GetRegex(string nom)
         {
-            return Context.LesConfigs.FirstOrDefault(x=>x.Nom== nom).Regex;
+            return Context.LesConfigs.FirstOrDefault(x => x.Nom == nom).Regex;
+        }
+
+        public static bool IsInit()
+        {
+            try
+            {
+                return Context.LesConfigs.Count() == 0;
+            }
+            catch (Exception) { return true; }
         }
         #endregion
     }

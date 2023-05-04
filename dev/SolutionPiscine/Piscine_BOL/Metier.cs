@@ -81,6 +81,11 @@ namespace Piscine_BOL
         {
             return LesAcces.TestAcces1(nomAcces);
         }
+
+        public static bool IsInit()
+        {
+            return LesConfigurations.IsInit();
+        }
         #endregion
     }
     #endregion
@@ -200,6 +205,11 @@ namespace Piscine_BOL
             Add(p);
             p.Id = EnregistrerConfig(p);
             return p.Id;
+        }
+
+        internal bool IsInit()
+        {
+            return Repository.IsInit();
         }
 
         private int EnregistrerConfig(Configuration p)

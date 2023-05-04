@@ -108,7 +108,13 @@ namespace Piscine_DAL
         {
             var resultat = new ArrayList();
             if (liste == null) return resultat;
-            liste.ForEach(x => { resultat.Add(x.Id); resultat.Add(x.Nom); resultat.Add(x.Capacite); });
+            liste.ForEach(x =>
+            {
+                resultat.Add(x.Id); 
+                resultat.Add(x.Nom); 
+                resultat.Add(x.Capacite); 
+                resultat.Add(x.Occupation);
+            });
             return resultat;
         }
         #endregion
