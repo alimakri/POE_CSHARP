@@ -46,13 +46,14 @@ namespace G_UILWpf.ViewModels
         {
             while (true)
             {
-                await Task.Delay(3000);
+                await Task.Delay(Properties.Settings.Default.FrequenceEnreg * 60000);
                 var regex1 = Metier.GetRegex("Occupation");
                 var regex2 = Metier.GetRegex("Capacite");
                 var dicoOccupation = Api.GetPiscines(regex1);
                 var dicoCapacite = Api.GetPiscines(regex2);
                 ArrayList al = Metier.SaveConfigs(dicoOccupation, dicoCapacite);
                 Piscines = al.ToListPiscine();
+                Metier.EnregistrerStats();
             }
         }
 

@@ -16,6 +16,7 @@ namespace Piscine_DAL
         public DbSet<Acces> LesAcces { get; set; }
         public DbSet<Piscine> LesPiscines { get; set; }
         public DbSet<Config> LesConfigs { get; set; }
+        public DbSet<Stat> LesStats { get; set; }
 
         public OccupationContext() : base("name=OccupationConfig")
         {
@@ -126,6 +127,13 @@ namespace Piscine_DAL
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Regex { get; set; }
+    }
+    internal class Stat
+    {
+        public int Id { get; set; }
+        public DateTime DateStat { get; set; }
+        public int Occupation { get; set; }
+        public Piscine Piscine { get; set; }
     }
 
 }

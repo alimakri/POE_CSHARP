@@ -31,5 +31,14 @@ namespace G_UILWpf.Properties {
                 return ((double)(this["SeuilOccupation"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int FrequenceEnreg {
+            get {
+                return ((int)(this["FrequenceEnreg"]));
+            }
+        }
     }
 }

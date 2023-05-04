@@ -84,6 +84,14 @@ namespace Piscine_DAL
         {
             return Context.LesConfigs.ToList().ToArrayList();
         }
+
+        public static void EnregistrerStat(int id, int occupation, DateTime d)
+        {
+            var p = Context.LesPiscines.FirstOrDefault(x => x.Id == id);
+            var stat = new Stat { Piscine = p, Occupation=occupation, DateStat = d };
+            Context.LesStats.Add(stat);
+            Context.SaveChanges();
+        }
         #endregion
     }
 }

@@ -19,6 +19,7 @@ namespace Piscine_BOL
         private static Access LesAcces = new Access();
         private static Activites LesActivites = new Activites();
         private static Configurations LesConfigurations = new Configurations();
+        private static Stats LesStats = new Stats();
 
 
         public static void Init()
@@ -81,6 +82,11 @@ namespace Piscine_BOL
             return config.Regex;
         }
 
+        public static void EnregistrerStats()
+        {
+            LesStats.EnregistrerStats(LesPiscines);
+        }
+
         public static void NouveauDetailActivite(string d1, string d2, int n, int idActivite)
         {
             LesActivites.NouveauDetailActivite(d1, d2, n, idActivite);
@@ -126,6 +132,10 @@ namespace Piscine_BOL
         public int Id;
         public string Nom;
         public string Regex;
+    }
+    public class Stat
+    {
+        public int Id;
     }
     public class Activite
     {
@@ -262,6 +272,17 @@ namespace Piscine_BOL
         private int EnregistrerConfig(Configuration p)
         {
             return Repository.EnregistrerConfig(p.ToArrayList());
+        }
+    }
+    #endregion
+
+    #region Stats
+    internal class Stats : List<Stat>
+    {
+        internal void EnregistrerStats(List<Piscine> piscines)
+        {
+            var d = DateTime.Now;
+            foreach(var p in piscines) Repository.EnregistrerStat(p.Id, p.Occupation, d);
         }
     }
     #endregion
