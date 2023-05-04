@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox ItemsSource="{Binding Piscines}"/>
+        <ListBox ItemsSource="{Binding Piscines}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="1" Grid.RowSpan="2" Text="{Binding Nom}" FontWeight="Bold" Margin="5" />
+                        <TextBlock  Text="{Binding Occupation}"/>
+                        <TextBlock  Grid.Row="1">
+                            <Run Text="{Binding Capacite}"/>
+                            <Run Text="places"/>
+                        </TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
