@@ -195,7 +195,7 @@ namespace Piscine_BOL
             {
                 p = this.FirstOrDefault(x => x.Nom == item.Key);
                 b1 = int.TryParse(item.Value.ToString(), out i);
-                b2 = int.TryParse(dicoCapacite[p.Nom].ToString(), out j);
+                b2 = int.TryParse(dicoCapacite[item.Key].ToString(), out j);
                 if (p == null)
                 {
                     p = new Piscine { Nom = item.Key, Occupation = b1 ? i : -1, Capacite = b2 ? j : -1 };
