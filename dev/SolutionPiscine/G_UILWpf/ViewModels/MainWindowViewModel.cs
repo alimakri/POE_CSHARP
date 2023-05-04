@@ -14,7 +14,7 @@ namespace G_UILWpf.ViewModels
     {
         public MainWindowViewModel()
         {
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
             if (Metier.IsInit())
             {
                 //Metier.NouveauRegex("Capacite", @"<td class=""place-name"">[\n\t ]*(.*?)[\n\t ]*<\/td>(?:.*?)*(?:\s)*([0-9]*)(?:.*?)(?:\s)*<td(?:.*?)>(?:\s)*<div(?:.*?)>(?:[\s-])*<\/div>(?:\s)*<div(?:.*?)>(?:[A-zé\n\s-])*<\/div>(?:\s)*<div(?:.*?)>(?:\s*?)[\s]*Capacité totale :  [0-9]*");
@@ -46,7 +46,20 @@ namespace G_UILWpf.ViewModels
             set { capacite = value; }
         }
         private int capacite;
-        public int Occupation
+
+        public string OccupationStr
+        {
+            get { return occupation == -1 ? "-" : occupation.ToString(); }
+        }
+        public string CapaciteStr
+        {
+            get { var s = capacite > 1 ? "s" : ""; return capacite == -1 ? "" : $"{capacite.ToString()} place{s}"; }
+        }
+        public string ColorOccupation
+        {
+            get { return occupation == -1 ? "Silver" : "Green"; }
+        }
+       public int Occupation
         {
             get { return occupation; }
             set { occupation = value; }

@@ -12,19 +12,21 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
+                        <Border BorderBrush="{Binding ColorOccupation}" BorderThickness="2" CornerRadius="50" Background="{Binding ColorOccupation}" Width="30" HorizontalAlignment="Left">
+                            <TextBlock  Text="{Binding OccupationStr, Mode=OneWay}" Foreground="White" HorizontalAlignment="Center" />
+                        </Border>
                         <TextBlock Grid.Column="1" Grid.RowSpan="2" Text="{Binding Nom}" FontWeight="Bold" Margin="5" />
-                        <TextBlock  Text="{Binding Occupation}"/>
-                        <TextBlock  Grid.Row="1">
-                            <Run Text="{Binding Capacite}"/>
-                            <Run Text="places"/>
-                        </TextBlock>
+
+
+                        <TextBlock  Grid.Row="1" Text="{Binding CapaciteStr, Mode=OneWay}"/>
+
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
