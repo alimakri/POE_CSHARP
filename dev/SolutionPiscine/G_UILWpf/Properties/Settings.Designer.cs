@@ -22,5 +22,14 @@ namespace G_UILWpf.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.2")]
+        public double SeuilOccupation {
+            get {
+                return ((double)(this["SeuilOccupation"]));
+            }
+        }
     }
 }

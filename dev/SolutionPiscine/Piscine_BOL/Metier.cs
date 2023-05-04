@@ -33,6 +33,10 @@ namespace Piscine_BOL
         {
             LesConfigurations.Add(nom, regex);
         }
+        public static ArrayList SaveConfigs(Dictionary<string, object> dicoOccupation)
+        {
+            return LesPiscines.SaveConfigs(dicoOccupation);
+        }
         #endregion
 
         #region Piscine
@@ -62,6 +66,14 @@ namespace Piscine_BOL
         public static int NouvelleActivite(string d1, string d2, string nom, int idPiscine)
         {
             return LesActivites.NouvelleActivite(LesPiscines, LesActivites, d1, d2, nom, idPiscine);
+        }
+
+
+        public static string GetRegex(string nom)
+        {
+            var config = LesConfigurations.FirstOrDefault(x=>x.Nom == nom);
+            if (config == null) return null;
+            return config.Regex;
         }
 
         public static void NouveauDetailActivite(string d1, string d2, int n, int idActivite)
@@ -168,6 +180,17 @@ namespace Piscine_BOL
                 Add(p);
                 EnregistrerPiscine(p);
             }
+        }
+
+        internal ArrayList SaveConfigs(Dictionary<string, object> dicoOccupation)
+        {
+            var al = new ArrayList();
+            foreach(var piscine in this)
+            {
+                piscine.Occupation = (int) dicoOccupation[piscine.Nom];
+                al.Add(piscine.ToArrayList());
+            }
+            return al;
         }
     }
     #endregion

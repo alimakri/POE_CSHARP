@@ -7,11 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace G_UILWpf.ViewModels
 {
     public class MainWindowViewModel
     {
+        #region Bindings
+        public List<PiscineViewModel> Piscines { get; set; }
+        #endregion
+
+        #region Propriétés
+        private ClientWebApi Api = new ClientWebApi();
+        #endregion
+
         public MainWindowViewModel()
         {
             //Thread.Sleep(5000);
@@ -23,8 +32,21 @@ namespace G_UILWpf.ViewModels
                 Metier.Init();
             }
             Piscines = Metier.GetPiscines(new ArrayList { 0 }).ToListPiscine();
+            TempsReel();
         }
-        public List<PiscineViewModel> Piscines { get; set; }
+
+        private async void TempsReel()
+        {
+            while (true)
+            {
+                var regex = Metier.GetRegex("Occupation");
+                var dicoOccupation = Api.GetPiscines(regex);
+                ArrayList al = Metier.SaveConfigs(dicoOccupation);
+                Piscines = al.ToListPiscine();
+                await Task.Delay(3000);
+            }
+        }
+
     }
     public class PiscineViewModel
     {
@@ -57,9 +79,15 @@ namespace G_UILWpf.ViewModels
         }
         public string ColorOccupation
         {
-            get { return occupation == -1 ? "Silver" : "Green"; }
+            get
+            {
+
+                if (occupation == -1) return "Silver";
+                if ((double)occupation / capacite > Properties.Settings.Default.SeuilOccupation) return "DarkOrange";
+                return  "Green";
+            }
         }
-       public int Occupation
+        public int Occupation
         {
             get { return occupation; }
             set { occupation = value; }
