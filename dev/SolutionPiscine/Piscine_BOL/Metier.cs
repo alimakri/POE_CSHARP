@@ -33,9 +33,9 @@ namespace Piscine_BOL
         {
             LesConfigurations.Add(nom, regex);
         }
-        public static ArrayList SaveConfigs(Dictionary<string, object> dicoOccupation)
+        public static ArrayList SaveConfigs(Dictionary<string, object> dicoOccupation, Dictionary<string, object> dicoCapacite)
         {
-            return LesPiscines.SaveConfigs(dicoOccupation);
+            return LesPiscines.SaveConfigs(dicoOccupation, dicoCapacite);
         }
         #endregion
 
@@ -48,6 +48,11 @@ namespace Piscine_BOL
         public static ArrayList GetPiscines(ArrayList recherche)
         {
             return LesPiscines.GetPiscines(recherche);
+        }
+
+        public static void LoadConfigs()
+        {
+            LesConfigurations.LoadConfigs();
         }
 
 
@@ -71,7 +76,7 @@ namespace Piscine_BOL
 
         public static string GetRegex(string nom)
         {
-            var config = LesConfigurations.FirstOrDefault(x=>x.Nom == nom);
+            var config = LesConfigurations.FirstOrDefault(x => x.Nom == nom);
             if (config == null) return null;
             return config.Regex;
         }
@@ -182,13 +187,26 @@ namespace Piscine_BOL
             }
         }
 
-        internal ArrayList SaveConfigs(Dictionary<string, object> dicoOccupation)
+        internal ArrayList SaveConfigs(Dictionary<string, object> dicoOccupation, Dictionary<string, object> dicoCapacite)
         {
             var al = new ArrayList();
-            foreach(var piscine in this)
+            int i = 0, j = 0; Piscine p; bool b1, b2;
+            foreach (var item in dicoOccupation)
             {
-                piscine.Occupation = (int) dicoOccupation[piscine.Nom];
-                al.Add(piscine.ToArrayList());
+                p = this.FirstOrDefault(x => x.Nom == item.Key);
+                b1 = int.TryParse(item.Value.ToString(), out i);
+                b2 = int.TryParse(dicoCapacite[p.Nom].ToString(), out j);
+                if (p == null)
+                {
+                    p = new Piscine { Nom = item.Key, Occupation = b1 ? i : -1, Capacite = b2 ? j : -1 };
+                    Add(p);
+                }
+                else
+                {
+                    p.Occupation = b1 ? i : -1;
+                    p.Capacite = b2 ? j : -1;
+                }
+                al.AddRange(p.ToArrayList());
             }
             return al;
         }
@@ -233,6 +251,12 @@ namespace Piscine_BOL
         internal bool IsInit()
         {
             return Repository.IsInit();
+        }
+
+        internal void LoadConfigs()
+        {
+            Clear();
+            foreach (var config in Repository.GetConfigs().ToConfig()) Add(config);
         }
 
         private int EnregistrerConfig(Configuration p)

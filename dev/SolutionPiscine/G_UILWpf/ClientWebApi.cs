@@ -14,7 +14,7 @@ namespace G_UILWpf
         internal Dictionary<string, object> GetPiscines(string regex)
         {
             Client.Headers.Add("Content-Type", "application/json");
-            var s = Client.UploadString($"http://localhost:57974/api/piscine", "POST", "\"" + regex.Replace("\"", @"\""") + "\"");
+            var s = Client.UploadString($"http://localhost:57974/api/piscine/?cache=nocache", "POST", "\"" + regex.Replace("\"", @"\""") + "\"");
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(s);
         }
     }

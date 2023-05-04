@@ -1,4 +1,5 @@
-﻿using G_UILWpf.Dto;
+﻿using G_UILWpf.CommunViewModels;
+using G_UILWpf.Dto;
 using Piscine_BOL;
 using System;
 using System.Collections;
@@ -11,10 +12,15 @@ using System.Windows;
 
 namespace G_UILWpf.ViewModels
 {
-    public class MainWindowViewModel
+    public class MainWindowViewModel : ViewModelBase
     {
         #region Bindings
-        public List<PiscineViewModel> Piscines { get; set; }
+        public List<PiscineViewModel> Piscines
+        {
+            get { return piscines; }
+            set { piscines = value; OnPropertyChanged("Piscines"); }
+        }
+        private List<PiscineViewModel> piscines;
         #endregion
 
         #region Propriétés
@@ -23,7 +29,7 @@ namespace G_UILWpf.ViewModels
 
         public MainWindowViewModel()
         {
-            //Thread.Sleep(5000);
+            Thread.Sleep(5000);
             if (Metier.IsInit())
             {
                 //Metier.NouveauRegex("Capacite", @"<td class=""place-name"">[\n\t ]*(.*?)[\n\t ]*<\/td>(?:.*?)*(?:\s)*([0-9]*)(?:.*?)(?:\s)*<td(?:.*?)>(?:\s)*<div(?:.*?)>(?:[\s-])*<\/div>(?:\s)*<div(?:.*?)>(?:[A-zé\n\s-])*<\/div>(?:\s)*<div(?:.*?)>(?:\s*?)[\s]*Capacité totale :  [0-9]*");
@@ -31,6 +37,7 @@ namespace G_UILWpf.ViewModels
                 Metier.NouveauRegex("Capacite", @"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>[^<]+<[^<]+<[^<]+<[^<]+<[^>]+>[^:]*:  ([0-9]*)");
                 Metier.Init();
             }
+            Metier.LoadConfigs();
             Piscines = Metier.GetPiscines(new ArrayList { 0 }).ToListPiscine();
             TempsReel();
         }
@@ -39,11 +46,13 @@ namespace G_UILWpf.ViewModels
         {
             while (true)
             {
-                var regex = Metier.GetRegex("Occupation");
-                var dicoOccupation = Api.GetPiscines(regex);
-                ArrayList al = Metier.SaveConfigs(dicoOccupation);
-                Piscines = al.ToListPiscine();
                 await Task.Delay(3000);
+                var regex1 = Metier.GetRegex("Occupation");
+                var regex2 = Metier.GetRegex("Capacite");
+                var dicoOccupation = Api.GetPiscines(regex1);
+                var dicoCapacite = Api.GetPiscines(regex2);
+                ArrayList al = Metier.SaveConfigs(dicoOccupation, dicoCapacite);
+                Piscines = al.ToListPiscine();
             }
         }
 
@@ -83,8 +92,9 @@ namespace G_UILWpf.ViewModels
             {
 
                 if (occupation == -1) return "Silver";
+                if (capacite == 0) return "Red";
                 if ((double)occupation / capacite > Properties.Settings.Default.SeuilOccupation) return "DarkOrange";
-                return  "Green";
+                return "Green";
             }
         }
         public int Occupation

@@ -49,9 +49,10 @@ namespace Piscine_DAL
             Piscine resultat =
                 new Piscine
                 {
-                    Nom = (string)al[0],
-                    Capacite = (int)al[1],
-                    Occupation = (int)al[2]
+                    Id = (int)al[0],
+                    Nom = (string)al[1],
+                    Capacite = (int)al[2],
+                    Occupation = (int)al[3]
                 };
             return resultat;
         }
@@ -110,10 +111,21 @@ namespace Piscine_DAL
             if (liste == null) return resultat;
             liste.ForEach(x =>
             {
-                resultat.Add(x.Id); 
-                resultat.Add(x.Nom); 
-                resultat.Add(x.Capacite); 
+                resultat.Add(x.Id);
+                resultat.Add(x.Nom);
+                resultat.Add(x.Capacite);
                 resultat.Add(x.Occupation);
+            });
+            return resultat;
+        }
+        internal static ArrayList ToArrayList(this List<Config> liste)
+        {
+            var resultat = new ArrayList();
+            if (liste == null) return resultat;
+            liste.ForEach(x =>
+            {
+                resultat.Add(x.Nom);
+                resultat.Add(x.Regex);
             });
             return resultat;
         }

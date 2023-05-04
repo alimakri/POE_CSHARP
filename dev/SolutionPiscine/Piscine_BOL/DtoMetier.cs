@@ -41,6 +41,7 @@ namespace Piscine_BOL
         public static ArrayList ToArrayList(this Piscine x)
         {
             var resultat = new ArrayList();
+            resultat.Add(x.Id);
             resultat.Add(x.Nom);
             resultat.Add(x.Capacite);
             resultat.Add(x.Occupation);
@@ -68,6 +69,21 @@ namespace Piscine_BOL
                 resultat.Add(x.Nom);
                 resultat.Add(x.Piscines.Select(y => y.Id).ToArray());
             });
+            return resultat;
+        }
+        #endregion
+        #region Entrant
+        public static List<Configuration> ToConfig(this ArrayList al)
+        {
+            List<Configuration> resultat = new List<Configuration>();
+            for (int i = 0; i < al.Count; i += 2)
+            {
+                resultat.Add(new Configuration
+                {
+                    Nom = (string)al[i],
+                    Regex = (string)al[i + 1],
+                });
+            }
             return resultat;
         }
         #endregion

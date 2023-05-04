@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Occupation des piscines" Height="450" Width="800">
     <Grid>
-        <ListBox ItemsSource="{Binding Piscines}">
+        <ListBox ItemsSource="{Binding Piscines, UpdateSourceTrigger=PropertyChanged}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>

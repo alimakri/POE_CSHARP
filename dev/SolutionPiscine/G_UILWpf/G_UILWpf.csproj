@@ -70,6 +70,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ClientWebApi.cs" />
+    <Compile Include="Commun\RelayCommand.cs" />
+    <Compile Include="Commun\ViewModelBase.cs" />
     <Compile Include="Dto\DtoInterface.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Page Include="Views\MainWindow.xaml">

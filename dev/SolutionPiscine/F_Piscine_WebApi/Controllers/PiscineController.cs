@@ -13,12 +13,16 @@ namespace F_Piscine_WebApi.Controllers
     {
         #region Propriétés
         private const string DataFile = @"d:\horaires-frequentation-piscines.txt";
-        private readonly string CodeHtml;
+        private string CodeHtml;
         #endregion
 
         public PiscineController()
         {
-            if (File.Exists(DataFile))
+        }
+
+        public Dictionary<string, object> Post(string cache, [FromBody] string regex)
+        {
+            if (File.Exists(DataFile) && cache != "nocache")
             {
                 CodeHtml = File.ReadAllText(DataFile);
             }
@@ -28,10 +32,6 @@ namespace F_Piscine_WebApi.Controllers
                 CodeHtml = clientStarsbourg_eu.DownloadString("https://www.strasbourg.eu/horaires-frequentation-piscines");
                 File.WriteAllText(DataFile, CodeHtml);
             }
-        }
-
-        public Dictionary<string, object> Post([FromBody] string regex)
-        {
             var dico = new Dictionary<string, object>();
             if (regex != null)
             {

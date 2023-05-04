@@ -79,6 +79,11 @@ namespace Piscine_DAL
             }
             catch (Exception) { return true; }
         }
+
+        public static ArrayList GetConfigs()
+        {
+            return Context.LesConfigs.ToList().ToArrayList();
+        }
         #endregion
     }
 }
