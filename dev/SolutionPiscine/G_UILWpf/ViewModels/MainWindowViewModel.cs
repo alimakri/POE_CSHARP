@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using Newtonsoft.Json.Linq;
 
 namespace G_UILWpf.ViewModels
 {
@@ -40,10 +41,17 @@ namespace G_UILWpf.ViewModels
             }
             Metier.LoadConfigs();
             Piscines = Metier.GetPiscines(new ArrayList { 0 }).ToListPiscine();
-            foreach (var piscine in piscines)
+            var dico = Api.CallApi("Horaires", @"<td class=""place-name"">[\n\r\t ]*(.*?)[\n\r\t ]*</td>[\r\n\t ]*<td[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<td class=""first-day"">[^<]*<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*(?:<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*)?");
+            foreach (var piscine in Piscines)
             {
-                var dico = Api.CallApi("Horaires", @"<td class=""place-name"">[\n\r\t ]*(.*?)[\n\r\t ]*</td>[\r\n\t ]*<td[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<td class=""first-day"">[^<]*<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*(?:<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*)?");
-                piscine.Horaires = (List<DateTime>)dico[piscine.Nom];
+                piscine.Horaires = new List<DateTime>();
+                foreach (JToken token in (Newtonsoft.Json.Linq.JArray)dico[piscine.Nom])
+                {
+                    if (DateTime.TryParse(token.ToString(), out DateTime dateTime))
+                    {
+                        piscine.Horaires.Add(dateTime);
+                    }
+                }
             }
 
             TempsReel();
