@@ -26,7 +26,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="LbPiscines" SelectedItem="{Binding CurrentPiscine}"
+        <ListBox SelectedItem="{Binding CurrentPiscine}"
             ItemsSource="{Binding Piscines, UpdateSourceTrigger=PropertyChanged}" 
             AlternationCount="2">
             <ListBox.ItemTemplate>
@@ -57,9 +57,15 @@
         <StackPanel Orientation="Vertical" Grid.Column="1">
             <TextBlock FontSize="18" HorizontalAlignment="Center" Foreground="Blue">
                 <Run  Text="Horaires :"/>
-                <Run Text="{Binding ElementName=LbPiscines, Path=SelectedItem.Nom}"/>
+                <Run Text="{Binding CurrentPiscine.Nom, UpdateSourceTrigger=PropertyChanged}"/>
             </TextBlock>
-            <ListBox ItemsSource="{Binding ElementName=LbPiscines, Path=SelectedItem.Horaires}"/>
+            <ListBox ItemsSource="{Binding CurrentPiscine.HorairesStr, UpdateSourceTrigger=PropertyChanged}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding StringFormat=HH:mm}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </StackPanel>
     </Grid>
 </Window>

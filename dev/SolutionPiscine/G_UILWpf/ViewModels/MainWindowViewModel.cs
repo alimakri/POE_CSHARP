@@ -22,6 +22,15 @@ namespace G_UILWpf.ViewModels
             set { piscines = value; OnPropertyChanged("Piscines"); }
         }
         private List<PiscineViewModel> piscines;
+
+
+        public PiscineViewModel CurrentPiscine
+        {
+            get { return currentPiscine; }
+            set { currentPiscine = value; OnPropertyChanged("CurrentPiscine"); }
+        }
+        private PiscineViewModel currentPiscine;
+
         #endregion
 
         #region Propriétés
@@ -52,6 +61,11 @@ namespace G_UILWpf.ViewModels
                         piscine.Horaires.Add(dateTime);
                     }
                 }
+                piscine.HorairesStr = new List<string>();
+                for (int i=0; i < piscine.Horaires.Count; i += 2)
+                {
+                    piscine.HorairesStr.Add($"{piscine.Horaires[i].ToString("HH:mm")} - {piscine.Horaires[i+1].ToString("HH:mm")}");
+                }
             }
 
             TempsReel();
@@ -66,7 +80,17 @@ namespace G_UILWpf.ViewModels
                 var dicoOccupation = Api.CallApi("Occupation", regex1);
                 var dicoCapacite = Api.CallApi("Capacite", regex2);
                 ArrayList al = Metier.UpdatePiscines(dicoOccupation, dicoCapacite);
-                Piscines = al.ToListPiscine();
+                var piscinesModif = al.ToListPiscine();
+
+                foreach(var pm in piscinesModif)
+                {
+                    var p = Piscines.FirstOrDefault(x => x.Nom == pm.Nom);
+                    if (p != null)
+                    {
+                        p.Occupation = pm.Occupation;
+                        p.Capacite = pm.Capacite;
+                    }
+                }
 
                 // L'enregistrement des stats se fait intégralement dans la DAL
                 Metier.UpdateStats();
@@ -129,5 +153,11 @@ namespace G_UILWpf.ViewModels
             set { horaires = value; }
         }
         private List<DateTime> horaires;
+        public List<string> HorairesStr
+        {
+            get { return horairesStr; }
+            set { horairesStr = value; }
+        }
+        private List<string> horairesStr;
     }
 }
