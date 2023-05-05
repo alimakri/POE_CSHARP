@@ -18,7 +18,7 @@
                 <Trigger Property="IsSelected" Value="True">
                     <Setter Property="Foreground" Value="Blue"></Setter>
                 </Trigger>
-            </Style.Triggers>
+            </Style.Triggers>  
         </Style>
     </Window.Resources>
     <Grid>
@@ -60,7 +60,6 @@
                 <Run Text="{Binding ElementName=LbPiscines, Path=SelectedItem.Nom}"/>
             </TextBlock>
             <ListBox ItemsSource="{Binding ElementName=LbPiscines, Path=SelectedItem.Horaires}"/>
-            <TextBlock Text="{Binding ElementName=LbPiscines.SelectedItem, Path=Nom}"/>
         </StackPanel>
     </Grid>
 </Window>
