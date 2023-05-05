@@ -35,11 +35,17 @@ namespace G_UILWpf.ViewModels
                 //Metier.NouveauRegex("Capacite", @"<td class=""place-name"">[\n\t ]*(.*?)[\n\t ]*<\/td>(?:.*?)*(?:\s)*([0-9]*)(?:.*?)(?:\s)*<td(?:.*?)>(?:\s)*<div(?:.*?)>(?:[\s-])*<\/div>(?:\s)*<div(?:.*?)>(?:[A-zé\n\s-])*<\/div>(?:\s)*<div(?:.*?)>(?:\s*?)[\s]*Capacité totale :  [0-9]*");
                 Metier.NouveauRegex("Occupation", @"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>([^<]+)<");
                 Metier.NouveauRegex("Capacite", @"<td class=""place-name"">([^<]+)[^<]+<[^<]+<[^<]+<[^>]+>[^<]+<[^<]+<[^<]+<[^<]+<[^>]+>[^:]*:  ([0-9]*)");
-                Metier.NouveauRegex("Horaires", @"<td class=""place-name"">[\n\t ]*(.*?)[\n\t ]*<\/td>[\n\t ]*<td[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<td class=""first-day"">[^<]*<div class=""opening-time (?:exception)?"">[\n\t ]*(\d{2}:\d{2} - \d{2}:\d{2})*[\n\t ].*[\n\t ]*(?:<div class=""opening-time (?:exception)?"">[\n\t ]*(\d{2}:\d{2} - \d{2}:\d{2})*[\n\t ].*[\n\t ]*)?");
+                Metier.NouveauRegex("Horaires", @"<td class=""place-name"">[\n\r\t ]*(.*?)[\n\r\t ]*</td>[\r\n\t ]*<td[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<td class=""first-day"">[^<]*<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*(?:<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*)?");
                 Metier.Init();
             }
             Metier.LoadConfigs();
             Piscines = Metier.GetPiscines(new ArrayList { 0 }).ToListPiscine();
+            foreach (var piscine in piscines)
+            {
+                var dico = Api.CallApi("Horaires", @"<td class=""place-name"">[\n\r\t ]*(.*?)[\n\r\t ]*</td>[\r\n\t ]*<td[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<td class=""first-day"">[^<]*<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*(?:<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*)?");
+                piscine.Horaires = (List<DateTime>)dico[piscine.Nom];
+            }
+
             TempsReel();
         }
 
@@ -49,8 +55,8 @@ namespace G_UILWpf.ViewModels
             {
                 var regex1 = Metier.GetRegex("Occupation");
                 var regex2 = Metier.GetRegex("Capacite");
-                var dicoOccupation = Api.GetPiscines(regex1);
-                var dicoCapacite = Api.GetPiscines(regex2);
+                var dicoOccupation = Api.CallApi("Occupation", regex1);
+                var dicoCapacite = Api.CallApi("Capacite", regex2);
                 ArrayList al = Metier.UpdatePiscines(dicoOccupation, dicoCapacite);
                 Piscines = al.ToListPiscine();
 
@@ -108,5 +114,12 @@ namespace G_UILWpf.ViewModels
         }
         private int occupation;
 
+
+        public List<DateTime> Horaires
+        {
+            get { return horaires; }
+            set { horaires = value; }
+        }
+        private List<DateTime> horaires;
     }
 }

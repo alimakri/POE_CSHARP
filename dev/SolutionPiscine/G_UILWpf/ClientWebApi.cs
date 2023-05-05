@@ -11,10 +11,10 @@ namespace G_UILWpf
     internal class ClientWebApi
     {
         private WebClient Client = new WebClient();
-        internal Dictionary<string, object> GetPiscines(string regex)
+        internal Dictionary<string, object> CallApi(string regexName, string regex)
         {
             Client.Headers.Add("Content-Type", "application/json");
-            var s = Client.UploadString($"http://localhost:57974/api/piscine/?cache=nocache", "POST", "\"" + regex.Replace("\"", @"\""") + "\"");
+            var s = Client.UploadString($"http://localhost:57974/api/piscine/?cache=nocache&cle={regexName}", "POST", "\"" + regex.Replace("\"", @"\""") + "\"");
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(s);
         }
     }

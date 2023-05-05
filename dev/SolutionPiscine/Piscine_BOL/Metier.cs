@@ -120,6 +120,7 @@ namespace Piscine_BOL
         public string Nom;
         public int Capacite;
         public int Occupation;
+        public List<DateTime> Horaires;
     }
     public class Acces
     {
@@ -177,14 +178,15 @@ namespace Piscine_BOL
         }
         public ArrayList GetPiscines(ArrayList recherche)
         {
-            return Repository.GetPiscines((int)recherche[0]);
+            var piscines = Repository.GetPiscines((int)recherche[0]);
+            return piscines;
         }
 
         internal void Init()
         {
             int capacite, occupation;
-            var dicoOccupation = Api.GetPiscines(Repository.GetRegex("Occupation"));
-            var dicoCapacite = Api.GetPiscines(Repository.GetRegex("Capacite"));
+            var dicoOccupation = Api.GetPiscines("Occupation", Repository.GetRegex("Occupation"));
+            var dicoCapacite = Api.GetPiscines("Capacite", Repository.GetRegex("Capacite"));
 
             foreach (var item in dicoCapacite)
             {
@@ -347,10 +349,10 @@ namespace Piscine_BOL
     internal class ServiceApi
     {
         private WebClient Client = new WebClient();
-        internal Dictionary<string, object> GetPiscines(string regex)
+        internal Dictionary<string, object> GetPiscines(string regexName, string regex)
         {
             Client.Headers.Add("Content-Type", "application/json");
-            var s = Client.UploadString($"http://localhost:57974/api/piscine/?cache=cache", "POST", "\"" + regex.Replace("\"", @"\""") + "\"");
+            var s = Client.UploadString($"http://localhost:57974/api/piscine/?cache=cache&cle={regexName}", "POST", "\"" + regex.Replace("\"", @"\""") + "\"");
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(s);
         }
     }
