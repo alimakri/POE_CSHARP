@@ -54,8 +54,7 @@ namespace F_Piscine_WebApi.Controllers
             var dico = new Dictionary<string, object>();
             if (Regex != null)
             {
-                Regex reg1 = new Regex(@"<td class=""place-name"">[\n\r\t ]*(.*?)[\n\r\t ]*</td>[\r\n\t ]*<td[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<td class=""first-day"">[^<]*<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*(?:<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*)?");
-                //Regex reg1 = new Regex(Regex);
+                Regex reg1 = new Regex(@"<td class=""place-name"">[\r\n\t ]*(.*?)[\n\t ]*</td>[\r\n\t ]*<td[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<td class=""first-day"">(?:[^<]*<div class=""opening-time (?:exception)?"">[\r\n\t ]*(\d{2}:\d{2} - \d{2}:\d{2})[\r\n\t ]*</div>)+");
                 var reponses1 = reg1
                     .Matches(CacheHtml).Cast<Match>()
                     .ToList();
@@ -66,10 +65,14 @@ namespace F_Piscine_WebApi.Controllers
                     int index = 2;
                     while (!string.IsNullOrEmpty(x.Groups[index].Value))
                     {
-                        var horaires = x.Groups[index].Value.Split(new char[] { ' ', '-' }, StringSplitOptions.RemoveEmptyEntries);
-                        if (horaires.Length != 2) return dico;
-                        datetimes.Add(new DateTime(1, 1, 1, int.Parse(horaires[0].Substring(0, 2)), int.Parse(horaires[0].Substring(3, 2)), 0));
-                        datetimes.Add(new DateTime(1, 1, 1, int.Parse(horaires[1].Substring(0, 2)), int.Parse(horaires[1].Substring(3, 2)), 0));
+                        for (int k = 0; k < x.Groups[index].Captures.Count; k++)
+                        {
+                            var horaires = x.Groups[index].Captures[k].Value.Split(new char[] { ' ', '-' }, StringSplitOptions.RemoveEmptyEntries);
+                            if (horaires.Length != 2) return dico;
+                            datetimes.Add(new DateTime(1, 1, 1, int.Parse(horaires[0].Substring(0, 2)), int.Parse(horaires[0].Substring(3, 2)), 0));
+                            datetimes.Add(new DateTime(1, 1, 1, int.Parse(horaires[1].Substring(0, 2)), int.Parse(horaires[1].Substring(3, 2)), 0));
+
+                        }
                         index++;
                     }
 
