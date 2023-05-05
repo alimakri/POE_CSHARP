@@ -51,8 +51,10 @@ namespace G_UILWpf.ViewModels
                 var regex2 = Metier.GetRegex("Capacite");
                 var dicoOccupation = Api.GetPiscines(regex1);
                 var dicoCapacite = Api.GetPiscines(regex2);
-                ArrayList al = Metier.SaveConfigs(dicoOccupation, dicoCapacite);
+                ArrayList al = Metier.UpdatePiscines(dicoOccupation, dicoCapacite);
                 Piscines = al.ToListPiscine();
+
+                // L'enregistrement des stats se fait intégralement dans la DAL
                 Metier.EnregistrerStats();
             }
         }

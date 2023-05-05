@@ -13,7 +13,7 @@ namespace F_Piscine_WebApi.Controllers
     {
         #region Propriétés
         private const string DataFile = @"d:\horaires-frequentation-piscines.txt";
-        private string CodeHtml;
+        private string CacheHtml;
         #endregion
 
         public PiscineController()
@@ -24,20 +24,20 @@ namespace F_Piscine_WebApi.Controllers
         {
             if (File.Exists(DataFile) && cache != "nocache")
             {
-                CodeHtml = File.ReadAllText(DataFile);
+                CacheHtml = File.ReadAllText(DataFile);
             }
             else
             {
                 WebClient clientStarsbourg_eu = new WebClient();
-                CodeHtml = clientStarsbourg_eu.DownloadString("https://www.strasbourg.eu/horaires-frequentation-piscines");
-                File.WriteAllText(DataFile, CodeHtml);
+                CacheHtml = clientStarsbourg_eu.DownloadString("https://www.strasbourg.eu/horaires-frequentation-piscines");
+                File.WriteAllText(DataFile, CacheHtml);
             }
             var dico = new Dictionary<string, object>();
             if (regex != null)
             {
                 Regex reg1 = new Regex(regex);
                 var reponses1 = reg1
-                    .Matches(CodeHtml).Cast<Match>()
+                    .Matches(CacheHtml).Cast<Match>()
                     .ToList();
                 foreach (var x in reponses1)
                 {

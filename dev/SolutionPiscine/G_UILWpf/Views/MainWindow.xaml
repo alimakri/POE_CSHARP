@@ -6,11 +6,26 @@
         xmlns:local="clr-namespace:G_UILWpf"
         mc:Ignorable="d"
         Title="Occupation des piscines" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="ListBoxItem">
+            <Style.Triggers>
+                <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                    <Setter Property="Background" Value="LightBlue"></Setter>
+                </Trigger>
+                <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                    <Setter Property="Background" Value="LightGreen"></Setter>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Foreground" Value="Blue"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <ListBox ItemsSource="{Binding Piscines, UpdateSourceTrigger=PropertyChanged}">
+        <ListBox ItemsSource="{Binding Piscines, UpdateSourceTrigger=PropertyChanged}" AlternationCount="2">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid Margin="2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="*"/>
@@ -19,16 +34,18 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Border BorderBrush="{Binding ColorOccupation}" BorderThickness="2" CornerRadius="50" Background="{Binding ColorOccupation}" Width="30" HorizontalAlignment="Left">
-                            <TextBlock  Text="{Binding OccupationStr, Mode=OneWay}" Foreground="White" HorizontalAlignment="Center" />
+                        <Border BorderBrush="{Binding ColorOccupation}" BorderThickness="2" CornerRadius="50" Background="{Binding ColorOccupation}" Width="30" Height="30" HorizontalAlignment="Left">
+                            <TextBlock  Text="{Binding OccupationStr, Mode=OneWay}" Foreground="White" HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center" FontWeight="Bold" />
                         </Border>
-                        <TextBlock Grid.Column="1" Grid.RowSpan="2" Text="{Binding Nom}" FontWeight="Bold" Margin="5" />
+                        <TextBlock Grid.Column="1" Grid.RowSpan="2" Text="{Binding Nom}" FontWeight="Bold" Margin="5" FontSize="14" />
 
 
                         <TextBlock  Grid.Row="1" Text="{Binding CapaciteStr, Mode=OneWay}"/>
 
                     </Grid>
                 </DataTemplate>
+                
             </ListBox.ItemTemplate>
         </ListBox>
     </Grid>

@@ -58,7 +58,7 @@ namespace Piscine_DAL
         internal ArrayList GetPiscines(int idAcces)
         {
             var resultat = new List<Piscine>();
-            if (idAcces == 0) 
+            if (idAcces == 0)
                 resultat = LesPiscines.ToList();
             else
             {
@@ -133,7 +133,8 @@ namespace Piscine_DAL
         public int Id { get; set; }
         public DateTime DateStat { get; set; }
         public int Occupation { get; set; }
-        public Piscine Piscine { get; set; }
+        public int UnePiscineId { get; set; }
+        public Piscine UnePiscine { get; set; }
     }
 
 }

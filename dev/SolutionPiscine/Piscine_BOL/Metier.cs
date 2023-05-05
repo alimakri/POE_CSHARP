@@ -34,9 +34,9 @@ namespace Piscine_BOL
         {
             LesConfigurations.Add(nom, regex);
         }
-        public static ArrayList SaveConfigs(Dictionary<string, object> dicoOccupation, Dictionary<string, object> dicoCapacite)
+        public static ArrayList UpdatePiscines(Dictionary<string, object> dicoOccupation, Dictionary<string, object> dicoCapacite)
         {
-            return LesPiscines.SaveConfigs(dicoOccupation, dicoCapacite);
+            return LesPiscines.UpdatePiscines(dicoOccupation, dicoCapacite);
         }
         #endregion
 
@@ -84,7 +84,7 @@ namespace Piscine_BOL
 
         public static void EnregistrerStats()
         {
-            LesStats.EnregistrerStats(LesPiscines);
+            LesStats.EnregistrerStats();
         }
 
         public static void NouveauDetailActivite(string d1, string d2, int n, int idActivite)
@@ -197,7 +197,14 @@ namespace Piscine_BOL
             }
         }
 
-        internal ArrayList SaveConfigs(Dictionary<string, object> dicoOccupation, Dictionary<string, object> dicoCapacite)
+        /// <summary>
+        // 2 actions : 1. Mettre à jour la liste des piscines dans cette couche métier
+        //             2. Enregitrer (ou mettre à jour) dans la bdd.
+        /// </summary>
+        /// <param name="dicoOccupation"> infos temps réel des occupations</param>
+        /// <param name="dicoCapacite">infos temps réel des capacités</param>
+        /// <returns></returns>
+        internal ArrayList UpdatePiscines(Dictionary<string, object> dicoOccupation, Dictionary<string, object> dicoCapacite)
         {
             var al = new ArrayList();
             int i = 0, j = 0; Piscine p; bool b1, b2;
@@ -217,6 +224,7 @@ namespace Piscine_BOL
                     p.Capacite = b2 ? j : -1;
                 }
                 al.AddRange(p.ToArrayList());
+                EnregistrerPiscine(p);
             }
             return al;
         }
@@ -279,10 +287,9 @@ namespace Piscine_BOL
     #region Stats
     internal class Stats : List<Stat>
     {
-        internal void EnregistrerStats(List<Piscine> piscines)
+        internal void EnregistrerStats()
         {
-            var d = DateTime.Now;
-            foreach(var p in piscines) Repository.EnregistrerStat(p.Id, p.Occupation, d);
+            Repository.EnregistrerStat();
         }
     }
     #endregion
@@ -343,7 +350,7 @@ namespace Piscine_BOL
         internal Dictionary<string, object> GetPiscines(string regex)
         {
             Client.Headers.Add("Content-Type", "application/json");
-            var s = Client.UploadString($"http://localhost:57974/api/piscine", "POST", "\"" + regex.Replace("\"", @"\""") + "\"");
+            var s = Client.UploadString($"http://localhost:57974/api/piscine/", "POST", "\"" + regex.Replace("\"", @"\""") + "\"");
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(s);
         }
     }
