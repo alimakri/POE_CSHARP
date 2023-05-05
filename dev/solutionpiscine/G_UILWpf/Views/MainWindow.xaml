@@ -18,7 +18,7 @@
                 <Trigger Property="IsSelected" Value="True">
                     <Setter Property="Foreground" Value="Blue"></Setter>
                 </Trigger>
-            </Style.Triggers>
+            </Style.Triggers>  
         </Style>
     </Window.Resources>
     <Grid>
