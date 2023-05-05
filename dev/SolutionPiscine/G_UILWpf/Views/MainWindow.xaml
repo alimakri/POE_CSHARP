@@ -55,14 +55,15 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel Orientation="Vertical" Grid.Column="1">
-            <TextBlock FontSize="18" HorizontalAlignment="Center" Foreground="Blue">
+            <TextBlock FontSize="18" HorizontalAlignment="Center" Foreground="Navy">
                 <Run  Text="Horaires :"/>
                 <Run Text="{Binding CurrentPiscine.Nom, UpdateSourceTrigger=PropertyChanged}"/>
             </TextBlock>
-            <ListBox ItemsSource="{Binding CurrentPiscine.HorairesStr, UpdateSourceTrigger=PropertyChanged}">
+            <ListBox ItemsSource="{Binding CurrentPiscine.HorairesStr, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" 
+                     >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding StringFormat=HH:mm}"/>
+                        <TextBlock Text="{Binding StringFormat=HH:mm}" FontSize="14"/>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
