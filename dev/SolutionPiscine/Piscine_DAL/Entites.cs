@@ -48,10 +48,21 @@ namespace Piscine_DAL
 
         internal int EnregistrerPiscine(ArrayList alPiscine)
         {
-            var newP = alPiscine.ToPiscine();
-            LesPiscines.Add(newP);
+            var p = alPiscine.ToPiscine();
+            var pDansBdd = LesPiscines.FirstOrDefault(x => x.Nom == p.Nom);
+            if (pDansBdd != null)
+            {
+                pDansBdd.Nom = p.Nom;
+                pDansBdd.Occupation = p.Occupation;
+                pDansBdd.Capacite = p.Capacite;
+                p = pDansBdd;
+            }
+            else
+            {
+                LesPiscines.Add(p);
+            }
             SaveChanges();
-            return newP.Id;
+            return p.Id;
         }
 
         #region Piscine
@@ -113,6 +124,7 @@ namespace Piscine_DAL
         public Piscine UnePiscine { get; set; }
         public List<DetailActivite> LesDetails { get; set; }
     }
+    [Table("LesDetailsActivites")]
     internal class DetailActivite
     {
         public int Id { get; set; }
@@ -122,12 +134,14 @@ namespace Piscine_DAL
 
         public Activite LActivite { get; set; }
     }
+    [Table("LesConfigs")]
     internal class Config
     {
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Regex { get; set; }
     }
+    [Table("LesStats")]
     internal class Stat
     {
         public int Id { get; set; }

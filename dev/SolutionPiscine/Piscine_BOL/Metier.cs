@@ -82,9 +82,9 @@ namespace Piscine_BOL
             return config.Regex;
         }
 
-        public static void EnregistrerStats()
+        public static void UpdateStats()
         {
-            LesStats.EnregistrerStats();
+            LesStats.UpdateStats();
         }
 
         public static void NouveauDetailActivite(string d1, string d2, int n, int idActivite)
@@ -287,9 +287,9 @@ namespace Piscine_BOL
     #region Stats
     internal class Stats : List<Stat>
     {
-        internal void EnregistrerStats()
+        internal void UpdateStats()
         {
-            Repository.EnregistrerStat();
+            Repository.UpdateStats();
         }
     }
     #endregion

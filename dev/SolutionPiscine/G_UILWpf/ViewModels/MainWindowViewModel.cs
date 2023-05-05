@@ -46,7 +46,6 @@ namespace G_UILWpf.ViewModels
         {
             while (true)
             {
-                await Task.Delay(Properties.Settings.Default.FrequenceEnreg * 60000);
                 var regex1 = Metier.GetRegex("Occupation");
                 var regex2 = Metier.GetRegex("Capacite");
                 var dicoOccupation = Api.GetPiscines(regex1);
@@ -55,7 +54,8 @@ namespace G_UILWpf.ViewModels
                 Piscines = al.ToListPiscine();
 
                 // L'enregistrement des stats se fait intégralement dans la DAL
-                Metier.EnregistrerStats();
+                Metier.UpdateStats();
+                await Task.Delay(Properties.Settings.Default.FrequenceEnreg * 60000);
             }
         }
 

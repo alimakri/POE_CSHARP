@@ -85,7 +85,7 @@ namespace Piscine_DAL
             return Context.LesConfigs.ToList().ToArrayList();
         }
 
-        public static void EnregistrerStat()
+        public static void UpdateStats()
         {
             var d = DateTime.Now; Stat stat;
             foreach(var p in Context.LesPiscines)
