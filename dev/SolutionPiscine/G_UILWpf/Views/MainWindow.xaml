@@ -26,7 +26,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="LbPiscines"
+        <ListBox x:Name="LbPiscines" SelectedItem="{Binding CurrentPiscine}"
             ItemsSource="{Binding Piscines, UpdateSourceTrigger=PropertyChanged}" 
             AlternationCount="2">
             <ListBox.ItemTemplate>
@@ -60,6 +60,7 @@
                 <Run Text="{Binding ElementName=LbPiscines, Path=SelectedItem.Nom}"/>
             </TextBlock>
             <ListBox ItemsSource="{Binding ElementName=LbPiscines, Path=SelectedItem.Horaires}"/>
+            <TextBlock Text="{Binding ElementName=LbPiscines.SelectedItem, Path=Nom}"/>
         </StackPanel>
     </Grid>
 </Window>
