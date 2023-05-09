@@ -59,8 +59,8 @@
                 <Run  Text="Horaires :"/>
                 <Run Text="{Binding CurrentPiscine.Nom, UpdateSourceTrigger=PropertyChanged}"/>
             </TextBlock>
-            <ListBox ItemsSource="{Binding CurrentPiscine.HorairesStr, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" 
-                     >
+            <ListBox ItemsSource="{Binding CurrentPiscine.HorairesStr, UpdateSourceTrigger=PropertyChanged}" 
+                     BorderThickness="0" Margin="5">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding StringFormat=HH:mm}" FontSize="14"/>
