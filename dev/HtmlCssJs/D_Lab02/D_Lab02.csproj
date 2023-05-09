@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="about.htm" />
     <Content Include="Global.asax" />
     <Content Include="images\speakers\april-meyer.jpg" />
     <Content Include="images\speakers\david-alexander.jpg" />
