@@ -1,0 +1,16 @@
+﻿html {
+    font-size: 62.5%;
+    font-family: Calibri, Arial, sans-serif;
+    background-color: #EAEEFA;
+}
+body {
+    margin: 0;
+    /* Default font-size to about 18px */
+    font-size: 1.8rem;
+}
+.container {
+    padding: 0 1rem;
+    max-width: 94rem;
+    /* Horizontally center containers */
+    margin: 0 auto;
+}

@@ -78,6 +78,7 @@
     <Content Include="images\sponsors\sponsor4.png" />
     <Content Include="images\sponsors\sponsor5.png" />
     <Content Include="index.htm" />
+    <Content Include="styles\site.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
