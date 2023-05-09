@@ -1,0 +1,47 @@
+﻿body {
+    font-family:'Segoe UI',Helvetica, Arial, sans-serif;
+}
+header{
+    padding-bottom:10px;
+    border-bottom:2px dotted blue;
+}
+header h1{
+    margin-left: 20px;
+    display:inline-block;
+}
+section {
+    padding-bottom: 5px;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    border-bottom-color: grey;
+}
+fieldset{
+    background-color:pink;
+    margin-bottom:10px;
+}
+legend{
+    font-size:1.2em;
+    font-style:italic;
+}
+fieldset li{
+    list-style: none;
+    opacity:0.6;
+    width:200px;
+}
+input[type=submit] {
+    background-color: pink;
+    opacity: 0.6;
+    width: 200px;
+}
+#label1 {
+    color:red;
+}
+.inputSimple{
+    background-color:lightgreen;
+}
+.gras{
+    font-weight:bold;
+}
+.invisible{
+    visibility:hidden;
+}

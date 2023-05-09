@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_AspnetMvcDemo", "C_Aspnet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_Lab02", "D_Lab02\D_Lab02.csproj", "{E53BCD25-3954-4BE9-98FE-0DF668588A99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_Javascript", "E_Javascript\E_Javascript.csproj", "{3C589151-12E0-4CDA-BF7D-4126F876AFB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E53BCD25-3954-4BE9-98FE-0DF668588A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E53BCD25-3954-4BE9-98FE-0DF668588A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E53BCD25-3954-4BE9-98FE-0DF668588A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C589151-12E0-4CDA-BF7D-4126F876AFB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C589151-12E0-4CDA-BF7D-4126F876AFB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C589151-12E0-4CDA-BF7D-4126F876AFB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C589151-12E0-4CDA-BF7D-4126F876AFB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
