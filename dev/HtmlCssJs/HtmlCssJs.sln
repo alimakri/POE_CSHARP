@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_WebFormDemo", "WebFormDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_AspnetMvcDemo", "C_AspnetMvcDemo\C_AspnetMvcDemo.csproj", "{2E7580E5-CC46-4FB4-8858-9D7CBE3015C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_Lab02", "D_Lab02\D_Lab02.csproj", "{E53BCD25-3954-4BE9-98FE-0DF668588A99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2E7580E5-CC46-4FB4-8858-9D7CBE3015C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E7580E5-CC46-4FB4-8858-9D7CBE3015C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E7580E5-CC46-4FB4-8858-9D7CBE3015C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E53BCD25-3954-4BE9-98FE-0DF668588A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E53BCD25-3954-4BE9-98FE-0DF668588A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E53BCD25-3954-4BE9-98FE-0DF668588A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E53BCD25-3954-4BE9-98FE-0DF668588A99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
