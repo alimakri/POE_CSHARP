@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PremierSite", "PremierSite\PremierSite.csproj", "{F2AC6AD8-0822-4EA6-978B-739C76CA5400}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_PremierSite", "PremierSite\A_PremierSite.csproj", "{F2AC6AD8-0822-4EA6-978B-739C76CA5400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_WebFormDemo", "WebFormDemo\B_WebFormDemo.csproj", "{5C11F156-64D4-412B-912B-D79DBA2F23C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_AspnetMvcDemo", "C_AspnetMvcDemo\C_AspnetMvcDemo.csproj", "{2E7580E5-CC46-4FB4-8858-9D7CBE3015C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F2AC6AD8-0822-4EA6-978B-739C76CA5400}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2AC6AD8-0822-4EA6-978B-739C76CA5400}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2AC6AD8-0822-4EA6-978B-739C76CA5400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C11F156-64D4-412B-912B-D79DBA2F23C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C11F156-64D4-412B-912B-D79DBA2F23C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C11F156-64D4-412B-912B-D79DBA2F23C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C11F156-64D4-412B-912B-D79DBA2F23C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E7580E5-CC46-4FB4-8858-9D7CBE3015C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E7580E5-CC46-4FB4-8858-9D7CBE3015C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E7580E5-CC46-4FB4-8858-9D7CBE3015C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E7580E5-CC46-4FB4-8858-9D7CBE3015C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
