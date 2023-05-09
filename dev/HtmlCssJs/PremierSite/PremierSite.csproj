@@ -70,7 +70,10 @@
     <Content Include="default.htm" />
     <Content Include="formulaire.htm" />
     <Content Include="images\aubergine.png" />
+    <Content Include="images\Contoso.png" />
     <Content Include="page2.htm" />
+    <Content Include="script\alertme.js" />
+    <Content Include="styles\ContactUsStyles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
