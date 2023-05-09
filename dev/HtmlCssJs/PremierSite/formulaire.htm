@@ -18,8 +18,40 @@
     </p>
     <p>
         If you would like to contact Contoso Conferencing, whether you're interested in our services or in a conference we're currently organizing, don't hesitate to contact us using our enquiry form (<strong>Bold fields</strong> are required).
-    </p>    
-    <form>
+    </p>
+    <form method="post">
+        <fieldset>
+            <legend>
+                Your Details and Enquiry
+            </legend>
+        <ol>
+            <li>
+                <label>
+                    <strong>Full Name</strong><br />
+                    <input type="text" name="UserName" />
+                </label>
+            </li>
+            <li>
+                <label>
+                    Telephone number<br />
+                    <input type="text" name="Phone" />
+                </label>
+            </li>
+            <li>
+                <label>
+                    Email Address<br />
+                    <input type="text" name="Email" />
+                </label>
+            </li>
+            <li>
+                <label>
+                    <strong>Message</strong><br />
+                    <textarea name="Message" cols="30" rows="10">add your message here</textarea>
+                </label>
+            </li>
+        </ol>
+        </fieldset>
+        <input type="submit" value="Send"/>
     </form>
 </body>
 </html>
