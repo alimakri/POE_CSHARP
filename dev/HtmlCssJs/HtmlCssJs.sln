@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G_Lab03", "G_Lab03\G_Lab03.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H_Validation", "H_Validation\H_Validation.csproj", "{D1900232-9153-4C19-8148-F065655C2D58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I_Lab004", "I_Lab004\I_Lab004.csproj", "{B69D32DC-44D5-4156-B513-38640DD47EC5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I_Lab04", "I_Lab004\I_Lab04.csproj", "{B69D32DC-44D5-4156-B513-38640DD47EC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

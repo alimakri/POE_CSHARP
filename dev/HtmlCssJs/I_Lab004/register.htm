@@ -53,7 +53,7 @@
                     </div>
                     <div class="field">
                         <label for="password">Choose a password:</label>
-                        <input type="password" id="password" name="password" required="required" />
+                        <input type="password" id="password" name="password" required="required" pattern="[a-zA-Z0-9]{5,}" title="At least 5 letters or numbers"/>
                     </div>
                     <div class="field">
                         <label for="confirm-password">Confirm your password:</label>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="field">
                         <label for="website">Website/blog:</label>
-                        <input type="url" id="website" name="website" />
+                        <input type="url" id="website" name="website" placeholder="http://"/>
                     </div>
                     <div>
                         <button type="submit">Register</button>
