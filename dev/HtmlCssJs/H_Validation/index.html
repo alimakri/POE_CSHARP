@@ -20,7 +20,9 @@
     </style>
     <script>
         function validationGlobal() {
-            return true;
+            if (document.getElementById("dateNaissance").value == '') return false;
+            var d1 = new Date(document.getElementById("dateNaissance").value).getFullYear();
+            return new Date().getFullYear() - d1 > 18
         }
     </script>
 </head>
