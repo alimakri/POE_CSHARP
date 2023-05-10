@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        input {
+            border: 1px solid black;
+        }
+
+            input:invalid {
+                border: 2px solid red;
+                background-color: pink;
+            }
+
+            input:valid {
+                border: 1px solid black;
+                background-color: lightgreen;
+            }
+    </style>
+    <script>
+        function validationGlobal() {
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validationGlobal();">
+        <div>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" placeholder="votre nom" name="nom" required="required" />
+        </div>
+        <div>
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" placeholder="votre prénom" required="required" />
+        </div>
+
+        <div>
+            <label for="code">Immatriculation:</label>
+            <input type="text" id="code" placeholder="Immatriculation du véhicule (AB-123-CD)" required="required" pattern="[A-Z]{2}-[0-9]{3}-[A-Z]{2}" />
+        </div>
+
+        <input type="number" id="age" placeholder="votre age" min="18" max="80" /> <label for="age">Age:</label>
+        <br />
+        <input type="date" id="dateNaissance" placeholder="votre dateNaissance" /> <label for="dateNaissance">Date de naissance:</label>
+        <br />
+        <select id="ville">
+            <optgroup label="France">
+                <option value="1">Lyon</option>
+                <option value="2">Paris</option>
+                <option value="3">Marseille</option>
+            </optgroup>
+            <optgroup label="Great Britain">
+                <option value="101">London</option>
+                <option value="102">Portmouth</option>
+                <option value="103">Liverpool</option>
+            </optgroup>
+        </select>
+        <br />
+        <input type="submit" name="submit" value="Go" />
+    </form>
+</body>
+</html>

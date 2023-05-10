@@ -11,17 +11,10 @@
     </style>
 </head>
 <body>
-    <script>
-        function f1() {
-            alert(f.style.backgroundColor);
-            var f = document.getElementById("formulaire");
-            if (f.style.backgroundColor.toUpperCase() == "LIGHTBLUE")
-                f.style.backgroundColor = "lightgreen";
-            else
-                f.style.backgroundColor = "lightblue";
-        }
-    </script>
-    <button onclick="f1();">Go</button>
+    <button onclick="f1();">Changer couleur</button>
+    <button onclick="f2();">Réduire image</button>
+    <button onclick="f3();">Get by name</button>
+    <button onclick="f4();" id="btn4"></button>
     <article>
         <header>
             <img src="images/Contoso.png" alt="Company logo" />
@@ -62,6 +55,12 @@
                             </label>
                         </li>
                         <li>
+                            <label>
+                                Telephone number 2<br />
+                                <input type="text" class="inputSimple" name="Phone" id="input2" />
+                            </label>
+                        </li>
+                        <li>
                             <label id="4">
                                 Email Address<br />
                                 <input type="text" class="inputSimple" name="Email" id="input3" />
@@ -86,5 +85,38 @@
             </small>
         </p>
     </footer>
+    <script>
+        image1 = document.images[0];
+        tailleInitiale = image1.width;
+        function f1() {
+            var f = document.getElementById("formulaire");
+            if (f.style.backgroundColor == "lightblue")
+                f.style.backgroundColor = "pink";
+            else
+                f.style.backgroundColor = "lightblue";
+        }
+        function f2() {
+            if (image1.width < 30) image1.width = 176; else image1.width /= 2;
+        }
+        function f3() {
+            var phones = document.getElementsByName("Phone");
+            phones.forEach(function (x) {
+                x.style.backgroundColor = "red";
+            });
+        }
+        var btn4 = document.getElementById("btn4");
+        btn4.textContent = "Programmation onmouseover sur l'image";
+        function f4() {
+            var image1 = document.images[0]; 
+            if (image1.onmouseover == undefined) {
+                image1.onmouseover = function () { alert('coucou'); };
+                btn4.textContent = "Déprogrammation onmouseover sur l'image"
+            }
+            else {
+                image1.onmouseover = undefined;
+                btn4.textContent = "Programmation onmouseover sur l'image"
+            }
+        }
+    </script>
 </body>
 </html>

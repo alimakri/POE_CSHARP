@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input type="text" id="text1" />
+    <input type="button" value="Ajouter" id="btn1" />
+    <input type="button" value="Supprimer" id="btn2" />
+    <ul id="ul1">
+        <li>Pierre</li>
+        <li>Paul</li>
+        <li>Jacques</li>
+    </ul>
+    <script>
+        function ajouterPersonne() {
+            var nouveauli = document.createElement("li");
+            nouveauli.textContent = text1.value;
+            ul1.appendChild(nouveauli);
+        }
+        function supprimerPersonne() {
+            var n = ul1.children.length;
+            var li = ul1.children[n - 1];
+            ul1.removeChild(li);
+        }
+        var btn1 = document.getElementById("btn1");
+        btn1.onclick = ajouterPersonne;
+        var btn2 = document.getElementById("btn2");
+        btn2.onclick = supprimerPersonne;
+        var text1 = document.getElementById("text1");
+        var ul1 = document.getElementById("ul1");
+    </script>
+</body>
+</html>

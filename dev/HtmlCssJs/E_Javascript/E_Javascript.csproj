@@ -67,10 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CreateElement.html" />
     <Content Include="dom.htm" />
     <Content Include="images\aubergine.png" />
     <Content Include="images\Contoso.png" />
     <Content Include="index.htm" />
+    <Content Include="interval.html" />
     <Content Include="styles\ContactUsStyles.css" />
     <Content Include="Web.config" />
   </ItemGroup>

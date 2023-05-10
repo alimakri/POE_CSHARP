@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>
+        Mouse pos: <b><span id="mouse-pos"></span></b>
+    </p>
+    
+    <input type="button" value="stop" onclick="stop()" id="btn1" onmouseover="deplace()"/>
+    <script>
+
+        const mousePosText = document.getElementById('mouse-pos');
+        let mousePos = { x: undefined, y: undefined };
+
+        window.addEventListener('mousemove', (event) => {
+            mousePos = { x: event.clientX, y: event.clientY };
+            mousePosText.textContent = `(${mousePos.x}, ${mousePos.y})`;
+        });
+
+        var btn1 = document.getElementById("btn1");
+        function deplace() {
+            
+        }
+        function stop() {
+            clearInterval(interval1);
+        }
+        function go() {
+            if (btn1.style.visibility == "visible")
+                btn1.style.visibility = "hidden";
+            else
+                btn1.style.visibility = "visible";
+        }
+        var interval1 = setInterval(go, 200);
+    </script>
+</body>
+</html>

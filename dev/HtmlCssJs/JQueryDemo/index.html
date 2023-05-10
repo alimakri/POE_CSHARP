@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JQuery demo</title>
+    <script src="Scripts/jquery-3.6.4.js"></script>
+    <style>
+        .normal {
+            list-style: square;
+        }
+        .selectionne {
+            color: blue;
+            text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#ul1").append("<li>" + $("#text1").val() + "</li>")
+            });
+            $("#btn2").click(function () {
+                $("#ul1 li:First").addClass("selectionne");
+            });
+        });
+
+    </script>
+    <input type="text" id="text1" />
+    <input type="button" id="btn1" value="Ajouter" />
+    <ul id="ul1" class="normal">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+    <input type="button" id="btn2" value="Changer style" />
+</body>
+</html>
