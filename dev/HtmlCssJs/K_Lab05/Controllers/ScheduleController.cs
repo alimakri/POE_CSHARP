@@ -42,7 +42,7 @@ namespace Conference.Controllers
                     end = "08:55",
                     tracks = new[] {1, 2},
                     room = "A",
-                    starCount = RandomStarCount()
+                    starCount = 49
                 },
                 new ScheduleItem
                 {

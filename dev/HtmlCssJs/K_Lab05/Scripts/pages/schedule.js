@@ -86,7 +86,7 @@ function saveStar(sessionId, isStarred) {
             data: 'starred=' + isStarred
         })
         .done(function (response) {
-            if (!isStarred &&  response.starCount > 50)
+            if (isStarred &&  response.starCount > 50)
                 alert("This session is very popular! Be sure to arrive early to get a seat.");
         });
     }
