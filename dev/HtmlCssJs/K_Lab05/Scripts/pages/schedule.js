@@ -3,26 +3,28 @@ var list = document.getElementById("schedule");
 var track1CheckBox = document.getElementById("show-track-1");
 var track2CheckBox = document.getElementById("show-track-2");
 
-// TODO: Create a function called downloadSchedule
-//       Use an XMLHttpRequest to GET "/schedule/list"
-//       The response will be a JSON object of the form "{ schedule: [ ... ] }"
-//       Save the array into the schedule variable
-//       Then call displaySchedule()
 function downloadSchedule() {
     var request = new XMLHttpRequest();
-    var url = "http://localhost:59813/schedule/list";
-    request.open("GET", url);
+    request.open("GET", "/schedule/list", true);
     request.onreadystatechange = function () {
-        if (request.readyState === 4 && request.status === 200) {
+        if (request.readyState === 4) {
             try {
-                schedule = JSON.parse(request.responseText);
-                displaySchedule();
+                var response = JSON.parse(request.responseText);
+                if (request.status === 200) {
+                    schedule = response.schedule;
+                    displaySchedule();
+                }
+                else {
+                    alert(response.message);
+                }
+            } catch (exception) {
+                alert("Schedule list not available.");
             }
-            catch (exception) { alert("Erreur récup schedule"); }
         }
-    }
+    };
     request.send();
 }
+
 function createSessionElement(session) {
     var li = document.createElement("li");
 
@@ -65,6 +67,25 @@ function saveStar(sessionId, isStarred) {
     //       e.g. "starred=true" or "starred=false"
     //       The response contains a JSON object "{ starCount: <number> }"
     //       If the star count is more than 50, warn the user about this being a busy session.
+    var request = new XMLHttpRequest();
+    request.open("GET", "/schedule/list", true);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            try {
+                var response = JSON.parse(request.responseText);
+                if (request.status === 200) {
+                    schedule = response.schedule;
+                    displaySchedule();
+                }
+                else {
+                    alert(response.message);
+                }
+            } catch (exception) {
+                alert("Schedule list not available.");
+            }
+        }
+    };
+    request.send();
 }
 
 function handleListClick(event) {
@@ -86,4 +107,6 @@ function handleListClick(event) {
 track1CheckBox.addEventListener("click", displaySchedule, false);
 track2CheckBox.addEventListener("click", displaySchedule, false);
 list.addEventListener("click", handleListClick, false);
+
+downloadSchedule();
 
