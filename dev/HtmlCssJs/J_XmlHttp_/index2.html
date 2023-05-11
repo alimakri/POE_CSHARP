@@ -6,10 +6,42 @@
     <script src="Scripts/jquery-3.6.4.js"></script>
 </head>
 <body>
-    <script>
-    // Standard
+    <!--********************************************************************************************-->
+    <h1>XmlHttp avec JQuery simple</h1>
+    <button onclick="f1()">Go avec GET</button>
+    <label id="label1">...</label>
 
-    // Ajax
+    <script>
+        var label1 = document.getElementById("label1");
+        function f1() {
+            var url = "http://localhost:60567/api/data";
+            $
+                .get(url, function (data) { label1.textContent = data; })
+                .error(function () { label1.textContent = "Plantage dans la communication"; });
+        }
+    </script>
+
+    <!--********************************************************************************************-->
+    <h1>XmlHttp avec JQuery Ajax</h1>
+    <button onclick="f2()">Go avec GET</button>
+    <label id="label2">...</label>
+    <script>
+        var label2 = document.getElementById("label2");
+        function f2() {
+            $.ajax(
+                {
+                    url: 'http://localhost:60567/api/data',
+                    type: 'GET',
+                    timeout: 12000,
+                    dataType: 'text'
+                })
+                .done(function (data) {
+                    label2.textContent = data;
+                })
+                .fail(function () {
+                    label2.textContent = "Plantage dans la communication";
+                });
+        }
     </script>
 
 </body>
