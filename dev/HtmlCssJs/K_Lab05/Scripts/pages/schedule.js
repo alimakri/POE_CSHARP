@@ -70,7 +70,6 @@ function displaySchedule() {
         var tracks = schedule[i].tracks;
         var isCurrentTrack = (track1CheckBox.checked && tracks.indexOf(1) >= 0) ||
             (track2CheckBox.checked && tracks.indexOf(2) >= 0);
-        isCurrentTrack = true;
         if (isCurrentTrack) {
             var li = createSessionElement(schedule[i]);
             list.appendChild(li);
