@@ -79,8 +79,8 @@ D:\POE_CSHARP\dev\HtmlCssJs\K_Lab05\bin\fr\System.Web.Razor.resources.dll
 D:\POE_CSHARP\dev\HtmlCssJs\K_Lab05\bin\fr\System.Web.WebPages.resources.dll
 D:\POE_CSHARP\dev\HtmlCssJs\K_Lab05\bin\fr\System.Web.WebPages.Deployment.resources.dll
 D:\POE_CSHARP\dev\HtmlCssJs\K_Lab05\bin\fr\System.Web.WebPages.Razor.resources.dll
-D:\POE_CSHARP\dev\HtmlCssJs\K_Lab05\obj\Debug\K_Lab05.csproj.AssemblyReference.cache
 D:\POE_CSHARP\dev\HtmlCssJs\K_Lab05\obj\Debug\K_Lab05.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\HtmlCssJs\K_Lab05\obj\Debug\K_Lab05.csproj.CopyComplete
 D:\POE_CSHARP\dev\HtmlCssJs\K_Lab05\obj\Debug\I_Lab004.dll
 D:\POE_CSHARP\dev\HtmlCssJs\K_Lab05\obj\Debug\I_Lab004.pdb
+D:\POE_CSHARP\dev\HtmlCssJs\K_Lab05\obj\Debug\K_Lab05.csproj.AssemblyReference.cache

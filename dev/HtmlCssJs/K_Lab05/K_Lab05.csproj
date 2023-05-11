@@ -168,7 +168,7 @@
     <Content Include="styles\images\stars.png" />
     <Content Include="styles\pages\register.css" />
     <Content Include="styles\pages\register.js" />
-    <Content Include="styles\schedule.css" />
+    <Content Include="styles\pages\schedule.css" />
     <Content Include="styles\site.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -221,7 +221,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59813</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:59813/</IISUrl>
+          <IISUrl>http://localhost:59812/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
