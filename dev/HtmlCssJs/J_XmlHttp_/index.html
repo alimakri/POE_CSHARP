@@ -10,6 +10,7 @@
     <label id="label1">...</label>
     <script>
         var label1 = document.getElementById("label1");
+        var response;
         function f1() {
             var request = new XMLHttpRequest();
             var url = "http://localhost:60567/api/data";
@@ -24,13 +25,13 @@
             var request = new XMLHttpRequest();
             var url = "http://localhost:60567/api/data";
             request.open("POST", url);
-            request.setRequestHeader("Content-Type", "application/json");
+            request.setRequestHeader("Content-Type", "text/plain");
             request.send();
 
             request.onreadystatechange = function () {
-                if (request.readyState === 4) {
-                    var response = JSON.parse(request.responseText);
-                    label1.textContent = response.nom + " " + response.prenom;
+                if (request.readyState == 4 && request.status == 200) {
+                    response = JSON.parse(JSON.parse(request.responseText));
+                    label1.textContent = response.Nom + " " + response.Prenom;
                 }
             }
         }
