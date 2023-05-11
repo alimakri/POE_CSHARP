@@ -44,5 +44,32 @@
         }
     </script>
 
+    <!--********************************************************************************************-->
+    <h1>XmlHttp avec JQuery Ajax</h1>
+    <button onclick="f3()">Go avec POST</button>
+    <input type="text" id="text1" value="1"/>
+    <label id="label3">...</label>
+    <script>
+        var label3 = document.getElementById("label3");
+        function f3() {
+            var id = $('#text1').val();
+            var url = 'http://localhost:60567/api/data/?id=' + id;
+            $.ajax(
+                {
+                    url: url,
+                    type: 'POST',
+                    timeout: 12000,
+                    contentType:'application/json'
+                })
+                .done(function (data) {
+                    var p = JSON.parse(data);
+                    label3.textContent = p.Prenom + ' ' + p.Nom;
+                })
+                .fail(function () {
+                    label3.textContent = "Plantage dans la communication";
+                });
+        }
+    </script>
+
 </body>
 </html>
