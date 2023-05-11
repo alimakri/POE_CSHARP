@@ -167,7 +167,6 @@
     <Content Include="Scripts\pages\schedule.js" />
     <Content Include="styles\images\stars.png" />
     <Content Include="styles\pages\register.css" />
-    <Content Include="styles\pages\register.js" />
     <Content Include="styles\pages\schedule.css" />
     <Content Include="styles\site.css" />
     <Content Include="Web.config" />
