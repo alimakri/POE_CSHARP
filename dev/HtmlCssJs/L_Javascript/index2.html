@@ -20,10 +20,10 @@
 
         // en json
         var employe2 = {
-            name ="Mary Jones",
-            age = 42,
-            salary = 20000,
-            payRise = function (amount) {
+            name: "Mary Jones",
+            age: 42,
+            salary: 20000,
+            payRise: function (amount) {
                 this.salary += amount;
                 return this.salary;
             }
@@ -38,10 +38,8 @@
             this.balance = 0;
             this.numTransactions = 0;
         };
-        var acc1 = new Account(1, "John");
-        var acc2 = new Account(2, "Mary");
 
-        // prototype
+        // prototype (extension de méthode)
         Account.prototype = {
             deposit: function (amount) {
                 this.balance += amount;
@@ -52,13 +50,39 @@
                 this.numTransactions++;
             },
             displayDetails: function () {
-                alert(this.id + ', ' + this.name + ' balance $' + this.balance + '(' + this.numTransactions + ' transaction(s)');
+                alert(this.id + ', ' + this.name + ' balance $' + this.balance + ' (' + this.numTransactions + ' transaction(s)');
             }
         };
+
+        var acc1 = new Account(1, "John");
+        var acc2 = new Account(2, "Mary");
         acc1.deposit(100);
         acc1.displayDetails();
         acc2.withdraw(50);
         acc2.displayDetails();
+
+        // Encapsulation de propriété
+        var Person = function (name, age) {
+            // private
+            var _name, _age;
+            _name = name;
+            _age = age;
+
+            this.getName = function () { return _name; }
+            this.setName = function (value) { _name = value; }
+
+            this.getAge = function () { return _age; }
+            this.setAge = function (value) { if (value > 0 && value <= 100) _age = value; }
+        }
+        // un prototype (comme les méthodes d'extension en CS) n'a pas accès au private
+        Person.prototype = {
+            toString: function () {
+                return this.getName() + ' is ' + this.getAge();
+            }
+        };
+        var p1 = new Person('Joe', 21);
+        alert(p1.toString());
+        alert(p1._name); // pas d'accès au private
     </script>
 </body>
 </html>

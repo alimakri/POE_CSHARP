@@ -56,3 +56,4 @@ D:\POE_CSHARP\dev\HtmlCssJs\L_Javascript\obj\Debug\L_Javascript.csproj.CoreCompi
 D:\POE_CSHARP\dev\HtmlCssJs\L_Javascript\obj\Debug\L_Javascript.csproj.CopyComplete
 D:\POE_CSHARP\dev\HtmlCssJs\L_Javascript\obj\Debug\L_Javascript.dll
 D:\POE_CSHARP\dev\HtmlCssJs\L_Javascript\obj\Debug\L_Javascript.pdb
+D:\POE_CSHARP\dev\HtmlCssJs\L_Javascript\obj\Debug\L_Javascript.csproj.AssemblyReference.cache
