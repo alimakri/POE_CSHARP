@@ -19,12 +19,13 @@
                 reader.onerror = function (e) {
                     alert('cannot load file');
                 }
-                reader.readAsText(theFileElem.files[0], "UTF-16");
+                reader.readAsText(theFileElem.files[0], "ASCII");
             }
             else {
                 alert("select a file");
             }
         }
     </script>
+
 </body>
 </html>

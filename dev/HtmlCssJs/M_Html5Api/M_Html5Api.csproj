@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="index2.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

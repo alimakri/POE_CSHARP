@@ -56,3 +56,4 @@ D:\POE_CSHARP\dev\HtmlCssJs\M_Html5Api\obj\Debug\M_Html5Api.csproj.CoreCompileIn
 D:\POE_CSHARP\dev\HtmlCssJs\M_Html5Api\obj\Debug\M_Html5Api.csproj.CopyComplete
 D:\POE_CSHARP\dev\HtmlCssJs\M_Html5Api\obj\Debug\M_Html5Api.dll
 D:\POE_CSHARP\dev\HtmlCssJs\M_Html5Api\obj\Debug\M_Html5Api.pdb
+D:\POE_CSHARP\dev\HtmlCssJs\M_Html5Api\obj\Debug\M_Html5Api.csproj.AssemblyReference.cache

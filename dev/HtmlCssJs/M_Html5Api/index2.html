@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div draggable="true" ondragstart="handleDrag(event)">
+        <b abc="12">Some content</b> to be dragged
+    </div>
+    <script>
+        function handleDrag(event) {
+            event.dataTransfer.effectAllowed = "copy";
+            event.dataTransfer.setData("text/plain", event.target.innerHTML);
+        }
+    </script>
+    <input type="text" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" />
+    <script>
+        function handleDragOver(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            event.dataTransfer.dropEffect = "copy"; // apparence souris
+        }
+        function handleDrop(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            event.target.value = event.dataTransfer.getData("text/plain");
+        }
+    </script>
+    <video src=""
+</body>
+</html>
