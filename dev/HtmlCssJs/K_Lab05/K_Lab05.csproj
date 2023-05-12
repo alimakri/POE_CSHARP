@@ -165,7 +165,12 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\pages\register.js" />
     <Content Include="Scripts\pages\schedule.js" />
+    <Content Include="styles\footer.css" />
+    <Content Include="styles\header.css" />
     <Content Include="styles\images\stars.png" />
+    <Content Include="styles\nav.css" />
+    <Content Include="styles\pages\about.css" />
+    <Content Include="styles\pages\index.css" />
     <Content Include="styles\pages\register.css" />
     <Content Include="styles\pages\schedule.css" />
     <Content Include="styles\site.css" />

@@ -20,7 +20,7 @@ namespace Conference.Controllers
             public int starCount { get; set; }
         }
 
-        static readonly Random random = new Random(1);
+        static readonly Random random = new Random();
         static readonly IEnumerable<ScheduleItem> schedule;
 
         static int RandomStarCount()
@@ -42,7 +42,7 @@ namespace Conference.Controllers
                     end = "08:55",
                     tracks = new[] {1, 2},
                     room = "A",
-                    starCount = 49
+                    starCount = RandomStarCount()
                 },
                 new ScheduleItem
                 {

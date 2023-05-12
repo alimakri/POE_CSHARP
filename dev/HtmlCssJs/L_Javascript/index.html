@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        // 2 portées pour les variables
+        var porteeGlobal1 = "porteeGlobal1";
+        function f1() {
+            "use strict"; // ça fait planter : porteeGlobal2 = "porteeGlobal2";
+            var porteeLocale = "porteeLocale";
+            porteeGlobal2 = "porteeGlobal2";
+            alert("Entrée fonction")
+            alert(porteeLocale);
+            alert(porteeGlobal1);
+            alert(porteeGlobal2);
+            alert("Sortie fonction")
+        };
+
+        f1();
+        alert("Hors fonction début")
+        //alert(porteeLocale); // ça plante
+        alert(porteeGlobal1);
+        alert(porteeGlobal2);
+        alert("Hors fonction fin");
+
+    </script>
+</body>
+</html>

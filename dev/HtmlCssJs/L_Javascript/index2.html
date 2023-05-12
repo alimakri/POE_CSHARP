@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        // Création d'objets en javascript
+        //var employe1 = new Object();
+        var employe1 = {};
+        employe1.name = "John Smith";
+        employe1.age = 21;
+        employe1.salary = 10000;
+        employe1.payRise = function (amount) {
+            this.salary += amount;
+            return this.salary;
+        };
+        var x = employe1.payRise(200);
+
+        // en json
+        var employe2 = {
+            name ="Mary Jones",
+            age = 42,
+            salary = 20000,
+            payRise = function (amount) {
+                this.salary += amount;
+                return this.salary;
+            }
+        };
+        var x = employe2.payRise(200);
+
+
+        // Classe-Constructeur en js
+        var Account = function (id, name) {
+            this.id = id;
+            this.name = name;
+            this.balance = 0;
+            this.numTransactions = 0;
+        };
+        var acc1 = new Account(1, "John");
+        var acc2 = new Account(2, "Mary");
+
+        // prototype
+        Account.prototype = {
+            deposit: function (amount) {
+                this.balance += amount;
+                this.numTransactions++;
+            },
+            withdraw: function (amount) {
+                this.balance -= amount;
+                this.numTransactions++;
+            },
+            displayDetails: function () {
+                alert(this.id + ', ' + this.name + ' balance $' + this.balance + '(' + this.numTransactions + ' transaction(s)');
+            }
+        };
+    </script>
+</body>
+</html>
