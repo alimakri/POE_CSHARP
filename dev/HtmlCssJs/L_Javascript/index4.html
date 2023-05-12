@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var Point = function (x, y) {
+            this.x = x;
+            this.y = y;
+        }
+        Point.prototype.moveBy = function (deltaX, deltaY) {
+            this.x += deltaX;
+            this.y += deltaY;
+        }
+        Point.prototype.moveTo = function (otherPoint) {
+            this.x = otherPoint.x;
+            this.y = otherPoint.y;
+        }
+
+        var p1 = new Point(100, 200);
+        p1.moveBy(10, 20);
+        var p2 = new Point(25, 50);
+        p2.moveTo(p1);
+        alert("p2.x=" + p2.x + " - p2.y=" + p2.y);
+
+        function setColor(color) {
+            this.color = color;
+        }
+        function setBackColor(color, i) {
+            this.color = color;
+        }
+
+        setColor.apply(p1, ["red"]);
+        alert(p1.color);
+    </script>
+</body>
+</html>

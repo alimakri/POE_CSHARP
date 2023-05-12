@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        // *********************************************
+        // Héritage (prototype chaining)
+        // *********************************************
+        var Person = function (name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        // Extension
+        Person.prototype = {
+            haveBirthday: function () {
+                this.age++;
+            }
+        };
+
+        var Student = function (name, age, subject) {
+            this.name = name;
+            this.age = age;
+            this.subject = subject;
+        }
+        // Expression de l'héritage
+        Student.prototype = new Person();
+        Student.prototype.constructor = Student;
+
+        var s1 = new Student('Jim', 20, 'Physics');
+        s1.subject = 'BioChemistry';
+        s1.haveBirthday();
+        alert(s1.age);
+    </script>
+</body>
+</html>

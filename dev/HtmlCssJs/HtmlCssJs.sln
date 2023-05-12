@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I_Lab04", "I_Lab04\I_Lab04.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L_Javascript", "L_Javascript\L_Javascript.csproj", "{43EDB629-AEB9-4450-944F-C4606F3C5FAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Html5Api", "M_Html5Api\M_Html5Api.csproj", "{90F062DF-0811-4421-942A-153A4E0B73A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{43EDB629-AEB9-4450-944F-C4606F3C5FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43EDB629-AEB9-4450-944F-C4606F3C5FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43EDB629-AEB9-4450-944F-C4606F3C5FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90F062DF-0811-4421-942A-153A4E0B73A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F062DF-0811-4421-942A-153A4E0B73A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F062DF-0811-4421-942A-153A4E0B73A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F062DF-0811-4421-942A-153A4E0B73A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
