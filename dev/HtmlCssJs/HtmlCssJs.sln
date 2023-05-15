@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_PremierSite", "PremierSite\A_PremierSite.csproj", "{F2AC6AD8-0822-4EA6-978B-739C76CA5400}"
 EndProject
@@ -28,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L_Javascript", "L_Javascript\L_Javascript.csproj", "{43EDB629-AEB9-4450-944F-C4606F3C5FAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Html5Api", "M_Html5Api\M_Html5Api.csproj", "{90F062DF-0811-4421-942A-153A4E0B73A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_Lab13", "N_Lab13\N_Lab13.csproj", "{155E9513-E685-4CD6-A896-0315FD868AA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{90F062DF-0811-4421-942A-153A4E0B73A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90F062DF-0811-4421-942A-153A4E0B73A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90F062DF-0811-4421-942A-153A4E0B73A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155E9513-E685-4CD6-A896-0315FD868AA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155E9513-E685-4CD6-A896-0315FD868AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155E9513-E685-4CD6-A896-0315FD868AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155E9513-E685-4CD6-A896-0315FD868AA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

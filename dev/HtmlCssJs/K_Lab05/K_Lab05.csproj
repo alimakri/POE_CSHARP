@@ -134,6 +134,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="feedback.htm" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -147,6 +148,8 @@
     <Content Include="images\sponsors\sponsor4.png" />
     <Content Include="images\sponsors\sponsor5.png" />
     <Content Include="index.htm" />
+    <Content Include="live.htm" />
+    <Content Include="location.htm" />
     <Content Include="register.htm" />
     <Content Include="registered.htm" />
     <Content Include="schedule.htm" />
@@ -165,6 +168,7 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\pages\register.js" />
     <Content Include="Scripts\pages\schedule.js" />
+    <Content Include="speaker-badge.htm" />
     <Content Include="styles\footer.css" />
     <Content Include="styles\header.css" />
     <Content Include="styles\images\stars.png" />
