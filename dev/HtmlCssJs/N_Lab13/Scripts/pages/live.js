@@ -37,11 +37,13 @@
 
         askQuestion: function (text) {
             // TODO: Create a message object with the format { ask: text }
-
+            var message = {ask:text};
             // TODO: Convert the message object into a JSON string
-            
+            var json = JSON.stringify(message);
+
             // TODO: Send the message to the socket
-            
+            this.socket.send(json);
+
             // Clear the input ready for another question.
             this.questionInput.value = "";
         },
@@ -53,6 +55,9 @@
             // TODO: Check if message has a `questions` property, before calling handleQuestionsMessage
             if (message.questions)
                 this.handleQuestionsMessage(message);
+            else if (message.remove) {
+                this.handleRemoveMessage(message);
+            }
         },
 
         handleQuestionsMessage: function (message) {
@@ -82,7 +87,7 @@
 
         displayQuestion: function (question) {
             var item = this.createQuestionItem(question);
-            //item.appendChild(this.createReportLink());
+            item.appendChild(this.createReportLink());
             this.questionListElement.appendChild(item);
         },
 
@@ -118,6 +123,7 @@
 
         reportQuestion: function (questionId) {
             // TODO: Send socket message { report: questionId }
+            this.socket.send(JSON.stringify({ report: questionId }));
         }
     });
 
