@@ -24,13 +24,11 @@ var app = express();
 var https = require("https");
 
 app.get('/:nomPiscine', function (req, res) {
-    // retrouver l'url 
+    // retrouver l'url dans liens
     var urlItem;
     liens.forEach(function (item) {
         if (item.Piscine == req.params.nomPiscine) urlItem = item.url;
     });
-
-
     var url = urlDetailPiscine + urlItem;
     console.log('Connexion à ' + url);
 
@@ -40,12 +38,16 @@ app.get('/:nomPiscine', function (req, res) {
         res.on('data', (chunk) => { codeHtml += chunk; });
         res.on('end', () => {
             try {
-                processRegex(codeHtml);
+                // regex
+                var json = processRegex(codeHtml);
+                // retour en json : {"adresse1":"....", "adresse2":"....", "telephone":"...."}
+                return res.end(JSON.stringify(json));
             } catch (e) {
                 console.error(e.message);
             }
         });
     });
+
 });
 
 function processRegex(codeHtml) {
@@ -55,9 +57,8 @@ function processRegex(codeHtml) {
     var adresse1 = matches[1];
     var adresse2 = matches[2];
     var telephone = matches[3];
-    console.log(adresse1);
-    console.log(adresse2);
-    console.log(telephone);
+
+    return { "adresse1": adresse1, "adresse2": adresse2, "telephone": telephone };
 }
 
 var server = app.listen(8081, function () {
