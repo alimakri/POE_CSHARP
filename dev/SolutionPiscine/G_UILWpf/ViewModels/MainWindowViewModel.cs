@@ -38,6 +38,12 @@ namespace G_UILWpf.ViewModels
         private void MajAdresse(PiscineViewModel p)
         {
             var dico = Api.CallNodejsApi(p.Nom);
+            if (dico.Count != 0)
+            {
+                p.Adresse1 = (string)dico["adresse1"];
+                p.Adresse2 = (string)dico["adresse2"];
+                p.Telephone = (string)dico["telephone"];
+            }
         }
 
         private PiscineViewModel currentPiscine;
@@ -124,6 +130,26 @@ namespace G_UILWpf.ViewModels
             set { nom = value; }
         }
         private string nom;
+        public string Adresse1
+        {
+            get { return adresse1; }
+            set { adresse1 = value; OnPropertyChanged("Adresse1"); }
+        }
+        private string adresse1;
+        public string Adresse2
+        {
+            get { return adresse2; }
+            set { adresse2 = value; OnPropertyChanged("Adresse2"); }
+        }
+        private string adresse2;
+        public string Telephone
+        {
+            get { return telephone; }
+            set { telephone = value; OnPropertyChanged("Telephone"); }
+        }
+        private string telephone;
+
+
         public int Capacite
         {
             get { return capacite; }
@@ -169,6 +195,8 @@ namespace G_UILWpf.ViewModels
             get { return horairesStr; }
             set { horairesStr = value; }
         }
+
+
         private List<string> horairesStr;
     }
 }

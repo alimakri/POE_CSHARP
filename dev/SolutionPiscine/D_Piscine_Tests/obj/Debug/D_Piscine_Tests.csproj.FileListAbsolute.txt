@@ -31,3 +31,5 @@ D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\EntityFramework.SqlS
 D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\EntityFramework.SqlServer.xml
 D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\E_Piscine_Commun.dll
 D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\E_Piscine_Commun.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\Newtonsoft.Json.dll
+D:\POE_CSHARP\dev\SolutionPiscine\D_Piscine_Tests\bin\Debug\Newtonsoft.Json.xml
