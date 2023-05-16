@@ -23,7 +23,7 @@ var express = require('express');
 var app = express();
 var https = require("https");
 
-app.get('/:nomPiscine', function (req, res) {
+app.get('/:nomPiscine', function (req, response) {
     // retrouver l'url dans liens
     var urlItem;
     liens.forEach(function (item) {
@@ -40,10 +40,11 @@ app.get('/:nomPiscine', function (req, res) {
             try {
                 // regex
                 var json = processRegex(codeHtml);
+                console.log(JSON.stringify(json));
                 // retour en json : {"adresse1":"....", "adresse2":"....", "telephone":"...."}
-                return res.end(JSON.stringify(json));
+                return response.end(JSON.stringify(json));
             } catch (e) {
-                console.error(e.message);
+                console.error('ERREUR:' + e.message);
             }
         });
     });
