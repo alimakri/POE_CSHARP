@@ -27,8 +27,19 @@ namespace G_UILWpf.ViewModels
         public PiscineViewModel CurrentPiscine
         {
             get { return currentPiscine; }
-            set { currentPiscine = value; OnPropertyChanged("CurrentPiscine"); }
+            set
+            {
+                currentPiscine = value;
+                MajAdresse(value);
+                OnPropertyChanged("CurrentPiscine");
+            }
         }
+
+        private void MajAdresse(PiscineViewModel p)
+        {
+            var dico = Api.CallNodejsApi(p.Nom);
+        }
+
         private PiscineViewModel currentPiscine;
 
         #endregion
@@ -50,7 +61,7 @@ namespace G_UILWpf.ViewModels
             }
             Metier.LoadConfigs();
             Piscines = Metier.GetPiscines(new ArrayList { 0 }).ToListPiscine();
-            var dico = Api.CallApi("Horaires", @"<td class=""place-name"">[\n\r\t ]*(.*?)[\n\r\t ]*</td>[\r\n\t ]*<td[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<td class=""first-day"">[^<]*<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*(?:<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*)?");
+            var dico = Api.CallAspnetApi("Horaires", @"<td class=""place-name"">[\n\r\t ]*(.*?)[\n\r\t ]*</td>[\r\n\t ]*<td[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<[^<]*<td class=""first-day"">[^<]*<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*(?:<div class=""opening-time (?:exception)?"">[\r\n\t ]*([0-9]{2}:[0-9]{2} - [0-9]{2}:[0-9]{2})*[\r\n\t ].*[\r\n\t ]*)?");
             foreach (var piscine in Piscines)
             {
                 piscine.Horaires = new List<DateTime>();
@@ -62,9 +73,9 @@ namespace G_UILWpf.ViewModels
                     }
                 }
                 piscine.HorairesStr = new List<string>();
-                for (int i=0; i < piscine.Horaires.Count; i += 2)
+                for (int i = 0; i < piscine.Horaires.Count; i += 2)
                 {
-                    piscine.HorairesStr.Add($"{piscine.Horaires[i].ToString("HH:mm")} - {piscine.Horaires[i+1].ToString("HH:mm")}");
+                    piscine.HorairesStr.Add($"{piscine.Horaires[i].ToString("HH:mm")} - {piscine.Horaires[i + 1].ToString("HH:mm")}");
                 }
             }
 
@@ -77,12 +88,12 @@ namespace G_UILWpf.ViewModels
             {
                 var regex1 = Metier.GetRegex("Occupation");
                 var regex2 = Metier.GetRegex("Capacite");
-                var dicoOccupation = Api.CallApi("Occupation", regex1);
-                var dicoCapacite = Api.CallApi("Capacite", regex2);
+                var dicoOccupation = Api.CallAspnetApi("Occupation", regex1);
+                var dicoCapacite = Api.CallAspnetApi("Capacite", regex2);
                 ArrayList al = Metier.UpdatePiscines(dicoOccupation, dicoCapacite);
                 var piscinesModif = al.ToListPiscine();
 
-                foreach(var pm in piscinesModif)
+                foreach (var pm in piscinesModif)
                 {
                     var p = Piscines.FirstOrDefault(x => x.Nom == pm.Nom);
                     if (p != null)
@@ -99,7 +110,7 @@ namespace G_UILWpf.ViewModels
         }
 
     }
-    public class PiscineViewModel
+    public class PiscineViewModel : ViewModelBase
     {
         public int Id
         {
@@ -142,7 +153,7 @@ namespace G_UILWpf.ViewModels
         public int Occupation
         {
             get { return occupation; }
-            set { occupation = value; }
+            set { occupation = value; OnPropertyChanged("OccupationStr"); }
         }
         private int occupation;
 
