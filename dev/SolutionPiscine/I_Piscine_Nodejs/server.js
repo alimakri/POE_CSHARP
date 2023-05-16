@@ -16,8 +16,7 @@ var liens =
         { "Piscine": "Piscine d'Ostwald", "url": "/407_SPO_8/piscine-d-ostwald" },
         { "Piscine": "Piscine du Wacken", "url": "/408_SPO_9/piscine-du-wacken" },
         { "Piscine": "Bains municipaux de Strasbourg", "url": "/400_SPO_1/bains-municipaux-de-strasbourg" }];
-const regex = /Coordonn\u00E9es[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([^<]*)[^>]*[>]*[>][\n\r\t ]*([0-9a-zA-Z ]*)[\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([0-9a-zA-Z :\u00E9+()]*)/gm;
-//const regex = /(span)/gm;
+const regex = /Coordonn\u00E9es[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([^<]*)[^>]*[>]*[>][\n\r\t ]*([0-9a-zA-Z ]*)[\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*T\u00E9l\u00E9phone : ([0-9+() ]*)/gm;
 
 // Etape 2 : partant du nom de la piscine se connecter à sa page.
 var express = require('express');
@@ -55,7 +54,7 @@ function processRegex(codeHtml) {
     var matches = regex.exec(codeHtml);
     var adresse1 = matches[1];
     var adresse2 = matches[2];
-    var telephone = matches[3].replace('Téléphone : +33 ', '');
+    var telephone = matches[3];
     console.log(adresse1);
     console.log(adresse2);
     console.log(telephone);
