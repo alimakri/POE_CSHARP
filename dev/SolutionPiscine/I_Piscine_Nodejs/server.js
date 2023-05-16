@@ -43,6 +43,9 @@ app.get('/:nomPiscine', function (req, res) {
             }
         });
     });
+
+    // Extraire avec un regex l'adresse de la piscine dans codeHtml
+    var regex = /Coordonnées[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([^<]*)[^>]*[>]*[>][\n\r\t ]*([0-9a-zA-Z ]*)[\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([0-9a-zA-Z :é+()]*)/;
 });
 
 
