@@ -20,6 +20,7 @@ var liens =
 // Etape 2 : partant du nom de la piscine se connecter à sa page.
 var express = require('express');
 var app = express();
+var https = require("https");
 
 app.get('/:nomPiscine', function (req, res) {
     // retrouver l'url 
@@ -27,12 +28,23 @@ app.get('/:nomPiscine', function (req, res) {
     liens.forEach(function (item) {
         if (item.Piscine == req.params.nomPiscine) urlItem = item.url;
     });
-   var url = urlDetailPiscine + urlItem;
+    var url = urlDetailPiscine + urlItem;
     console.log('Connexion à ' + url);
 
     // Récupérer le html de url
-
+    https.get(url, (res) => {
+        let codeHtml = '';
+        res.on('data', (chunk) => { codeHtml += chunk; });
+        res.on('end', () => {
+            try {
+                console.log(codeHtml);
+            } catch (e) {
+                console.error(e.message);
+            }
+        });
+    });
 });
+
 
 var server = app.listen(8081, function () {
     var host = server.address().address;
