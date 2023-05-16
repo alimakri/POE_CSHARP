@@ -10,4 +10,6 @@ http.createServer(function (req, res) {
 
 // Etape 1 : Définir une liste d'objets json : (CENTRE NAUTIQUE DE SCHILTIGHEIM - /401_SPO_2/centre-nautique-de-schiltigheim), (PISCINE DE HAUTEPIERRE  - /402_SPO_3/piscine-de-hautepierre)
 
-// Avec le lien, retrouver l'adresse de la piscine. Verbe GET
+// Etape 2 : avec le lien, retrouver l'adresse de la piscine. Verbe GET
+
+// Etape 3 : dans l'application WPF faire appel à ce service
