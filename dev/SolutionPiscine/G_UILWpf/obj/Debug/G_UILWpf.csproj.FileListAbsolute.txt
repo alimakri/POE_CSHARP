@@ -27,3 +27,4 @@ D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf.exe
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf.pdb
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\EntityFramework.SqlServer.dll
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf.csproj.SuggestedBindingRedirects.cache
