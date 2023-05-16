@@ -55,6 +55,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel Orientation="Vertical" Grid.Column="1">
+            <!--Horaires-->
             <TextBlock FontSize="18" HorizontalAlignment="Center" Foreground="Navy">
                 <Run  Text="Horaires :"/>
                 <Run Text="{Binding CurrentPiscine.Nom, UpdateSourceTrigger=PropertyChanged}"/>
@@ -63,10 +64,17 @@
                      BorderThickness="0" Margin="5">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding StringFormat=HH:mm}" FontSize="14"/>
+                        <TextBlock Text="{Binding}" FontSize="14"/>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+            
+            <!--Adresse-->
+            <StackPanel Margin="5">
+                <TextBlock FontSize="14" HorizontalAlignment="Left" Foreground="Navy" Text="{Binding CurrentPiscine.Adresse1, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock FontSize="14" HorizontalAlignment="Left" Foreground="Navy" Text="{Binding CurrentPiscine.Adresse2, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock FontSize="14" HorizontalAlignment="Left" Foreground="Navy" Text="{Binding CurrentPiscine.Telephone, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
