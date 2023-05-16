@@ -22,10 +22,16 @@ var express = require('express');
 var app = express();
 
 app.get('/:nomPiscine', function (req, res) {
-    var url = urlDetailPiscine + liens[req.params.nomPiscine].url;
-    console.log(url);
+    // retrouver l'url 
+    var urlItem;
+    liens.forEach(function (item) {
+        if (item.Piscine == req.params.nomPiscine) urlItem = item.url;
+    });
+   var url = urlDetailPiscine + urlItem;
+    console.log('Connexion à ' + url);
 
     // Récupérer le html de url
+
 });
 
 var server = app.listen(8081, function () {
