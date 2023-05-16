@@ -16,6 +16,8 @@ var liens =
         { "Piscine": "Piscine d'Ostwald", "url": "/407_SPO_8/piscine-d-ostwald" },
         { "Piscine": "Piscine du Wacken", "url": "/408_SPO_9/piscine-du-wacken" },
         { "Piscine": "Bains municipaux de Strasbourg", "url": "/400_SPO_1/bains-municipaux-de-strasbourg" }];
+const regex = /Coordonn\u00E9es[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([^<]*)[^>]*[>]*[>][\n\r\t ]*([0-9a-zA-Z ]*)[\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([0-9a-zA-Z :\u00E9+()]*)/gm;
+//const regex = /(span)/gm;
 
 // Etape 2 : partant du nom de la piscine se connecter à sa page.
 var express = require('express');
@@ -28,6 +30,8 @@ app.get('/:nomPiscine', function (req, res) {
     liens.forEach(function (item) {
         if (item.Piscine == req.params.nomPiscine) urlItem = item.url;
     });
+
+
     var url = urlDetailPiscine + urlItem;
     console.log('Connexion à ' + url);
 
@@ -37,17 +41,25 @@ app.get('/:nomPiscine', function (req, res) {
         res.on('data', (chunk) => { codeHtml += chunk; });
         res.on('end', () => {
             try {
-                console.log(codeHtml);
+                processRegex(codeHtml);
             } catch (e) {
                 console.error(e.message);
             }
         });
     });
-
-    // Extraire avec un regex l'adresse de la piscine dans codeHtml
-    var regex = /Coordonnées[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([^<]*)[^>]*[>]*[>][\n\r\t ]*([0-9a-zA-Z ]*)[\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([0-9a-zA-Z :é+()]*)/;
 });
 
+function processRegex(codeHtml) {
+    // Extraire avec un regex l'adresse de la piscine dans codeHtml
+    //var matches = codeHtml.match(regex);
+    var matches = regex.exec(codeHtml);
+    var adresse1 = matches[1];
+    var adresse2 = matches[2];
+    var telephone = matches[3].replace('Téléphone : +33 ', '');
+    console.log(adresse1);
+    console.log(adresse2);
+    console.log(telephone);
+}
 
 var server = app.listen(8081, function () {
     var host = server.address().address;
