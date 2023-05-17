@@ -3,15 +3,19 @@
     var check = "";
     if (Model.Fait) { check = @"checked=""checked"""; }
 }
-<form>
-    <div>
-        Libellé : <input type="text" value="@Model.Libelle" size="50" />
-    </div>
-    <div>
-        Fait : <input type="checkbox" @check />
-    </div>
-    <div>
-        <input type="submit" value="Ok" />
-    </div>
-</form>
-
+<div>
+    <form>
+        <div>
+            Libellé : <input type="text" value="@Model.Libelle" name="libelle" id="libelle" size="50" />
+        </div>
+        <div>
+            Fait : <input type="checkbox" name="fait" @check />
+        </div>
+        <div>
+            <input type="submit" value="Ok" />
+        </div>
+    </form>
+</div>
+<div>
+    <a href="/todo/index">Retour</a>
+</div>
