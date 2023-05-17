@@ -1,0 +1,2 @@
+﻿1. Définir un contrôleur TodoController avec sa vue qui affiche une liste de Todo
+2. Pour chaque todo dans la vue avoir deux liens: edit (/todo/edit/{id}) et Supprimer (/todo/delete/{id})

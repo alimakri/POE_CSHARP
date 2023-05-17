@@ -1,5 +1,5 @@
 ﻿@model List<C_Todo_V1.Models.Todo>
-
+<h3>Liste des choses à faire</h3>
 <table>
     <thead>
         <tr>
@@ -17,7 +17,7 @@
                 {
                     check = @"checked=""checked""";
                 }
-                <tr><td>@todo.Id</td><td>@todo.Libelle</td><td><input type="checkbox" @check /></td></tr>
+                <tr><td>@todo.Id</td><td>@todo.Libelle</td><td><input type="checkbox" @check disabled="disabled"/></td></tr>
                 check = "";
             }
         }
