@@ -15,8 +15,8 @@ namespace B_LeControleur
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Demo", action = "Index6", id = UrlParameter.Optional }
+                url: "{controller}/{action}/{x}/{id}",
+                defaults: new { controller = "Demo", action = "page1", id = UrlParameter.Optional }
             );
         }
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,5 +59,20 @@ namespace B_LeControleur.Controllers
             var content = new RedirectResult("http://google.fr");
             return content;
         }
+        public ActionResult Page1(string x, string id)
+        {
+            //var al = new ArrayList();
+            //al.Add(x);
+            //al.Add(id);
+            //return View(al);
+
+            var item = new Agre { Item1 = x, Item2 = id };
+            return View(item);
+        }
+    }
+    public class Agre
+    {
+        public string Item1;
+        public string Item2;
     }
 }
