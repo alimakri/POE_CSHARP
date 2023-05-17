@@ -6,18 +6,26 @@
             <th>Id</th>
             <th>Libellé</th>
             <th></th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @{
-            string check = "";
+            var check = "";
             foreach (var todo in Model)
             {
                 if (todo.Fait)
                 {
                     check = @"checked=""checked""";
                 }
-                <tr><td>@todo.Id</td><td>@todo.Libelle</td><td><input type="checkbox" @check disabled="disabled"/></td></tr>
+                <tr>
+                    <td>@todo.Id</td>
+                    <td>@todo.Libelle</td>
+                    <td><input type="checkbox" @check disabled="disabled" /></td>
+                    <td><a href="/todo/edit/@todo.Id">Editer</a></td>
+                    <td><a href="/todo/delete/@todo.Id">Supprimer</a></td>
+                </tr>
                 check = "";
             }
         }
