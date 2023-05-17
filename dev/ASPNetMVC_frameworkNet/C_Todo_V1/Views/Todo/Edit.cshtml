@@ -1,0 +1,17 @@
+﻿@model C_Todo_V1.Models.Todo
+@{
+    var check = "";
+    if (Model.Fait) { check = @"checked=""checked"""; }
+}
+<form>
+    <div>
+        Libellé : <input type="text" value="@Model.Libelle" size="50" />
+    </div>
+    <div>
+        Fait : <input type="checkbox" @check />
+    </div>
+    <div>
+        <input type="submit" value="Ok" />
+    </div>
+</form>
+
