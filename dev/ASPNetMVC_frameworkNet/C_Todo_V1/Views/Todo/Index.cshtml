@@ -1,0 +1,27 @@
+﻿@model List<C_Todo_V1.Models.Todo>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Libellé</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            string check = "";
+            foreach (var todo in Model)
+            {
+                if (todo.Fait)
+                {
+                    check = @"checked=""checked""";
+                }
+                <tr><td>@todo.Id</td><td>@todo.Libelle</td><td><input type="checkbox" @check /></td></tr>
+                check = "";
+            }
+        }
+    </tbody>
+
+</table>
+
