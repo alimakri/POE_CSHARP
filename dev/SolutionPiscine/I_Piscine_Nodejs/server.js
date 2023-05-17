@@ -16,7 +16,9 @@ var liens =
         { "Piscine": "Piscine d'Ostwald", "url": "/407_SPO_8/piscine-d-ostwald" },
         { "Piscine": "Piscine du Wacken", "url": "/408_SPO_9/piscine-du-wacken" },
         { "Piscine": "Bains municipaux de Strasbourg", "url": "/400_SPO_1/bains-municipaux-de-strasbourg" }];
-const regex = /Coordonn\u00E9es[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([^<]*)[^>]*[>]*[>][\n\r\t ]*([0-9a-zA-Z ]*)[\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*T\u00E9l\u00E9phone : ([0-9+() ]*)/gm;
+
+const regex = /Coordonn\u00E9es[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([^<]*)[^>]*[>]*[>][\n\r\t ]*([0-9a-zA-Z ]*)[\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*T\u00E9l\u00E9phone : ([0-9+() ]*)/;
+//const regex = new RegExp(/Coordonn\u00E9es[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*([^<]*)[^>]*[>]*[>][\n\r\t ]*([0-9a-zA-Z ]*)[\n\r\t ]*[^>]*[>][\n\r\t ]*[^>]*[>][\n\r\t ]*T\u00E9l\u00E9phone : ([0-9+() ]*)/);
 
 // Etape 2 : partant du nom de la piscine se connecter à sa page.
 var express = require('express');
@@ -48,14 +50,15 @@ app.get('/:nomPiscine', function (req, response) {
             }
         });
     });
-
 });
 
 function processRegex(codeHtml) {
     // Extraire avec un regex l'adresse de la piscine dans codeHtml
     var matches = regex.exec(codeHtml);
-    if (matches == null) return {};
-
+    var b = matches === null;
+    if (b) {
+        return {};
+    }
     return { "adresse1": matches[1], "adresse2": matches[2], "telephone": matches[3] };
 }
 
