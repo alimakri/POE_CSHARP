@@ -15,7 +15,7 @@ namespace C_Todo_V1.Models
     }
     public class TodoContext : DbContext
     {
-        public TodoContext() :base("name=TodoConfig")
+        public TodoContext() : base("name=TodoConfig")
         {
 
         }

@@ -23,7 +23,7 @@ namespace C_Todo_V1.Controllers
         }
         public ActionResult Edit(int id)
         {
-            var todo = Repo.GetById(id);
+            var todo = Repo.Get(id);
             if (todo == null) return RedirectToAction("Index");
             return View(todo);
         }
@@ -31,7 +31,7 @@ namespace C_Todo_V1.Controllers
         [HttpPost]
         public ActionResult Edit(Todo todo)
         {
-            var todoTrouve = Repo.GetById(id);
+            var todoTrouve = Repo.Get(todo.Id);
             if (todoTrouve != null)
             {
                 todoTrouve.Libelle = todo.Libelle;
