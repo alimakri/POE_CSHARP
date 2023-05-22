@@ -29,18 +29,26 @@ namespace C_Todo_V1.Controllers
         [HttpPost]
         public ActionResult Edit(Todo todo)
         {
-            var todoTrouve = Todoes.FirstOrDefault(x=>x.Id==todo.Id);
+            var todoTrouve = Todoes.FirstOrDefault(x => x.Id == todo.Id);
             if (todoTrouve != null)
             {
                 todoTrouve.Libelle = todo.Libelle;
                 todoTrouve.Fait = todo.Fait;
             }
-        return RedirectToAction("Index"); }
+            return RedirectToAction("Index");
+        }
         public ActionResult Delete(int id)
         {
             var todo = Todoes.FirstOrDefault(x => x.Id == id);
             if (todo != null) Todoes.Remove(todo);
             return RedirectToAction("Index");
+        }
+        public ActionResult Add()
+        {
+            var todo = new Todo();
+            todo.Id = Todoes.Max(x => x.Id) + 1;
+            Todoes.Add(todo);
+            return View(todo);
         }
     }
 }

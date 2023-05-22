@@ -3,10 +3,10 @@
     var check = "";
     if (Model.Fait) { check = @"checked=""checked"""; }
 }
-<h2>Modifier un todo</h2>
+<h2>Nouveau todo</h2>
 <div>
     <form method="post" action="todo/edit">
-        <input type="hidden" name="Id" value="@Model.Id"/>
+        <input type="hidden" name="Id" value="@Model.Id" />
         <div>
             Libellé : <input type="text" value="@Model.Libelle" name="libelle" id="libelle" size="50" />
         </div>
