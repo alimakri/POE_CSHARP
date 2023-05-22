@@ -1,4 +1,5 @@
-﻿using C_Todo_V1.Models;
+﻿using C_Todo_V1.Data;
+using C_Todo_V1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +10,20 @@ namespace C_Todo_V1.Controllers
 {
     public class TodoController : Controller
     {
-        private List<Todo> Todoes = new List<Todo>
-            {
-                new Todo{Id=1, Libelle="Acheter du pain", Fait=false},
-                new Todo{Id=2, Libelle="Réviser HTML5", Fait=true},
-                new Todo{Id=3, Libelle="Prendre 4 jours de Week-end", Fait=false},
-            };
+        //private List<Todo> Todoes = new List<Todo>
+        //    {
+        //        new Todo{Id=1, Libelle="Acheter du pain", Fait=false},
+        //        new Todo{Id=2, Libelle="Réviser HTML5", Fait=true},
+        //        new Todo{Id=3, Libelle="Prendre 4 jours de Week-end", Fait=false},
+        //    };
+        private Repository Repo = new Repository();
         public ActionResult Index()
         {
-            return View(Todoes);
+            return View(Repo.Get());
         }
         public ActionResult Edit(int id)
         {
-            var todo = Todoes.FirstOrDefault(x => x.Id == id);
+            var todo = Repo.GetById(id);
             if (todo == null) return RedirectToAction("Index");
             return View(todo);
         }
@@ -29,7 +31,7 @@ namespace C_Todo_V1.Controllers
         [HttpPost]
         public ActionResult Edit(Todo todo)
         {
-            var todoTrouve = Todoes.FirstOrDefault(x => x.Id == todo.Id);
+            var todoTrouve = Repo.GetById(id);
             if (todoTrouve != null)
             {
                 todoTrouve.Libelle = todo.Libelle;
@@ -39,15 +41,12 @@ namespace C_Todo_V1.Controllers
         }
         public ActionResult Delete(int id)
         {
-            var todo = Todoes.FirstOrDefault(x => x.Id == id);
-            if (todo != null) Todoes.Remove(todo);
+            Repo.Remove(id);
             return RedirectToAction("Index");
         }
         public ActionResult Add()
         {
-            var todo = new Todo();
-            todo.Id = Todoes.Max(x => x.Id) + 1;
-            Todoes.Add(todo);
+            var todo = Repo.Add();
             return View(todo);
         }
     }
