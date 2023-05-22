@@ -9,7 +9,7 @@ namespace F_LeModele_Validation.Controllers
 {
     public class PersonneController : Controller
     {
-       private List<Personne> Personnes=new List<Personne> 
+        private List<Personne> Personnes = new List<Personne>
        {
            new Personne{ Id=1, Nom="Alexandre", DateNaissance = new DateTime(1990,1,1), Immatriculation="AB123AB", Inscrit=true },
            new Personne{ Id=1, Nom="Bernard", DateNaissance = new DateTime(1980,1,1), Immatriculation="CD123CD", Inscrit=false },
@@ -24,7 +24,7 @@ namespace F_LeModele_Validation.Controllers
         // GET: Personne/Create
         public ActionResult Create()
         {
-            return View();
+            return View(new Personne());
         }
 
         // POST: Personne/Create
@@ -33,8 +33,16 @@ namespace F_LeModele_Validation.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-
+                if (ModelState.IsValid)
+                {
+                    Personnes.Add(new Personne
+                    {
+                        Nom = collection["nom"],
+                        Immatriculation = collection["immatriculation"],
+                        DateNaissance = DateTime.ParseExact(collection["DateNaissance"], "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture),
+                        Inscrit = bool.Parse(collection.GetValues("Inscrit")[0])
+                    });
+                }
                 return RedirectToAction("Index");
             }
             catch
@@ -46,39 +54,49 @@ namespace F_LeModele_Validation.Controllers
         // GET: Personne/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var p = Personnes.FirstOrDefault(x => x.Id == id);
+            if (p == null) return RedirectToAction("Index");
+            return View(p);
         }
 
         // POST: Personne/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
+            var p = Personnes.FirstOrDefault(x => x.Id == id);
+            if (p == null) return RedirectToAction("Index");
             try
             {
                 // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                p.Nom = collection["nom"];
+                p.Immatriculation = collection["immatriculation"];
+                p.DateNaissance = DateTime.ParseExact(collection["DateNaissance"], "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+                p.Inscrit = bool.Parse(collection.GetValues("Inscrit")[0]);
             }
             catch
             {
-                return View();
             }
+            return RedirectToAction("Index");
         }
 
         // GET: Personne/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var p = Personnes.FirstOrDefault(x => x.Id == id);
+            if (p == null) return RedirectToAction("Index");
+            return View(p);
         }
 
         // POST: Personne/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
+            var p = Personnes.FirstOrDefault(x => x.Id == id);
+            if (p == null) return RedirectToAction("Index");
             try
             {
                 // TODO: Add delete logic here
-
+                Personnes.Remove(p);
                 return RedirectToAction("Index");
             }
             catch
