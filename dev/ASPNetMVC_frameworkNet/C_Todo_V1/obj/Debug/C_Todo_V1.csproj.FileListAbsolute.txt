@@ -76,3 +76,7 @@ D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\C_Todo_V1\obj\Debug\C_Todo_V1.csproj.Co
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\C_Todo_V1\obj\Debug\C_Todo_V1.dll
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\C_Todo_V1\obj\Debug\C_Todo_V1.pdb
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\C_Todo_V1\obj\Debug\C_Todo_V1.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\C_Todo_V1\bin\EntityFramework.dll
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\C_Todo_V1\bin\EntityFramework.SqlServer.dll
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\C_Todo_V1\bin\EntityFramework.xml
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\C_Todo_V1\bin\EntityFramework.SqlServer.xml

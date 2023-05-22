@@ -31,17 +31,12 @@ namespace C_Todo_V1.Controllers
         [HttpPost]
         public ActionResult Edit(Todo todo)
         {
-            var todoTrouve = Repo.Get(todo.Id);
-            if (todoTrouve != null)
-            {
-                todoTrouve.Libelle = todo.Libelle;
-                todoTrouve.Fait = todo.Fait;
-            }
+            Repo.Update(todo);
             return RedirectToAction("Index");
         }
         public ActionResult Delete(int id)
         {
-            Repo.Remove(id);
+            Repo.Delete(id);
             return RedirectToAction("Index");
         }
         public ActionResult Add()

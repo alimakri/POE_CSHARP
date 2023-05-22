@@ -19,7 +19,7 @@ namespace C_Todo_V1.Data
             return Context.Todoes.FirstOrDefault(x => x.Id == id);
         }
 
-        internal void Remove(int id)
+        internal void Delete(int id)
         {
             var todo = Context.Todoes.FirstOrDefault(x => x.Id == id);
             if (todo == null) return;
@@ -33,6 +33,14 @@ namespace C_Todo_V1.Data
             Context.Todoes.Add(todo);
             Context.SaveChanges();
             return todo;
+        }
+
+        internal void Update(Todo todoModif)
+        {
+            var todoOrigin = Context.Todoes.FirstOrDefault(x => x.Id == todoModif.Id);
+            todoOrigin.Libelle = todoModif.Libelle;
+            todoOrigin.Fait = todoModif.Fait;
+            Context.SaveChanges();
         }
     }
 }
