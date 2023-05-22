@@ -25,6 +25,17 @@ namespace C_Todo_V1.Controllers
             if (todo == null) return RedirectToAction("Index");
             return View(todo);
         }
+
+        [HttpPost]
+        public ActionResult Edit(Todo todo)
+        {
+            var todoTrouve = Todoes.FirstOrDefault(x=>x.Id==todo.Id);
+            if (todoTrouve != null)
+            {
+                todoTrouve.Libelle = todo.Libelle;
+                todoTrouve.Fait = todo.Fait;
+            }
+        return RedirectToAction("Index"); }
         public ActionResult Delete(int id)
         {
             var todo = Todoes.FirstOrDefault(x => x.Id == id);

@@ -4,7 +4,8 @@
     if (Model.Fait) { check = @"checked=""checked"""; }
 }
 <div>
-    <form>
+    <form method="post" action="todo/edit">
+        <input type="hidden" name="Id" value="@Model.Id"/>
         <div>
             Libellé : <input type="text" value="@Model.Libelle" name="libelle" id="libelle" size="50" />
         </div>

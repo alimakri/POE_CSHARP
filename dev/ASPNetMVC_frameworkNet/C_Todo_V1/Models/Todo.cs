@@ -7,8 +7,8 @@ namespace C_Todo_V1.Models
 {
     public class Todo
     {
-        public int Id;
-        public string Libelle;
-        public bool Fait;
+        public int Id { get; set; }
+        public string Libelle { get; set; }
+        public bool Fait { get; set; }
     }
 }
