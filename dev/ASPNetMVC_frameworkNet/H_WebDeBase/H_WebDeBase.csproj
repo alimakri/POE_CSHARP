@@ -90,7 +90,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="pages\Error.html" />
-    <Content Include="pages\index.html" />
+    <None Include="pages\index.cshtml" />
     <Content Include="pages\index3.html" />
     <Content Include="pages\index2.html" />
     <Content Include="Web.config" />

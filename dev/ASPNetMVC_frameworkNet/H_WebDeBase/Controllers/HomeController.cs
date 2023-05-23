@@ -26,9 +26,16 @@ namespace H_WebDeBase.Controllers
             Comptes[1].Ecritures.Add(new Ecriture { Id = Guid.NewGuid(), Libelle = "Salaire avri", Montant = 4100.90M });
         }
         // http://localhost:58378/home/index
-        public string Index(int id)
+        public string Index(int? id)
         {
-            var compte = Comptes.FirstOrDefault(x => x.Id == id); string path = ""; string content = ""; string nom = "Inconnu"; decimal montant = 0;
+            string path = ""; string content = "";
+            if (id==null)
+            {
+                path = Server.MapPath("/pages/error.html");
+                content = System.IO.File.ReadAllText(path);
+                return content.Replace("@id", "non renseigné");
+            }
+            var compte = Comptes.FirstOrDefault(x => x.Id == id);  string nom = "Inconnu"; decimal montant = 0; string ul=""; string montantColor = "montantColorPositif";
             if (compte == null)
             {
                 path = Server.MapPath("/pages/error.html");
@@ -36,15 +43,23 @@ namespace H_WebDeBase.Controllers
             }
             else
             {
-                path = Server.MapPath("/pages/index.html");
+                path = Server.MapPath("/pages/index.cshtml");
                 content = System.IO.File.ReadAllText(path);
                 nom = compte.Titulaire; montant = compte.Montant;
-
+                ul = "<table>";
+                foreach(var e in compte.Ecritures)
+                {
+                    ul += $"<tr><td>{e.Libelle}</td><td>{e.Montant}</td></tr>";
+                }
+                ul += "</table>";
+                if (compte.Montant < 0) montantColor = "montantColorNegatif";
             }
             content = content
                 .Replace("@nom", nom)
                 .Replace("@id", id.ToString())
-                .Replace("@montant", montant.ToString("# ###.00"));
+                .Replace("@montantColor", montantColor)
+                .Replace("@montant", montant.ToString("# ###.00"))
+                .Replace("@ecritures", ul);
             return content;
         }
         #endregion
