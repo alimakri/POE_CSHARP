@@ -18,11 +18,17 @@ namespace H_WebDeBase.Controllers
             Comptes.Add(new Compte { Id = 1, Titulaire = "Pierre", Montant = 100, Ecritures = new List<Ecriture>() });
             Comptes.Add(new Compte { Id = 2, Titulaire = "Paul", Montant = 300, Ecritures = new List<Ecriture>() });
             Comptes.Add(new Compte { Id = 3, Titulaire = "Jacques", Montant = -50, Ecritures = new List<Ecriture>() });
+            Comptes[0].Ecritures.Add(new Ecriture { Id = Guid.NewGuid(), Libelle = "Achat Auchan", Montant = -103.50M });
+            Comptes[0].Ecritures.Add(new Ecriture { Id = Guid.NewGuid(), Libelle = "Impots Reven", Montant = -1100.00M });
+            Comptes[0].Ecritures.Add(new Ecriture { Id = Guid.NewGuid(), Libelle = "Salaire avri", Montant = 2100.90M });
+            Comptes[1].Ecritures.Add(new Ecriture { Id = Guid.NewGuid(), Libelle = "Achat Carrefour", Montant = -103.50M });
+            Comptes[1].Ecritures.Add(new Ecriture { Id = Guid.NewGuid(), Libelle = "Impots Reven", Montant = -2100.00M });
+            Comptes[1].Ecritures.Add(new Ecriture { Id = Guid.NewGuid(), Libelle = "Salaire avri", Montant = 4100.90M });
         }
         // http://localhost:58378/home/index
         public string Index(int id)
         {
-            var compte = Comptes.FirstOrDefault(x => x.Id == id); string path = ""; string content = ""; string nom = "Inconnu"; decimal montant = 0; 
+            var compte = Comptes.FirstOrDefault(x => x.Id == id); string path = ""; string content = ""; string nom = "Inconnu"; decimal montant = 0;
             if (compte == null)
             {
                 path = Server.MapPath("/pages/error.html");
