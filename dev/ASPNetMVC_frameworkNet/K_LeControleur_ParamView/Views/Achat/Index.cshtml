@@ -1,10 +1,10 @@
-﻿@model K_LeControleur_ParamView.Models.AchatsNom>
+﻿@model K_LeControleur_ParamView.Models.AchatsNom
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Achats effectués par </h2>
+<h2>Achats effectués par @Model.Nom</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
