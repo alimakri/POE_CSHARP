@@ -11,6 +11,7 @@ namespace H_WebDeBase.Models
         public string Titulaire;
         public decimal Montant;
         public List<Ecriture> Ecritures;
+        public string Message;
     }
     public class Ecriture
     {

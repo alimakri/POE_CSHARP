@@ -15,9 +15,9 @@ namespace H_WebDeBase.Controllers
 
         public HomeController()
         {
-            Comptes.Add(new Compte { Id = 1, Titulaire = "Pierre", Montant = 100, Ecritures = new List<Ecriture>() });
-            Comptes.Add(new Compte { Id = 2, Titulaire = "Paul", Montant = 300, Ecritures = new List<Ecriture>() });
-            Comptes.Add(new Compte { Id = 3, Titulaire = "Jacques", Montant = -50, Ecritures = new List<Ecriture>() });
+            Comptes.Add(new Compte { Id = 1, Titulaire = "Pierre", Montant = 100, Message="Bonjour Pierre....", Ecritures = new List<Ecriture>() });
+            Comptes.Add(new Compte { Id = 2, Titulaire = "Paul", Montant = 300, Message=null, Ecritures = new List<Ecriture>() });
+            Comptes.Add(new Compte { Id = 3, Titulaire = "Jacques", Montant = -50, Message = "Bonjour Jacques....", Ecritures = new List<Ecriture>() });
             Comptes[0].Ecritures.Add(new Ecriture { Id = Guid.NewGuid(), Libelle = "Achat Auchan", Montant = -103.50M });
             Comptes[0].Ecritures.Add(new Ecriture { Id = Guid.NewGuid(), Libelle = "Impots Reven", Montant = -1100.00M });
             Comptes[0].Ecritures.Add(new Ecriture { Id = Guid.NewGuid(), Libelle = "Salaire avri", Montant = 2100.90M });
@@ -35,7 +35,8 @@ namespace H_WebDeBase.Controllers
                 content = System.IO.File.ReadAllText(path);
                 return content.Replace("@id", "non renseigné");
             }
-            var compte = Comptes.FirstOrDefault(x => x.Id == id);  string nom = "Inconnu"; decimal montant = 0; string ul=""; string montantColor = "montantColorPositif";
+            var compte = Comptes.FirstOrDefault(x => x.Id == id);  string nom = "Inconnu"; decimal montant = 0; string ul=""; 
+            string montantColor = "montantColorPositif"; string message = ""; string messageDisabled = "";
             if (compte == null)
             {
                 path = Server.MapPath("/pages/error.html");
@@ -53,10 +54,19 @@ namespace H_WebDeBase.Controllers
                 }
                 ul += "</table>";
                 if (compte.Montant < 0) montantColor = "montantColorNegatif";
+
+                if (!string.IsNullOrEmpty(compte.Message))
+                {
+                    message = compte.Message;
+                }
+                else
+                    messageDisabled = "disabled='disabled'";
             }
             content = content
                 .Replace("@nom", nom)
                 .Replace("@id", id.ToString())
+                .Replace("@messageDisabled", messageDisabled)
+                .Replace("@message", message)
                 .Replace("@montantColor", montantColor)
                 .Replace("@montant", montant.ToString("# ###.00"))
                 .Replace("@ecritures", ul);

@@ -11,6 +11,11 @@
             color: red;
         }
     </style>
+    <script>
+        function DisplayMessage() {
+            alert('@message');
+        }
+    </script>
 </head>
 <body>
     <h2>Version 4</h2>
@@ -19,5 +24,6 @@
     <div>
         @ecritures
     </div>
+    <button @messageDisabled onclick="DisplayMessage()">Vous avez un message</button>
 </body>
 </html>
