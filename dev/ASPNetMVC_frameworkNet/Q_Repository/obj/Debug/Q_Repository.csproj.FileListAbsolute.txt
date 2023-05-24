@@ -84,3 +84,9 @@ D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\Q_Repository\obj\Debug\Q_Repository.csp
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\Q_Repository\obj\Debug\Q_Repository.csproj.CopyComplete
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\Q_Repository\obj\Debug\Q_Repository.dll
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\Q_Repository\obj\Debug\Q_Repository.pdb
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\Q_Repository\bin\System.Net.Http.Formatting.dll
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\Q_Repository\bin\System.Web.Http.dll
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\Q_Repository\bin\System.Web.Http.WebHost.dll
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\Q_Repository\bin\System.Net.Http.Formatting.xml
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\Q_Repository\bin\System.Web.Http.xml
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\Q_Repository\bin\System.Web.Http.WebHost.xml
