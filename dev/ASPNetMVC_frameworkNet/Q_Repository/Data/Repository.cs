@@ -52,7 +52,7 @@ namespace Q_Repository.Data
             var liste = new List<Produit>();
             while (rd.Read())
             {
-                liste.Add(new Produit { Id = (int)rd[0], Name = (string)rd[1], Reference = (string)rd[2], ListPrice = (double)rd[3] });
+                liste.Add(new Produit { Id = (int)rd[0], Name = (string)rd[1], Reference = (string)rd[2], ListPrice = (decimal)rd[3] });
             }
             rd.Close();
             return liste;

@@ -1,44 +1,47 @@
 ﻿@model List<Q_Repository.Models.Categorie>
-    <script>
-        function changeCat() {
-            var idCat = document.getElementById("listCat").value;
-            $.ajax({
-                url: "/api/data/" + idCat,
-                method: "GET",
-                success: function (data) {
-                    var json = JSON.parse(data);
-                    var listSousCat = $('#listSousCat'); // document.getElementById("listSousCat");
-                    listSousCat.empty();
-                    $.each(json, function (key, val) {
-                        listSousCat.append('<option id="' + val.Id + '">' + val.Name + '</option>');
-                    });
-                },
-                error: function (error) {
-                    alert("error" + error);
-                }
-            });
-        }
-        function changeSousCat() {
-            var idSousCat = document.getElementById("listSousCat").value;
-            $.ajax({
-                url: "/api/data/?souscat=" + idSousCat,
-                method: "GET",
-                success: function (data) {
-                    var json = JSON.parse(data);
-                    var listProduct = $('#listProduct'); 
-                    listProduct.empty();
-                    $.each(json, function (key, val) {
-                        listProduct.append('<li id="' + val.Id + '">' + val.Name + '</li>');
-                    });
-                },
-                error: function (error) {
-                    alert("error" + error);
-                }
-            });
-        }
-    </script>
+<script>
+    function changeCat() {
+        var idCat = document.getElementById("listCat").value;
+        $.ajax({
+            url: "/api/data/?id=" + idCat,
+            method: "GET",
+            success: function (data) {
+                var json = JSON.parse(data);
+                var listSousCat = $('#listSousCat'); // document.getElementById("listSousCat");
+                listSousCat.empty();
+                $.each(json, function (key, val) {
+                    listSousCat.append('<option value="' + val.Id + '">' + val.Name + '</option>');
+                });
+                changeSousCat();
+            },
+            error: function (error) {
+                alert("error" + error);
+            }
+        });
+    }
+    function changeSousCat() {
+        var idSousCat = document.getElementById("listSousCat").value;
+        $.ajax({
+            url: "/api/data/?souscat=" + idSousCat,
+            method: "GET",
+            success: function (data) {
+                var json = JSON.parse(data);
+                var listProduct = $('#listProduct');
+                listProduct.empty();
+                var s = '';
+                $.each(json, function (key, val) {
+                    s = '<li id="' + val.Id + '">' + val.Name + '</li>';
+                    listProduct.append(s);
+                });
+            },
+            error: function (error) {
+                alert("error" + error);
+            }
+        });
+    }
+</script>
 <div style="margin:10px">
-    <select id="listCat" onchange="changeCat();">
+    <select id="listCat" onchange="changeCat(); ">
         @foreach (var cat in Model)
         {
             <option value="@cat.Id">@cat.Name</option>
@@ -46,9 +49,16 @@
     </select>
 </div>
 <div style="margin:10px">
-    <select id="listSousCat" onchange="changeSousCat();>
+    <select id="listSousCat" onchange="changeSousCat();">
     </select>
 </div>
 <div>
     <ul id="listProduct"></ul>
 </div>
+@section scripts{
+    <script>
+        var idCat = $('#listCat').val();
+        alert(idCat);
+        changeCat();
+    </script>
+}
