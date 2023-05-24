@@ -21,5 +21,6 @@ namespace Q_Repository.Models
         public string Name { get; set; }
         public string Reference { get; set; }
         public decimal ListPrice { get; set; }
+        public byte[] Image { get; set; }
     }
 }
