@@ -10,16 +10,19 @@ namespace Q_Repository.Data
 {
     public class Repository
     {
-        internal List<Categorie> GetAllCat()
+        private SqlCommand Cmd = new SqlCommand();
+        public Repository()
         {
             var cnx = new SqlConnection();
             cnx.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=AdventureWorks2017;Integrated Security=True";
             cnx.Open();
-            var cmd = new SqlCommand();
-            cmd.Connection = cnx;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select ProductCategoryID, Name from Production.ProductCategory ";
-            var rd = cmd.ExecuteReader();
+            Cmd.Connection = cnx;
+            Cmd.CommandType = CommandType.Text;
+        }
+        internal List<Categorie> GetAllCat()
+        {
+            Cmd.CommandText = "select ProductCategoryID, Name from Production.ProductCategory ";
+            var rd = Cmd.ExecuteReader();
             var liste = new List<Categorie>();
             while (rd.Read())
             {
@@ -31,14 +34,8 @@ namespace Q_Repository.Data
 
         internal object GetSousCats(int id)
         {
-            var cnx = new SqlConnection();
-            cnx.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=AdventureWorks2017;Integrated Security=True";
-            cnx.Open();
-            var cmd = new SqlCommand();
-            cmd.Connection = cnx;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"select ProductSubcategoryID, Name from Production.ProductSubcategory where ProductCategoryID={id} ";
-            var rd = cmd.ExecuteReader();
+            Cmd.CommandText = $"select ProductSubcategoryID, Name from Production.ProductSubcategory where ProductCategoryID={id} ";
+            var rd = Cmd.ExecuteReader();
             var liste = new List<SousCategorie>();
             while (rd.Read())
             {
