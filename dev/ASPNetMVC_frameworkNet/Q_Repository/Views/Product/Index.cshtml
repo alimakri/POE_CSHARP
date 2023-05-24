@@ -7,12 +7,11 @@
     }
 
     .divDroite {
-        background-color: blue;
         margin: 5px;
+        padding: 5px;
     }
 
     .divGauche {
-        background-color: lightgreen;
         margin: 5px;
         padding: 5px;
     }
@@ -25,9 +24,9 @@
             if (val.Id == idProduit) { produit = val; return false; }
         });
         if (produit == null) return;
-        //    alert(produit.Name);
-        //    alert(produit.Reference);
-        //    alert(produit.ListPrice);
+        $('#NomProduit').html('<h3>' + produit.Name + '</h3>');
+        $('#ReferenceProduit').html('<h5>' + produit.Reference + '</h5>');
+        $('#PrixProduit').html('<h5>' + produit.ListPrice + '</h5>');
     }
     function changeCat() {
         var idCat = document.getElementById("listCat").value;
@@ -91,6 +90,9 @@
         </div>
     </div>
     <div class="divDroite">
+        <div id="NomProduit"></div>
+        <div id="ReferenceProduit"></div>
+        <div id="PrixProduit"></div>
     </div>
 </div>
 @section scripts{
