@@ -1,0 +1,8 @@
+﻿@model List<Q_Repository.Models.Categorie>
+
+<select>
+    @foreach (var cat in Model)
+    {
+        <option value="@cat.Id">@cat.Name</option>
+    }
+</select>

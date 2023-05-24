@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_RazorBases", "N_RazorBase
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "O_RazorHelpers", "O_RazorHelpers\O_RazorHelpers.csproj", "{BF651CDC-F37A-4E85-A7F2-180F979FE101}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P_VuePartielle", "P_VuePartielle\P_VuePartielle.csproj", "{9D2704D1-EE3A-4EE7-B4C3-DD08F1ECED21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q_Repository", "Q_Repository\Q_Repository.csproj", "{DAEFB88B-FDCF-4DAF-891B-F575B000B33F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +103,14 @@ Global
 		{BF651CDC-F37A-4E85-A7F2-180F979FE101}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF651CDC-F37A-4E85-A7F2-180F979FE101}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF651CDC-F37A-4E85-A7F2-180F979FE101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2704D1-EE3A-4EE7-B4C3-DD08F1ECED21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2704D1-EE3A-4EE7-B4C3-DD08F1ECED21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2704D1-EE3A-4EE7-B4C3-DD08F1ECED21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2704D1-EE3A-4EE7-B4C3-DD08F1ECED21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEFB88B-FDCF-4DAF-891B-F575B000B33F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEFB88B-FDCF-4DAF-891B-F575B000B33F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEFB88B-FDCF-4DAF-891B-F575B000B33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEFB88B-FDCF-4DAF-891B-F575B000B33F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

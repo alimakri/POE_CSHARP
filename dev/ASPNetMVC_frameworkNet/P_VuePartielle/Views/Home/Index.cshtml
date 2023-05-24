@@ -1,0 +1,16 @@
+﻿@model P_VuePartielle.Models.Avion
+@{
+    ViewBag.Title = "Index";
+    ViewBag.Message = "Ok";
+}
+
+<h2>Index</h2>
+<h3>@Model.Name</h3>
+@Html.ActionLink("Index2", "Index2")
+<div>
+    @Html.Partial("_Commun1", Model)
+</div>
+
+<div>
+    @Html.Partial("_Commun2")
+</div>
