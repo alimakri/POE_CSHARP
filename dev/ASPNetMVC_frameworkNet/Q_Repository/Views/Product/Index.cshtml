@@ -1,8 +1,18 @@
 ﻿@model List<Q_Repository.Models.Categorie>
-
-<select>
-    @foreach (var cat in Model)
-    {
-        <option value="@cat.Id">@cat.Name</option>
-    }
-</select>
+    <script>
+        function changeCat() {
+            var idCat = document.getElementById("listCat").value;
+        }
+    </script>
+<div>
+    <select id="listCat" onchange="changeCat();">
+        @foreach (var cat in Model)
+        {
+            <option value="@cat.Id">@cat.Name</option>
+        }
+    </select>
+</div>
+<div>
+    <select>
+    </select>
+</div>
