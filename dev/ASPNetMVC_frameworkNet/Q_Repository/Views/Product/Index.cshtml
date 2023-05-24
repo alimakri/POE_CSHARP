@@ -3,13 +3,15 @@
         function changeCat() {
             var idCat = document.getElementById("listCat").value;
             $.ajax({
-                url: "/api/data/1",
-                method: "POST",    
-                data: {
-                    item_id: id,
-                },
-                success: function (response) {
-                    document.getElementById("disp").innerHTML = response;
+                url: "/api/data/" + idCat,
+                method: "GET",    
+                success: function (data) {
+                    var json = JSON.parse(data);
+                    var listSousCat = $('#listSousCat'); // document.getElementById("listSousCat");
+                    listSousCat.empty();
+                    $.each(json, function (key, val) {
+                        listSousCat.append('<option id="' + val.Id + '">' + val.Name + '</option>');
+                    });
                 },
                 error: function (error) {
                     alert("error" + error);
@@ -17,7 +19,7 @@
             });    
         }
     </script>
-<div>
+<div style="margin:10px">
     <select id="listCat" onchange="changeCat();">
         @foreach (var cat in Model)
         {
@@ -25,7 +27,7 @@
         }
     </select>
 </div>
-<div>
-    <select>
+<div style="margin:10px">
+    <select id="listSousCat">
     </select>
 </div>
