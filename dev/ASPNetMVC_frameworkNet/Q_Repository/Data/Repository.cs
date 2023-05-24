@@ -28,5 +28,24 @@ namespace Q_Repository.Data
             rd.Close();
             return liste;
         }
+
+        internal object GetSousCats(int id)
+        {
+            var cnx = new SqlConnection();
+            cnx.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=AdventureWorks2017;Integrated Security=True";
+            cnx.Open();
+            var cmd = new SqlCommand();
+            cmd.Connection = cnx;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"select ProductSubcategoryID, Name from Production.ProductSubcategory where ProductCategoryID={id} ";
+            var rd = cmd.ExecuteReader();
+            var liste = new List<SousCategorie>();
+            while (rd.Read())
+            {
+                liste.Add(new SousCategorie { Id = (int)rd[0], Name = (string)rd[1] });
+            }
+            rd.Close();
+            return liste;
+        }
     }
 }

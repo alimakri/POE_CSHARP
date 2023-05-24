@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Q_Repository.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,9 +11,11 @@ namespace Q_Repository.Controllers
 {
     public class DataController : ApiController
     {
-        public PostSousCat(int id)
+        private Repository Repo = new Repository();
+        public string PostSousCat(int id)
         {
-
+            var sousCats = Repo.GetSousCats(id);
+            return JsonConvert.SerializeObject(sousCats);
         }
     }
 }
