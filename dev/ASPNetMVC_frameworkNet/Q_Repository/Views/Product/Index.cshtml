@@ -1,7 +1,33 @@
 ﻿@model List<Q_Repository.Models.Categorie>
+<style>
+    .divGlobal {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+    }
+
+    .divDroite {
+        background-color: blue;
+        margin: 5px;
+    }
+
+    .divGauche {
+        background-color: lightgreen;
+        margin: 5px;
+        padding: 5px;
+    }
+</style>
 <script>
+    var produits;
     function changeProduit(idProduit) {
-        alert(idProduit);
+        var produit;
+        $.each(produits, function (key, val) {
+            if (val.Id == idProduit) { produit = val; return false; }
+        });
+        if (produit == null) return;
+        //    alert(produit.Name);
+        //    alert(produit.Reference);
+        //    alert(produit.ListPrice);
     }
     function changeCat() {
         var idCat = document.getElementById("listCat").value;
@@ -28,11 +54,11 @@
             url: "/api/data/?souscat=" + idSousCat,
             method: "GET",
             success: function (data) {
-                var json = JSON.parse(data);
+                produits = JSON.parse(data);
                 var listProduct = $('#listProduct');
                 listProduct.empty();
                 var s = '';
-                $.each(json, function (key, val) {
+                $.each(produits, function (key, val) {
                     s = '<li id="' + val.Id + '"><a onclick="changeProduit(' + val.Id + ');" href="#">' + val.Name + '</a></li>';
                     listProduct.append(s);
                 });
@@ -43,20 +69,29 @@
         });
     }
 </script>
-<div style="margin:10px">
-    <select id="listCat" onchange="changeCat(); ">
-        @foreach (var cat in Model)
-        {
-            <option value="@cat.Id">@cat.Name</option>
-        }
-    </select>
-</div>
-<div style="margin:10px">
-    <select id="listSousCat" onchange="changeSousCat();">
-    </select>
-</div>
-<div>
-    <ul id="listProduct"></ul>
+<div class="divGlobal">
+    <div class="divGauche">
+        <div>
+            <h4>Catégories</h4>
+            <select id="listCat" onchange="changeCat();">
+                @foreach (var cat in Model)
+                {
+                    <option value="@cat.Id">@cat.Name</option>
+                }
+            </select>
+        </div>
+        <div>
+            <h4>Sous catégories</h4>
+            <select id="listSousCat" onchange="changeSousCat();">
+            </select>
+        </div>
+        <div>
+            <h4>Liste des produits</h4>
+            <ul id="listProduct"></ul>
+        </div>
+    </div>
+    <div class="divDroite">
+    </div>
 </div>
 @section scripts{
     <script>
