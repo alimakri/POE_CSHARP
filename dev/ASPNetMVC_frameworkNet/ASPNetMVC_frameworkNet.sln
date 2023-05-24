@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_LeControleur", "B_LeControleur\B_LeControleur.csproj", "{77145CD1-650C-44EC-9574-696707FFC0FF}"
 EndProject
@@ -30,6 +30,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_LeControleur_Authentication", "M_LeControleur_Authentication\M_LeControleur_Authentication.csproj", "{EA2932F6-A920-4805-9F26-760EA1CEAE65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_RazorBases", "N_RazorBases\N_RazorBases.csproj", "{250F7300-29F6-4440-A5AC-3144BEFD5951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "O_RazorHelpers", "O_RazorHelpers\O_RazorHelpers.csproj", "{BF651CDC-F37A-4E85-A7F2-180F979FE101}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{250F7300-29F6-4440-A5AC-3144BEFD5951}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{250F7300-29F6-4440-A5AC-3144BEFD5951}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{250F7300-29F6-4440-A5AC-3144BEFD5951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF651CDC-F37A-4E85-A7F2-180F979FE101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF651CDC-F37A-4E85-A7F2-180F979FE101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF651CDC-F37A-4E85-A7F2-180F979FE101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF651CDC-F37A-4E85-A7F2-180F979FE101}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
