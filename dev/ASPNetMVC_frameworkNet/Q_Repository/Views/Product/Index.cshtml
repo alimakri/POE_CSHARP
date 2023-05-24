@@ -5,15 +5,23 @@
         flex-direction: row;
         margin: 10px;
     }
-
     .divDroite {
         margin: 5px;
         padding: 5px;
+        background-color:pink;
     }
 
     .divGauche {
         margin: 5px;
         padding: 5px;
+        background-color: cornflowerblue;
+    }
+    .divImage {
+        margin: 5px;
+        padding: 5px;
+        background-color: lightgreen;
+        width: 300px;
+        height: 300px;
     }
 </style>
 <script>
@@ -90,9 +98,14 @@
         </div>
     </div>
     <div class="divDroite">
-        <div id="NomProduit"></div>
-        <div id="ReferenceProduit"></div>
-        <div id="PrixProduit"></div>
+        <div>
+            <div id="NomProduit"></div>
+            <div id="ReferenceProduit"></div>
+            <div id="PrixProduit"></div>
+        </div>
+        <div class="divImage">
+
+        </div>
     </div>
 </div>
 @section scripts{

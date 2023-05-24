@@ -47,7 +47,14 @@ namespace Q_Repository.Data
         }
         internal object GetProducts(object idSousCat)
         {
-            Cmd.CommandText = $"select ProductID, Name, ProductNumber, ListPrice from Production.Product where ProductsubCategoryID={idSousCat}";
+            Cmd.CommandText = $@"select p.ProductID, p.Name, p.ProductNumber, p.ListPrice, pp.LargePhoto
+                                from Production.Product p
+                                inner
+                                join Production.ProductProductPhoto ppp on ppp.ProductID = p.ProductID
+                                inner
+                                join Production.ProductPhoto pp on ppp.ProductPhotoID = pp.ProductPhotoID
+                                where ProductsubCategoryID = {idSousCat}";
+            //Cmd.CommandText = $"select ProductID, Name, ProductNumber, ListPrice from Production.Product where ProductsubCategoryID={idSousCat}";
             var rd = Cmd.ExecuteReader();
             var liste = new List<Produit>();
             while (rd.Read())
