@@ -19,6 +19,14 @@ namespace Q_Repository.Data
             cmd.Connection = cnx;
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select ProductCategoryID, Name from Production.ProductCategory ";
+            var rd = cmd.ExecuteReader();
+            var liste = new List<Categorie>();
+            while (rd.Read())
+            {
+                liste.Add(new Categorie { Id = (int)rd[0], Name = (string)rd[1] });
+            }
+            rd.Close();
+            return liste;
         }
     }
 }
