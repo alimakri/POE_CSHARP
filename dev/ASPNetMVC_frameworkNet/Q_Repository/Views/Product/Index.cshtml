@@ -8,20 +8,15 @@
     .divDroite {
         margin: 5px;
         padding: 5px;
-        background-color:pink;
     }
 
     .divGauche {
         margin: 5px;
         padding: 5px;
-        background-color: cornflowerblue;
     }
     .divImage {
         margin: 5px;
         padding: 5px;
-        background-color: lightgreen;
-        width: 300px;
-        height: 300px;
     }
 </style>
 <script>
@@ -35,7 +30,7 @@
         $('#NomProduit').html('<h3>' + produit.Name + '</h3>');
         $('#ReferenceProduit').html('<h5>' + produit.Reference + '</h5>');
         $('#PrixProduit').html('<h5>' + produit.ListPrice + '</h5>');
-        $('#ImageProduit').attr('src', produit.Image);
+        $('#ImageProduit').attr('src', 'data:image/JPG;base64,'+ produit.Image);
     }
     function changeCat() {
         var idCat = document.getElementById("listCat").value;
