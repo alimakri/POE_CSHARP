@@ -2,6 +2,19 @@
     <script>
         function changeCat() {
             var idCat = document.getElementById("listCat").value;
+            $.ajax({
+                url: "/api/data",
+                method: "POST", // First change type to method here    
+                data: {
+                    item_id: id,
+                },
+                success: function (response) {
+                    document.getElementById("disp").innerHTML = response;
+                },
+                error: function (error) {
+                    alert("error" + error);
+                }
+            });    
         }
     </script>
 <div>

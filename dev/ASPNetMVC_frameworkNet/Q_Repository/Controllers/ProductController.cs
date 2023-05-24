@@ -12,7 +12,6 @@ namespace Q_Repository.Controllers
         private Repository Repo = new Repository();
         public ActionResult Index()
         {
-
             return View(Repo.GetAllCat());
         }
     }
