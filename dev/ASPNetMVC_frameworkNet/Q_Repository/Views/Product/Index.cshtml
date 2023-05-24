@@ -30,7 +30,7 @@
                 listProduct.empty();
                 var s = '';
                 $.each(json, function (key, val) {
-                    s = '<li id="' + val.Id + '"><a href="#">' + val.Name + '</a></li>';
+                    s = '<li id="' + val.Id + '"><a onclick="alert(' + val.Id + '");" href="#">' + val.Name + ' [' + val.Id + ']' + '</a></li>';
                     listProduct.append(s);
                 });
             },
@@ -58,7 +58,6 @@
 @section scripts{
     <script>
         var idCat = $('#listCat').val();
-        alert(idCat);
         changeCat();
     </script>
 }
