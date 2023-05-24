@@ -17,5 +17,10 @@ namespace Q_Repository.Controllers
             var sousCats = Repo.GetSousCats(id);
             return JsonConvert.SerializeObject(sousCats);
         }
+        public string GetProduct(int souscat)
+        {
+            var products = Repo.GetProducts(souscat);
+            return JsonConvert.SerializeObject(products);
+        }
     }
 }

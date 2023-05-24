@@ -4,7 +4,7 @@
             var idCat = document.getElementById("listCat").value;
             $.ajax({
                 url: "/api/data/" + idCat,
-                method: "GET",    
+                method: "GET",
                 success: function (data) {
                     var json = JSON.parse(data);
                     var listSousCat = $('#listSousCat'); // document.getElementById("listSousCat");
@@ -16,7 +16,25 @@
                 error: function (error) {
                     alert("error" + error);
                 }
-            });    
+            });
+        }
+        function changeSousCat() {
+            var idSousCat = document.getElementById("listSousCat").value;
+            $.ajax({
+                url: "/api/data/?souscat=" + idSousCat,
+                method: "GET",
+                success: function (data) {
+                    var json = JSON.parse(data);
+                    var listProduct = $('#listProduct'); 
+                    listProduct.empty();
+                    $.each(json, function (key, val) {
+                        listProduct.append('<li id="' + val.Id + '">' + val.Name + '</li>');
+                    });
+                },
+                error: function (error) {
+                    alert("error" + error);
+                }
+            });
         }
     </script>
 <div style="margin:10px">
@@ -28,6 +46,9 @@
     </select>
 </div>
 <div style="margin:10px">
-    <select id="listSousCat">
+    <select id="listSousCat" onchange="changeSousCat();>
     </select>
+</div>
+<div>
+    <ul id="listProduct"></ul>
 </div>

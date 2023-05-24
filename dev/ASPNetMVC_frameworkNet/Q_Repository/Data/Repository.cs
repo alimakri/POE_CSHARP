@@ -19,6 +19,7 @@ namespace Q_Repository.Data
             Cmd.Connection = cnx;
             Cmd.CommandType = CommandType.Text;
         }
+
         internal List<Categorie> GetAllCat()
         {
             Cmd.CommandText = "select ProductCategoryID, Name from Production.ProductCategory ";
@@ -44,5 +45,18 @@ namespace Q_Repository.Data
             rd.Close();
             return liste;
         }
+        internal object GetProducts(object idSousCat)
+        {
+            Cmd.CommandText = $"select ProductID, Name, ProductNumber, ListPrice from Production.Product where ProductsubCategoryID={idSousCat}";
+            var rd = Cmd.ExecuteReader();
+            var liste = new List<Produit>();
+            while (rd.Read())
+            {
+                liste.Add(new Produit { Id = (int)rd[0], Name = (string)rd[1], Reference = (string)rd[2], ListPrice = (double)rd[3] });
+            }
+            rd.Close();
+            return liste;
+        }
+
     }
 }
