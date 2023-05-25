@@ -22,6 +22,7 @@ namespace U_Routage
                 name: "route2",
                 url: "{controller}/{action}/{personne}",
                 defaults: new { controller = "Home", action = "Index" }
+                , constraints: new { personne = "[0-9]+" }
             );
             routes.MapRoute(
                 name: "Default",

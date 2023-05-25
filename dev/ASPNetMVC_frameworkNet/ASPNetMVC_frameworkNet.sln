@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T_Ninject", "T_Ninject\T_Ni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U_Routage", "U_Routage\U_Routage.csproj", "{D9B692A5-88B5-48C4-AD0F-B6A45BD5307D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V_Mobile", "V_Mobile\V_Mobile.csproj", "{012DFFE5-BA31-4721-8220-CF468941F5DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{D9B692A5-88B5-48C4-AD0F-B6A45BD5307D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9B692A5-88B5-48C4-AD0F-B6A45BD5307D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9B692A5-88B5-48C4-AD0F-B6A45BD5307D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012DFFE5-BA31-4721-8220-CF468941F5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012DFFE5-BA31-4721-8220-CF468941F5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012DFFE5-BA31-4721-8220-CF468941F5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012DFFE5-BA31-4721-8220-CF468941F5DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

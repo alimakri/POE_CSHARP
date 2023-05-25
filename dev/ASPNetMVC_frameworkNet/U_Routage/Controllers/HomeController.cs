@@ -46,9 +46,16 @@ namespace U_Routage.Controllers
             return View();
         }
         // http://localhost:62953/home/index2/3
-        public ActionResult Index2(int id)
+        public ActionResult Index2(int personne)
         {
-            ViewBag.Message = id;
+            ViewBag.Message = personne;
+
+            return View();
+        }
+        // http://localhost:62953/home/index2/abc
+        public ActionResult Index2(string personne)
+        {
+            ViewBag.Message = personne;
 
             return View();
         }
