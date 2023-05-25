@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P_VuePartielle", "P_VuePart
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q_Repository", "Q_Repository\Q_Repository.csproj", "{DAEFB88B-FDCF-4DAF-891B-F575B000B33F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R_Repository_ClientLeger", "R_Repository_ClientLeger\R_Repository_ClientLeger.csproj", "{1567CCA1-F573-4A18-B229-E5FD1A8B5A76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{DAEFB88B-FDCF-4DAF-891B-F575B000B33F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAEFB88B-FDCF-4DAF-891B-F575B000B33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAEFB88B-FDCF-4DAF-891B-F575B000B33F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1567CCA1-F573-4A18-B229-E5FD1A8B5A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1567CCA1-F573-4A18-B229-E5FD1A8B5A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1567CCA1-F573-4A18-B229-E5FD1A8B5A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1567CCA1-F573-4A18-B229-E5FD1A8B5A76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

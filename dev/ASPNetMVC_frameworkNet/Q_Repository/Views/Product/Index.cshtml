@@ -30,7 +30,20 @@
         $('#NomProduit').html('<h3>' + produit.Name + '</h3>');
         $('#ReferenceProduit').html('<h5>' + produit.Reference + '</h5>');
         $('#PrixProduit').html('<h5>' + produit.ListPrice + '</h5>');
-        $('#ImageProduit').attr('src', 'data:image/JPG;base64,'+ produit.Image);
+
+        // Client léger -----------------------------------------------------------------------------------------
+        /*$('#ImageProduit').attr('src', 'data:image/JPG;base64,'+ produit.Image);*/ // retirer car Client léger
+        $.ajax({
+            url: "/api/data/?idProduit=" + idProduit,
+            method: "GET",
+            success: function (data) {
+                $('#ImageProduit').attr('src', 'data:image/JPG;base64,' + data);
+            },
+            error: function (error) {
+                alert("error" + error);
+            }
+        });
+        // -------------------------------------------------------------------------------------------------------
     }
     function changeCat() {
         var idCat = document.getElementById("listCat").value;
