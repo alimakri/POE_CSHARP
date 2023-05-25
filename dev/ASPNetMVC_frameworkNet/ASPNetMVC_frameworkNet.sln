@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q_Repository", "Q_Repositor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R_Repository_ClientLeger", "R_Repository_ClientLeger\R_Repository_ClientLeger.csproj", "{1567CCA1-F573-4A18-B229-E5FD1A8B5A76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S_Repository_Ioc", "S_Repository_Ioc\S_Repository_Ioc.csproj", "{BDE1A829-E6E4-4A58-A42A-CBECBD9A5028}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{1567CCA1-F573-4A18-B229-E5FD1A8B5A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1567CCA1-F573-4A18-B229-E5FD1A8B5A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1567CCA1-F573-4A18-B229-E5FD1A8B5A76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE1A829-E6E4-4A58-A42A-CBECBD9A5028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE1A829-E6E4-4A58-A42A-CBECBD9A5028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE1A829-E6E4-4A58-A42A-CBECBD9A5028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE1A829-E6E4-4A58-A42A-CBECBD9A5028}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

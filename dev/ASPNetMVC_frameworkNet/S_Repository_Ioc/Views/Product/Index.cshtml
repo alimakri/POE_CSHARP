@@ -1,0 +1,125 @@
+﻿@model List<Q_Repository.Models.Categorie>
+<style>
+    .divGlobal {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+    }
+    .divDroite {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .divGauche {
+        margin: 5px;
+        padding: 5px;
+    }
+    .divImage {
+        margin: 5px;
+        padding: 5px;
+    }
+</style>
+<script>
+    var produits;
+    function changeProduit(idProduit) {
+        var produit;
+        $.each(produits, function (key, val) {
+            if (val.Id == idProduit) { produit = val; return false; }
+        });
+        if (produit == null) return;
+        $('#NomProduit').html('<h3>' + produit.Name + '</h3>');
+        $('#ReferenceProduit').html('<h5>' + produit.Reference + '</h5>');
+        $('#PrixProduit').html('<h5>' + produit.ListPrice + '</h5>');
+
+        // Client léger -----------------------------------------------------------------------------------------
+        /*$('#ImageProduit').attr('src', 'data:image/JPG;base64,'+ produit.Image);*/ // retirer car Client léger
+        $.ajax({
+            url: "/api/data/?idProduit=" + idProduit,
+            method: "GET",
+            success: function (data) {
+                $('#ImageProduit').attr('src', 'data:image/JPG;base64,' + data);
+            },
+            error: function (error) {
+                alert("error" + error);
+            }
+        });
+        // -------------------------------------------------------------------------------------------------------
+    }
+    function changeCat() {
+        var idCat = document.getElementById("listCat").value;
+        $.ajax({
+            url: "/api/data/?id=" + idCat,
+            method: "GET",
+            success: function (data) {
+                var json = JSON.parse(data);
+                var listSousCat = $('#listSousCat'); // document.getElementById("listSousCat");
+                listSousCat.empty();
+                $.each(json, function (key, val) {
+                    listSousCat.append('<option value="' + val.Id + '">' + val.Name + '</option>');
+                });
+                changeSousCat();
+            },
+            error: function (error) {
+                alert("error" + error);
+            }
+        });
+    }
+    function changeSousCat() {
+        var idSousCat = document.getElementById("listSousCat").value;
+        $.ajax({
+            url: "/api/data/?souscat=" + idSousCat,
+            method: "GET",
+            success: function (data) {
+                produits = JSON.parse(data);
+                var listProduct = $('#listProduct');
+                listProduct.empty();
+                var s = '';
+                $.each(produits, function (key, val) {
+                    s = '<li id="' + val.Id + '"><a onclick="changeProduit(' + val.Id + ');" href="#">' + val.Name + '</a></li>';
+                    listProduct.append(s);
+                });
+            },
+            error: function (error) {
+                alert("error" + error);
+            }
+        });
+    }
+</script>
+<div class="divGlobal">
+    <div class="divGauche">
+        <div>
+            <h4>Catégories</h4>
+            <select id="listCat" onchange="changeCat();">
+                @foreach (var cat in Model)
+                {
+                    <option value="@cat.Id">@cat.Name</option>
+                }
+            </select>
+        </div>
+        <div>
+            <h4>Sous catégories</h4>
+            <select id="listSousCat" onchange="changeSousCat();">
+            </select>
+        </div>
+        <div>
+            <h4>Liste des produits</h4>
+            <ul id="listProduct"></ul>
+        </div>
+    </div>
+    <div class="divDroite">
+        <div>
+            <div id="NomProduit"></div>
+            <div id="ReferenceProduit"></div>
+            <div id="PrixProduit"></div>
+        </div>
+        <div class="divImage">
+            <img id="ImageProduit" src="" alt=""/>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        var idCat = $('#listCat').val();
+        changeCat();
+    </script>
+}
