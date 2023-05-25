@@ -2,6 +2,7 @@
 using S_Repository_Ioc.Data;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -11,7 +12,14 @@ namespace S_Repository_Ioc.Controllers
 {
     public class DataController : ApiController
     {
-        private IRepository Repo = new Repository();
+        private IRepository Repo = null;
+        public DataController()
+        {
+            if (Q_Repository.Properties.Settings.Default.RepoConfig == 1)
+                Repo = new FakeRepository();
+            else
+                Repo = new Repository();
+        }
         public string GetSousCat(int id)
         {
             var sousCats = Repo.GetSousCats(id);

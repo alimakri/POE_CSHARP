@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales sur un assembly sont contrôlées via ce
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("Q_Repository")]
+[assembly: AssemblyTitle("S_Repository_Ioc")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Q_Repository")]
+[assembly: AssemblyProduct("S_Repository_Ioc")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
