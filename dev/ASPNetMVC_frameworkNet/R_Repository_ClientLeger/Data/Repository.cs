@@ -39,14 +39,13 @@ namespace Q_Repository.Data
                                 from Production.ProductProductPhoto ppp
                                 inner join Production.ProductPhoto pp on ppp.ProductPhotoID = pp.ProductPhotoID
                                 where ppp.ProductID={idProduit}";
-            var rd = Cmd.ExecuteReader();
-            var liste = new List<SousCategorie>();
-            while (rd.Read())
+            var rd = Cmd.ExecuteReader(); byte[] data = null;
+            if (rd.Read())
             {
-                liste.Add(new SousCategorie { Id = (int)rd[0], Name = (string)rd[1] });
+                data = (byte[])rd[0];
             }
             rd.Close();
-            return liste;
+            return data;
         }
 
         internal object GetSousCats(int id)

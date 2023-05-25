@@ -37,6 +37,7 @@
             url: "/api/data/?idProduit=" + idProduit,
             method: "GET",
             success: function (data) {
+                alert(data);
                 $('#ImageProduit').attr('src', 'data:image/JPG;base64,' + data);
             },
             error: function (error) {
