@@ -1,0 +1,13 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Admin</h2>
+<h3>Le cache a été rempli avec :</h3>
+<ul>
+    @foreach (var produit in Model)
+    {
+        <li>@produit</li>
+    }
+</ul>

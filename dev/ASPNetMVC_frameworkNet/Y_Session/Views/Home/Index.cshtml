@@ -1,48 +1,74 @@
-﻿@model IEnumerable<Y_Session.Models.PanierElement>
+﻿@model List<Y_Session.Models.PanierElement>
 
 @{
     ViewBag.Title = "Index";
+    var listeProduits = (List<string>)HttpRuntime.Cache["ListeProduit"];
 }
 
 <h2>Index</h2>
+<h3>SessionId = @ViewBag.SessionId</h3>
 
 <div class="div2">
-    <h3>SessionId = @ViewBag.SessionId</h3>
 
     <form method="POST">
         <div class="div1"> Id : <input type="text" name="Id" /></div>
-        <div class="div1"> Libellé : <input type="text" name="Libelle" /></div>
+        <div class="div1"> Libellé : <input type="text" name="Produit" /></div>
         <div class="div1"> Prix : <input type="text" name="Prix" /></div>
         <div class="div1">
             <input type="submit" value="Commander" />
         </div>
     </form>
 </div>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Produit)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Prix)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Produit)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Prix)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
+@if (Model.Count == 0)
+{
+    <h3 style="color:indianred">La panier est vide</h3>
 }
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                Libellé
+            </th>
+            <th>
+                Prix
+            </th>
+            <th></th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Produit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prix)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+@if (listeProduits != null && listeProduits.Count > 0)
+{
+    <div class="div2">
+        <h3>Le cache contient :</h3>
+        <ul>
+            @foreach (var produit in listeProduits)
+            {
+                <li>@produit</li>
+            }
+        </ul>
+
+    </div>
+}
+else
+{
+    <h3>Le cache est vide !</h3>
+}
