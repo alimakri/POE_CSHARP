@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Session Storage</h1>
+    <h2 id="h2"></h2>
+    <div>
+        <input type="text" id="saisie" value="" />
+        <button id="btn">Enregistrer</button>
+    </div>
+    <script>
+        var h2 = document.getElementById("h2");
+        var saisie = document.getElementById("saisie");
+        var btn = document.getElementById("btn");
+
+        h2.innerHTML = sessionStorage["Animal"];
+        btn.onclick = function () {
+            sessionStorage["Animal"] = saisie.value;
+            h2.innerHTML = sessionStorage["Animal"];
+        };
+    </script>
+</body>
+</html>

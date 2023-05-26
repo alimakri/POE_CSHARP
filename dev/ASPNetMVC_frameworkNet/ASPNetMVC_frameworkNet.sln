@@ -51,7 +51,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W_Cache", "W_Cache\W_Cache.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X_Roles", "X_Roles\X_Roles.csproj", "{846E3137-8D83-48E2-B996-470061BE81FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Y_Session", "Y_Session\Y_Session.csproj", "{2A438C03-5EB5-4222-968C-68C83CF3B49A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Y_SessionCache_Server", "Y_Session\Y_SessionCache_Server.csproj", "{2A438C03-5EB5-4222-968C-68C83CF3B49A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z_Storage_Client", "Z_Storage_Client\Z_Storage_Client.csproj", "{16D49519-9736-4876-AF86-CD4238980C67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +161,10 @@ Global
 		{2A438C03-5EB5-4222-968C-68C83CF3B49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A438C03-5EB5-4222-968C-68C83CF3B49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A438C03-5EB5-4222-968C-68C83CF3B49A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16D49519-9736-4876-AF86-CD4238980C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16D49519-9736-4876-AF86-CD4238980C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D49519-9736-4876-AF86-CD4238980C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16D49519-9736-4876-AF86-CD4238980C67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
