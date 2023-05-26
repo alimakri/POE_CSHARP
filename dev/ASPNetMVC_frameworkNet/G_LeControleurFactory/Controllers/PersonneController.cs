@@ -8,7 +8,6 @@ namespace G_LeControleurFactory.Controllers
 {
     public class PersonneController : Controller
     {
-        // GET: Personne
         public ActionResult Index()
         {
             return View();
