@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Local Storage (persistant)</h1>
+    <h2 id="h2"></h2>
+    <div>
+        <select id="classe">
+            <option value="Animal">Animal</option>
+            <option value="Vegetal">Végétal</option>
+            <option value="Mineral">Minéral</option>
+        </select><br /><br />
+        <input type="text" id="saisie" value="" />
+        <button id="btn">Enregistrer</button>
+        <button id="btn2">Supprimer</button>
+    </div>
+    <script>
+        var h2 = document.getElementById("h2");
+        var saisie = document.getElementById("saisie");
+        var btn = document.getElementById("btn");
+        var btn2 = document.getElementById("btn2");
+        var classe = document.getElementById("classe");
+        var choixClasse = "Animal";
+
+        h2.innerHTML = localStorage[choixClasse];
+        btn.onclick = function () {
+            localStorage.setItem(choixClasse, saisie.value);
+            h2.innerHTML = localStorage[choixClasse];
+            /*alert('Enregistrement de ' + choixClasse + ' : ' + localStorage[choixClasse]);*/
+            saisie.value = "";
+        };
+        btn2.onclick = function () {
+            localStorage.removeItem(choixClasse);
+            h2.innerHTML = "";
+        };
+        classe.onchange = function(){
+            choixClasse = classe.options[classe.selectedIndex].value;
+            h2.innerHTML = localStorage[choixClasse];
+        };
+    </script>
+    <a href="/home/index">Session storage</a>
+</body>
+</html>

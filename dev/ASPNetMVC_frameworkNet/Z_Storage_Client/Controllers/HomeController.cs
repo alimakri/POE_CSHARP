@@ -13,5 +13,9 @@ namespace Z_Storage_Client.Controllers
         {
             return View();
         }
+        public ActionResult Index2()
+        {
+            return View();
+        }
     }
 }
