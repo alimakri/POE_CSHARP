@@ -4,13 +4,23 @@
 }
 
 <h2>Chat</h2>
+<label for="couleur">Votre couleur</label>
+<select id="couleur">
+    <option value="red">Rouge</option>
+    <option value="green">Vert</option>
+    <option value="blue">Bleu</option>
+</select>
+<br />
+<br />
 <label for="identifiant">Votre pseudo</label>
 <input type="text" id="identifiant" />
+<br />
 <br />
 <label for="message">Votre message</label>
 <input type="text" id="message" />
 <br />
-<input type="button" id="btnSend" value="Envoyer"/>
+<br />
+<input type="button" id="btnSend" value="Envoyer" />
 <div id="messages"></div>
 
 @section scripts{
@@ -20,12 +30,15 @@
     <script>
         $(function () {
             var chat = $.connection.chatHub;
-            chat.client.broadcastMessage = function (name, message) {
-                $('#messages').append(name + ' : ' + message + '<br/>');
+            chat.client.broadcastMessage = function (name, message, couleur) {
+                $('#messages').append('<span style="color:' + couleur + '">' + name + ' : ' + message + '</span><br/>');
             };
             $.connection.hub.start().done(function () {
                 $('#btnSend').click(function () {
-                    chat.server.envoyer($('#identifiant').val(), $('#message').val());
+                    chat.server.envoyer(
+                        $('#identifiant').val(),
+                        $('#message').val(),
+                        $('#couleur').val());
                 });
             });
         });

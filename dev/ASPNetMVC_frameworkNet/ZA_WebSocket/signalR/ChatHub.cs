@@ -8,9 +8,9 @@ namespace ZA_WebSocket
 {
     public class ChatHub : Hub
     {
-        public void Envoyer(string name, string message)
+        public void Envoyer(string name, string message, string couleur)
         {
-            Clients.All.broadcastMessage(name, message);
+            Clients.All.broadcastMessage(name, message, couleur);
         }
     }
 }
