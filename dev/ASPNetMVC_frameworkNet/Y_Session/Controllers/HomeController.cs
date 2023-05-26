@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.SessionState;
 using Y_Session.Models;
 
 namespace Y_Session.Controllers
@@ -10,18 +11,27 @@ namespace Y_Session.Controllers
     public class HomeController : Controller
     {
         private List<PanierElement> Panier = null;
+        private HttpSessionState MaSession;
         public HomeController()
         {
-            if (Session != null && Session["Panier"] != null)
-                Panier = (List<PanierElement>)Session["Panier"];
-            if (Panier == null) Panier = new List<PanierElement>();
-            Panier.Add(new PanierElement { Id = 1, Produit = "Souris", Prix = 15 });
-            Panier.Add(new PanierElement { Id = 2, Produit = "Clavier", Prix = 22 });
-            Session["Panier"] = Panier;
-
+            MaSession = System.Web.HttpContext.Current.Session;
         }
         public ActionResult Index()
         {
+            ViewBag.SessionId = MaSession.SessionID;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Index(PanierElement commande)
+        {
+            ViewBag.SessionId = MaSession.SessionID;
+
+            // Récupération du panier dans Session
+            Panier = (List<PanierElement>)Session["Panier"];
+            // Ajoût de la commande
+            Panier.Add(commande);
+            // Enregistrement du panier dans Session
+            Session["Panier"] = Panier;
             return View(Panier);
         }
     }

@@ -6,9 +6,18 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="div2">
+    <h3>SessionId = @ViewBag.SessionId</h3>
+
+    <form method="POST">
+        <div class="div1"> Id : <input type="text" name="Id" /></div>
+        <div class="div1"> Libellé : <input type="text" name="Libelle" /></div>
+        <div class="div1"> Prix : <input type="text" name="Prix" /></div>
+        <div class="div1">
+            <input type="submit" value="Commander" />
+        </div>
+    </form>
+</div>
 <table class="table">
     <tr>
         <th>
