@@ -9,7 +9,7 @@
     <script>
         $('#btn1').click(function() {
             $.ajax({
-                url: "/api/data/",
+                url: "/api/data/a",
                 method: "GET",
                 success: function(data) {
                     var json = data;
@@ -25,8 +25,8 @@
                 }
             });
             $.ajax({
-                url: "/api/data/",
-                method: "POST",
+                url: "/api/data/b",
+                method: "GET",
                 success: function(data) {
                     var json = data;
                     var listEaux = $('#listEaux');
