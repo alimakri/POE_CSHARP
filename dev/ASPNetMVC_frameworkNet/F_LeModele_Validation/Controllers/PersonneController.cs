@@ -67,7 +67,6 @@ namespace F_LeModele_Validation.Controllers
             if (p == null) return RedirectToAction("Index");
             try
             {
-                // TODO: Add update logic here
                 p.Nom = collection["nom"];
                 p.Immatriculation = collection["immatriculation"];
                 p.DateNaissance = DateTime.ParseExact(collection["DateNaissance"], "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
@@ -95,7 +94,6 @@ namespace F_LeModele_Validation.Controllers
             if (p == null) return RedirectToAction("Index");
             try
             {
-                // TODO: Add delete logic here
                 Personnes.Remove(p);
                 return RedirectToAction("Index");
             }

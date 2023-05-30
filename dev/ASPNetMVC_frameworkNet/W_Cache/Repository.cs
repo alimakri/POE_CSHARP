@@ -12,6 +12,7 @@ namespace W_Cache
     {
         public Repository()
         {
+            // Configuration (règle)
             MemoryCache.Default.AddOrGetExisting("MesData", Get(), DateTime.Now.AddSeconds(30));
         }
 
@@ -23,6 +24,7 @@ namespace W_Cache
 
         public object GetCache()
         {
+            // Retourne les données avec ou sans Get
             return MemoryCache.Default.Get("MesData");
         }
     }
