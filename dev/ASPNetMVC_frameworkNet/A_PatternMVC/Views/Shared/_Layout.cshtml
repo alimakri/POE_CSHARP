@@ -30,6 +30,7 @@
     </div>
     <div class="container body-content">
         @RenderBody()
+        @RenderSection("test", required:true)
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Mon application ASP.NET</p>

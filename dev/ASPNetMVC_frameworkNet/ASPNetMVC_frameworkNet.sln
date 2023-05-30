@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_LeControleur", "B_LeContr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_PatternMVC", "A_PatternMVC\A_PatternMVC.csproj", "{9ECE781C-6D3B-4E25-BC34-D8DD066FA2C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_Todo_V1", "C_Todo_V1\C_Todo_V1.csproj", "{77D959ED-0D73-4421-BCE9-C763E8189042}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_Todo_CodeFirst", "C_Todo_V1\C_Todo_CodeFirst.csproj", "{77D959ED-0D73-4421-BCE9-C763E8189042}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_Todo_V2", "D_Todo_V2\D_Todo_V2.csproj", "{897C4C0D-7562-47C2-ACA3-BA2D7B9CAC94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_Todo_DatabaseFirst", "D_Todo_V2\D_Todo_DatabaseFirst.csproj", "{897C4C0D-7562-47C2-ACA3-BA2D7B9CAC94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E_LeControleur_ModelBinder", "E_LeControleur_ModelBinder\E_LeControleur_ModelBinder.csproj", "{7078B6DD-FCF1-4BD7-94A5-59480BF60071}"
 EndProject
