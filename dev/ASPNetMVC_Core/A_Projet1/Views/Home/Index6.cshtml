@@ -1,0 +1,12 @@
+﻿@using A_ProjetComplet.Models
+@model List<Personne>
+
+<h2>Il y a @Model.Count personnes </h2>
+<ul>
+    @{
+        foreach (var p in Model)
+        {
+            <li><strong>@p.Nom</strong> de la ville de @p.Ville</li>
+        }
+    }
+</ul>

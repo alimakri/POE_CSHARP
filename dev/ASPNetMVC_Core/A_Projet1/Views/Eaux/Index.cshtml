@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<h1>Eaux minérales</h1>
+<input type="button" id="btn1" value="Go" style="display:block" />
+<ul id="listEaux">
+</ul>
+@section scripts{
+    <script>
+        $('#btn1').click(function() {
+            $.ajax({
+                url: "/api/data/",
+                method: "GET",
+                success: function(data) {
+                    var json = data;
+                    var listEaux = $('#listEaux');
+                    listEaux.empty();
+                    $.each(json, function(key, val) {
+                        listEaux.append('<li>' + val + '</li>');
+                    });
+                    $('#btn1').css('display', 'none');
+                },
+                error: function(error) {
+                    alert("error" + error);
+                }
+            });
+            $.ajax({
+                url: "/api/data/",
+                method: "POST",
+                success: function(data) {
+                    var json = data;
+                    var listEaux = $('#listEaux');
+                    $.each(json, function(key, val) {
+                        listEaux.append('<li>' + val + '</li>');
+                    });
+                },
+                error: function(error) {
+                    alert("error" + error);
+                }
+            });
+        });
+    </script>
+}
