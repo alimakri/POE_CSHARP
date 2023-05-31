@@ -83,3 +83,4 @@ D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\N_RazorBases\obj\Debug\N_RazorBases.csp
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\N_RazorBases\obj\Debug\N_RazorBases.csproj.CopyComplete
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\N_RazorBases\obj\Debug\N_RazorBases.dll
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\N_RazorBases\obj\Debug\N_RazorBases.pdb
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\N_RazorBases\obj\Debug\N_RazorBases.csproj.AssemblyReference.cache

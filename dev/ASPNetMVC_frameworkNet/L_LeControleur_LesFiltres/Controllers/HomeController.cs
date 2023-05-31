@@ -8,7 +8,6 @@ namespace L_LeControleur_LesFiltres.Controllers
 {
     public class HomeController : Controller
     {
-        private string Message = "";
         public ActionResult Index()
         {
             ViewBag.Message += "Index<br/>";

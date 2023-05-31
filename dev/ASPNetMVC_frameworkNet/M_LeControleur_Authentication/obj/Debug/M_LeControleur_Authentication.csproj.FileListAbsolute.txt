@@ -123,3 +123,5 @@ D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\M_LeControleur_Authentication\obj\Debug
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\M_LeControleur_Authentication\obj\Debug\M_LeControleur_Authentication.csproj.CopyComplete
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\M_LeControleur_Authentication\obj\Debug\M_LeControleur_Authentication.dll
 D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\M_LeControleur_Authentication\obj\Debug\M_LeControleur_Authentication.pdb
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\M_LeControleur_Authentication\bin\fr\EntityFramework.resources.dll
+D:\POE_CSHARP\dev\ASPNetMVC_frameworkNet\M_LeControleur_Authentication\bin\fr\EntityFramework.SqlServer.resources.dll
