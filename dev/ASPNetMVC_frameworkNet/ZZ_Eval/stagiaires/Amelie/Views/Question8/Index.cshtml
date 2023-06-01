@@ -1,0 +1,58 @@
+﻿@model ZZ_Eval.Models.DuckFamily
+@{
+    @ViewBag.Total;
+    ViewBag.Title = "Question 8";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<form method="post">
+    <div style="display:flex">
+        <div style="margin:15px">
+            <h3>Pommes</h3><input type="number" name="pomme" min="0" max="3" value="0" />
+        </div>
+        <div style="margin:15px">
+            <h3>Poires</h3><input type="number" name="poire" min="0" max="3" value="0" />
+        </div>
+        <div style="margin:15px">
+            <h3>Scoubidous</h3><input type="number" name="scoubidou" min="0" max="3" value="0" />
+        </div>
+    </div>
+    <div style="margin:15px">
+        <input type="submit" name="submit" value="Commander" id="commander" />
+        <input type="button" id="reset" value="Reset" />
+        <h3><label id="total">@ViewBag.Total</label> €</h3> 
+    </div>
+</form>
+@section scripts{
+    <script>
+        var cpt = 0;
+        var sum = 0.0;
+        $("#commander").click(function () {
+            //alert("lancement de la fonction" + @ViewBag.Total )
+            cpt++;
+            if (cpt == 1) {
+                alert("premier coup montant : " + $("#total").value )
+                if (  $("#total").value < 3,14) {
+                    alert("retentez un coup");
+                    cpt++;
+                } else {
+                    cpt = 0;
+                    $("#total").value =0;
+                }
+            }
+            if (cpt == 2) {
+                alert("montant total deuxieme coup : " + $("#total").value )
+                if ($("#total").value == 3,14) {
+                    alert("gagneé!");
+                   $("#total").value = 0;
+                    cpt = 0;
+                } else { cpt = 0; $("#total").value = 0; }
+            }
+    });
+    </script>
+
+
+
+}
+@section retour{
+    <a href="/home/question/8">Retour</a>
+}

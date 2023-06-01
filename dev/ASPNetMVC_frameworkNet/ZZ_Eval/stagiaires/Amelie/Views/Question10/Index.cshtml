@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Question 10";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+
+<br />
+<br />
+<h2>Réponse à la question 10</h2>
+<br />
+<br />
+
+<div style="display:flex ; flex-direction:row; margin : 20px; justify-content:center">
+
+    <div style="margin:10px">
+        @Html.Partial("Vue1")
+        <img class="fit-picture"
+             src="..\images\vuePartielle.png"
+             alt="image non affichée">
+        <footer style="margin-bottom:0">
+            <p>mai 2023 - makrisoft.net</p>
+        </footer>
+    </div>
+
+    <div style="margin:10px">
+        @Html.Partial("Vue2")
+        <img class="fit-picture"
+             src="..\images\vuePartielle.png"
+             alt="image non affichée">
+        <footer style="margin-bottom:0">
+            <p>mai 2023 - makrisoft.net</p>
+        </footer>
+    </div>
+
+</div>
+
+
+<br />
+<br />
+<br />
+<br />
+
+@section retour{
+    <a href="/home/question/10">Retour</a>
+}

@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Evaluation</h1>
+    <p class="lead"> ASP NET .Net Framework.</p>
+    <p><a href="https://makrisoft.net" class="btn btn-primary btn-lg">Source &raquo;</a></p>
+</div>
+
+@*<div id="storage"></div>*@
+<strong>Evaluation sur 50 points. Répondez aux 10 questions ci-dessous dans un ordre quelconque.</strong>
+<table style="font-size:18px; width:300px">
+    @{
+        // ------------------------------------
+        var n = 10;
+        var questions = new List<string> {
+            "MVVM|5", "Injection|10", "Retour|3", "Ajax Client|7", "Code First|5",
+            "Model Binder|6", "Ajax Server|5", "Souviens-toi|4", "Matrix|3","Vue partielle|2" };
+        // ------------------------------------
+        var j = 1; string[] tab; string q;
+        for (var i = 0; i < n; i++)
+        {
+            j = i + 1;
+            tab = questions[i].Split('|');
+            q = "Q" + j;
+            <tr> <td>@j</td><td><a href="/home/question/@j">@tab[0]</a></td><td>@tab[1] points</td><td><input type="checkbox" id="@q" onclick="coche(@j)" /></td></tr>
+        }
+    }
+</table>
+@section scripts{
+    <script>
+        function coche(id) {
+            if ($('#Q' + id).is(':checked')) localStorage["q"] += ";Q" + id; else localStorage["q"] = localStorage["q"].replace(";Q" + id, "");
+            $('#storage').html(localStorage["q"]);
+        }
+        $(localStorage["q"].split(';')).each(function (key, val) {
+            if (val != '') $('#' + val).attr('checked', 'checked');
+        })
+    </script>
+}

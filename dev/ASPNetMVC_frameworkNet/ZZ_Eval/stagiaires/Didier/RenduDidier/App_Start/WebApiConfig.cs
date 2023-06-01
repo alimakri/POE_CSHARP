@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
+
+namespace ZZ_Eval
+{
+    public static class WebApiConfig
+    {
+        public static void Register(HttpConfiguration config)
+        {
+            // Configuration et services de l'API Web
+
+            // Itinéraires de l'API Web
+            config.MapHttpAttributeRoutes();
+
+            config.Routes.MapHttpRoute(
+                name: "ApiFoot",
+                routeTemplate: "api/{controller}/{equipe}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+            config.Routes.MapHttpRoute(
+                name: "MathApi",
+                routeTemplate: "api/{controller}/{mathematicien}",
+                defaults: new {action = "Get", mathematicien = RouteParameter.Optional }
+            ); 
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+        }
+    }
+}

@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<section class="titre data-content">
+    <h1 class="nom_sportif">Ajax Amsterdam</h1>
+    <section class="data">
+        <section id="section1">
+            <a href="#" id="logo">cliquez ici pour voir le logo</a>
+        </section>
+        <section id="section2" style="display:none">
+            <figure>
+                <img src="~/images/logoAjax.png" width="120" height="120">
+            </figure>
+        </section>
+        <div>
+            <a href="#" id="fiche">cliquez ici pour voir la fiche</a>
+        </div>
+        <div class="identite">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Nom&nbsp;: <strong id="nom" style="font-size:24px"></strong></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Pays&nbsp;: <strong id="pays"></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Fondé en&nbsp;: <strong id="anneeFondation"></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Président&nbsp;: <strong id="president"></strong></td>
+                    </tr>
+                    <tr><td>Entraineur&nbsp;: <strong id="entraineur"></strong></a></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>
+@section scripts{
+    <script>
+
+        $('#logo').click(function () {
+            $('#section2').css('display', 'block');
+        });
+
+        $('#fiche').click(function () {
+
+            $.ajax({
+                url: "/api/ApiFoot/?equipe=AMSTERDAM",
+                method: "PUT",
+                success: function (data) {
+                    data = JSON.parse(data);
+                    //alert(data.Nom)
+                    $("#nom").html(data.Nom);
+                    $("#pays").html(data.Pays);
+                    $("#anneeFondation").html(data.AnneeFondation);
+                    $("#president").html(data.President);
+                    $("#entraineur").html(data.Entraineur);
+
+                },
+                error: function (error) {
+                    alert("error" + error);
+                }
+            });
+
+        });
+
+    </script>
+}
+
+
+@section retour{
+    <a href="/home/question/4">Retour</a>
+}

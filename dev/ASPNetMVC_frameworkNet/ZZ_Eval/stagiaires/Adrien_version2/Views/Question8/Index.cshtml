@@ -1,0 +1,69 @@
+﻿@model ZZ_Eval.Models.DuckFamily
+@{
+    ViewBag.Title = "Question 8";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<form method="post">
+    <div style="display:flex">
+        <div style="margin:15px">
+            <h3>Pommes</h3><input type="number" name="pomme" min="0" max="3" value="0" />
+        </div>
+        <div style="margin:15px">
+            <h3>Poires</h3><input type="number" name="poire" min="0" max="3" value="0" />
+        </div>
+        <div style="margin:15px">
+            <h3>Scoubidous</h3><input type="number" name="scoubidou" min="0" max="3" value="0" />
+        </div>
+    </div>
+    <div style="margin:15px">
+        <input type="submit" name="submit" value="Commander" />
+        <input type="button" id="reset" value="Reset" />
+        <h3><label id="total">@ViewBag.Total</label> €</h3>
+    </div>
+</form>
+@section scripts{
+    <script>
+        // Pas réussi à faire fonctionner le local storage
+        function Update() {
+            var pomme = parseInt($("input[name=pomme]").val()); // je récupère les valeurs des inputs
+            var poire = parseInt($("input[name=poire]").val());
+            var scoubidou = parseInt($("input[name=scoubidou]").val());
+
+            var total = pomme * 1 + poire * 0.1 + scoubidou * 0.01;
+            localStorage.setItem('total', total.toString()); // sauvegarde du total dans le local storage (ça marche pas...)
+            if (total >= 3.14) { // blocage des champs à partir de 3.14€
+                $("input[type='number']").prop("disabled", true);
+                $("input[name='submit']").prop("disabled", true);
+                $("#reset").prop("disabled", false);
+            } else {
+                $("input[type='number']").prop("disabled", false);
+                $("input[name='submit']").prop("disabled", false);
+                $("#reset").prop("disabled", true);
+            }
+            $("#total").text(total);
+
+        }
+        $(document).ready(function () {
+            var previousTotal = localStorage.getItem('total'); // on récupère la valeur du local storage
+            if (previousTotal) {
+                var total = parseFloat(previousTotal);
+                $("#total").text(total);
+            }
+        });
+
+        $("input[type='number']").on("input", function () {
+            Update();
+        });
+
+        $("input[name='submit']").on("click", function () {
+            $(this).data("previousTotal", localStorage.getItem('total'));
+        });
+
+        $("#reset").on("click", function () { // Configuration du bouton reset
+            $("total").text("0");
+        });
+    </script>
+}
+@section retour{
+    <a href="/home/question/8">Retour</a>
+}
