@@ -16,7 +16,10 @@ namespace ZZ_Eval.Controllers
         [HttpPost]
         public ActionResult Index(int pomme, int poire, int scoubidou, string submit)
         {
-            ViewBag.Total = pomme * 1M + poire * 0.1M + scoubidou * 0.01M;
+            if (submit == "Reset") 
+                ViewBag.Total = 0;
+            else
+                ViewBag.Total = pomme * 1M + poire * 0.1M + scoubidou * 0.01M;
             return View();
         }
     }

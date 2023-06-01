@@ -13,6 +13,8 @@ namespace ZZ_Eval.Controllers
     {
         public string Get()
         {
+            //var path = HttpContext.Current.Server.MapPath("/images/ramanujan.png");
+            //var photo = System.IO.File.ReadAllBytes(path);
             return "test";
         }
         public string Put(string equipe)

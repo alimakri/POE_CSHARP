@@ -15,14 +15,11 @@ namespace ZZ_Eval
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "Math",
-                routeTemplate: "api/{controller}/math/{mathematicien}"
-            );
-            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "api/ApiMath/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
         }
     }
 }

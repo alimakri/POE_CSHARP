@@ -12,12 +12,7 @@ namespace ZZ_Eval.Controllers
             var personnes = Repo.GetLesPersonnes();
             var voitures = Repo.GetLesVoitures();
 
-            return View(new Question1ViewModel
-            {
-                Titre = "Passagers des voitures",
-                Personnes = personnes,
-                Voitures= voitures
-            });
+            return View();
         }
     }
 }

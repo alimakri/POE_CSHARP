@@ -43,31 +43,6 @@
     </section>
 </section>
 @section scripts{
-    <script>
-        $('#logo').click(function () {
-            $('#section2').css('display', 'block');
-            $('#logo').css('display', 'none');
-        });
-        $('#fiche').click(function () {
-            $.ajax({
-                url: "/api/apifoot/?equipe=amsterdam",
-                //url: "/api/apifoot/amsterdam",
-                method: "PUT",
-                success: function (data) {
-                    var fiche = JSON.parse(data);
-                    $('#nom').html(fiche.Nom); //
-                    $('#pays').html(fiche.Pays); //
-                    $('#anneeFondation').html(fiche.AnneeFondation); //
-                    $('#president').html(fiche.President); //
-                    $('#entraineur').html(fiche.Entraineur); //
-                },
-                error: function (error) {
-                    alert("error" + error);
-                }
-            });
-            $('#fiche').css('display', 'none');
-        });
-    </script>
 }
 @section retour{
     <a href="/home/question/4">Retour</a>

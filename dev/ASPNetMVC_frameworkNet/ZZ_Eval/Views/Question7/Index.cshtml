@@ -10,13 +10,13 @@
 </div>
 @section scripts{
     <script>
-        var url = "/api/apimath/math/@ViewBag.Nom";
+        var url = "/api/apimath/@ViewBag.Nom";
         $.ajax({
             url: url,
             method: "GET",
             success: function (data) {
                 var fiche = JSON.parse(data);
-                $('#mathematicien').html(fiche.Mathematicien);
+                $('#mathematicien').html(fiche.mathematicien);
                 $('#photo').attr('src', 'data:image/PNG;base64,' + fiche.Photo);
                 $('#formule').attr('src', 'data:image/PNG;base64,' + fiche.Formule);
             },

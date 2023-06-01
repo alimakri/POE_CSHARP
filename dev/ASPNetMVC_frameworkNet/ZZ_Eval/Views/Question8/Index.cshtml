@@ -22,16 +22,7 @@
     </div>
 </form>
 @section scripts{
-    <script>
-        $('#reset').click(function () {
-            localStorage.setItem("Total", 0);
-            $('#total').html(localStorage.getItem('total'));
-        });
-        var totalPrecedent = parseFloat($('#total').html().replace(',', '.')) || 0;
-        var montant = parseFloat(localStorage.getItem("Total")) || 0;
-        localStorage.setItem("Total", totalPrecedent + montant);
-        $('#total').html((totalPrecedent + montant).toFixed(2));
-    </script>
+
 }
 @section retour{
     <a href="/home/question/8">Retour</a>

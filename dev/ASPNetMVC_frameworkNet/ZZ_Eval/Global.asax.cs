@@ -2,9 +2,6 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using ZB_Eval.Binders;
-using ZZ_Eval.Injection;
-using ZZ_Eval.Models;
 
 namespace ZZ_Eval
 {
@@ -17,8 +14,6 @@ namespace ZZ_Eval
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            ControllerBuilder.Current.SetControllerFactory(new QuestionControllerFactory());
-            ModelBinders.Binders.Add(typeof(DuckFamily), new DuckFamilyModelBinder());
         }
     }
 }

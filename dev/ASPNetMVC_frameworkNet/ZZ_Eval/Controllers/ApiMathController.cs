@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Ajax.Utilities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,20 +8,42 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 
+using System.Web.UI.WebControls;
+
 namespace ZB_Eval.Controllers
 {
     public class ApiMathController : ApiController
     {
-        public string Get(string mathematicien)
+        //Je n'arrive pas à enregistrer les images, ReadAllBytes() ne fait que lire puis fermer le fichier, alors que WriteAllBytes le réécrit
+        public string Get(string id)
         {
-            var photo = HttpContext.Current.Server.MapPath($"/images/{mathematicien}.png");
-            var formule = HttpContext.Current.Server.MapPath($"/images/formule_{mathematicien}.png");
-            return JsonConvert.SerializeObject(new
+            if (id.ToUpper() == "RAMANUJAN")
             {
-                Mathematicien = mathematicien.Substring(0,1).ToUpper() + mathematicien.Substring(1).ToLower(),
-                Photo= System.IO.File.ReadAllBytes(photo),
-                Formule= System.IO.File.ReadAllBytes(formule)
-            });
+                var pathPhoto = HttpContext.Current.Server.MapPath("/images/ramanujan.png;base64,");
+                var pathFormule = HttpContext.Current.Server.MapPath("/images/formule_ramanujan.png;base64,");
+                return JsonConvert.SerializeObject(new
+                {
+                    Mathematicien = id,
+                    Photo = System.IO.File.ReadAllBytes(pathPhoto),
+                    Formule = System.IO.File.ReadAllBytes(pathFormule),
+                });
+            }
+            else if (id.ToUpper() == "EINSTEIN")
+            {
+                var pathPhoto = HttpContext.Current.Server.MapPath("/images/einstein.png;base64,");
+                var pathFormule = HttpContext.Current.Server.MapPath("/images/formule_einstein.png;base64,");
+                return JsonConvert.SerializeObject(new
+                {
+                    Mathematicien = id,
+                    Photo = System.IO.File.ReadAllBytes(pathPhoto),
+                    Formule = System.IO.File.ReadAllBytes(pathFormule),
+                });
+            }
+            else
+                return null;
+
         }
+
     }
+
 }

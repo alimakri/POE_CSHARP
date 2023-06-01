@@ -7,7 +7,7 @@ namespace ZZ_Eval.Models
 {
     public class DuckFamily
     {
-        public string PersonnagePrincipal { get; set; }
-        public List<string> Neveux { get; set; }
+        public string Principal { get; set; }
+        public List<string> Neveus { get; set; }
     }
 }
