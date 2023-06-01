@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2sfVmAa0T5Tqab7NgGsSaC0TXpdkGKLOyeuGi/eub+c=",
+  "Hash": "soh79ox96kRs2xTD1ysdDgqtX7g7iio2EwQ0dK3gy8E=",
   "Source": "B_ProjetARemplir",
   "BasePath": "_content/B_ProjetARemplir",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\POE_CSHARP\\dev\\ASPNetMVC_Core\\B_ProjetARemplir\\wwwroot\\images\\public.png",
+      "SourceId": "B_ProjetARemplir",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\POE_CSHARP\\dev\\ASPNetMVC_Core\\B_ProjetARemplir\\wwwroot\\",
+      "BasePath": "_content/B_ProjetARemplir",
+      "RelativePath": "images/public.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\public.png"
     },
     {
       "Identity": "D:\\POE_CSHARP\\dev\\ASPNetMVC_Core\\B_ProjetARemplir\\wwwroot\\js\\site.js",

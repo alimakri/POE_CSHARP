@@ -7,6 +7,8 @@ builder.Host.UseSerilog();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+var cnx = builder.Configuration.GetConnectionString("DefaultConnection");
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
