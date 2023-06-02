@@ -8,21 +8,14 @@
         </table>
     </div>
 
-
-
     <div style="width: 60%; padding: 20px; border: 1px solid blue">
         <h3>Horaires de la piscine <span id="NomPiscine"></span> : </h3>
         <p>  <span id="horaire1"></span>  <span id="horaire2"></span>   </p>
-
-
-
         <ul id="afficherHoraire">
         </ul>
-
-
-
         <h3>Adresse : </h3>
-        <p id="adresse"> </p>
+        <p id="adresse1"> </p>
+        <p id="adresse2"> </p>
     </div>
 </div>
 
@@ -99,12 +92,13 @@
                     $("#afficherHoraire").append(hor);
                 }
             }
-            $("#adresse").html(piscine.Adresse1);
+            $("#adresse1").html(piscine.Adresse1);
+            $("#adresse2").html(piscine.Adresse2);
         }
 
 
         function displayPiscines() {
-
+            $("#tableau_piscine").empty();
             $.each(piscines, function (key, value) {
                 var table = '<tr onclick="AfficherDetails('
                     + value.Id +
@@ -133,6 +127,7 @@
                 }
             });
         }
-        tempsReel();
+        setInterval(function () { tempsReel(); }, 3000);
+        
     </script>
 }

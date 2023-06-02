@@ -48,8 +48,21 @@ namespace H_UILWeb.Controllers
                         piscine.HorairesStr.Add($"{piscine.Horaires[i].ToString("HH:mm")} - {piscine.Horaires[i + 1].ToString("HH:mm")}");
                     }
                 }
+                MajAdresse(piscine);
+
             }
             return JsonConvert.SerializeObject(Piscines);
         }
+        private void MajAdresse(PiscineViewModel p)
+        {
+            var dico = Api.CallNodejsApi(p.Nom);
+            if (dico.Count != 0)
+            {
+                p.Adresse1 = (string)dico["adresse1"];
+                p.Adresse2 = (string)dico["adresse2"];
+                p.Telephone = (string)dico["telephone"];
+            }
+        }
+
     }
 }
