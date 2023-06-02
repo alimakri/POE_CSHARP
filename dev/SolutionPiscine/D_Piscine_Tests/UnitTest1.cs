@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Piscine_BOL;
+using PiscineBOL;
 using System;
 using System.Collections.Generic;
 using System.Data;

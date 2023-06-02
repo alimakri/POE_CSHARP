@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div id="principal">
+    <div class="avanttab">
+        <table style="margin:15px" id="tableau_piscine">
+        </table>
+    </div>
+
+
+
+    <div style="width: 60%; padding: 20px; border: 1px solid blue">
+        <h3>Horaires de la piscine <span id="NomPiscine"></span> : </h3>
+        <p>  <span id="horaire1"></span>  <span id="horaire2"></span>   </p>
+
+
+
+        <ul id="afficherHoraire">
+        </ul>
+
+
+
+        <h3>Adresse : </h3>
+        <p id="adresse"> </p>
+    </div>
+</div>
+
+
+
+<style>
+
+
+
+    ul {
+        list-style-type: none;
+    }
+
+
+
+    .avanttab {
+        display: flex;
+        width: 60%;
+        border: 1px solid blue;
+    }
+
+
+
+    #principal {
+        display: flex;
+        /*        border: 1px solid red;*/
+        width: 100%
+    }
+
+
+
+    .td1 {
+        height: 35px;
+        width: 35px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        color: white;
+        justify-content: center;
+        background-color: green
+    }
+
+
+
+    .td2 {
+        vertical-align: text-top;
+        font-weight: bold
+    }
+
+
+
+    .td3 {
+        vertical-align: text-top;
+        font-size: 13px
+    }
+</style>
+@section scripts{
+    <script>
+        var piscines;
+
+        function AfficherDetails(id) {
+            $(".leshoraires").remove();
+            var piscine;
+            for (var p in piscines) {
+                if (piscines[p].Id == id) {
+                    piscine = piscines[p];
+                    break;
+                }
+            }
+            if (piscine.HorairesStr != null) {
+                for (var i = 0; i < piscine.HorairesStr.length; i++) {
+                    var hor = '<li class="leshoraires">' + piscine.HorairesStr[i] + '<li>';
+                    $("#afficherHoraire").append(hor);
+                }
+            }
+            $("#adresse").html(piscine.Adresse1);
+        }
+
+
+        function displayPiscines() {
+
+            $.each(piscines, function (key, value) {
+                var table = '<tr onclick="AfficherDetails('
+                    + value.Id +
+                    ')"><td><table><tr><td style="display: flex; margin: 5px; "><div class="td1">'
+                    + value.Occupation +
+                    '</div></td><td rowspan="2" class="td2">'
+                    + value.Nom +
+                    ';</td></tr><tr><td class="td3">'
+                    + value.Capacite +
+                    '</td></tr></table></td></tr> '
+                $("#tableau_piscine").append(table);
+            });
+
+        }
+        function tempsReel() {
+            $.ajax({
+                url: "/api/infosbaseapi",
+                method: "GET",
+                success: function (data) {
+                    piscines = JSON.parse(data);
+                    console.log(piscines);
+                    displayPiscines();
+                },
+                error: function (error) {
+                    alert("error" + error);
+                }
+            });
+        }
+        tempsReel();
+    </script>
+}

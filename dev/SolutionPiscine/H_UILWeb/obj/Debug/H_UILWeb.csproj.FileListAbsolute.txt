@@ -1,3 +1,5 @@
+D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\obj\Debug\H_UILWeb.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\obj\Debug\H_UILWeb.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\H_UILWeb.dll.config
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\H_UILWeb.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\H_UILWeb.pdb
@@ -69,6 +71,7 @@ D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Microsoft.Owin.Security.Twitter.d
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Microsoft.Web.Infrastructure.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Newtonsoft.Json.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Owin.dll
+D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Piscine_BOL.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\System.Net.Http.Formatting.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\System.Web.Helpers.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\System.Web.Http.dll
@@ -80,6 +83,9 @@ D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\System.Web.WebPages.Deployment.dl
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\System.Web.WebPages.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\System.Web.WebPages.Razor.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\WebGrease.dll
+D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Piscine_DAL.dll
+D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\E_Piscine_Commun.dll
+D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Piscine_BOL.pdb
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\System.Web.Helpers.xml
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\System.Web.Mvc.xml
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\System.Web.Optimization.xml
@@ -107,6 +113,9 @@ D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Microsoft.Owin.Security.Twitter.x
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Microsoft.Owin.Security.OAuth.xml
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Piscine_DAL.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\Piscine_DAL.dll.config
+D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\E_Piscine_Commun.pdb
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\fr\System.Web.Helpers.resources.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\fr\System.Web.Mvc.resources.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\fr\System.Web.Optimization.resources.dll
@@ -129,8 +138,6 @@ D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\fr\Microsoft.Owin.Security.Facebo
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\fr\Microsoft.Owin.Security.Google.resources.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\fr\Microsoft.Owin.Security.Twitter.resources.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\bin\fr\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\obj\Debug\H_UILWeb.csproj.AssemblyReference.cache
-D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\obj\Debug\H_UILWeb.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\obj\Debug\H_UILWeb.csproj.CopyComplete
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\obj\Debug\H_UILWeb.dll
 D:\POE_CSHARP\dev\SolutionPiscine\H_UILWeb\obj\Debug\H_UILWeb.pdb

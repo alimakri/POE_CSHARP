@@ -1,4 +1,5 @@
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf.csproj.SuggestedBindingRedirects.cache
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\Views\MainWindow.g.cs
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\App.g.cs
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf_MarkupCompile.cache
@@ -6,17 +7,19 @@ D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf_MarkupCompile.lref
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\G_UILWpf.exe.config
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\G_UILWpf.exe
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\G_UILWpf.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\EntityFramework.SqlServer.dll
+D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\Newtonsoft.Json.dll
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\Piscine_BOL.dll
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\Piscine_DAL.dll
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\E_Piscine_Commun.dll
-D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\Newtonsoft.Json.dll
-D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\EntityFramework.dll
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\Piscine_BOL.pdb
+D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\EntityFramework.xml
+D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\Newtonsoft.Json.xml
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\Piscine_DAL.pdb
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\Piscine_DAL.dll.config
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\E_Piscine_Commun.pdb
-D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\Newtonsoft.Json.xml
-D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\EntityFramework.xml
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\Views\MainWindow.baml
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf.g.resources
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf.Properties.Resources.resources
@@ -25,5 +28,3 @@ D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf.csproj.CoreCompile
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf.csproj.CopyComplete
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf.exe
 D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\obj\Debug\G_UILWpf.pdb
-D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\EntityFramework.SqlServer.dll
-D:\POE_CSHARP\dev\SolutionPiscine\G_UILWpf\bin\Debug\EntityFramework.SqlServer.xml

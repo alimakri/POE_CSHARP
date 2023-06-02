@@ -1,6 +1,6 @@
 ﻿using G_UILWpf.CommunViewModels;
 using G_UILWpf.Dto;
-using Piscine_BOL;
+using PiscineBOL;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -71,17 +71,20 @@ namespace G_UILWpf.ViewModels
             foreach (var piscine in Piscines)
             {
                 piscine.Horaires = new List<DateTime>();
-                foreach (JToken token in (Newtonsoft.Json.Linq.JArray)dico[piscine.Nom])
+                if (dico.ContainsKey(piscine.Nom))
                 {
-                    if (DateTime.TryParse(token.ToString(), out DateTime dateTime))
+                    foreach (JToken token in (Newtonsoft.Json.Linq.JArray)dico[piscine.Nom])
                     {
-                        piscine.Horaires.Add(dateTime);
+                        if (DateTime.TryParse(token.ToString(), out DateTime dateTime))
+                        {
+                            piscine.Horaires.Add(dateTime);
+                        }
                     }
-                }
-                piscine.HorairesStr = new List<string>();
-                for (int i = 0; i < piscine.Horaires.Count; i += 2)
-                {
-                    piscine.HorairesStr.Add($"{piscine.Horaires[i].ToString("HH:mm")} - {piscine.Horaires[i + 1].ToString("HH:mm")}");
+                    piscine.HorairesStr = new List<string>();
+                    for (int i = 0; i < piscine.Horaires.Count; i += 2)
+                    {
+                        piscine.HorairesStr.Add($"{piscine.Horaires[i].ToString("HH:mm")} - {piscine.Horaires[i + 1].ToString("HH:mm")}");
+                    }
                 }
             }
 
