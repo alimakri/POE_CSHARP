@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\CSharp\1_A_Enum\bin\Debug\1_A_Enum.exe.config
+D:\POE_CSHARP\dev\CSharp\1_A_Enum\bin\Debug\1_A_Enum.exe
+D:\POE_CSHARP\dev\CSharp\1_A_Enum\bin\Debug\1_A_Enum.pdb
+D:\POE_CSHARP\dev\CSharp\1_A_Enum\obj\Debug\1_A_Enum.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\CSharp\1_A_Enum\obj\Debug\1_A_Enum.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\CSharp\1_A_Enum\obj\Debug\1_A_Enum.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\CSharp\1_A_Enum\obj\Debug\1_A_Enum.exe
+D:\POE_CSHARP\dev\CSharp\1_A_Enum\obj\Debug\1_A_Enum.pdb
