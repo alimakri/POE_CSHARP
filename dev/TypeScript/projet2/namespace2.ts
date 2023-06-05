@@ -1,0 +1,1 @@
+let soleil = new Galaxie.Astre();

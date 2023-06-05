@@ -23,3 +23,32 @@ console.log(ficus);
 console.log("==>" + ficus);
 console.log('vert'.replace(ficus, 'ooo'));
 
+class Vegetaux{
+    private _liste: Vegetal[];
+    constructor(){
+        this._liste =[];
+        this._liste.push(
+            new Vegetal('Ficus'),
+            new Vegetal('begonia'),
+            new Vegetal('Yucca')
+        );
+    }
+    [Symbol.iterator](){
+        let index:number=0;
+        let liste = this._liste;
+        return{
+            next(){
+                let item = new VegetalIterator();
+                if(index < liste.length){
+                    item.value=liste[index];
+                    item.done=false;
+                    index++;
+                }
+            }
+        }
+    }
+}
+class VegetalIterator{
+    value:Vegetal;
+    done: boolean=true;
+}
