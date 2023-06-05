@@ -1,0 +1,26 @@
+﻿
+<h1> @ViewBag.Nom </h1>
+
+<img id="photo" alt="photo" />
+<img id="formule" alt="formule" />
+<p> url = "/api/ApiMath/?id=@ViewBag.Nom" </p>
+
+@section scripts{
+    <script>
+        var url = "/api/ApiMath/?id=@ViewBag.Nom";
+        $.ajax({
+            url: url,
+            method: "GET",
+            success: function (data) {
+                var fiche = JSON.parse(data);
+                alert(data)
+                $('#mathematicien').html(fiche.Mathematicien);
+                $('#photo').attr('src', 'data:image/PNG;base64,' + fiche.Photo);
+                $('#formule').attr('src', 'data:image/PNG;base64,' + fiche.Formule);
+            },
+            error: function (error) {
+                alert("error" + error);
+            }
+        });
+    </script>
+}

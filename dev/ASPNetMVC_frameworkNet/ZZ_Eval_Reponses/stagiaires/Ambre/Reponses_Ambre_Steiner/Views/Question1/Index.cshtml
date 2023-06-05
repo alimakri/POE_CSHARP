@@ -1,0 +1,66 @@
+﻿@model ZZ_Eval.ViewModels.Question1ViewModel
+@{
+    @ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Model.Titre</h2>
+<div>
+    <h3>Les passagers</h3>
+    <div>
+        <table class="table">
+            <tr>
+                <th>
+                    Nom
+                </th>
+                <th>
+                    Date de naissance
+                </th>
+                <th>
+                    Embauché
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Personnes)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nom)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateNaissance)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EstEmbauche)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    <div>
+        <h3>Les voitures</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Nom
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Voitures)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nom)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+@section retour{
+    <a href="/home/question/1">Retour</a>
+}

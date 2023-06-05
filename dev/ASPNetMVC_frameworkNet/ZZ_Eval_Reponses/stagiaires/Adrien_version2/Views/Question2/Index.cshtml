@@ -1,0 +1,14 @@
+﻿﻿@model System.Collections.ArrayList
+@{
+    ViewBag.Title = "Question 2";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>@Model[0] @Model[1] @Model[2]</h2>
+@if ((bool)Model[3])
+{
+    <img src="~/images/question2.png" />
+}
+@section retour{
+    <a href="/home/question/2">Retour</a>
+}

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Coffre";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Coffre</h2>
+
+<form method="post" style="margin:10px">
+    <label for="cle">Clef: </label>
+    <input type="text" name="cle" id="cle" />
+    <input type="submit" value="Go" />
+</form>
+<img src="~/images/neo.png" />
+
+@section retour{
+    <a href="/question9/index">Retour</a>
+}

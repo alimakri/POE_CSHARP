@@ -1,0 +1,31 @@
+﻿@model ZZ_Eval.Models.DuckFamily
+@{
+    ViewBag.Title = "Question 7";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<div>
+    <h2 id="mathematicien"></h2>
+    <img id="photo" alt="photo" />
+    <img id="formule" alt="formule" />
+</div>
+@section scripts{
+    <script>
+        var url = "/api/ApiMath/@ViewBag.Nom";
+        $.ajax({
+            url: url,
+            method: "GET",
+            success: function (data) {
+                var fiche = JSON.parse(data);
+                $('#mathematicien').html(fiche.Mathematicien);
+                $('#photo').attr('src', 'data:image/PNG;base64,' + fiche.Photo);
+                $('#formule').attr('src', 'data:image/PNG;base64,' + fiche.Formule);
+            },
+            error: function (error) {
+                alert("error" + error);
+            }
+        });
+    </script>
+}
+@section retour{
+    <a href="/home/question/7">Retour</a>
+}

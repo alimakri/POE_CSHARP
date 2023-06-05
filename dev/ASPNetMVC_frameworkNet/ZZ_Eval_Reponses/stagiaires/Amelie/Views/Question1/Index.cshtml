@@ -1,0 +1,67 @@
+﻿@model ZZ_Eval.ViewModels.Agre
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+<h2>Passagers des voitures</h2>
+<div>
+    <h3>Les passagers</h3>
+    <div>
+        <table class="table">
+            <tr>
+                <th>
+                    Nom
+                </th>
+                <th>
+                    Date de naissance
+                </th>
+                <th>
+                    Embauché
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Item1)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nom)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateNaissance)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EstEmbauche)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    <div>
+        <h3>Les voitures</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    Nom
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Item2)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nom)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+@section retour{
+    <a href="/home/question/1">Retour</a>
+}

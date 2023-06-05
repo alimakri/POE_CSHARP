@@ -1,0 +1,240 @@
+﻿
+@{
+    ViewBag.Title = "Question";
+}
+
+<h2>Question n° @ViewBag.NoQuestion</h2>
+@if (ViewBag.NoQuestion == 1)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <h2>MVVM -  5 points</h2>
+            <p><a class="btn btn-default" href="/question1/index">Votre réponse</a></p>
+            <p>
+                Dans une application Asp Net MVC .Net framework, on veut combiner les pattern MVC et MVVM. Pour cela, on a :
+                <ul>
+                    <li>un contrôleur Question1 dans le dossier Controllers</li>
+                    <li>un modèle Personne dans le dossier Models</li>
+                    <li>une vue Index dans le dossier Views/Question1</li>
+                </ul>
+                <ol>
+                    <li><strong>Modifier le return View de l'action Index du contrôleur Question1.</strong></li>
+                    <li> <strong>Compléter la classe Question1ViewModel dans le dossier ViewModels.</strong></li>
+                </ol>
+            </p>
+            <div style="align-content:center;margin:30px">
+                <h4 style="color:darkcyan">Résultat attendu</h4>
+                <img src="~/images/question1.png" style="align-content:center;border:2px solid silver" />
+            </div>
+        </div>
+    </div>
+}
+
+else if (ViewBag.NoQuestion == 2)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Injection -  10 points</h2>
+            <p><a class="btn btn-default" href="/question2/index">Votre réponse</a></p>
+            <p>
+                Le contrôleur Question2 définit :
+                <ul>
+                    <li>un constructeur avec un paramètre de type ArrayList. </li>
+                    <li>une action Index</li>
+                </ul>
+                <ol>
+                    <li><strong>Définir une classe dans le dossier Injection pour que le constructeur réceptionne une ArrayList.</strong></li>
+                    <li> <strong>Compléter le fichier global.asax si nécessaire.</strong></li>
+                    <li><strong>Cette question ayant un impact sur les autres réponses, vérifiez que celles-ci soient toujours corrects.</strong></li>
+                </ol>
+            </p>
+            <div style="align-content:center;margin:30px">
+                <h4 style="color:darkcyan">Résultat attendu</h4>
+                <img src="~/images/capture2.png" style="align-content:center;border:2px solid silver" />
+            </div>
+        </div>
+    </div>
+}
+else if (ViewBag.NoQuestion == 3)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Retour -  3 points</h2>
+            <p><a class="btn btn-default" href="/question3/index">Votre réponse</a></p>
+            <p>
+                Le contrôleur Question3 définit :
+                <ul>
+                    <li>une simple action Index</li>
+                    <li>une simple vue Index mais boguée.</li>
+                </ul>
+                <ol>
+                    <li><strong>Corriger la vue.</strong></li>
+                </ol>
+            </p>
+            <div style="align-content:center;margin:30px">
+                <h4 style="color:darkcyan">Résultat attendu</h4>
+                <img src="~/images/capture3.png" style="align-content:center;border:2px solid silver" />
+            </div>
+        </div>
+    </div>
+
+}
+else if (ViewBag.NoQuestion == 4)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Ajax Client -  3 points</h2>
+            <p><a class="btn btn-default" href="/question4/index">Votre réponse</a></p>
+            <p>
+                Le contrôleur Question4 définit :
+                <ul>
+                    <li>une simple action Index</li>
+                    <li>une vue Index avec deux liens.</li>
+                </ul>
+                <ol>
+                    <li><strong>Un clic sur le premier lien doit faire afficher un logo.</strong></li>
+                    <li><strong>Un clic sur le deuxième lien doit faire un appel WebApi pour compléter la fiche.</strong></li>
+                    <li><strong>Ces deux tâches doivent être codées <b style="color:blue">uniquement</b> dans la section scripts de la vue.</strong></li>
+                </ol>
+            </p>
+            <div style="align-content:center;margin:30px">
+                <h4 style="color:darkcyan">Résultat attendu</h4>
+                <img src="~/images/capture4.png" style="align-content:center;border:2px solid silver" />
+            </div>
+        </div>
+    </div>
+}
+else if (ViewBag.NoQuestion == 5)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Code First -  3 points</h2>
+            <p><a class="btn btn-default" href="/question5/index">Votre réponse</a></p>
+            <p>
+                <strong>Le contrôleur Question5 définit 3 actions:</strong>
+                <ul>
+                    <li>l'action index qui affiche les 2 liens (écran 1).</li>
+                    <li>l'action Fill pour remplir une base de données (écran 2 ou 4).</li>
+                    <li>l'action Display pour afficher le contenu de la base de données (écran 3).</li>
+                </ul>
+                <strong>Implémenter la classe Repository5</strong>
+                <ol>
+                    <li>Elle définit une base de données PlanteDB.</li>
+                    <li>Elle définit une table Plante contenant les champs Id et Nom.</li>
+                </ol>
+            </p>
+            <div style="align-content:center;margin:30px">
+                <h4 style="color:darkcyan">Résultat attendu</h4>
+                <img src="~/images/capture5.png" style="align-content:center;border:2px solid silver" />
+            </div>
+        </div>
+    </div>
+}
+else if (ViewBag.NoQuestion == 6)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Model Binder -  6 points</h2>
+            <p><a class="btn btn-default" href="/question6/index">Votre réponse</a></p>
+            <p>
+                L'action Index du contrôleur Question6Controller avec son paramètre de type <b>DuckFamily</b> doit afficher l'écran ci-dessous (Après).
+            </p>
+            <p>
+                <strong>Définissez un model binder pour que cette action reçoive correctement ce paramètre.</strong>
+            </p>
+            <div style="align-content:center;margin:30px">
+                <h4 style="color:darkcyan">Résultat attendu</h4>
+                <img src="~/images/capture6.png" style="align-content:center;border:2px solid silver" />
+            </div>
+        </div>
+    </div>
+}
+else if (ViewBag.NoQuestion == 7)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Ajax Server -  5 points</h2>
+            <p>
+                <a class="btn btn-default" href="/question7/index/ramanujan">Votre réponse Ramanujan</a>
+                <a class="btn btn-default" href="/question7/index/einstein">Votre réponse Einstein</a>
+            </p>
+            <p>
+                Implémenter le webapi manquant pour afficher les deux écrans ci-dessous.
+            </p>
+            <p>
+                <strong>Définissez la classe ApiMathController dans le dossier Controllers.</strong>
+            </p>
+            <div style="align-content:center;margin:30px">
+                <h4 style="color:darkcyan">Résultat attendu</h4>
+                <div style="display:flex">
+                    <img src="~/images/capture7_1.png" style="align-content:center;border:2px solid silver;margin:5px" />
+                    <img src="~/images/capture7_2.png" style="align-content:center;border:2px solid silver" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else if (ViewBag.NoQuestion == 8)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Souviens-toi -  4 points</h2>
+            <p>
+                <a class="btn btn-default" href="/question8/index">Votre réponse</a>
+            </p>
+            <p>
+                Ici, après avoir fait un reset, vous devez cumuler des commandes pour obtenir un total de 3,14€.
+            </p>
+            <strong>Codez uniquement la section script de la vue Index pour le contrôleur Question8</strong>
+            <div style="align-content:center;margin:30px">
+                <h4 style="color:darkcyan">Résultat attendu</h4>
+                <div style="display:flex">
+                    <img src="~/images/capture8.png" style="align-content:center;border:2px solid silver" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else if (ViewBag.NoQuestion == 9)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Matrix -  3 points</h2>
+            <p><a class="btn btn-default" href="/question9/index">Votre réponse</a></p>
+            <p>
+                <strong>Le contrôleur Question9 définit 3 vues:</strong>
+                <ul>
+                    <li>la vue index pour accéder aux autres vues.</li>
+                    <li>la vue cle, accessible uniquement par le maître des clés (maitredescles@matrix.com).</li>
+                    <li>la vue coffre, accessible uniquement par Neo (neo@matrix.com).</li>
+                </ul>
+                <strong>Ecrire le code qui donne les autorisations d'accès.</strong>
+            </p>
+            <div style="align-content:center;margin:30px">
+                <h4 style="color:darkcyan">Résultat attendu</h4>
+                <img src="~/images/capture9.png" style="align-content:center;border:2px solid silver" />
+            </div>
+        </div>
+    </div>
+}
+else if (ViewBag.NoQuestion == 10)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Vue partielle -  2 points</h2>
+            <p>
+                <a class="btn btn-default" href="/question10/index">Votre réponse</a>
+            </p>
+            <p>
+                Deux vues doivent s'afficher. Ces deux ont en commun la même photo.
+            </p>
+            <strong>Définissez la vue partielle qui contient cette photo.</strong>
+            <div style="align-content:center;margin:30px">
+                <h4 style="color:darkcyan">Résultat attendu</h4>
+                <div style="display:flex">
+                    <img src="~/images/capture10.png" style="align-content:center;border:2px solid silver" />
+                </div>
+            </div>
+        </div>
+    </div>
+}

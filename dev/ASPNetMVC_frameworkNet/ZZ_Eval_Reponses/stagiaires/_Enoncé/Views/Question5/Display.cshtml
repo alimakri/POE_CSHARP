@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ZZ_Eval.Repositories.Plante>
+
+@{
+    ViewBag.Title = "Display";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Display</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+        </tr>
+    }
+
+</table>
+@section retour{
+    <a href="/question5/index">Retour</a>
+}

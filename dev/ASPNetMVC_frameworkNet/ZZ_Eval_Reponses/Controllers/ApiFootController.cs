@@ -1,0 +1,29 @@
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+
+namespace ZZ_Eval.Controllers
+{
+    public class ApiFootController : ApiController
+    {
+        public string Get() { return "test"; }
+        [HttpPut]
+        public string Put(string id)
+        {
+            if (id.ToUpper() == "AMSTERDAM")
+                return JsonConvert.SerializeObject(new
+                {
+                    Nom = "Amsterdamsche Football Club Ajax",
+                    Pays = "Pays-Bas",
+                    AnneeFondation = "1900",
+                    President = "Frank Eijken",
+                    Entraineur = "Johnny HEITINGA",
+                });
+            return null;
+        }
+    }
+}

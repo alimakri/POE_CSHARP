@@ -1,0 +1,45 @@
+﻿@model ZZ_Eval.Models.DuckFamily
+@{
+    ViewBag.Title = "Question 6";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Le formulaire</h2>
+<form method="post">
+    <div>
+        <label for="personnagePrincipal">Personnage principal</label>
+        <input type="text" name="personnagePrincipal" id="personnagePrincipal" value="Donald" />
+    </div>
+    <br />
+    <div>
+        <label for="neveu1">Premier neveu&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="neveu1" id="neveu1" value="Riri" />
+    </div>
+    <div>
+        <label for="neveu2">Second neveu&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="neveu2" id="neveu2" value="Fifi" />
+    </div>
+    <div>
+        <label for="neveu3">Troisième neveu</label>
+        <input type="text" name="neveu3" id="neveu3" value="Loulou" />
+    </div>
+    <br />
+    <div>
+        <input type="submit" value="Envoyer" />
+    </div>
+</form>
+@if (Model != null)
+{
+    <div style="color:blue">
+        <h2>Réception du formulaire</h2>
+        Les neveus de @Model.Principal sont @Model.Neveus[0], @Model.Neveus[1] et @Model.Neveus[2].
+    </div>
+    <img src="~/images/question6.png" />
+}
+@section retour{
+    <a href="/home/question/6">Retour</a>
+}
+
+
+
+

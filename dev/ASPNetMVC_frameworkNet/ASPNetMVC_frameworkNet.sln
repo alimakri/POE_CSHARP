@@ -59,7 +59,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZA_WebSocket", "ZA_WebSocke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZZ_Eval", "ZZ_Eval\ZZ_Eval.csproj", "{2A6371B7-F764-45DE-8427-8CE7FF949B84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZZ_Eval_Reponses", "ZZ_Eval_Reponses\ZZ_Eval_Reponses.csproj", "{79841333-A301-45C8-B1FF-A58FFC1D1979}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZZ_Eval_Reponses", "ZZ_Eval_Reponses\ZZ_Eval_Reponses.csproj", "{B8E00373-BC18-4708-9291-9365F3FA8FD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -179,10 +179,10 @@ Global
 		{2A6371B7-F764-45DE-8427-8CE7FF949B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A6371B7-F764-45DE-8427-8CE7FF949B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A6371B7-F764-45DE-8427-8CE7FF949B84}.Release|Any CPU.Build.0 = Release|Any CPU
-		{79841333-A301-45C8-B1FF-A58FFC1D1979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79841333-A301-45C8-B1FF-A58FFC1D1979}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79841333-A301-45C8-B1FF-A58FFC1D1979}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79841333-A301-45C8-B1FF-A58FFC1D1979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8E00373-BC18-4708-9291-9365F3FA8FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8E00373-BC18-4708-9291-9365F3FA8FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8E00373-BC18-4708-9291-9365F3FA8FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8E00373-BC18-4708-9291-9365F3FA8FD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
