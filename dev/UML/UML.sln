@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMLX_1", "UMLX_1\UMLX_1.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMLX_2", "UMLX_2\UMLX_2.csproj", "{AF833B61-759A-4F8C-BC73-4C3B5BFBC946}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMLTD4Bis", "UMLTD4Bis\UMLTD4Bis.csproj", "{22282436-598A-4A79-9DC4-9F808DB35E30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{AF833B61-759A-4F8C-BC73-4C3B5BFBC946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF833B61-759A-4F8C-BC73-4C3B5BFBC946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF833B61-759A-4F8C-BC73-4C3B5BFBC946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22282436-598A-4A79-9DC4-9F808DB35E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22282436-598A-4A79-9DC4-9F808DB35E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22282436-598A-4A79-9DC4-9F808DB35E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22282436-598A-4A79-9DC4-9F808DB35E30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
