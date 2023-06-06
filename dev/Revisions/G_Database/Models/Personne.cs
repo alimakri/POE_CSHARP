@@ -8,7 +8,7 @@ namespace G_Database.Models
 {
     public class Personne
     {
-        public string Nom;
-        public string Prenom;
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
     }
 }

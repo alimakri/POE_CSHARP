@@ -1,4 +1,6 @@
-﻿using System;
+﻿using G_Database.Models;
+using G_Database.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +10,11 @@ namespace G_Database.ViewModels
 {
     public class MainWindowViewModel
     {
+        public List<Personne> LesPersonnes { get; set; }
+        private RepoDalton Repo = new RepoDalton();
+        public MainWindowViewModel()
+        {
+            LesPersonnes = Repo.Get();
+        }
     }
 }
