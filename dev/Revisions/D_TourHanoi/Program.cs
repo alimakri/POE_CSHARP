@@ -6,50 +6,47 @@ using System.Threading.Tasks;
 
 namespace D_TourHanoi
 {
+    //deplacements.Add(new Deplacement { Piece = 1, Depart = eA, Arrivee = eB });
+    //deplacements.Add(new Deplacement { Piece = 2, Depart = eA, Arrivee = eC });
+    //deplacements.Add(new Deplacement { Piece = 1, Depart = eB, Arrivee = eC });
+    //deplacements.Add(new Deplacement { Piece = 3, Depart = eA, Arrivee = eB });
+    //deplacements.Add(new Deplacement { Piece = 1, Depart = eC, Arrivee = eA });
+    //deplacements.Add(new Deplacement { Piece = 2, Depart = eC, Arrivee = eB });
+    //deplacements.Add(new Deplacement { Piece = 1, Depart = eA, Arrivee = eB });
+
     class Program
     {
         private static Deplacements LesDeplacements;
         static void Main(string[] args)
         {
-            List<Emplacement> emplacements = new List<Emplacement>();
-            var eA = new Emplacement { Nom = "A", LaTour = new Tour { 1, 2, 3 } };
-            var eB = new Emplacement { Nom = "B", LaTour = new Tour() };
-            var eC = new Emplacement { Nom = "C", LaTour = new Tour() };
-            emplacements.Add(eA);
-            emplacements.Add(eB);
-            emplacements.Add(eC);
+            var eA = "A";
+            var eB = "B";
+            var eC = "C";
 
             LesDeplacements = new Deplacements();
-            Deplacer(new Tour { 1, 2, 3 }, FonctionEnum.Depart, FonctionEnum.Arrivee, FonctionEnum.intermediaire);
+            Deplacer(new List<int> { 1, 2, 3 }, eA, eB, eC);
 
-            //deplacements.Add(new Deplacement { Piece = 1, Depart = eA, Arrivee = eB });
-            //deplacements.Add(new Deplacement { Piece = 2, Depart = eA, Arrivee = eC });
-            //deplacements.Add(new Deplacement { Piece = 1, Depart = eB, Arrivee = eC });
-            //deplacements.Add(new Deplacement { Piece = 3, Depart = eA, Arrivee = eB });
-            //deplacements.Add(new Deplacement { Piece = 1, Depart = eC, Arrivee = eA });
-            //deplacements.Add(new Deplacement { Piece = 2, Depart = eC, Arrivee = eB });
-            //deplacements.Add(new Deplacement { Piece = 1, Depart = eA, Arrivee = eB });
-            //deplacements.Afficher();
+            LesDeplacements.Afficher();
 
             Console.ReadLine();
         }
 
-        private static void Deplacer(Tour pile, FonctionEnum depart, FonctionEnum arrivee, FonctionEnum intermediaire)
+        private static void Deplacer(List<int> pile, string depart, string arrivee, string intermediaire)
         {
             if (pile.Count == 1)
                 Deplacer(pile[0], depart, arrivee);
             else
             {
                 var pieceBase = pile[pile.Count - 1];
-                var sousPile = new Tour(); sousPile.AddRange(pile); sousPile.Remove(pieceBase);
+                var sousPile = new List<int>(); sousPile.AddRange(pile); sousPile.Remove(pieceBase);
                 Deplacer(sousPile, depart, intermediaire, arrivee);
                 Deplacer(pieceBase, depart, arrivee);
                 Deplacer(sousPile, intermediaire, arrivee, depart);
             }
         }
-        private static void Deplacer(int piece, FonctionEnum depart, FonctionEnum arrivee)
+        private static void Deplacer(int piece, string depart, string arrivee)
         {
-            LesDeplacements.Add(new Deplacement { Piece = piece });
+            LesDeplacements.Add(new Deplacement { Piece = piece, Depart = depart, Arrivee = arrivee });
         }
     }
     class Deplacements : List<Deplacement>
@@ -58,25 +55,14 @@ namespace D_TourHanoi
         {
             foreach (var d in this)
             {
-                Console.WriteLine("Pièce {0} de {1} vers {2}", d.Piece, d.Depart.Nom, d.Arrivee.Nom);
+                Console.WriteLine("Pièce {0} de {1} vers {2}", d.Piece, d.Depart, d.Arrivee);
             }
         }
-    }
-    class Emplacement
-    {
-        public string Nom;
-        public FonctionEnum Fonction;
-        public Tour LaTour;
-    }
-    enum FonctionEnum { Depart, Arrivee, intermediaire }
-    class Tour : List<int>
-    {
-        public Emplacement Place;
     }
     class Deplacement
     {
         public int Piece;
-        public Emplacement Depart;
-        public Emplacement Arrivee;
+        public string Depart;
+        public string Arrivee;
     }
 }
