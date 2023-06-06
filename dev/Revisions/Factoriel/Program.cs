@@ -18,11 +18,11 @@ namespace Factoriel
     }
     public static class Outils
     {
-        public static long Factoriel(int n)
-        {
-            if (n == 0) return 1;
-            if (n == 1) return 1; 
-            return n * Factoriel(n - 1);
-        }
+        //public static long Factoriel(int n)
+        //{
+        //    if (n == 0) return 1;
+        //    if (n == 1) return 1; 
+        //    return n * Factoriel(n - 1);
+        //}
     }
 }
