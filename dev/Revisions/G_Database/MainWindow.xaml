@@ -9,8 +9,8 @@
     <Grid>
         <DataGrid ItemsSource="{Binding}" >
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=Prenom}" Header="First Name"/>
-                <DataGridTextColumn Binding="{Binding Path=Nom}" Header="Last Name"/>
+                <DataGridTextColumn Binding="{Binding Path=Prenom}" Header="Prénom"/>
+                <DataGridTextColumn Binding="{Binding Path=Nom}" Header="Nom"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
