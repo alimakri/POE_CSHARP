@@ -8,6 +8,7 @@ namespace D_TourHanoi
 {
     class Program
     {
+        private static Deplacements LesDeplacements;
         static void Main(string[] args)
         {
             List<Emplacement> emplacements = new List<Emplacement>();
@@ -18,9 +19,9 @@ namespace D_TourHanoi
             emplacements.Add(eB);
             emplacements.Add(eC);
 
-            Deplacer();
+            LesDeplacements = new Deplacements();
+            Deplacer(new Tour { 1, 2, 3 }, FonctionEnum.Depart, FonctionEnum.Arrivee, FonctionEnum.intermediaire);
 
-            //Deplacements deplacements = new Deplacements();
             //deplacements.Add(new Deplacement { Piece = 1, Depart = eA, Arrivee = eB });
             //deplacements.Add(new Deplacement { Piece = 2, Depart = eA, Arrivee = eC });
             //deplacements.Add(new Deplacement { Piece = 1, Depart = eB, Arrivee = eC });
@@ -33,19 +34,29 @@ namespace D_TourHanoi
             Console.ReadLine();
         }
 
-        private static void Deplacer()
+        private static void Deplacer(Tour pile, FonctionEnum depart, FonctionEnum arrivee, FonctionEnum intermediaire)
         {
-            Deplacements deplacements = new Deplacements();
-            deplacements.Add(new Deplacement { Pieces = SousPile(), DepartFonction = FonctionEnum.Depart, ArriveeFonction = FonctionEnum.Intermedidiaire });
-            deplacements.Add(new Deplacement { Piece = PieceBase(), DepartFonction = FonctionEnum.Depart, ArriveeFonction = FonctionEnum.Arrivee });
-            deplacements.Add(new Deplacement { Pieces = SousPile(), DepartFonction = FonctionEnum.Intermedidiaire, ArriveeFonction = FonctionEnum.Arrivee });
+            if (pile.Count == 1)
+                Deplacer(pile[0], depart, arrivee);
+            else
+            {
+                var pieceBase = pile[pile.Count - 1];
+                var sousPile = new Tour(); sousPile.AddRange(pile); sousPile.Remove(pieceBase);
+                Deplacer(sousPile, depart, intermediaire, arrivee);
+                Deplacer(pieceBase, depart, arrivee);
+                Deplacer(sousPile, intermediaire, arrivee, depart);
+            }
+        }
+        private static void Deplacer(int piece, FonctionEnum depart, FonctionEnum arrivee)
+        {
+            LesDeplacements.Add(new Deplacement { Piece = piece });
         }
     }
     class Deplacements : List<Deplacement>
     {
         public void Afficher()
         {
-            foreach(var d in this)
+            foreach (var d in this)
             {
                 Console.WriteLine("Pièce {0} de {1} vers {2}", d.Piece, d.Depart.Nom, d.Arrivee.Nom);
             }
@@ -57,7 +68,7 @@ namespace D_TourHanoi
         public FonctionEnum Fonction;
         public Tour LaTour;
     }
-    enum FonctionEnum { Depart, Arrivee, Intermedidiaire }
+    enum FonctionEnum { Depart, Arrivee, intermediaire }
     class Tour : List<int>
     {
         public Emplacement Place;
