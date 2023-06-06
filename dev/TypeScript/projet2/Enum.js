@@ -1,3 +1,4 @@
+"use strict";
 var Boussole;
 (function (Boussole) {
     Boussole[Boussole["Nord"] = 1] = "Nord";
@@ -6,5 +7,5 @@ var Boussole;
     Boussole[Boussole["Ouest"] = 8] = "Ouest";
     Boussole[Boussole["SudOuest"] = 10] = "SudOuest";
 })(Boussole || (Boussole = {}));
-var direction = Boussole.SudOuest;
+let direction = Boussole.SudOuest;
 console.log('valeur de ', Boussole[10], '=', direction);

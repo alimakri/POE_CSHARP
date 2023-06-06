@@ -1,1 +1,2 @@
-var soleil = new Galaxie.Astre();
+"use strict";
+let soleil = new Galaxie.Astre();

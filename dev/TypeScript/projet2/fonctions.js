@@ -1,7 +1,8 @@
+"use strict";
 function somme(a, b) {
     return a + b;
 }
-var somme2 = function (a, b) {
+let somme2 = function (a, b) {
     return a + b;
 };
 var s1 = somme(1, 2);
@@ -12,38 +13,35 @@ function produitV1(x, y) {
         y = 1;
     return x * y;
 }
-function produitV2(x, y) {
-    if (y === void 0) { y = 1; }
+function produitV2(x, y = 1) {
     if (y === undefined)
         y = 1;
     return x * y;
 }
 function produitV3(x, y) {
-    var resultat = x;
-    y.forEach(function (j) { return resultat *= j; });
+    let resultat = x;
+    y.forEach(j => resultat *= j);
     return resultat;
 }
 // PersonneV1
 function PersonneV1(nom) {
-    var _this = this;
     this.nom = nom;
-    setTimeout(function () {
-        console.log("nom.v2: ", _this.nom);
+    setTimeout(() => {
+        console.log("nom.v2: ", this.nom);
     }, 1000);
 }
 ;
 var p1 = new PersonneV1('Roger');
 var PersonneV2 = function (nom) {
-    var _this = this;
     this.nom = nom;
-    setTimeout(function () {
-        console.log("nom.v2: ", _this.nom);
+    setTimeout(() => {
+        console.log("nom.v2: ", this.nom);
     }, 1000);
 };
 var p2 = new PersonneV2('Rabbit');
 function fraction(x, y) {
-    var op1 = 0, op2 = 0;
-    var b = true;
+    let op1 = 0, op2 = 0;
+    let b = true;
     if (typeof x == "string")
         op1 = parseInt(x);
     else if (typeof x == "number")

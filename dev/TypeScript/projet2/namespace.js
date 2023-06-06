@@ -1,9 +1,8 @@
+"use strict";
 var Galaxie;
 (function (Galaxie) {
-    var Astre = /** @class */ (function () {
-        function Astre() {
-        }
-        return Astre;
-    }());
+    class Astre {
+        constructor(nom) { this._nom = nom; }
+    }
     Galaxie.Astre = Astre;
 })(Galaxie || (Galaxie = {}));

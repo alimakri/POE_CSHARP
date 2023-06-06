@@ -1,19 +1,18 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Livre = exports.Magazine = void 0;
-var Revue = /** @class */ (function () {
-    function Revue(editeur, prix) {
-        this.editeur = editeur;
-        this.prix = prix;
-    }
-    return Revue;
-}());
-exports.Magazine = Revue;
-var Livre = /** @class */ (function () {
-    function Livre(titre, auteur) {
-        this.titre = titre;
-        this.auteur = auteur;
-    }
-    return Livre;
-}());
-exports.Livre = Livre;
+System.register([], function (exports_1, context_1) {
+    "use strict";
+    var Revue, Livre;
+    var __moduleName = context_1 && context_1.id;
+    return {
+        setters: [],
+        execute: function () {
+            Revue = class Revue {
+                constructor(editeur, prix) { this.editeur = editeur; this.prix = prix; }
+            };
+            exports_1("Magazine", Revue);
+            Livre = class Livre {
+                constructor(titre, auteur) { this.titre = titre; this.auteur = auteur; }
+            };
+            exports_1("Livre", Livre);
+        }
+    };
+});

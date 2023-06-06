@@ -3,12 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
-        <script src="system.js"></script>
-        <script src="module2.js"></script>
+        <script src="node_modules/systemjs/dist/system.js"></script>
+<script>
+    System.defaultJSExtensions=true;
+    // System.import('./module');
+    // System.import('./module2');
+</script>
     </head>
     <body>
-        <script>
-            alert(lm.auteur);
-        </script>
+       Hello
     </body>
 </html>
