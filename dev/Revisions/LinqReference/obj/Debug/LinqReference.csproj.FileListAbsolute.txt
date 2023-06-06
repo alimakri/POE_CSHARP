@@ -1,0 +1,11 @@
+D:\POE_CSHARP\dev\Revisions\LinqReference\bin\Debug\LinqReference.exe.config
+D:\POE_CSHARP\dev\Revisions\LinqReference\bin\Debug\LinqReference.exe
+D:\POE_CSHARP\dev\Revisions\LinqReference\bin\Debug\LinqReference.pdb
+D:\POE_CSHARP\dev\Revisions\LinqReference\bin\Debug\ADONET.exe
+D:\POE_CSHARP\dev\Revisions\LinqReference\bin\Debug\ADONET.pdb
+D:\POE_CSHARP\dev\Revisions\LinqReference\bin\Debug\ADONET.exe.config
+D:\POE_CSHARP\dev\Revisions\LinqReference\obj\Debug\LinqReference.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\LinqReference\obj\Debug\LinqReference.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\LinqReference\obj\Debug\LinqReference.csproj.CopyComplete
+D:\POE_CSHARP\dev\Revisions\LinqReference\obj\Debug\LinqReference.exe
+D:\POE_CSHARP\dev\Revisions\LinqReference\obj\Debug\LinqReference.pdb

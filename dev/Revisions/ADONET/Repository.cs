@@ -55,7 +55,7 @@ namespace ADONET
             return cats;
         }
 
-        internal IEnumerable<Produit> GetProduits(string nomCategorie)
+        public IEnumerable<Produit> GetProduits(string nomCategorie)
         {
             if (!CnxIsOpen) return null;
 
@@ -92,9 +92,9 @@ namespace ADONET
     }
     public class Produit
     {
-        internal int Id;
-        internal string Nom;
-        internal decimal Prix;
+        public int Id;
+        public string Nom;
+        public decimal Prix;
         public override string ToString()
         {
             return $"{Id}\t{Nom}\t{Prix}";

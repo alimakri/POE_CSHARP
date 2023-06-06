@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EB60CD63-0B74-4547-B34B-2CC5F09B11C6}</ProjectGuid>
+    <ProjectGuid>{C4372C05-99D0-41D8-AC87-EB24699F1D18}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LinqReference</RootNamespace>
-    <AssemblyName>LinqReference</AssemblyName>
+    <RootNamespace>D_TourHanoi</RootNamespace>
+    <AssemblyName>D_TourHanoi</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

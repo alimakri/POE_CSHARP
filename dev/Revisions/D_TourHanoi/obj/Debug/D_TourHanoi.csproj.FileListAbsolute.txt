@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\Revisions\D_TourHanoi\bin\Debug\D_TourHanoi.exe.config
+D:\POE_CSHARP\dev\Revisions\D_TourHanoi\bin\Debug\D_TourHanoi.exe
+D:\POE_CSHARP\dev\Revisions\D_TourHanoi\bin\Debug\D_TourHanoi.pdb
+D:\POE_CSHARP\dev\Revisions\D_TourHanoi\obj\Debug\D_TourHanoi.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\D_TourHanoi\obj\Debug\D_TourHanoi.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\D_TourHanoi\obj\Debug\D_TourHanoi.exe
+D:\POE_CSHARP\dev\Revisions\D_TourHanoi\obj\Debug\D_TourHanoi.pdb
