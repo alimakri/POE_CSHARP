@@ -31,9 +31,8 @@ namespace ADONET
         private static string FaireUnChoix(List<string> cats)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write("Choisissez une catégorie (1-4): ");
             
-            var saisieStr = Console.ReadLine();
+            var saisieStr = "";
             int saisie = 0;
             while (!int.TryParse(saisieStr, out saisie) || saisie < 1 || saisie > 4)
             {

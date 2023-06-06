@@ -6,3 +6,10 @@ D:\POE_CSHARP\dev\TypeScript\projet2\Revisions\ADONET\obj\Debug\ADONET.csproj.Su
 D:\POE_CSHARP\dev\TypeScript\projet2\Revisions\ADONET\obj\Debug\ADONET.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\TypeScript\projet2\Revisions\ADONET\obj\Debug\ADONET.exe
 D:\POE_CSHARP\dev\TypeScript\projet2\Revisions\ADONET\obj\Debug\ADONET.pdb
+D:\POE_CSHARP\dev\Revisions\ADONET\bin\Debug\ADONET.exe.config
+D:\POE_CSHARP\dev\Revisions\ADONET\bin\Debug\ADONET.exe
+D:\POE_CSHARP\dev\Revisions\ADONET\bin\Debug\ADONET.pdb
+D:\POE_CSHARP\dev\Revisions\ADONET\obj\Debug\ADONET.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\ADONET\obj\Debug\ADONET.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\ADONET\obj\Debug\ADONET.exe
+D:\POE_CSHARP\dev\Revisions\ADONET\obj\Debug\ADONET.pdb
