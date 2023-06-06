@@ -37,8 +37,8 @@ namespace ADONET
             int saisie = 0;
             while (!int.TryParse(saisieStr, out saisie) || saisie < 1 || saisie > 4)
             {
-                saisieStr = Console.ReadLine();
                 Console.Write("Choisissez une catégorie (1-4): ");
+                saisieStr = Console.ReadLine();
             }
 
             Console.ForegroundColor = ConsoleColor.Gray;
