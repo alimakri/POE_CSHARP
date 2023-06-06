@@ -15,6 +15,10 @@ namespace G_Database.ViewModels
         public MainWindowViewModel()
         {
             LesPersonnes = Repo.Get();
+            foreach(var p in LesPersonnes)
+            {
+                p.Photo = $"/images/{p.Prenom}.png";
+            }
         }
     }
 }

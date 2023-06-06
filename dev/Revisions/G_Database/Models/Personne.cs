@@ -10,5 +10,6 @@ namespace G_Database.Models
     {
         public string Nom { get; set; }
         public string Prenom { get; set; }
+        public string Photo { get; set; }
     }
 }

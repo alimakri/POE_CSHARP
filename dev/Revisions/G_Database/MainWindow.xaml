@@ -11,6 +11,14 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=Prenom}" Header="Prénom"/>
                 <DataGridTextColumn Binding="{Binding Path=Nom}" Header="Nom"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.Header>Photo</DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Path=Photo}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
