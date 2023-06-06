@@ -24,7 +24,7 @@ namespace G_Database
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+            //DataContext = new MainWindowViewModel();
         }
     }
 }

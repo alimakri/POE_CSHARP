@@ -1,0 +1,14 @@
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\I_LinqToEntities.exe.config
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\I_LinqToEntities.exe
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\I_LinqToEntities.pdb
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\EntityFramework.dll
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\EntityFramework.SqlServer.dll
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\EntityFramework.xml
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\EntityFramework.SqlServer.xml
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\fr\EntityFramework.resources.dll
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\obj\Debug\I_LinqToEntities.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\obj\Debug\I_LinqToEntities.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\obj\Debug\I_LinqToEntities.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\obj\Debug\I_LinqToEntities.csproj.CopyComplete
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\obj\Debug\I_LinqToEntities.exe
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\obj\Debug\I_LinqToEntities.pdb
