@@ -17,10 +17,18 @@ namespace M_Attribut
     class Jardinage
     {
         public static string Outil = "";
-        [Outil]
+        [Outil()]
         public void TaillerHaies()
         {
             if (Outil == "TailleHaie") Console.WriteLine("C'est bon !");   
         }
     }
+    class OutilAttribute : Attribute
+    {
+        public OutilAttribute()
+        {
+            Jardinage.Outil = "TailleHaie";
+        }
+    }
+
 }

@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Revisions\N_Jessy\bin\Debug\N_Jessy.exe.config
+D:\POE_CSHARP\dev\Revisions\N_Jessy\bin\Debug\N_Jessy.exe
+D:\POE_CSHARP\dev\Revisions\N_Jessy\bin\Debug\N_Jessy.pdb
+D:\POE_CSHARP\dev\Revisions\N_Jessy\obj\Debug\N_Jessy.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\N_Jessy\obj\Debug\N_Jessy.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Revisions\N_Jessy\obj\Debug\N_Jessy.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\N_Jessy\obj\Debug\N_Jessy.exe
+D:\POE_CSHARP\dev\Revisions\N_Jessy\obj\Debug\N_Jessy.pdb
