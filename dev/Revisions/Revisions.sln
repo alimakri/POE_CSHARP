@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H_Calculatrice", "H_Calcula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I_LinqToEntities", "I_LinqToEntities\I_LinqToEntities.csproj", "{3CEF4EA2-2AE1-42CA-BAED-600C43E74A04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J_DatasetTypé", "J_DatasetTypé\J_DatasetTypé.csproj", "{753C9366-E9DC-4FD4-A2BF-20056FA27432}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K_CleDeTableau", "K_CleDeTableau\K_CleDeTableau.csproj", "{A0387615-D7E4-4922-9C9B-0E2B874311B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{3CEF4EA2-2AE1-42CA-BAED-600C43E74A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CEF4EA2-2AE1-42CA-BAED-600C43E74A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CEF4EA2-2AE1-42CA-BAED-600C43E74A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{753C9366-E9DC-4FD4-A2BF-20056FA27432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{753C9366-E9DC-4FD4-A2BF-20056FA27432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{753C9366-E9DC-4FD4-A2BF-20056FA27432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{753C9366-E9DC-4FD4-A2BF-20056FA27432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0387615-D7E4-4922-9C9B-0E2B874311B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0387615-D7E4-4922-9C9B-0E2B874311B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0387615-D7E4-4922-9C9B-0E2B874311B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0387615-D7E4-4922-9C9B-0E2B874311B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

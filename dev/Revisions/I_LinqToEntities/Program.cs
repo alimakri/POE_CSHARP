@@ -29,9 +29,14 @@ namespace I_LinqToEntities
             //    .Where(x=>x.SalesOrderHeader.OrderDate.Year==2013)
             //    .Sum(item => item.UnitPrice * item.OrderQty);
 
-            var cas = context.SalesOrderDetails
-                .GroupBy(x => x.SalesOrderHeader.OrderDate.Year)
-                .Select(x => new { Annee = x.Key, Somme = x.Sum(y => y.UnitPrice * y.OrderQty) });
+            //var cas = context.SalesOrderDetails
+            //    .GroupBy(x => x.SalesOrderHeader.OrderDate.Year)
+            //    .Select(x => new { Annee = x.Key, Somme = x.Sum(y => y.UnitPrice * y.OrderQty) });
+
+            var cas = from d in context.SalesOrderDetails
+                       group d by d.SalesOrderHeader.OrderDate.Year into g
+                       select new { Annee = g.Key, Somme = g.Sum(y => y.UnitPrice * y.OrderQty) };
+
 
             foreach (var ca in cas) Console.WriteLine(ca);
             Console.WriteLine();
