@@ -39,5 +39,7 @@ namespace I_LinqToEntities
         public Nullable<System.DateTime> DiscontinuedDate { get; set; }
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }
+    
+        public virtual ProductSubcategory ProductSubcategory { get; set; }
     }
 }
