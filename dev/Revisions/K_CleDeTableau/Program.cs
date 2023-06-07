@@ -10,7 +10,7 @@ namespace K_CleDeTableau
     {
         static void Main(string[] args)
         {
-            var personnes = new List<Personne>
+            var personnes = new Personnes
             {
                 new Personne{Id=1, Name="Jacques", NoSecu="1341293704046"},
                 new Personne{Id=2, Name="Ali", NoSecu="1620869382220"},
@@ -18,7 +18,34 @@ namespace K_CleDeTableau
             };
             var p1 = personnes[1];
             var p2 = personnes["1620869382220"];
-            Console.WriteLine("p1 et p2 sont les même personne", p1.Equals(p2));
+            var p3 = personnes[p1];
+            Console.WriteLine("p1, p2 et p3 sont les mêmes personne: {0}", p1.Equals(p2) && p1.Equals(p3));
+            Console.ReadLine();
+        }
+    }
+    class Personnes : List<Personne>
+    {
+        public Personne this[string noSecu]
+        {
+            get
+            {
+                foreach (var p in this)
+                {
+                    if (p.NoSecu == noSecu) return p;
+                }
+                return null;
+            }
+        }
+        public Personne this[Personne pRef]
+        {
+            get
+            {
+                foreach (var p in this)
+                {
+                    if (p.Equals(pRef)) return p;
+                }
+                return null;
+            }
         }
     }
     class Personne
@@ -26,6 +53,6 @@ namespace K_CleDeTableau
         public int Id { get; set; }
         public string Name { get; set; }
         public string NoSecu { get; set; }
-
+       
     }
 }

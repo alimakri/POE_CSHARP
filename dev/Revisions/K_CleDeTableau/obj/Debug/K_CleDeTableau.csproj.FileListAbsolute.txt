@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Revisions\K_CleDeTableau\bin\Debug\K_CleDeTableau.exe.config
+D:\POE_CSHARP\dev\Revisions\K_CleDeTableau\bin\Debug\K_CleDeTableau.exe
+D:\POE_CSHARP\dev\Revisions\K_CleDeTableau\bin\Debug\K_CleDeTableau.pdb
+D:\POE_CSHARP\dev\Revisions\K_CleDeTableau\obj\Debug\K_CleDeTableau.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\K_CleDeTableau\obj\Debug\K_CleDeTableau.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Revisions\K_CleDeTableau\obj\Debug\K_CleDeTableau.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\K_CleDeTableau\obj\Debug\K_CleDeTableau.exe
+D:\POE_CSHARP\dev\Revisions\K_CleDeTableau\obj\Debug\K_CleDeTableau.pdb
