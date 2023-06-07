@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J_DatasetTypé", "J_Dataset
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K_CleDeTableau", "K_CleDeTableau\K_CleDeTableau.csproj", "{A0387615-D7E4-4922-9C9B-0E2B874311B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L_Cirque", "L_Cirque\L_Cirque.csproj", "{923AEF90-610B-49BF-8B6D-2D70A1021A15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Attribut", "M_Attribut\M_Attribut.csproj", "{25A3D017-7B91-4052-B548-BD18FDB3F3A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{A0387615-D7E4-4922-9C9B-0E2B874311B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0387615-D7E4-4922-9C9B-0E2B874311B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0387615-D7E4-4922-9C9B-0E2B874311B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{923AEF90-610B-49BF-8B6D-2D70A1021A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{923AEF90-610B-49BF-8B6D-2D70A1021A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{923AEF90-610B-49BF-8B6D-2D70A1021A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{923AEF90-610B-49BF-8B6D-2D70A1021A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25A3D017-7B91-4052-B548-BD18FDB3F3A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25A3D017-7B91-4052-B548-BD18FDB3F3A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25A3D017-7B91-4052-B548-BD18FDB3F3A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25A3D017-7B91-4052-B548-BD18FDB3F3A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

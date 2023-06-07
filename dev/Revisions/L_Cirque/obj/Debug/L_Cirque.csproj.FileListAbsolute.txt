@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Revisions\L_Cirque\bin\Debug\L_Cirque.exe.config
+D:\POE_CSHARP\dev\Revisions\L_Cirque\bin\Debug\L_Cirque.exe
+D:\POE_CSHARP\dev\Revisions\L_Cirque\bin\Debug\L_Cirque.pdb
+D:\POE_CSHARP\dev\Revisions\L_Cirque\obj\Debug\L_Cirque.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\L_Cirque\obj\Debug\L_Cirque.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Revisions\L_Cirque\obj\Debug\L_Cirque.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\L_Cirque\obj\Debug\L_Cirque.exe
+D:\POE_CSHARP\dev\Revisions\L_Cirque\obj\Debug\L_Cirque.pdb
