@@ -10,41 +10,34 @@ namespace O_Async
     {
         static void Main(string[] args)
         {
-            var watch = new System.Diagnostics.Stopwatch();
+            Console.WriteLine(DateTime.Now.ToLongTimeString());
+            Console.ReadLine();
+            // -------------------------
+            var t1 = new Tache();
+            var action = new Action<int, ConsoleColor, string>(t1.Go);
 
-            watch.Start();
 
-            var t = new Tache();
-            t.GoGlobal();
+            action.BeginInvoke(2, ConsoleColor.Cyan, "A", new AsyncCallback(t1.Fin), "Compteur 1"); // 7 s
+            action.BeginInvoke(1, ConsoleColor.Red, "B", new AsyncCallback(t1.Fin), "Compteur 2"); // 7 s
+            // -------------------------
 
-            watch.Stop();
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
             Console.ReadLine();
         }
     }
     class Tache
     {
-        private List<int> Liste;
-        public Tache()
+        public void Go(int k, ConsoleColor c, string nom)
         {
-            Liste = new List<int>();
-            for (int i = 0; i < 100000; i++) Liste.Add(i);
-
+            for (int i = 0; i < k * 50000; i++)
+            {
+                Console.ForegroundColor = c;
+                Console.WriteLine($"{nom} - {i}");
+            }
         }
-        public async Task Go(IEnumerable<int> liste)
+        public void Fin(IAsyncResult res)
         {
-            foreach (var id in liste) Console.WriteLine(id);
-        }
-        public async Task GoGlobal()
-        {
-            var t1 = new Tache();
-            var t2 = new Tache();
-
-            //t1.Go(Liste); // 8 416 ms
-
-            await t1.Go(Liste.Take(50000));
-            await t2.Go(Liste.Skip(50000).Take(50000));
+            Console.WriteLine("Fin de l'action: " + (string)res.AsyncState);
+            Console.WriteLine(DateTime.Now.ToLongTimeString());
         }
     }
 }
