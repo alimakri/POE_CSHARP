@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Revisions\R_Attribut\bin\Debug\R_Attribut.exe.config
+D:\POE_CSHARP\dev\Revisions\R_Attribut\bin\Debug\R_Attribut.exe
+D:\POE_CSHARP\dev\Revisions\R_Attribut\bin\Debug\R_Attribut.pdb
+D:\POE_CSHARP\dev\Revisions\R_Attribut\obj\Debug\R_Attribut.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\R_Attribut\obj\Debug\R_Attribut.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Revisions\R_Attribut\obj\Debug\R_Attribut.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\R_Attribut\obj\Debug\R_Attribut.exe
+D:\POE_CSHARP\dev\Revisions\R_Attribut\obj\Debug\R_Attribut.pdb

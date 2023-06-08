@@ -14,7 +14,7 @@ namespace P_WpfConverter
             {
                 new FleurViewModel{ Nom="Tulipe", Couleur="Rouge" },
                 new FleurViewModel{ Nom="Oeillet", Couleur="Jaune" },
-                new FleurViewModel{ Nom="Géranium", Couleur="Blanc" }
+                new FleurViewModel{ Nom="Geranium", Couleur="Blanc" }
             };
         }
         public List<FleurViewModel> LesFleurs { get; set; }

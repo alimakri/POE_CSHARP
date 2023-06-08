@@ -2,7 +2,6 @@ D:\POE_CSHARP\dev\Revisions\P_WpfConverter\bin\Debug\P_WpfConverter.exe.config
 D:\POE_CSHARP\dev\Revisions\P_WpfConverter\bin\Debug\P_WpfConverter.exe
 D:\POE_CSHARP\dev\Revisions\P_WpfConverter\bin\Debug\P_WpfConverter.pdb
 D:\POE_CSHARP\dev\Revisions\P_WpfConverter\obj\Debug\P_WpfConverter.csproj.AssemblyReference.cache
-D:\POE_CSHARP\dev\Revisions\P_WpfConverter\obj\Debug\P_WpfConverter.csproj.SuggestedBindingRedirects.cache
 D:\POE_CSHARP\dev\Revisions\P_WpfConverter\obj\Debug\MainWindow.g.cs
 D:\POE_CSHARP\dev\Revisions\P_WpfConverter\obj\Debug\App.g.cs
 D:\POE_CSHARP\dev\Revisions\P_WpfConverter\obj\Debug\P_WpfConverter_MarkupCompile.cache
@@ -14,3 +13,4 @@ D:\POE_CSHARP\dev\Revisions\P_WpfConverter\obj\Debug\P_WpfConverter.csproj.Gener
 D:\POE_CSHARP\dev\Revisions\P_WpfConverter\obj\Debug\P_WpfConverter.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\Revisions\P_WpfConverter\obj\Debug\P_WpfConverter.exe
 D:\POE_CSHARP\dev\Revisions\P_WpfConverter\obj\Debug\P_WpfConverter.pdb
+D:\POE_CSHARP\dev\Revisions\P_WpfConverter\obj\Debug\GeneratedInternalTypeHelper.g.cs
