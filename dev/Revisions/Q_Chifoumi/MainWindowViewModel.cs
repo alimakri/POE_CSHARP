@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -17,6 +18,9 @@ namespace Q_Chifoumi
             PierreCommand = new RelayCommand(PierreCommandExecute);
             FeuilleCommand = new RelayCommand(FeuilleCommandExecute);
             CiseauCommand = new RelayCommand(CiseauCommandExecute);
+
+            NouvellePartieCommand = new RelayCommand(NouvellePartieCommandExecute);
+            FermerCommand = new RelayCommand(FermerCommandExecute);
         }
         #endregion
 
@@ -25,6 +29,19 @@ namespace Q_Chifoumi
         #endregion
 
         #region Command
+        private void NouvellePartieCommandExecute(object obj)
+        {
+            Points = 0;
+            PierreEnabled = true;
+            FeuilleEnabled = true;
+            CiseauEnabled = true;
+            Message = "Nouvelle partie";
+            MessageCouleur = "blue";
+        }
+        private void FermerCommandExecute(object obj)
+        {
+            Application.Current.Shutdown();
+        }
         private void PierreCommandExecute(object obj)
         {
             ChoixUtilisateurExecute(Chifoumi.Pierre);
@@ -46,15 +63,22 @@ namespace Q_Chifoumi
                 Image = $"/images/{choixMachine.ToString()}.png",
                 Texte = choixMachine.ToString()
             };
-            if (ComparerChoix(choixUtilisateur, choixMachine))
+            switch (ComparerChoix(choixUtilisateur, choixMachine))
             {
-                Message = "Vous avez gagné !";
-                MessageCouleur = "green";
-                CiseauEnabled = FeuilleEnabled = PierreEnabled = false;
+                case 3:
+                    Message = "Vous avez gagné !";
+                    MessageCouleur = "green";
+                    CiseauEnabled = FeuilleEnabled = PierreEnabled = false;
+                    break;
+                case -3:
+                    Message = "Vous avez perdu !";
+                    MessageCouleur = "red";
+                    CiseauEnabled = FeuilleEnabled = PierreEnabled = false;
+                    break;
             }
         }
 
-        private bool ComparerChoix(Chifoumi choixU, Chifoumi choixM)
+        private int ComparerChoix(Chifoumi choixU, Chifoumi choixM)
         {
             if (choixM == choixU)
             {
@@ -74,11 +98,11 @@ namespace Q_Chifoumi
             }
             else
             {
-                Points = 0;
+                Points--;
                 Message = "Perdu";
                 MessageCouleur = "blue";
             }
-            return Points == 3;
+            return Points;
         }
 
         private Chifoumi ChoixMachineExecute()
@@ -92,6 +116,8 @@ namespace Q_Chifoumi
         public ICommand PierreCommand { get; set; }
         public ICommand FeuilleCommand { get; set; }
         public ICommand CiseauCommand { get; set; }
+        public ICommand FermerCommand { get; set; }
+        public ICommand NouvellePartieCommand { get; set; }
         public int Points
         {
             get { return points; }

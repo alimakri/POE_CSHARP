@@ -13,8 +13,12 @@
         </Grid.ColumnDefinitions>
         <Menu>
             <MenuItem Header="_Menu">
-                <MenuItem Header="_Nouvelle partie"/>
-                <MenuItem Header="_Fermer" />
+                <MenuItem Header="_Nouvelle partie" Command="{Binding NouvellePartieCommand}"/>
+                <MenuItem Header="_Fermer"  Command="{Binding FermerCommand}"/>
+                <Separator/>
+                <MenuItem Header="_Pierre"  Command="{Binding PierreCommand}" IsEnabled="{Binding PierreEnabled}"/>
+                <MenuItem Header="_Feuille"  Command="{Binding FeuilleCommand}" IsEnabled="{Binding FeuilleEnabled}"/>
+                <MenuItem Header="_Ciseau"  Command="{Binding CiseauCommand}" IsEnabled="{Binding CiseauEnabled}"/>
             </MenuItem>
         </Menu>
 
