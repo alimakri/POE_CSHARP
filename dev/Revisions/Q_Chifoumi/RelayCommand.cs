@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Installation.CommunViewModels
+namespace Q_Chifoumi
 {
     public class RelayCommand : ICommand
     {
