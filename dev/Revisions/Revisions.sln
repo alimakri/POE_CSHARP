@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "O3_Async_asyncawait_xxxxxxx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P_WpfConverter", "P_WpfConverter\P_WpfConverter.csproj", "{1605BE40-5E99-445A-B35B-97272A953EF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "O2_AsyncAwait", "O2_AsyncAwait\O2_AsyncAwait.csproj", "{09B3C4CB-B47C-4624-9138-813854800EF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q_Chifoumi", "Q_Chifoumi\Q_Chifoumi.csproj", "{0E5886C9-0F6F-4C81-95F7-8FEB96269E43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +121,14 @@ Global
 		{1605BE40-5E99-445A-B35B-97272A953EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1605BE40-5E99-445A-B35B-97272A953EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1605BE40-5E99-445A-B35B-97272A953EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09B3C4CB-B47C-4624-9138-813854800EF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B3C4CB-B47C-4624-9138-813854800EF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B3C4CB-B47C-4624-9138-813854800EF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B3C4CB-B47C-4624-9138-813854800EF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E5886C9-0F6F-4C81-95F7-8FEB96269E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E5886C9-0F6F-4C81-95F7-8FEB96269E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E5886C9-0F6F-4C81-95F7-8FEB96269E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E5886C9-0F6F-4C81-95F7-8FEB96269E43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
