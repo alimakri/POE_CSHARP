@@ -15,9 +15,7 @@ namespace Q_Chifoumi
         #region Constructor
         public MainWindowViewModel()
         {
-            PierreCommand = new RelayCommand(PierreCommandExecute);
-            FeuilleCommand = new RelayCommand(FeuilleCommandExecute);
-            CiseauCommand = new RelayCommand(CiseauCommandExecute);
+            PfcCommand = new RelayCommand(PfcCommandExecute);
 
             NouvellePartieCommand = new RelayCommand(NouvellePartieCommandExecute);
             FermerCommand = new RelayCommand(FermerCommandExecute);
@@ -42,17 +40,10 @@ namespace Q_Chifoumi
         {
             Application.Current.Shutdown();
         }
-        private void PierreCommandExecute(object obj)
+        private void PfcCommandExecute(object obj)
         {
-            ChoixUtilisateurExecute(Chifoumi.Pierre);
-        }
-        private void FeuilleCommandExecute(object obj)
-        {
-            ChoixUtilisateurExecute(Chifoumi.Feuille);
-        }
-        private void CiseauCommandExecute(object obj)
-        {
-            ChoixUtilisateurExecute(Chifoumi.Ciseau);
+            Chifoumi choix = (Chifoumi)Enum.Parse(typeof(Chifoumi), (string)obj);
+            ChoixUtilisateurExecute(choix);
         }
 
         private void ChoixUtilisateurExecute(Chifoumi choixUtilisateur)
@@ -113,9 +104,7 @@ namespace Q_Chifoumi
         #endregion
 
         #region Bindings
-        public ICommand PierreCommand { get; set; }
-        public ICommand FeuilleCommand { get; set; }
-        public ICommand CiseauCommand { get; set; }
+        public ICommand PfcCommand { get; set; }
         public ICommand FermerCommand { get; set; }
         public ICommand NouvellePartieCommand { get; set; }
         public int Points
