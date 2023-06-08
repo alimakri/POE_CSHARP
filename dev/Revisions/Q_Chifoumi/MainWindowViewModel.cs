@@ -30,9 +30,7 @@ namespace Q_Chifoumi
         private void NouvellePartieCommandExecute(object obj)
         {
             Points = 0;
-            PierreEnabled = true;
-            FeuilleEnabled = true;
-            CiseauEnabled = true;
+            PfcEnabled = true;
             Message = "Nouvelle partie";
             MessageCouleur = "blue";
         }
@@ -59,12 +57,12 @@ namespace Q_Chifoumi
                 case 3:
                     Message = "Vous avez gagné !";
                     MessageCouleur = "green";
-                    CiseauEnabled = FeuilleEnabled = PierreEnabled = false;
+                    PfcEnabled = false;
                     break;
                 case -3:
                     Message = "Vous avez perdu !";
                     MessageCouleur = "red";
-                    CiseauEnabled = FeuilleEnabled = PierreEnabled = false;
+                    PfcEnabled = false;
                     break;
             }
         }
@@ -133,24 +131,12 @@ namespace Q_Chifoumi
         }
         private ChoixViewModel choixMachine;
 
-        public bool PierreEnabled
+        public bool PfcEnabled
         {
-            get { return pierreEnabled; }
-            set { pierreEnabled = value; OnPropertyChanged("PierreEnabled"); }
+            get { return pfcEnabled; }
+            set { pfcEnabled = value; OnPropertyChanged("PfcEnabled"); }
         }
-        private bool pierreEnabled = true;
-        public bool FeuilleEnabled
-        {
-            get { return feuilleEnabled; }
-            set { feuilleEnabled = value; OnPropertyChanged("FeuilleEnabled"); }
-        }
-        private bool feuilleEnabled =true;
-        public bool CiseauEnabled
-        {
-            get { return ciseauEnabled; }
-            set { ciseauEnabled = value; OnPropertyChanged("CiseauEnabled"); }
-        }
-        private bool ciseauEnabled = true;
+        private bool pfcEnabled = true;
 
         #endregion
     }

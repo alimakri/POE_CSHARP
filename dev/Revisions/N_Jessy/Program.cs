@@ -43,7 +43,7 @@ namespace N_Jessy
             Cnx.Close();
             Flux.Close();
         }
-         ~GrosseClasse() { var i = 0; }
+         ~GrosseClasse() {  }
 
         //public void Finalize()
         //{
