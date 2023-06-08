@@ -5,13 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Q_Chifoumi"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Chifoumi" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="2" FontSize="28"/>
+        <Menu>
+            <MenuItem Header="_Menu">
+                <MenuItem Header="_Nouvelle partie"/>
+                <MenuItem Header="_Fermer" />
+            </MenuItem>
+        </Menu>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <TextBlock  HorizontalAlignment="Center" Text="{Binding Points}" FontSize="28"/>
+            <TextBlock HorizontalAlignment="Center" Text="{Binding Message}" Foreground="{Binding MessageCouleur}" FontSize="28"/>
+        </StackPanel>
         <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -22,10 +32,31 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Grid.ColumnSpan="3" Margin="10" IsEnabled="False"></Button>
-            <Button Grid.Row="1" Margin="10"></Button>
-            <Button Grid.Row="1" Grid.Column="1" Margin="10"></Button>
-            <Button Grid.Row="1" Grid.Column="2" Margin="10"></Button>
+            <!--Bouton machine-->
+            <Button Grid.ColumnSpan="3" Margin="10" IsEnabled="False" DataContext="{Binding ChoixMachine}">
+                <StackPanel>
+                    <Image Source="{Binding Image}" Width="150"/>
+                    <TextBlock Text="{Binding Texte}" FontSize="16" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Row="1" Margin="10" Command="{Binding PierreCommand}">
+                <StackPanel>
+                    <Image Source="/images/pierre.png" Width="100"/>
+                    <TextBlock Text="Pierre" FontSize="16" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Row="1" Grid.Column="1" Margin="10" Command="{Binding FeuilleCommand}">
+                <StackPanel>
+                    <Image Source="/images/feuille.png" Width="100"/>
+                    <TextBlock Text="Feuille" FontSize="16" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Row="1" Grid.Column="2" Margin="10" Command="{Binding CiseauCommand}">
+                <StackPanel>
+                    <Image Source="/images/ciseau.png" Width="100"/>
+                    <TextBlock Text="Ciseau" FontSize="16" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </Grid>
     </Grid>
 </Window>
