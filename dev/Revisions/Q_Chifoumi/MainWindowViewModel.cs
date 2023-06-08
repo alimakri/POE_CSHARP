@@ -50,6 +50,7 @@ namespace Q_Chifoumi
             {
                 Message = "Vous avez gagné !";
                 MessageCouleur = "green";
+                CiseauEnabled = FeuilleEnabled = PierreEnabled = false;
             }
         }
 
@@ -122,19 +123,19 @@ namespace Q_Chifoumi
             get { return pierreEnabled; }
             set { pierreEnabled = value; OnPropertyChanged("PierreEnabled"); }
         }
-        private bool pierreEnabled;
+        private bool pierreEnabled = true;
         public bool FeuilleEnabled
         {
             get { return feuilleEnabled; }
             set { feuilleEnabled = value; OnPropertyChanged("FeuilleEnabled"); }
         }
-        private bool feuilleEnabled;
+        private bool feuilleEnabled =true;
         public bool CiseauEnabled
         {
             get { return ciseauEnabled; }
             set { ciseauEnabled = value; OnPropertyChanged("CiseauEnabled"); }
         }
-        private bool ciseauEnabled;
+        private bool ciseauEnabled = true;
 
         #endregion
     }
