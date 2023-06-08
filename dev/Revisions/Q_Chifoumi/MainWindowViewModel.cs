@@ -46,14 +46,20 @@ namespace Q_Chifoumi
                 Image = $"/images/{choixMachine.ToString()}.png",
                 Texte = choixMachine.ToString()
             };
-            ComparerChoix(choixUtilisateur, choixMachine);
+            if (ComparerChoix(choixUtilisateur, choixMachine))
+            {
+                Message = "Vous avez gagné !";
+                MessageCouleur = "green";
+            }
         }
 
-        private void ComparerChoix(Chifoumi choixU, Chifoumi choixM)
+        private bool ComparerChoix(Chifoumi choixU, Chifoumi choixM)
         {
             if (choixM == choixU)
             {
                 Points = 0;
+                Message = "Egalité";
+                MessageCouleur = "blue";
             }
             else if (
                 choixU == Chifoumi.Pierre && choixM == Chifoumi.Ciseau ||
@@ -62,11 +68,16 @@ namespace Q_Chifoumi
                 )
             {
                 Points++;
+                Message = "Gagné";
+                MessageCouleur = "blue";
             }
             else
             {
                 Points = 0;
+                Message = "Perdu";
+                MessageCouleur = "blue";
             }
+            return Points == 3;
         }
 
         private Chifoumi ChoixMachineExecute()
@@ -92,8 +103,12 @@ namespace Q_Chifoumi
             set { message = value; OnPropertyChanged("Message"); }
         }
         private string message;
-        public string MessageCouleur { get; set; }
-        //public ChoixViewModel ChoixMachine { get; set; }
+        public string MessageCouleur
+        {
+            get { return messageCouleur; }
+            set { messageCouleur = value; OnPropertyChanged("MessageCouleur"); }
+        }
+        private string messageCouleur;
 
         public ChoixViewModel ChoixMachine
         {
@@ -101,6 +116,26 @@ namespace Q_Chifoumi
             set { choixMachine = value; OnPropertyChanged("ChoixMachine"); }
         }
         private ChoixViewModel choixMachine;
+
+        public bool PierreEnabled
+        {
+            get { return pierreEnabled; }
+            set { pierreEnabled = value; OnPropertyChanged("PierreEnabled"); }
+        }
+        private bool pierreEnabled;
+        public bool FeuilleEnabled
+        {
+            get { return feuilleEnabled; }
+            set { feuilleEnabled = value; OnPropertyChanged("FeuilleEnabled"); }
+        }
+        private bool feuilleEnabled;
+        public bool CiseauEnabled
+        {
+            get { return ciseauEnabled; }
+            set { ciseauEnabled = value; OnPropertyChanged("CiseauEnabled"); }
+        }
+        private bool ciseauEnabled;
+
         #endregion
     }
     public class ChoixViewModel 
