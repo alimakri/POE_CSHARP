@@ -23,6 +23,7 @@ namespace Q_Chifoumi
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
         }
     }
 }
