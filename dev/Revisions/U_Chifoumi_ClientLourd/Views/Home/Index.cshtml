@@ -61,26 +61,31 @@
         }
         function comparerChoix(choixU, choixM) {
             var etat = '';
+
+            // Egalité
             if (choixU == choixM) {
                 points = 0;
                 etat = 'Egalité';
             }
+            // Gagné
             else if (choixU == 1 && choixM == 3 || choixU == 2 && choixM == 1 || choixU == 3 && choixM == 2) {
                 points++;
                 etat = 'Gagné';
             }
+                // Perdu
             else {
                 points--;
                 etat = 'Perdu';
             }
 
-
+            // Affichage message, points, imgMachine.
             var pluriel = points < -1 || points > 1 ? 's' : '';
             $('#message').html(etat);
             $('#points').html(points + " point"+pluriel);
             $('#imgMachine')[0].src = '/images/' + fpc[choixM - 1] + '.png';
             $('#message').css('color', 'blue');
 
+            // AFfichage si gagné ou perdu
             if (points == 3) {
                 $('#message').html("Vous avez gagné !");
                 $('#message').css('color', "green");
