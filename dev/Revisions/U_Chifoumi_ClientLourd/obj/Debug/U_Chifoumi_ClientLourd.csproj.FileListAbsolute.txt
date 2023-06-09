@@ -87,3 +87,4 @@ D:\POE_CSHARP\dev\Revisions\U_Chifoumi_ClientLourd\obj\Debug\U_Chifoumi_ClientLo
 D:\POE_CSHARP\dev\Revisions\U_Chifoumi_ClientLourd\obj\Debug\U_Chifoumi_ClientLourd.dll
 D:\POE_CSHARP\dev\Revisions\U_Chifoumi_ClientLourd\obj\Debug\U_Chifoumi_ClientLourd.pdb
 D:\POE_CSHARP\dev\Revisions\U_Chifoumi_ClientLourd\obj\Debug\U_Chifoumi_ClientLourd.g.resources
+D:\POE_CSHARP\dev\Revisions\U_Chifoumi_ClientLourd\obj\Debug\U_Chifoumi_ClientLourd.csproj.AssemblyReference.cache

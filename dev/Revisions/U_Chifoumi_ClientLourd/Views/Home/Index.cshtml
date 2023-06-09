@@ -49,6 +49,11 @@
 </table>
 @section scripts{
     <script>
+        // Liste des ptés d'un objet.
+        //$.each($('#imgMachine'), function (key, element) {
+        //    alert('key: ' + key + '\n' + 'value: ' + element);
+        //});
+
         var fpc = ['pierre', 'feuille', 'ciseau'];
         var points = 0;
         function randomIntFromInterval(min, max) { // min and max included
@@ -68,10 +73,29 @@
                 points--;
                 etat = 'Perdu';
             }
+
+
+            var pluriel = points < -1 || points > 1 ? 's' : '';
             $('#message').html(etat);
-            $('#points').html(points + " point");
-            $('#imgMachine').src = "~/images/" + fpc[choixM - 1] + ".png";
+            $('#points').html(points + " point"+pluriel);
+            $('#imgMachine')[0].src = '/images/' + fpc[choixM - 1] + '.png';
             $('#message').css('color', 'blue');
+
+            if (points == 3) {
+                $('#message').html("Vous avez gagné !");
+                $('#message').css('color', "green");
+            }
+            else if (points == -3) {
+                $('#message').html("Vous avez perdu !");
+                $('#message').css('color', "red");
+            }
+            if (points == 3 || points == -3) {
+                $('#1').css('display', 'none');
+                $('#2').css('display', 'none');
+                $('#3').css('display', 'none');
+                $('#imgMachine').css('display', 'none');
+                $('#points').css('display', 'none');
+            }
         }
         $('.Fpc').click(function () {
             // Choix Machine et utilisateur
