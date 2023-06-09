@@ -52,17 +52,23 @@
     <script>
         $('.Fpc').click(function () {
             $.ajax({
-                url: "/api/chifoumi/?id=" + this.id + "&joueur=" + $('#joueur').value,
+                url: "/api/chifoumi/?id=" + this.id + "&joueur=" + $('#joueur').val(),
                 method: "GET",
                 success: function (data) {
-                    //var json = data;
                     var json = JSON.parse(data);
-                    //alert("~/images/" + choixMachine + ".png");
                     var pluriel = json.Points > 1 || json.Points < -1 ? 's' : '';
                     $('#imgMachine').src = "~/images/" + json.choixMachine + ".png";
                     $('#points').html(json.Points + " point" + pluriel);
                     $('#message').html(json.Message);
                     $('#message').css('color', json.MessageCouleur);
+                    if (json.Points == 3) {
+                        $('#message').html("Vous avez gagné !");
+                        $('#message').css('color', "green");
+                    }
+                    else if (json.Points == -3) {
+                        $('#message').html("Vous avez perdu !");
+                        $('#message').css('color', "red");
+                    }
                 },
                 error: function (error) {
                     alert("error" + error);

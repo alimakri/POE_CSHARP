@@ -52,23 +52,26 @@ namespace T_Chifoumi_ClientLeger.Controllers
             }
 
             // Set
-            Points = Dico[joueur];
+            if (Dico.ContainsKey(joueur)) Points = Dico[joueur];
         }
         private void SetPoints()
         {
             // File Exists
             if (!System.IO.File.Exists("score.txt")) System.IO.File.WriteAllText("score.txt", "");
 
-            // Lecture du fichier
-            var lignes = System.IO.File.ReadAllLines("score.txt");
-            foreach(var ligne in lignes)
-            {
-                var tab = ligne.Split('|');
-                Dico.Add(tab[0], int.Parse(tab[1]));
-            }
+            //// Lecture du fichier
+            //var lignes = System.IO.File.ReadAllLines("score.txt");
+            //foreach(var ligne in lignes)
+            //{
+            //    var tab = ligne.Split('|');
+            //    Dico.Add(tab[0], int.Parse(tab[1]));
+            //}
 
             // Modif
-            Dico[Joueur] = Points;
+            if (Dico.ContainsKey(Joueur))
+                Dico[Joueur] = Points;
+            else
+                Dico.Add(Joueur, Points);
 
             // Ecriture
             string s = "";
