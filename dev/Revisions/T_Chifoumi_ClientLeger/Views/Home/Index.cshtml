@@ -12,9 +12,10 @@
     }
 </style>
 <table>
+    <tr><td><input type="text" id="joueur" value="Ali"/></td></tr>
     <tr>
         <td rowspan="2">
-            <h2 id="points">3 points</h2>
+            <h2 id="points"></h2>
         </td>
     </tr>
     <tr>
@@ -51,18 +52,15 @@
     <script>
         $('.Fpc').click(function () {
             $.ajax({
-                url: "/api/chifoumi/?id=" + this.id,
+                url: "/api/chifoumi/?id=" + this.id + "&joueur=" + $('#joueur').value,
                 method: "GET",
                 success: function (data) {
                     //var json = data;
                     var json = JSON.parse(data);
-                    //    json.ChoixMachine
-                    //    json.Points
-                    //    json.Etat
-                    //    json.Message
-                    //    json.MessageCouleur
-                    $('#imgMachine').src = "~/images/" + choixMachine + ".png";
-                    $('#points').html(json.Points + " point(s)");
+                    //alert("~/images/" + choixMachine + ".png");
+                    var pluriel = json.Points > 1 || json.Points < -1 ? 's' : '';
+                    $('#imgMachine').src = "~/images/" + json.choixMachine + ".png";
+                    $('#points').html(json.Points + " point" + pluriel);
                     $('#message').html(json.Message);
                     $('#message').css('color', json.MessageCouleur);
                 },

@@ -23,7 +23,7 @@ namespace Q_Chifoumi
         #endregion
 
         #region Propriétés
-        private Random alea = new Random();
+        private Random Alea = new Random();
         #endregion
 
         #region Command
@@ -96,7 +96,7 @@ namespace Q_Chifoumi
 
         private Chifoumi ChoixMachineExecute()
         {
-            var choixInt = alea.Next(1, 4);
+            var choixInt = Alea.Next(1, 4);
             return (Chifoumi)choixInt;
         }
         #endregion
