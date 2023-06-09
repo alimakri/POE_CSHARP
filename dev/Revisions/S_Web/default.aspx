@@ -11,6 +11,8 @@
     <h2>Formulaire reçu</h2>
     <asp:Label runat="server" ID="Nom" />
     <asp:Label runat="server" ID="Prenom" />
+    <h3>Le cookie est inscrit</h3>
+    <br />
     <a href="page.aspx">Autre page</a>
 </body>
 </html>
