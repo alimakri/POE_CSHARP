@@ -1,0 +1,7 @@
+D:\POE_CSHARP\dev\Revisions\V_ProcStock\bin\Debug\V_ProcStock.exe.config
+D:\POE_CSHARP\dev\Revisions\V_ProcStock\bin\Debug\V_ProcStock.exe
+D:\POE_CSHARP\dev\Revisions\V_ProcStock\bin\Debug\V_ProcStock.pdb
+D:\POE_CSHARP\dev\Revisions\V_ProcStock\obj\Debug\V_ProcStock.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\V_ProcStock\obj\Debug\V_ProcStock.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\V_ProcStock\obj\Debug\V_ProcStock.exe
+D:\POE_CSHARP\dev\Revisions\V_ProcStock\obj\Debug\V_ProcStock.pdb

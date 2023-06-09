@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T_Chifoumi_ClientLeger", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U_Chifoumi_ClientLourd", "U_Chifoumi_ClientLourd\U_Chifoumi_ClientLourd.csproj", "{1EC30500-48C4-4F41-B603-9DC949EFA31A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V_ProcStock", "V_ProcStock\V_ProcStock.csproj", "{FAAF4FD7-CA32-4916-A681-AD3943E44857}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{1EC30500-48C4-4F41-B603-9DC949EFA31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EC30500-48C4-4F41-B603-9DC949EFA31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EC30500-48C4-4F41-B603-9DC949EFA31A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAAF4FD7-CA32-4916-A681-AD3943E44857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAF4FD7-CA32-4916-A681-AD3943E44857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAF4FD7-CA32-4916-A681-AD3943E44857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAAF4FD7-CA32-4916-A681-AD3943E44857}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
