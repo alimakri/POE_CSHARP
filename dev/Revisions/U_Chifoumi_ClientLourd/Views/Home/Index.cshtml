@@ -1,0 +1,83 @@
+﻿<style>
+    .div1 {
+        display: flex;
+        border: 1px solid blue;
+    }
+
+    .div2 {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        background-color: pink;
+    }
+</style>
+<table>
+    <tr>
+        <td rowspan="2">
+            <h2 id="points"></h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3 id="message"></h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr><td style="text-align: center"><img src="~/images/init.png" width="160" id="imgMachine" /></td></tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="image" src="~/images/pierre.png" width="80" class="Fpc" id="1" />
+                                </td>
+                                <td>
+                                    <input type="image" src="~/images/feuille.png" width="80" class="Fpc" id="2" />
+                                </td>
+                                <td>
+                                    <input type="image" src="~/images/ciseau.png" width="80" class="Fpc" id="3" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+@section scripts{
+    <script>
+        var fpc = ['pierre', 'feuille', 'ciseau'];
+        var points = 0;
+        function randomIntFromInterval(min, max) { // min and max included
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        function comparerChoix(choixU, choixM) {
+            var etat = '';
+            if (choixU == choixM) {
+                points = 0;
+                etat = 'Egalité';
+            }
+            else if (choixU == 1 && choixM == 3 || choixU == 2 && choixM == 1 || choixU == 3 && choixM == 2) {
+                points++;
+                etat = 'Gagné';
+            }
+            else {
+                points--;
+                etat = 'Perdu';
+            }
+            $('#message').html(etat);
+            $('#points').html(points + " point");
+            $('#imgMachine').src = "~/images/" + fpc[choixM - 1] + ".png";
+            $('#message').css('color', 'blue');
+        }
+        $('.Fpc').click(function () {
+            // Choix Machine et utilisateur
+            var choixMachine = randomIntFromInterval(1, 3);
+            var choixUtilisateur = this.id;
+            comparerChoix(choixUtilisateur, choixMachine);
+        });
+    </script>
+}

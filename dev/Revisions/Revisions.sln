@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32616.157
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_ADONET", "ADONET\A_ADONET.csproj", "{84FEDA3D-8175-4886-95F8-2FA6B11DC866}"
 EndProject
@@ -46,6 +46,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S_Web", "S_Web\S_Web.csproj", "{F62F1F53-2B99-4C4D-9436-8A20F2B9E3A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T_Chifoumi_ClientLeger", "T_Chifoumi_ClientLeger\T_Chifoumi_ClientLeger.csproj", "{9448D47F-5F54-493F-981A-ED50F6FA6638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U_Chifoumi_ClientLourd", "U_Chifoumi_ClientLourd\U_Chifoumi_ClientLourd.csproj", "{1EC30500-48C4-4F41-B603-9DC949EFA31A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{9448D47F-5F54-493F-981A-ED50F6FA6638}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9448D47F-5F54-493F-981A-ED50F6FA6638}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9448D47F-5F54-493F-981A-ED50F6FA6638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EC30500-48C4-4F41-B603-9DC949EFA31A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC30500-48C4-4F41-B603-9DC949EFA31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC30500-48C4-4F41-B603-9DC949EFA31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC30500-48C4-4F41-B603-9DC949EFA31A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
