@@ -26,13 +26,13 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input type="image" src="~/images/pierre.png" width="80"/>
+                                    <input type="image" src="~/images/pierre.png" width="80" class="Fpc" id="pierre"/>
                                 </td>
                                 <td>
-                                    <input type="image" src="~/images/feuille.png" width="80"/>
+                                    <input type="image" src="~/images/feuille.png" width="80" class="Fpc" id="feuille"/>
                                 </td>
                                 <td>
-                                    <input type="image" src="~/images/ciseau.png" width="80"/>
+                                    <input type="image" src="~/images/ciseau.png" width="80" class="Fpc" id="ciseau"/>
                                 </td>
                             </tr>
                         </table>
@@ -42,18 +42,10 @@
         </td>
     </tr>
 </table>
-@*<div class="div1">
-        <div class="div2">
-            <h2>3</h2>
-        </div>
-        <div>
-            <div class="div2">
-                <div><img src="/images/feuille.png" width="80" /></div>
-            </div>
-            <div class="div1">
-                <div class="div2"></div>
-                <div class="div2"></div>
-                <div class="div2"></div>
-            </div>
-        </div>
-    </div>*@
+@section scripts{
+    <script>
+        $('.Fpc').click(function () {
+            
+        });
+    </script>
+}
