@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 
 namespace T_Chifoumi_ClientLeger.Controllers
@@ -32,8 +33,10 @@ namespace T_Chifoumi_ClientLeger.Controllers
 
         private Random Alea = new Random();
         private Dictionary<string, int> Dico = new Dictionary<string, int>();
+        private string ScoreFile;
         public DataChifoumi(string joueur)
         {
+            ScoreFile = HttpContext.Current.Server.MapPath("/score.txt");
             Joueur = joueur;
             GetPoints(joueur);
         }
@@ -41,10 +44,10 @@ namespace T_Chifoumi_ClientLeger.Controllers
         private void GetPoints(string joueur)
         {
             // File Exists
-            if (!System.IO.File.Exists("score.txt")) return;
+            if (!System.IO.File.Exists(ScoreFile)) return;
 
             // Lecture du fichier
-            var lignes = System.IO.File.ReadAllLines("score.txt");
+            var lignes = System.IO.File.ReadAllLines(ScoreFile);
             foreach (var ligne in lignes)
             {
                 var tab = ligne.Split('|');
@@ -57,17 +60,9 @@ namespace T_Chifoumi_ClientLeger.Controllers
         private void SetPoints()
         {
             // File Exists
-            if (!System.IO.File.Exists("score.txt")) System.IO.File.WriteAllText("score.txt", "");
+            if (!System.IO.File.Exists(ScoreFile)) System.IO.File.WriteAllText(ScoreFile, "");
 
-            //// Lecture du fichier
-            //var lignes = System.IO.File.ReadAllLines("score.txt");
-            //foreach(var ligne in lignes)
-            //{
-            //    var tab = ligne.Split('|');
-            //    Dico.Add(tab[0], int.Parse(tab[1]));
-            //}
-
-            // Modif
+            // Modif ou ajoût
             if (Dico.ContainsKey(Joueur))
                 Dico[Joueur] = Points;
             else
@@ -79,7 +74,7 @@ namespace T_Chifoumi_ClientLeger.Controllers
             {
                 s += item.Key + "|" + item.Value.ToString() + "\n";
             }
-            System.IO.File.WriteAllText("score.txt", s);
+            System.IO.File.WriteAllText(ScoreFile, s);
         }
 
         public int ComparerChoix(Chifoumi choixU, Chifoumi choixM)

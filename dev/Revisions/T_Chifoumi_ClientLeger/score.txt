@@ -1,0 +1,3 @@
+Ali|-3
+Paolo|1
+Amanda|-1
