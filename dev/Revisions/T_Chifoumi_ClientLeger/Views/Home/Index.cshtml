@@ -14,13 +14,18 @@
 <table>
     <tr>
         <td rowspan="2">
-            <h2>3 points</h2>
+            <h2 id="points">3 points</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3 id="message"></h3>
         </td>
     </tr>
     <tr>
         <td>
             <table>
-                <tr><td style="text-align: center"><img src="~/images/feuille.png" width="160" /></td></tr>
+                <tr><td style="text-align: center"><img src="~/images/feuille.png" width="160" id="imgMachine"/></td></tr>
                 <tr>
                     <td>
                         <table>
@@ -45,7 +50,27 @@
 @section scripts{
     <script>
         $('.Fpc').click(function () {
-            
+            $.ajax({
+                url: "/api/chifoumi/?id=" + this.id,
+                method: "GET",
+                success: function (data) {
+                    //var json = data;
+                    var json = JSON.parse(data);
+                    //    json.ChoixUtilisateur
+                    //    json.ChoixMachine
+                    //    json.Points
+                    //    json.Etat
+                    //    json.Message
+                    //    json.MessageCouleur
+                    $('#imgMachine').src = "~/images/" + choixMachine + ".png";
+                    $('#points').html(json.Points + " point(s)");
+                    $('#message').html(json.Message);
+                    $('#message').css('color', json.MessageCouleur);
+                },
+                error: function (error) {
+                    alert("error" + error);
+                }
+            });
         });
     </script>
 }
