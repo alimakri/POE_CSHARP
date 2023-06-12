@@ -1,0 +1,8 @@
+D:\POE_CSHARP\dev\Revisions\O_AsyncAwait\bin\Debug\O2_AsyncAwait.exe.config
+D:\POE_CSHARP\dev\Revisions\O_AsyncAwait\bin\Debug\O2_AsyncAwait.exe
+D:\POE_CSHARP\dev\Revisions\O_AsyncAwait\bin\Debug\O2_AsyncAwait.pdb
+D:\POE_CSHARP\dev\Revisions\O_AsyncAwait\obj\Debug\O_AsyncAwait.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\O_AsyncAwait\obj\Debug\O_AsyncAwait.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Revisions\O_AsyncAwait\obj\Debug\O_AsyncAwait.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\O_AsyncAwait\obj\Debug\O2_AsyncAwait.exe
+D:\POE_CSHARP\dev\Revisions\O_AsyncAwait\obj\Debug\O2_AsyncAwait.pdb

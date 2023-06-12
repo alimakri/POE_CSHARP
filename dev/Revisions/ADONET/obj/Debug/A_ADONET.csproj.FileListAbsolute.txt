@@ -1,0 +1,5 @@
+D:\POE_CSHARP\dev\Revisions\ADONET\obj\Debug\A_ADONET.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\ADONET\obj\Debug\A_ADONET.csproj.SuggestedBindingRedirects.cache
+D:\POE_CSHARP\dev\Revisions\ADONET\obj\Debug\A_ADONET.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\ADONET\obj\Debug\ADONET.exe
+D:\POE_CSHARP\dev\Revisions\ADONET\obj\Debug\ADONET.pdb

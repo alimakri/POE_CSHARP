@@ -1,7 +1,3 @@
-D:\POE_CSHARP\dev\Revisions\F_Conversion\bin\Debug\F_Conversion.exe.config
-D:\POE_CSHARP\dev\Revisions\F_Conversion\bin\Debug\F_Conversion.exe
-D:\POE_CSHARP\dev\Revisions\F_Conversion\bin\Debug\F_Conversion.pdb
 D:\POE_CSHARP\dev\Revisions\F_Conversion\obj\Debug\F_Conversion.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\F_Conversion\obj\Debug\F_Conversion.csproj.SuggestedBindingRedirects.cache
 D:\POE_CSHARP\dev\Revisions\F_Conversion\obj\Debug\F_Conversion.csproj.CoreCompileInputs.cache
-D:\POE_CSHARP\dev\Revisions\F_Conversion\obj\Debug\F_Conversion.exe
-D:\POE_CSHARP\dev\Revisions\F_Conversion\obj\Debug\F_Conversion.pdb

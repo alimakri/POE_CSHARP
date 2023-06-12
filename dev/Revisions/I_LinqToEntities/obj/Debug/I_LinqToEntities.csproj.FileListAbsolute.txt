@@ -6,6 +6,7 @@ D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\EntityFramework.SqlServer
 D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\EntityFramework.xml
 D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\EntityFramework.SqlServer.xml
 D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\fr\EntityFramework.resources.dll
+D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
 D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\obj\Debug\I_LinqToEntities.csproj.AssemblyReference.cache
 D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\obj\Debug\I_LinqToEntities.csproj.SuggestedBindingRedirects.cache
 D:\POE_CSHARP\dev\Revisions\I_LinqToEntities\obj\Debug\I_LinqToEntities.csproj.CoreCompileInputs.cache
