@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\POE_CSHARP\\dev\\Revisions\\V_AspNetCore_TypeScript\\W_AspNetCore_TypeScript.csproj": {}
+    "D:\\POE_CSHARP\\dev\\Revisions\\W_AspNetCore_TypeScript\\W_AspNetCore_TypeScript.csproj": {}
   },
   "projects": {
-    "D:\\POE_CSHARP\\dev\\Revisions\\V_AspNetCore_TypeScript\\W_AspNetCore_TypeScript.csproj": {
+    "D:\\POE_CSHARP\\dev\\Revisions\\W_AspNetCore_TypeScript\\W_AspNetCore_TypeScript.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\POE_CSHARP\\dev\\Revisions\\V_AspNetCore_TypeScript\\W_AspNetCore_TypeScript.csproj",
+        "projectUniqueName": "D:\\POE_CSHARP\\dev\\Revisions\\W_AspNetCore_TypeScript\\W_AspNetCore_TypeScript.csproj",
         "projectName": "W_AspNetCore_TypeScript",
-        "projectPath": "D:\\POE_CSHARP\\dev\\Revisions\\V_AspNetCore_TypeScript\\W_AspNetCore_TypeScript.csproj",
+        "projectPath": "D:\\POE_CSHARP\\dev\\Revisions\\W_AspNetCore_TypeScript\\W_AspNetCore_TypeScript.csproj",
         "packagesPath": "C:\\Users\\alima\\.nuget\\packages\\",
-        "outputPath": "D:\\POE_CSHARP\\dev\\Revisions\\V_AspNetCore_TypeScript\\obj\\",
+        "outputPath": "D:\\POE_CSHARP\\dev\\Revisions\\W_AspNetCore_TypeScript\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alima\\AppData\\Roaming\\NuGet\\NuGet.Config",
