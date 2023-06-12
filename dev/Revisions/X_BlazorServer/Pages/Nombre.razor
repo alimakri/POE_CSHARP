@@ -1,31 +1,38 @@
-﻿@page "/nombre"
+﻿@inherits NombreBase
+@page "/nombre"
 
 <PageTitle>Devinez un nombre</PageTitle>
 
 <h1>Nombre magique</h1>
-
-<div>
-    <h4>Devinez un nombre compris entre 0 et @NbMax</h4>
-</div>
-<div>
-    <input type="number" @bind="Value"/>
-    <button class="btn btn-primary" @onclick="TestNumber">Tester</button>
-</div>
-
-
-@code {
-    public const int NbMax = 20;
-    public int Value;
-    public int NbMagic = 12;
-    public bool Gagne;
-    public int NbVies = 5;
-    public void TestNumber()
-    {
-        if (Value == NbMagic) Gagne = true;
+@if (Gagne.HasValue)
+{
+    if(Gagne.Value) { <h2>Gagn&eacute;  🤪 </h2>}
+    else { <h2>Perdu   😭</h2>}
+    <button class="btn btn-primary" @onclick=Rejouer>Rejouer</button>
+}
+else
+{
+    <div>
+        <h4>Devinez un nombre compris entre 0 et @NbMax</h4>
+    </div>
+    <div>
+        <input type="number" @bind="Value" />
+        <button class="btn btn-primary" @onclick="TestNumber">Tester</button>
+    </div>
+    <div>
+        @for (int i = 0; i < NbVies; i++)
+        {
+            <span style="color:red;font-size:24px;">&hearts; </span>
+        }
+    </div>
+    <div>
+        @if (TropPetit)
+        {
+            <span style="width:52px">  👎 </span>
+        }
         else
         {
-            NbVies--;
-            if (NbVies == 0) Gagne = false;
+            <span> 👍 </span>
         }
-    }
+    </div>
 }
