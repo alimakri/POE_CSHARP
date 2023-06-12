@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U_Chifoumi_ClientLourd", "U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V_ProcStock", "V_ProcStock\V_ProcStock.csproj", "{FAAF4FD7-CA32-4916-A681-AD3943E44857}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W_AspNetCore_TypeScript", "V_AspNetCore_TypeScript\W_AspNetCore_TypeScript.csproj", "{B1AB5D7E-343B-40EE-A1B0-F8451B0A911F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{FAAF4FD7-CA32-4916-A681-AD3943E44857}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAAF4FD7-CA32-4916-A681-AD3943E44857}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAAF4FD7-CA32-4916-A681-AD3943E44857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1AB5D7E-343B-40EE-A1B0-F8451B0A911F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1AB5D7E-343B-40EE-A1B0-F8451B0A911F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1AB5D7E-343B-40EE-A1B0-F8451B0A911F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1AB5D7E-343B-40EE-A1B0-F8451B0A911F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
