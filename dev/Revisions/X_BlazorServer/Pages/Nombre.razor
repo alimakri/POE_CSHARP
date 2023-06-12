@@ -1,0 +1,31 @@
+﻿@page "/nombre"
+
+<PageTitle>Devinez un nombre</PageTitle>
+
+<h1>Nombre magique</h1>
+
+<div>
+    <h4>Devinez un nombre compris entre 0 et @NbMax</h4>
+</div>
+<div>
+    <input type="number" @bind="Value"/>
+    <button class="btn btn-primary" @onclick="TestNumber">Tester</button>
+</div>
+
+
+@code {
+    public const int NbMax = 20;
+    public int Value;
+    public int NbMagic = 12;
+    public bool Gagne;
+    public int NbVies = 5;
+    public void TestNumber()
+    {
+        if (Value == NbMagic) Gagne = true;
+        else
+        {
+            NbVies--;
+            if (NbVies == 0) Gagne = false;
+        }
+    }
+}

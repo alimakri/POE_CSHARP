@@ -2,7 +2,6 @@
     showMsg: function (): void {
         let v: any = jQuery.fn.jquery.toString(); 
         let content: any = $('#ts-example2')[0].innerHTML;        
-        alert(content.toString());
         $('#ts-example2')[0].innerHTML = content + " " + v + "!!";
     }
 };

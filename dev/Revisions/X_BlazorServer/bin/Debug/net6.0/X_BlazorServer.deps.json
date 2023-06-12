@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "X_BlazorServer/1.0.0": {
+        "runtime": {
+          "X_BlazorServer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "X_BlazorServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
