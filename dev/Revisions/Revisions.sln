@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_ADONET", "ADONET\A_ADONET.csproj", "{84FEDA3D-8175-4886-95F8-2FA6B11DC866}"
 EndProject
@@ -27,13 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K_CleDeTableau", "K_CleDeTa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L_Cirque", "L_Cirque\L_Cirque.csproj", "{923AEF90-610B-49BF-8B6D-2D70A1021A15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Attribut_XXXXXXXXXXXX", "M_Attribut\M_Attribut_XXXXXXXXXXXX.csproj", "{25A3D017-7B91-4052-B548-BD18FDB3F3A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Attribut", "M_Attribut\M_Attribut.csproj", "{25A3D017-7B91-4052-B548-BD18FDB3F3A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N_Jessy", "N_Jessy\N_Jessy.csproj", "{1C0CE7C4-1068-4658-B93C-6DBD60283F5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "O1_Async_Delegue", "O_Async\O1_Async_Delegue.csproj", "{FEF18B45-B285-497C-93A1-EF033718BB41}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "O3_Async_asyncawait_xxxxxxxxx", "O_Asyn_asyncawait\O3_Async_asyncawait_xxxxxxxxx.csproj", "{30E6FA97-64AF-4D28-9DF1-32210E1C14E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P_WpfConverter", "P_WpfConverter\P_WpfConverter.csproj", "{1605BE40-5E99-445A-B35B-97272A953EF2}"
 EndProject
@@ -117,10 +115,6 @@ Global
 		{FEF18B45-B285-497C-93A1-EF033718BB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEF18B45-B285-497C-93A1-EF033718BB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEF18B45-B285-497C-93A1-EF033718BB41}.Release|Any CPU.Build.0 = Release|Any CPU
-		{30E6FA97-64AF-4D28-9DF1-32210E1C14E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{30E6FA97-64AF-4D28-9DF1-32210E1C14E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{30E6FA97-64AF-4D28-9DF1-32210E1C14E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{30E6FA97-64AF-4D28-9DF1-32210E1C14E9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1605BE40-5E99-445A-B35B-97272A953EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1605BE40-5E99-445A-B35B-97272A953EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1605BE40-5E99-445A-B35B-97272A953EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU

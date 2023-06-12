@@ -1,8 +1,0 @@
-D:\POE_CSHARP\dev\Revisions\O_Async\bin\Debug\O_Async.exe.config
-D:\POE_CSHARP\dev\Revisions\O_Async\bin\Debug\O_Async.exe
-D:\POE_CSHARP\dev\Revisions\O_Async\bin\Debug\O_Async.pdb
-D:\POE_CSHARP\dev\Revisions\O_Async\obj\Debug\O_Async.csproj.AssemblyReference.cache
-D:\POE_CSHARP\dev\Revisions\O_Async\obj\Debug\O_Async.csproj.SuggestedBindingRedirects.cache
-D:\POE_CSHARP\dev\Revisions\O_Async\obj\Debug\O_Async.csproj.CoreCompileInputs.cache
-D:\POE_CSHARP\dev\Revisions\O_Async\obj\Debug\O_Async.exe
-D:\POE_CSHARP\dev\Revisions\O_Async\obj\Debug\O_Async.pdb

@@ -10,25 +10,39 @@ namespace M_Attribut
     {
         static void Main(string[] args)
         {
-            var jardin = new Jardinage();
-            jardin.TaillerHaies();
+            var client1 = new Client(); 
+            client1.DisplayNiveau();
+            Console.ReadLine();
         }
     }
-    class Jardinage
+    [Solde(1001)]
+    [Categorie(Origine ="Particulier")]
+    class Client
     {
-        public static string Outil = "";
-        [Outil()]
-        public void TaillerHaies()
+        public void DisplayNiveau()
         {
-            if (Outil == "TailleHaie") Console.WriteLine("C'est bon !");   
+             var attributes = typeof(Client).GetCustomAttributes(true);
+            var attSolde = attributes.FirstOrDefault(x => x.GetType().ToString() == "M_Attribut.SoldeAttribute");
+            var attCat = attributes.FirstOrDefault(x => x.GetType().ToString() == "M_Attribut.CategorieAttribute");
+            if (attSolde != null && attCat!=null) Console.WriteLine("Vous avez le niveau {0} et la catégorie {1}",
+                ((SoldeAttribute)attSolde).Classe,
+                ((CategorieAttribute)attCat).Origine
+                );
         }
     }
-    class OutilAttribute : Attribute
+    [AttributeUsage(AttributeTargets.Class)]
+    class SoldeAttribute : Attribute
     {
-        public OutilAttribute()
+        public NiveauEnum Classe = NiveauEnum.None;
+        public SoldeAttribute(double montant)
         {
-            Jardinage.Outil = "TailleHaie";
+            if (montant > 1000) Classe = NiveauEnum.Premium; else Classe = NiveauEnum.Standard;
         }
     }
-
+    [AttributeUsage(AttributeTargets.Class)]
+    class CategorieAttribute : Attribute
+    {
+        public string Origine;
+    }
+    public enum NiveauEnum { None, Standard, Premium }
 }
