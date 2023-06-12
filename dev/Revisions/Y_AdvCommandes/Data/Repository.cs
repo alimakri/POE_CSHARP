@@ -26,5 +26,11 @@ namespace Y_AdvCommandes.Data
                 Total = x.SalesOrderDetails.Sum(y => y.OrderQty * y.UnitPrice)
             });
         }
+
+        internal IEnumerable<DetailCommandeViewModel> GetDetailCommandes(string reference)
+        {
+            return Context.SalesOrderDetails.Where(x => x.SalesOrderHeader.SalesOrderNumber == reference)
+                .Select(x => new DetailCommandeViewModel { Article = "x.Product.Name", Prix = x.UnitPrice, Quantite = x.OrderQty });
+        }
     }
 }

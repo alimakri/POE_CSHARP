@@ -16,10 +16,29 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
+            <TextBlock  Margin="10">
+                <Run Text="{Binding ListeCommande.Count, Mode=OneWay}"/>
+                <Run Text="commandes"/>
+            </TextBlock>
             <ComboBox ItemsSource="{Binding ListeAnnee}" SelectedItem="{Binding CurrentAnnee}" />
             <ComboBox ItemsSource="{Binding ListeMois}" SelectedItem="{Binding CurrentMois}" DisplayMemberPath="Nom"/>
         </StackPanel>
-        <DataGrid Grid.Column="0" Grid.Row="1" ItemsSource="{Binding ListCommande}"/>
-        <DataGrid Grid.Column="1" Grid.Row="1" ItemsSource="{Binding ListDetailCommande}"/>
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" EnableRowVirtualization="True"  
+                      HorizontalAlignment="Stretch" 
+                  ItemsSource="{Binding ListeCommande}" SelectedItem="{Binding CurrentCommande}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Reference}" Header="Référence"/>
+                <DataGridTextColumn Binding="{Binding Path=Total}" Header="Total"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Grid.Row="1" Grid.Column="1" AutoGenerateColumns="True" EnableRowVirtualization="True"  
+                      HorizontalAlignment="Stretch" 
+                  ItemsSource="{Binding ListeDetailCommande}" >
+            <!--<DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Article}" Header="Référence"/>
+                <DataGridTextColumn Binding="{Binding Path=Quantite}" Header="Total"/>
+                <DataGridTextColumn Binding="{Binding Path=Prix}" Header="Prix"/>
+            </DataGrid.Columns>-->
+        </DataGrid>
     </Grid>
 </Window>

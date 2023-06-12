@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Y_AdvCommandes.CommunViewModels;
 using Y_AdvCommandes.Data;
 
 namespace Y_AdvCommandes.ViewModels
 {
-    public class MainWindowViewModel
+    public class MainWindowViewModel : ViewModelBase
     {
         private Repository Repo = new Repository();
         // Année
@@ -37,12 +38,37 @@ namespace Y_AdvCommandes.ViewModels
         private MoisViewModel currentMois;
 
         // Commandes
-        List<CommandeViewModel> ListeCommande{ get; set; }
+
+        public List<CommandeViewModel> ListeCommande
+        {
+            get { return listeCommande; }
+            set { listeCommande = value; OnPropertyChanged("ListeCommande"); }
+        }
+        private List<CommandeViewModel> listeCommande;
+        public List<DetailCommandeViewModel> ListeDetailCommande
+        {
+            get { return listeDetailCommande; }
+            set { listeDetailCommande = value; OnPropertyChanged("ListeCommande"); }
+        }
+        private List<DetailCommandeViewModel> listeDetailCommande;
+
         private void FillCommands()
         {
             if (currentMois == null) return;
             ListeCommande = Repo.GetCommandes(currentAnnee, currentMois).ToList();
         }
+
+        public CommandeViewModel CurrentCommande
+        {
+            get { return currentCommande; }
+            set
+            {
+                currentCommande = value;
+                OnPropertyChanged("ListeCommande");
+                ListeDetailCommande = Repo.GetDetailCommandes(currentCommande.Reference).ToList();
+            }
+        }
+        private CommandeViewModel currentCommande;
 
 
 
@@ -63,8 +89,7 @@ namespace Y_AdvCommandes.ViewModels
             new MoisViewModel{ Numero=11, Nom="Novembre" },
             new MoisViewModel{ Numero=12, Nom="Décembre" },
             };
-            CurrentAnnee = ListeAnnee[0];
-            CurrentMois = ListeMois[0];
+           
         }
     }
     public class MoisViewModel
@@ -72,9 +97,43 @@ namespace Y_AdvCommandes.ViewModels
         public int Numero { get; set; }
         public string Nom { get; set; }
     }
-    public class CommandeViewModel
+    public class CommandeViewModel : ViewModelBase
     {
-        public string Reference { get; set; }
-        public decimal Total { get; set; }
+
+        public string Reference
+        {
+            get { return reference; }
+            set { reference = value; OnPropertyChanged("Reference"); }
+        }
+        private string reference;
+        public decimal Total
+        {
+            get { return total; }
+            set { total = value; OnPropertyChanged("Total"); }
+        }
+        private decimal total;
+
+    }
+    public class DetailCommandeViewModel : ViewModelBase
+    {
+        public string Article
+        {
+            get { return article; }
+            set { article = value; OnPropertyChanged("Reference"); }
+        }
+        private string article;
+        public int Quantite
+        {
+            get { return quantite; }
+            set { quantite = value; OnPropertyChanged("Quantite"); }
+        }
+        private int quantite;
+        public decimal Prix
+        {
+            get { return prix; }
+            set { prix = value; OnPropertyChanged("Prix"); }
+        }
+        private decimal prix;
+
     }
 }

@@ -47,6 +47,7 @@
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="SalesOrderHeader" Relationship="Self.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" FromRole="SalesOrderDetail" ToRole="SalesOrderHeader" />
+    <Property Name="ProductProductID" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="SalesOrderHeader">
     <Key>

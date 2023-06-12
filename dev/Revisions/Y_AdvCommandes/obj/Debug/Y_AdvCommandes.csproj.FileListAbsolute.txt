@@ -2,7 +2,6 @@ D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\bin\Debug\Y_AdvCommandes.exe.config
 D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\bin\Debug\Y_AdvCommandes.exe
 D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\bin\Debug\Y_AdvCommandes.pdb
 D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\obj\Debug\Y_AdvCommandes.csproj.AssemblyReference.cache
-D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\obj\Debug\Y_AdvCommandes.csproj.SuggestedBindingRedirects.cache
 D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\obj\Debug\App.g.cs
 D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\obj\Debug\Y_AdvCommandes_MarkupCompile.cache
 D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\obj\Debug\Y_AdvCommandes_MarkupCompile.lref
