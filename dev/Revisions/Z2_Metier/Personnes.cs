@@ -4,7 +4,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Z5_Donnees;
 using Z4_Dto;
 
 namespace Z2_Metier
@@ -14,7 +13,7 @@ namespace Z2_Metier
         public static DataSet1 Get()
         {
             // Etape 2 - 4
-            var ds2 = DataPersonnes.Get();
+            var ds2 = Z5_Donnees.DataPersonnes.Get();
 
             // Etape 5
             var ds1 = new DataSet1();

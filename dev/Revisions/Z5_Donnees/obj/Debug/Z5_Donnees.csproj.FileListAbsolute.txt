@@ -3,3 +3,7 @@ D:\POE_CSHARP\dev\Revisions\Z5_Donnees\bin\Debug\Z5_Donnees.pdb
 D:\POE_CSHARP\dev\Revisions\Z5_Donnees\obj\Debug\Z5_Donnees.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\Revisions\Z5_Donnees\obj\Debug\Z5_Donnees.dll
 D:\POE_CSHARP\dev\Revisions\Z5_Donnees\obj\Debug\Z5_Donnees.pdb
+D:\POE_CSHARP\dev\Revisions\Z5_Donnees\bin\Debug\Z4_Dto.dll
+D:\POE_CSHARP\dev\Revisions\Z5_Donnees\bin\Debug\Z4_Dto.pdb
+D:\POE_CSHARP\dev\Revisions\Z5_Donnees\obj\Debug\Z5_Donnees.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\Z5_Donnees\obj\Debug\Z5_Donnees.csproj.CopyComplete

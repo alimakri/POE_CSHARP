@@ -46,9 +46,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Personnes.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Z4_Dto\Z4_Dto.csproj">
       <Project>{6c854ed2-3a89-442f-b083-8423538518d0}</Project>
       <Name>Z4_Dto</Name>

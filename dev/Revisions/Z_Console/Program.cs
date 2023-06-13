@@ -12,8 +12,13 @@ namespace Z_Console
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Quelle couche de données ?");
+            Console.WriteLine("1. Base de données");
+            Console.WriteLine("2. Données fictives");
+            var couche = Console.ReadLine();
+
             // Etape 1 - 6
-            var ds1 = Personnes.Get();
+            var ds1 = Personnes.Get(couche);
 
             foreach(DataRow row in ds1.Tables[0].Rows)
             {
