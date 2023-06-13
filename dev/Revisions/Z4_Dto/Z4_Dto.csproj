@@ -77,5 +77,8 @@
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
