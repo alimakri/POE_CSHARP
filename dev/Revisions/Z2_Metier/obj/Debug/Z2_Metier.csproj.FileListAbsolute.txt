@@ -1,0 +1,11 @@
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\bin\Debug\Z2_Metier.dll
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\bin\Debug\Z2_Metier.pdb
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\bin\Debug\Z3_Donnees.dll
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\bin\Debug\Z4_Dto.dll
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\bin\Debug\Z3_Donnees.pdb
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\bin\Debug\Z4_Dto.pdb
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\obj\Debug\Z2_Metier.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\obj\Debug\Z2_Metier.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\obj\Debug\Z2_Metier.csproj.CopyComplete
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\obj\Debug\Z2_Metier.dll
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\obj\Debug\Z2_Metier.pdb

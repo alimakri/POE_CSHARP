@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="AdventureWorks2017ModelStoreContainer" CdmEntityContainer="AdvContext">
+  <EntityContainerMapping StorageEntityContainer="AdventureWorks2017Model1StoreContainer" CdmEntityContainer="AdvContext">
     <EntitySetMapping Name="Products">
-      <EntityTypeMapping TypeName="AdventureWorks2017Model.Product">
+      <EntityTypeMapping TypeName="AdventureWorks2017Model1.Product">
         <MappingFragment StoreEntitySet="Product">
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -33,7 +33,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SalesOrderDetails">
-      <EntityTypeMapping TypeName="AdventureWorks2017Model.SalesOrderDetail">
+      <EntityTypeMapping TypeName="AdventureWorks2017Model1.SalesOrderDetail">
         <MappingFragment StoreEntitySet="SalesOrderDetail">
           <ScalarProperty Name="SalesOrderID" ColumnName="SalesOrderID" />
           <ScalarProperty Name="SalesOrderDetailID" ColumnName="SalesOrderDetailID" />
@@ -50,7 +50,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SalesOrderHeaders">
-      <EntityTypeMapping TypeName="AdventureWorks2017Model.SalesOrderHeader">
+      <EntityTypeMapping TypeName="AdventureWorks2017Model1.SalesOrderHeader">
         <MappingFragment StoreEntitySet="SalesOrderHeader">
           <ScalarProperty Name="SalesOrderID" ColumnName="SalesOrderID" />
           <ScalarProperty Name="RevisionNumber" ColumnName="RevisionNumber" />

@@ -21,3 +21,4 @@ D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\bin\Debug\fr\EntityFramework.resource
 D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
 D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\obj\Debug\Y_AdvCommandes_Content.g.cs
 D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\obj\Debug\Y_AdvCommandes.csproj.CopyComplete
+D:\POE_CSHARP\dev\Revisions\Y_AdvCommandes\obj\Debug\Y_AdvCommandes.csproj.SuggestedBindingRedirects.cache

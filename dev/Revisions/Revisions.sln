@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32616.157
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_ADONET", "ADONET\A_ADONET.csproj", "{84FEDA3D-8175-4886-95F8-2FA6B11DC866}"
 EndProject
@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J_DatasetTypé", "J_Dataset
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K_CleDeTableau", "K_CleDeTableau\K_CleDeTableau.csproj", "{A0387615-D7E4-4922-9C9B-0E2B874311B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L_Cirque", "L_Cirque\L_Cirque.csproj", "{923AEF90-610B-49BF-8B6D-2D70A1021A15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L_Cirque_International", "L_Cirque\L_Cirque_International.csproj", "{923AEF90-610B-49BF-8B6D-2D70A1021A15}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Attribut", "M_Attribut\M_Attribut.csproj", "{25A3D017-7B91-4052-B548-BD18FDB3F3A9}"
 EndProject
@@ -52,6 +52,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T_Chifoumi_ClientLeger", "T_Chifoumi_ClientLeger\T_Chifoumi_ClientLeger.csproj", "{9448D47F-5F54-493F-981A-ED50F6FA6638}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U_Chifoumi_ClientLourd", "U_Chifoumi_ClientLourd\U_Chifoumi_ClientLourd.csproj", "{1EC30500-48C4-4F41-B603-9DC949EFA31A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z1_Console", "Z_Console\Z1_Console.csproj", "{55405F78-F65B-4676-A1D8-6B890E961AA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z2_Metier", "Z2_Metier\Z2_Metier.csproj", "{FE47C8B2-7D3C-46E0-8697-6967F1441BD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z3_Donnees", "Z3_Donnees\Z3_Donnees.csproj", "{CF60E30A-885F-4D06-993E-61CCA6A11331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z4_Dto", "Z4_Dto\Z4_Dto.csproj", "{6C854ED2-3A89-442F-B083-8423538518D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z5_Donnees", "Z5_Donnees\Z5_Donnees.csproj", "{E8756DD9-4CAF-4238-8B77-ECCEE0B505E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +169,26 @@ Global
 		{1EC30500-48C4-4F41-B603-9DC949EFA31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EC30500-48C4-4F41-B603-9DC949EFA31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EC30500-48C4-4F41-B603-9DC949EFA31A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55405F78-F65B-4676-A1D8-6B890E961AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55405F78-F65B-4676-A1D8-6B890E961AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55405F78-F65B-4676-A1D8-6B890E961AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55405F78-F65B-4676-A1D8-6B890E961AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE47C8B2-7D3C-46E0-8697-6967F1441BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE47C8B2-7D3C-46E0-8697-6967F1441BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE47C8B2-7D3C-46E0-8697-6967F1441BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE47C8B2-7D3C-46E0-8697-6967F1441BD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF60E30A-885F-4D06-993E-61CCA6A11331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF60E30A-885F-4D06-993E-61CCA6A11331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF60E30A-885F-4D06-993E-61CCA6A11331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF60E30A-885F-4D06-993E-61CCA6A11331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C854ED2-3A89-442F-B083-8423538518D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C854ED2-3A89-442F-B083-8423538518D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C854ED2-3A89-442F-B083-8423538518D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C854ED2-3A89-442F-B083-8423538518D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8756DD9-4CAF-4238-8B77-ECCEE0B505E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8756DD9-4CAF-4238-8B77-ECCEE0B505E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8756DD9-4CAF-4238-8B77-ECCEE0B505E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8756DD9-4CAF-4238-8B77-ECCEE0B505E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

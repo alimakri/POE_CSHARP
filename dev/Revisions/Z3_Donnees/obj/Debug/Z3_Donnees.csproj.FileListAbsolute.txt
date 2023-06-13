@@ -1,0 +1,9 @@
+D:\POE_CSHARP\dev\Revisions\Z3_Donnees\bin\Debug\Z3_Donnees.dll
+D:\POE_CSHARP\dev\Revisions\Z3_Donnees\bin\Debug\Z3_Donnees.pdb
+D:\POE_CSHARP\dev\Revisions\Z3_Donnees\bin\Debug\Z4_Dto.dll
+D:\POE_CSHARP\dev\Revisions\Z3_Donnees\bin\Debug\Z4_Dto.pdb
+D:\POE_CSHARP\dev\Revisions\Z3_Donnees\obj\Debug\Z3_Donnees.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\Z3_Donnees\obj\Debug\Z3_Donnees.csproj.CoreCompileInputs.cache
+D:\POE_CSHARP\dev\Revisions\Z3_Donnees\obj\Debug\Z3_Donnees.csproj.CopyComplete
+D:\POE_CSHARP\dev\Revisions\Z3_Donnees\obj\Debug\Z3_Donnees.dll
+D:\POE_CSHARP\dev\Revisions\Z3_Donnees\obj\Debug\Z3_Donnees.pdb

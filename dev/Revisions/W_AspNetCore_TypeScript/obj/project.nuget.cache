@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gg/z5/yb1Uogz8h89AkboZaHYvdLRRZIlIcenJqIHeAO4l3ksy/pGxjrqNIBhmfAhv4r4UoK00n/aEiI8paYkw==",
+  "dgSpecHash": "dagY91XknoYgwsx0Vv+6Z7RpXzqq30jWeBr5OetJZSWjvwkAcvKxpoHa4Wy0SFehvcoGZDQ3ZLCsmRs/sDU77Q==",
   "success": true,
   "projectFilePath": "D:\\POE_CSHARP\\dev\\Revisions\\W_AspNetCore_TypeScript\\W_AspNetCore_TypeScript.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\alima\\.nuget\\packages\\microsoft.typescript.msbuild\\5.1.3\\microsoft.typescript.msbuild.5.1.3.nupkg.sha512"
+  ],
   "logs": []
 }
