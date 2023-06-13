@@ -45,13 +45,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Z3_Donnees\Z3_Donnees.csproj">
-      <Project>{CF60E30A-885F-4D06-993E-61CCA6A11331}</Project>
-      <Name>Z3_Donnees</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Z4_Dto\Z4_Dto.csproj">
       <Project>{6C854ED2-3A89-442F-B083-8423538518D0}</Project>
       <Name>Z4_Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Z5_Donnees\Z5_Donnees.csproj">
+      <Project>{e8756dd9-4caf-4238-8b77-eccee0b505e4}</Project>
+      <Name>Z5_Donnees</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
