@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ListBox ItemsSource="{Binding ListePersonne}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Gray" BorderThickness="1" Padding="2">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Id}" FontWeight="Bold" Margin="5"/>
+                            <TextBlock Text="{Binding NomComplet}" FontSize="16" Foreground="Blue"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>

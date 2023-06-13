@@ -69,6 +69,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +94,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Z2_Metier\Z2_Metier.csproj">
+      <Project>{FE47C8B2-7D3C-46E0-8697-6967F1441BD3}</Project>
+      <Name>Z2_Metier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Z4_Dto\Z4_Dto.csproj">
+      <Project>{6C854ED2-3A89-442F-B083-8423538518D0}</Project>
+      <Name>Z4_Dto</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

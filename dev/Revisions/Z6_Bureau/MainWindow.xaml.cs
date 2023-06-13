@@ -23,6 +23,7 @@ namespace Z6_Bureau
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
         }
     }
 }
