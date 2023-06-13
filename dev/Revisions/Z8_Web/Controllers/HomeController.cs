@@ -12,7 +12,7 @@ namespace Z8_Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var ds1 = Personnes.Get("3");
+            var ds1 = Personnes.Get(SourceEnum.Real);
 
             return View(ds1);
         }

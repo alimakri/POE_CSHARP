@@ -29,7 +29,7 @@
     <Property Name="DiscontinuedDate" Type="DateTime" Precision="3" />
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="SalesOrderDetails" Relationship="AdventureWorks2017Model.ProductSalesOrderDetail" FromRole="Product" ToRole="SalesOrderDetail" />
+    <NavigationProperty Name="SalesOrderDetails" Relationship="Self.FK_SalesOrderDetail_Product" FromRole="Product" ToRole="SalesOrderDetail" />
   </EntityType>
   <EntityType Name="SalesOrderDetail">
     <Key>
@@ -47,9 +47,8 @@
     <Property Name="LineTotal" Type="Decimal" Precision="38" Scale="6" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
     <Property Name="rowguid" Type="Guid" Nullable="false" />
     <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_SalesOrderDetail_Product" FromRole="SalesOrderDetail" ToRole="Product" />
     <NavigationProperty Name="SalesOrderHeader" Relationship="Self.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" FromRole="SalesOrderDetail" ToRole="SalesOrderHeader" />
-    <NavigationProperty Name="Product" Relationship="AdventureWorks2017Model.ProductSalesOrderDetail" FromRole="SalesOrderDetail" ToRole="Product" />
-    <Property Name="ProductProductID" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="SalesOrderHeader">
     <Key>
@@ -83,6 +82,18 @@
     <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="SalesOrderDetails" Relationship="Self.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" FromRole="SalesOrderHeader" ToRole="SalesOrderDetail" />
   </EntityType>
+  <Association Name="FK_SalesOrderDetail_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="SalesOrderDetail" Type="Self.SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
     <End Role="SalesOrderHeader" Type="Self.SalesOrderHeader" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -101,25 +112,13 @@
     <EntitySet Name="Products" EntityType="Self.Product" />
     <EntitySet Name="SalesOrderDetails" EntityType="Self.SalesOrderDetail" />
     <EntitySet Name="SalesOrderHeaders" EntityType="Self.SalesOrderHeader" />
+    <AssociationSet Name="FK_SalesOrderDetail_Product" Association="Self.FK_SalesOrderDetail_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetails" />
+    </AssociationSet>
     <AssociationSet Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" Association="Self.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
       <End Role="SalesOrderHeader" EntitySet="SalesOrderHeaders" />
       <End Role="SalesOrderDetail" EntitySet="SalesOrderDetails" />
     </AssociationSet>
-    <AssociationSet Name="ProductSalesOrderDetail" Association="AdventureWorks2017Model.ProductSalesOrderDetail">
-      <End Role="Product" EntitySet="Products" />
-      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetails" />
-    </AssociationSet>
   </EntityContainer>
-  <Association Name="ProductSalesOrderDetail">
-    <End Type="AdventureWorks2017Model.Product" Role="Product" Multiplicity="1" />
-    <End Type="AdventureWorks2017Model.SalesOrderDetail" Role="SalesOrderDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Product">
-        <PropertyRef Name="ProductID" />
-      </Principal>
-      <Dependent Role="SalesOrderDetail">
-        <PropertyRef Name="ProductProductID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
 </Schema>

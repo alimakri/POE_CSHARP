@@ -9,10 +9,12 @@ using Z4_Dto;
 
 namespace Z2_Metier
 {
+    public enum SourceEnum { None=0, Real=3, Fake=5 }
     public static class Personnes
     {
-        public static DataSet1 Get(string couche)
+        public static DataSet1 Get(SourceEnum source)
         {
+            var couche = (int)source;
             // Etape 2 - 4
             DataSet2 ds2 = null;
             var method = $"Z{couche}_Donnees.DataPersonnes.Get";
