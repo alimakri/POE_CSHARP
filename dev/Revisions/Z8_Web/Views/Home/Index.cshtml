@@ -1,0 +1,13 @@
+﻿@using System.Data
+@model Z4_Dto.DataSet1
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Personnes</h2>
+<ul></ul>
+@foreach (DataRow row in Model.Tables[0].Rows)
+{
+    <li>@row["NomComplet"]</li>
+}
+ </ul>

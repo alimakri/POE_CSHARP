@@ -67,6 +67,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z6_Bureau", "Z6_Bureau\Z6_B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z7_WebAjax", "Z7_WebAjax\Z7_WebAjax.csproj", "{304F4501-D0F3-4ADC-9DB9-93E7B87303B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z8_Web", "Z8_Web\Z8_Web.csproj", "{FC7B460A-5D89-4F10-AABC-8D98CAD7E8CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -201,6 +203,10 @@ Global
 		{304F4501-D0F3-4ADC-9DB9-93E7B87303B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{304F4501-D0F3-4ADC-9DB9-93E7B87303B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{304F4501-D0F3-4ADC-9DB9-93E7B87303B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC7B460A-5D89-4F10-AABC-8D98CAD7E8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC7B460A-5D89-4F10-AABC-8D98CAD7E8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC7B460A-5D89-4F10-AABC-8D98CAD7E8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC7B460A-5D89-4F10-AABC-8D98CAD7E8CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

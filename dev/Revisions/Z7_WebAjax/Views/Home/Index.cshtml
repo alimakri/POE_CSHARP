@@ -1,7 +1,26 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Personnes";
 }
+<ul id="liste">
 
-<h2>Index</h2>
-
+</ul>
+<h2>Personnes</h2>
+@section scripts{
+    <script>
+        $.ajax({
+            url: "/api/personne",
+            method: "GET",
+            contentType: "application/json",
+            success: function (data) {
+                var json = JSON.parse(data);
+                $.each(json, function (key, val) {
+                    $('#liste').append('<li>' + val.NomComplet + '</li>');
+                });
+            },
+            error: function (error) {
+                alert("error" + error);
+            }
+        });
+    </script>
+}

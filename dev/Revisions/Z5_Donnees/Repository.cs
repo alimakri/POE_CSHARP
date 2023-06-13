@@ -13,7 +13,7 @@ namespace Z5_Donnees
     {
         internal DataSet2 GetPersonnes()
         {
-            var data = File.ReadAllText(@"Personnes.txt");
+            var data = File.ReadAllText(@"d:\Personnes.txt");
             Regex reg1 = new Regex(@"([0-9]+). ([^ ]+) ([^\n]+)");
             var matches = reg1
                 .Matches(data).Cast<Match>()
