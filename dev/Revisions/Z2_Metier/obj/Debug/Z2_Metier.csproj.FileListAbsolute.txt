@@ -9,3 +9,5 @@ D:\POE_CSHARP\dev\Revisions\Z2_Metier\obj\Debug\Z2_Metier.dll
 D:\POE_CSHARP\dev\Revisions\Z2_Metier\obj\Debug\Z2_Metier.pdb
 D:\POE_CSHARP\dev\Revisions\Z2_Metier\bin\Debug\Z5_Donnees.dll
 D:\POE_CSHARP\dev\Revisions\Z2_Metier\bin\Debug\Z5_Donnees.pdb
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\bin\Debug\Z3_Donnees.dll
+D:\POE_CSHARP\dev\Revisions\Z2_Metier\bin\Debug\Z3_Donnees.pdb

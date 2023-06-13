@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z4_Dto", "Z4_Dto\Z4_Dto.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z5_Donnees", "Z5_Donnees\Z5_Donnees.csproj", "{E8756DD9-4CAF-4238-8B77-ECCEE0B505E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z6_Bureau", "Z6_Bureau\Z6_Bureau.csproj", "{CC149A52-8E18-4B48-9FE4-2BB84D2DB80A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +191,10 @@ Global
 		{E8756DD9-4CAF-4238-8B77-ECCEE0B505E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8756DD9-4CAF-4238-8B77-ECCEE0B505E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8756DD9-4CAF-4238-8B77-ECCEE0B505E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC149A52-8E18-4B48-9FE4-2BB84D2DB80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC149A52-8E18-4B48-9FE4-2BB84D2DB80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC149A52-8E18-4B48-9FE4-2BB84D2DB80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC149A52-8E18-4B48-9FE4-2BB84D2DB80A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

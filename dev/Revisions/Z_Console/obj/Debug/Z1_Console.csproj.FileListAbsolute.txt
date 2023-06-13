@@ -12,3 +12,5 @@ D:\POE_CSHARP\dev\Revisions\Z_Console\obj\Debug\Z_Console.exe
 D:\POE_CSHARP\dev\Revisions\Z_Console\obj\Debug\Z_Console.pdb
 D:\POE_CSHARP\dev\Revisions\Z_Console\bin\Debug\Z5_Donnees.dll
 D:\POE_CSHARP\dev\Revisions\Z_Console\bin\Debug\Z5_Donnees.pdb
+D:\POE_CSHARP\dev\Revisions\Z_Console\bin\Debug\Z3_Donnees.dll
+D:\POE_CSHARP\dev\Revisions\Z_Console\bin\Debug\Z3_Donnees.pdb

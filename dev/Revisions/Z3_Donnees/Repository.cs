@@ -24,7 +24,7 @@ namespace Z3_Donnees
             var cmd = new SqlCommand();
             cmd.Connection = cnx;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select top 100 BusinessEntityId Id, FirstName prenom, LastName nom from Person.Person order by BusinessEntityId";
+            cmd.CommandText = "select BusinessEntityId Id, FirstName prenom, LastName nom from Person.Person order by BusinessEntityId";
             SqlDataReader rd = null;
             try
             {

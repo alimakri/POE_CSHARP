@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Z3_Donnees\Z3_Donnees.csproj">
+      <Project>{cf60e30a-885f-4d06-993e-61cca6a11331}</Project>
+      <Name>Z3_Donnees</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Z4_Dto\Z4_Dto.csproj">
       <Project>{6C854ED2-3A89-442F-B083-8423538518D0}</Project>
       <Name>Z4_Dto</Name>

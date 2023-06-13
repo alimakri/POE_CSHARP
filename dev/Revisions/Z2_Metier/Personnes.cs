@@ -10,10 +10,16 @@ namespace Z2_Metier
 {
     public static class Personnes
     {
-        public static DataSet1 Get()
+        public static DataSet1 Get(string couche)
         {
             // Etape 2 - 4
-            var ds2 = Z5_Donnees.DataPersonnes.Get();
+            DataSet2 ds2 = null;
+            var method = $"Z{couche}_Donnees.DataPersonnes.Get";
+            switch (couche)
+            {
+                case "3":  ds2 = Z3_Donnees.DataPersonnes.Get(); break;
+                case "5":  ds2 = Z5_Donnees.DataPersonnes.Get(); break;
+            }
 
             // Etape 5
             var ds1 = new DataSet1();

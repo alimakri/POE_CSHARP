@@ -13,8 +13,8 @@ namespace Z_Console
         static void Main(string[] args)
         {
             Console.WriteLine("Quelle couche de données ?");
-            Console.WriteLine("1. Base de données");
-            Console.WriteLine("2. Données fictives");
+            Console.WriteLine("3. Base de données");
+            Console.WriteLine("5. Données fictives");
             var couche = Console.ReadLine();
 
             // Etape 1 - 6
