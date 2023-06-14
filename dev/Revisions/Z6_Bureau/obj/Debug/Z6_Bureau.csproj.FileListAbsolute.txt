@@ -20,4 +20,3 @@ D:\POE_CSHARP\dev\Revisions\Z6_Bureau\obj\Debug\Z6_Bureau.csproj.CoreCompileInpu
 D:\POE_CSHARP\dev\Revisions\Z6_Bureau\obj\Debug\Z6_Bureau.csproj.CopyComplete
 D:\POE_CSHARP\dev\Revisions\Z6_Bureau\obj\Debug\Z6_Bureau.exe
 D:\POE_CSHARP\dev\Revisions\Z6_Bureau\obj\Debug\Z6_Bureau.pdb
-D:\POE_CSHARP\dev\Revisions\Z6_Bureau\obj\Debug\Z6_Bureau.csproj.SuggestedBindingRedirects.cache

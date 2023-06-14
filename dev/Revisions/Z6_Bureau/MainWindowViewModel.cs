@@ -11,6 +11,7 @@ namespace Z6_Bureau
 {
     public class MainWindowViewModel : ViewModelBase
     {
+        private List<DetailsViewModel> ListeComplete;
         public MainWindowViewModel()
         {
             // Init ListePersonne
@@ -27,6 +28,22 @@ namespace Z6_Bureau
         }
         // Personne
         public List<PersonneViewModel> ListePersonne { get; set; }
+
+        public MagasinViewModel CurrentMagasin
+        {
+            get { return currentMagasin; }
+            set
+            {
+                ListeDetails.Clear();
+                OnPropertyChanged("ListeDetails");
+                if (value == null) return;
+                currentMagasin = value; OnPropertyChanged("CurrentMagasin");
+                ListeDetails = ListeComplete.Where(x => x.Magasin == currentMagasin.Nom).ToList();
+            }
+        }
+        private MagasinViewModel currentMagasin;
+
+
         public PersonneViewModel CurrentPersonne
         {
             get
@@ -40,16 +57,33 @@ namespace Z6_Bureau
 
 
 
-                ListeDetails.Clear();
+                ListeComplete = new List<DetailsViewModel>();
                 foreach (DataRow row in ds1.Tables["Detail"].Rows)
                 {
-                    ListeDetails.Add(new DetailsViewModel { Magasin = (string)row["Magasin"] });
+                    ListeComplete.Add(new DetailsViewModel
+                    {
+                        Magasin = (string)row["Magasin"],
+                        RefCommande = (string)row["RefCommande"]
+                    });
                 }
-                ListeMagasins = ListeDetails.Distinct().Select(x => new MagasinViewModel { Nom = x.Magasin }).ToList();
+                ListeMagasins.Clear();
+                ListeMagasins = ListeComplete.Distinct(new MagasinComparer()).Select(x => new MagasinViewModel { Nom = x.Magasin }).ToList();
+                CurrentMagasin = ListeMagasins.FirstOrDefault();
             }
         }
         private PersonneViewModel currentPersonne;
+        public class MagasinComparer : IEqualityComparer<DetailsViewModel>
+        {
+            public bool Equals(DetailsViewModel x, DetailsViewModel y)
+            {
+                return x.Magasin == y.Magasin;
+            }
 
+            public int GetHashCode(DetailsViewModel obj)
+            {
+                return 0;
+            }
+        }
         // ListeDetails
         public List<DetailsViewModel> ListeDetails
         {
@@ -98,6 +132,12 @@ namespace Z6_Bureau
             set { magasin = value; OnPropertyChanged("Magasin"); }
         }
         private string magasin;
+        public string RefCommande
+        {
+            get { return refCommande; }
+            set { refCommande = value; OnPropertyChanged("Magasin"); }
+        }
+        private string refCommande;
 
     }
 }

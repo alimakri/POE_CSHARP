@@ -24,13 +24,13 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel Grid.Column="1" Orientation="Vertical">
-            <ComboBox ItemsSource="{Binding ListeMagasins}"/>
-            <ListBox ItemsSource="{Binding ListeDetails, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Background="Pink">
+            <ComboBox ItemsSource="{Binding ListeMagasins}" SelectedItem="{Binding CurrentMagasin, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Background="Green" DisplayMemberPath="Nom"></ComboBox>
+            <ListBox ItemsSource="{Binding ListeDetails}">
                 <ListBox.ItemTemplate >
                     <DataTemplate>
                         <Border BorderBrush="Gray" BorderThickness="1">
                             <StackPanel Orientation="Horizontal" >
-                                <TextBlock Text="{Binding Magasin}" FontWeight="Bold" Margin="5 0 " VerticalAlignment="Top" Foreground="Gray"/>
+                                <TextBlock Text="{Binding RefCommande}" FontWeight="Bold" Margin="5 0 " VerticalAlignment="Top" Foreground="Gray"/>
                             </StackPanel>
                         </Border>
                     </DataTemplate>

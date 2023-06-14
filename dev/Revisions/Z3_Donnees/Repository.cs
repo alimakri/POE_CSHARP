@@ -33,7 +33,7 @@ namespace Z3_Donnees
             var cmd = new SqlCommand();
             cmd.Connection = cnx;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $@"select Top 10 st.Name Magasin, h.SalesOrderNumber refCommande from Sales.SalesOrderHeader h 
+            cmd.CommandText = $@"select st.Name Magasin, h.SalesOrderNumber refCommande from Sales.SalesOrderHeader h 
                                 inner join Sales.SalesPerson sp on h.SalesPersonID = sp.BusinessEntityID
                                 inner join Sales.Store st on st.SalesPersonID = sp.BusinessEntityID
                                 inner join HumanResources.Employee e on e.BusinessEntityID = sp.BusinessEntityID

@@ -63,6 +63,7 @@ namespace Z2_Metier
                 {
                     var newRow1 = ds1.Tables["Detail"].NewRow();
                     newRow1["Magasin"] = row2["Magasin"];
+                    newRow1["RefCommande"] = row2["RefCommande"];
                     ds1.Tables["Detail"].Rows.Add(newRow1);
                 }
             }
