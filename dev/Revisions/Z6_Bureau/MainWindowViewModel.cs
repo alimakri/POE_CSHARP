@@ -9,7 +9,7 @@ using Z4_Dto;
 
 namespace Z6_Bureau
 {
-    public class MainWindowViewModel
+    public class MainWindowViewModel : ViewModelBase
     {
         public MainWindowViewModel()
         {
@@ -36,6 +36,7 @@ namespace Z6_Bureau
             {
                 currentPersonne = value;
                 var ds1 = Personnes.GetDetails(SourceEnum.Real, currentPersonne.Id);
+                ListeDetails.Clear();
                 foreach (DataRow row in ds1.Tables["Detail"].Rows)
                 {
                     ListeDetails.Add(new DetailsViewModel { Magasin = (string)row["Magasin"] });
@@ -45,7 +46,19 @@ namespace Z6_Bureau
         private PersonneViewModel currentPersonne;
 
         // ListeDetails
-        public List<DetailsViewModel> ListeDetails { get; set; } 
+        public List<DetailsViewModel> ListeDetails
+        {
+            get
+            {
+                return listeDetails;
+            }
+            set
+            {
+                listeDetails = value;
+                OnPropertyChanged("ListeDetails");
+            }
+        }
+        private List<DetailsViewModel> listeDetails;
 
     }
     public class PersonneViewModel
