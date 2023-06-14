@@ -14,7 +14,7 @@ namespace Z7_WebAjax.Controllers
     {
         public string Get()
         {
-            var data = Personnes.Get(SourceEnum.Fake);
+            var data = Personnes.GetPersonnes(SourceEnum.Fake);
             if (data == null) return null;
             return JsonConvert.SerializeObject(data.Tables[0].AsEnumerable().Select(x => new
             {

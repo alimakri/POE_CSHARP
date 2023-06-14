@@ -1,3 +1,5 @@
+D:\POE_CSHARP\dev\Revisions\Z8_Web\obj\Debug\Z8_Web.csproj.AssemblyReference.cache
+D:\POE_CSHARP\dev\Revisions\Z8_Web\obj\Debug\Z8_Web.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\Z8_Web.dll.config
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\Z8_Web.dll
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\Z8_Web.pdb
@@ -60,6 +62,7 @@ D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\System.Web.Webpages.dll
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\System.Web.Webpages.Razor.dll
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\Z2_Metier.dll
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\Z4_Dto.dll
+D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\Z3_Donnees.dll
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\Z2_Metier.pdb
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\Z4_Dto.pdb
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\System.Web.Razor.xml
@@ -69,14 +72,13 @@ D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\System.Web.Webpages.Razor.xml
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\System.Web.Helpers.xml
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\System.Web.Mvc.xml
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\Z3_Donnees.pdb
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\fr\System.Web.Razor.resources.dll
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\fr\System.Web.Webpages.resources.dll
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\fr\System.Web.Webpages.Deployment.resources.dll
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\fr\System.Web.Webpages.Razor.resources.dll
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\fr\System.Web.Helpers.resources.dll
 D:\POE_CSHARP\dev\Revisions\Z8_Web\bin\fr\System.Web.Mvc.resources.dll
-D:\POE_CSHARP\dev\Revisions\Z8_Web\obj\Debug\Z8_Web.csproj.AssemblyReference.cache
-D:\POE_CSHARP\dev\Revisions\Z8_Web\obj\Debug\Z8_Web.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\Revisions\Z8_Web\obj\Debug\Z8_Web.csproj.CopyComplete
 D:\POE_CSHARP\dev\Revisions\Z8_Web\obj\Debug\Z8_Web.dll
 D:\POE_CSHARP\dev\Revisions\Z8_Web\obj\Debug\Z8_Web.pdb

@@ -1,16 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<xs:schema id="DataSet1" 
-                  targetNamespace="http://tempuri.org/DataSet1.xsd"
-                  elementFormDefault="qualified"
-                  attributeFormDefault="qualified"
-                  xmlns="http://tempuri.org/DataSet1.xsd"
-                  xmlns:mstns="http://tempuri.org/DataSet1.xsd"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-                  xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-    <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
-        <xs:complexType>
-            <xs:choice minOccurs="0" maxOccurs="unbounded"></xs:choice>
-        </xs:complexType>
-    </xs:element>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Personne" msprop:Generator_RowClassName="PersonneRow" msprop:Generator_RowEvHandlerName="PersonneRowChangeEventHandler" msprop:Generator_RowDeletedName="PersonneRowDeleted" msprop:Generator_RowDeletingName="PersonneRowDeleting" msprop:Generator_RowEvArgName="PersonneRowChangeEvent" msprop:Generator_TablePropName="Personne" msprop:Generator_RowChangedName="PersonneRowChanged" msprop:Generator_UserTableName="Personne" msprop:Generator_RowChangingName="PersonneRowChanging" msprop:Generator_TableClassName="PersonneDataTable" msprop:Generator_TableVarName="tablePersonne">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="NomComplet" msprop:Generator_UserColumnName="NomComplet" msprop:Generator_ColumnPropNameInTable="NomCompletColumn" msprop:Generator_ColumnPropNameInRow="NomComplet" msprop:Generator_ColumnVarNameInTable="columnNomComplet" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Detail" msprop:Generator_RowClassName="DetailRow" msprop:Generator_RowEvHandlerName="DetailRowChangeEventHandler" msprop:Generator_RowDeletedName="DetailRowDeleted" msprop:Generator_RowDeletingName="DetailRowDeleting" msprop:Generator_RowEvArgName="DetailRowChangeEvent" msprop:Generator_TablePropName="Detail" msprop:Generator_RowChangedName="DetailRowChanged" msprop:Generator_UserTableName="Detail" msprop:Generator_RowChangingName="DetailRowChanging" msprop:Generator_TableClassName="DetailDataTable" msprop:Generator_TableVarName="tableDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Magasin" msprop:Generator_UserColumnName="Magasin" msprop:Generator_ColumnPropNameInTable="MagasinColumn" msprop:Generator_ColumnPropNameInRow="Magasin" msprop:Generator_ColumnVarNameInTable="columnMagasin" type="xs:string" minOccurs="0" />
+              <xs:element name="RefCommande" msprop:Generator_UserColumnName="RefCommande" msprop:Generator_ColumnPropNameInTable="RefCommandeColumn" msprop:Generator_ColumnPropNameInRow="RefCommande" msprop:Generator_ColumnVarNameInTable="columnRefCommande" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Personne" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
 </xs:schema>

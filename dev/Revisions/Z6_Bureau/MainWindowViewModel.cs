@@ -5,11 +5,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Z2_Metier;
+using Z4_Dto;
 
 namespace Z6_Bureau
 {
     public class MainWindowViewModel
     {
+        public MainWindowViewModel()
+        {
+            // Init ListePersonne
+            var ds1 = Personnes.GetPersonnes(SourceEnum.Real);
+
+            ListePersonne = new List<PersonneViewModel>();
+            ListeDetails = new List<DetailsViewModel>();
+            foreach (DataRow row in ds1.Tables["Personne"].Rows)
+            {
+                ListePersonne.Add(new PersonneViewModel { Id = (int)row["Id"], NomComplet = (string)row["NomComplet"] });
+            }
+
+        }
         // Personne
         public List<PersonneViewModel> ListePersonne { get; set; }
         public PersonneViewModel CurrentPersonne
@@ -21,23 +35,18 @@ namespace Z6_Bureau
             set
             {
                 currentPersonne = value;
-
+                var ds1 = Personnes.GetDetails(SourceEnum.Real, currentPersonne.Id);
+                foreach (DataRow row in ds1.Tables["Detail"].Rows)
+                {
+                    ListeDetails.Add(new DetailsViewModel { Magasin = (string)row["Magasin"] });
+                }
             }
         }
         private PersonneViewModel currentPersonne;
 
         // ListeDetails
-        public List<DetailsViewModel> ListeDetails { get; set; }
+        public List<DetailsViewModel> ListeDetails { get; set; } 
 
-        public MainWindowViewModel()
-        {
-            var ds1 = Personnes.Get(SourceEnum.Fake);
-            ListePersonne = new List<PersonneViewModel>();
-            foreach (DataRow row in ds1.Tables[0].Rows)
-            {
-                ListePersonne.Add(new PersonneViewModel { Id = (int)row["Id"], NomComplet = (string)row["NomComplet"] });
-            }
-        }
     }
     public class PersonneViewModel
     {

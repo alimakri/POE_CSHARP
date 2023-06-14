@@ -20,6 +20,44 @@ namespace Z3_Donnees
     internal class Repository
     {
         private string MessageErreur = null;
+
+        internal DataSet2 GetDetails(int idPersonne)
+        {
+            var cnx = new SqlConnection();
+            cnx.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=AdventureWorks2017;Integrated Security=true";
+            try
+            {
+                cnx.Open();
+            }
+            catch (Exception ex) { MessageErreur = ex.Message; return null; }
+            var cmd = new SqlCommand();
+            cmd.Connection = cnx;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $@"select st.Name Magasin, h.SalesOrderNumber refCommande from Sales.SalesOrderHeader h 
+                                inner join Sales.SalesPerson sp on h.SalesPersonID = sp.BusinessEntityID
+                                inner join Sales.Store st on st.SalesPersonID = sp.BusinessEntityID
+                                inner join HumanResources.Employee e on e.BusinessEntityID = sp.BusinessEntityID
+                                inner join Person.Person p on p.BusinessEntityID = e.BusinessEntityID
+                                where p.BusinessEntityID={idPersonne}";
+            SqlDataReader rd = null;
+            try
+            {
+                rd = cmd.ExecuteReader();
+            }
+            catch (Exception ex) { MessageErreur = ex.Message; return null; }
+
+            var ds = new DataSet2();
+            while (rd.Read())
+            {
+                var newRow = ds.Tables["Detail"].NewRow();
+                newRow["Magasin"] = rd["Magasin"];
+                newRow["RefCommande"] = rd["RefCommande"];
+                ds.Tables["Detail"].Rows.Add(newRow);
+            }
+            rd.Close();
+            return ds;
+        }
+
         internal DataSet2 GetEmployes()
         {
             var cnx = new SqlConnection();

@@ -18,9 +18,9 @@ namespace Z_Console
             var couche = Console.ReadLine();
 
             // Etape 1 - 6
-            var ds1 = Personnes.Get((SourceEnum)Enum.Parse(typeof(SourceEnum), couche));
+            var ds1 = Personnes.GetPersonnes((SourceEnum)Enum.Parse(typeof(SourceEnum), couche));
 
-            foreach(DataRow row in ds1.Tables[0].Rows)
+            foreach(DataRow row in ds1.Tables["Personne"].Rows)
             {
                 Console.WriteLine("{0}. {1}", row["Id"], row["NomComplet"]);
             }
