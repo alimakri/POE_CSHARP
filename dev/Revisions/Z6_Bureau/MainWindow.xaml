@@ -23,16 +23,19 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ListBox Grid.Column="1" ItemsSource="{Binding ListeDetails, UpdateSourceTrigger=PropertyChanged}">
-            <ListBox.ItemTemplate >
-                <DataTemplate>
-                    <Border BorderBrush="Gray" BorderThickness="1">
-                        <StackPanel Orientation="Horizontal" >
-                            <TextBlock Text="{Binding Magasin}" FontWeight="Bold" Margin="5 0 " VerticalAlignment="Top" Foreground="Gray"/>
-                        </StackPanel>
-                    </Border>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            <ComboBox ItemsSource="{Binding ListeMagasins}"/>
+            <ListBox ItemsSource="{Binding ListeDetails, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Background="Pink">
+                <ListBox.ItemTemplate >
+                    <DataTemplate>
+                        <Border BorderBrush="Gray" BorderThickness="1">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="{Binding Magasin}" FontWeight="Bold" Margin="5 0 " VerticalAlignment="Top" Foreground="Gray"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
     </Grid>
 </Window>
