@@ -5,19 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Z6_Bureau"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="AdventureWorks" Height="450" Width="800">
     <Grid>
-        <ListBox ItemsSource="{Binding ListePersonne}">
-            <ListBox.ItemTemplate>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox ItemsSource="{Binding ListePersonne}" SelectedItem="{Binding CurrentPersonne}" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate >
                 <DataTemplate>
-                    <Border BorderBrush="Gray" BorderThickness="1" Padding="2">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding Id}" FontWeight="Bold" Margin="5"/>
-                            <TextBlock Text="{Binding NomComplet}" FontSize="16" Foreground="Blue"/>
+                    <Border BorderBrush="Gray" BorderThickness="1">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="{Binding Id}" FontWeight="Bold" Margin="5 0 " VerticalAlignment="Top" Foreground="Gray"/>
+                            <TextBlock Text="{Binding NomComplet}" FontSize="16" Foreground="Blue" />
                         </StackPanel>
                     </Border>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <ListBox Grid.Column="1" ItemsSource="{Binding ListeDetails}"/>
     </Grid>
 </Window>

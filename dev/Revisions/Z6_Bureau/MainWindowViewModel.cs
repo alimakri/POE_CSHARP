@@ -10,7 +10,25 @@ namespace Z6_Bureau
 {
     public class MainWindowViewModel
     {
+        // Personne
         public List<PersonneViewModel> ListePersonne { get; set; }
+        public PersonneViewModel CurrentPersonne
+        {
+            get
+            {
+                return currentPersonne;
+            }
+            set
+            {
+                currentPersonne = value;
+
+            }
+        }
+        private PersonneViewModel currentPersonne;
+
+        // ListeDetails
+        public List<DetailsViewModel> ListeDetails { get; set; }
+
         public MainWindowViewModel()
         {
             var ds1 = Personnes.Get(SourceEnum.Fake);
@@ -25,5 +43,9 @@ namespace Z6_Bureau
     {
         public int Id { get; set; }
         public string NomComplet { get; set; }
+    }
+    public class DetailsViewModel
+    {
+        public string Magasin { get; set; }
     }
 }
