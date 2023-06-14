@@ -13,7 +13,7 @@ namespace Z3_Donnees
         public static DataSet2 Get()
         {
             // Etape 3
-           return Repo.GetPersonnes();
+           return Repo.GetEmployes();
         }
     }
 }

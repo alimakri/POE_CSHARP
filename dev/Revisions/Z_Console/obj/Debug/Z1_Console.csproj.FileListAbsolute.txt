@@ -10,3 +10,4 @@ D:\POE_CSHARP\dev\Revisions\Z_Console\obj\Debug\Z1_Console.csproj.CoreCompileInp
 D:\POE_CSHARP\dev\Revisions\Z_Console\obj\Debug\Z1_Console.csproj.CopyComplete
 D:\POE_CSHARP\dev\Revisions\Z_Console\obj\Debug\Z_Console.exe
 D:\POE_CSHARP\dev\Revisions\Z_Console\obj\Debug\Z_Console.pdb
+D:\POE_CSHARP\dev\Revisions\Z_Console\obj\Debug\Z1_Console.csproj.SuggestedBindingRedirects.cache

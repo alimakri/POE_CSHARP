@@ -3,3 +3,4 @@ D:\POE_CSHARP\dev\Revisions\Z4_Dto\bin\Debug\Z4_Dto.pdb
 D:\POE_CSHARP\dev\Revisions\Z4_Dto\obj\Debug\Z4_Dto.csproj.CoreCompileInputs.cache
 D:\POE_CSHARP\dev\Revisions\Z4_Dto\obj\Debug\Z4_Dto.dll
 D:\POE_CSHARP\dev\Revisions\Z4_Dto\obj\Debug\Z4_Dto.pdb
+D:\POE_CSHARP\dev\Revisions\Z4_Dto\obj\Debug\Z4_Dto.csproj.AssemblyReference.cache

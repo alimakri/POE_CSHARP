@@ -13,7 +13,7 @@ namespace Z6_Bureau
         public List<PersonneViewModel> ListePersonne { get; set; }
         public MainWindowViewModel()
         {
-            var ds1 = Personnes.Get("5");
+            var ds1 = Personnes.Get(SourceEnum.Fake);
             ListePersonne = new List<PersonneViewModel>();
             foreach (DataRow row in ds1.Tables[0].Rows)
             {

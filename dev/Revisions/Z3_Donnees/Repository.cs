@@ -7,12 +7,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Z4_Dto;
 
+
+//select st.Name, h.SalesOrderNumber from Sales.SalesOrderHeader h
+//inner join Sales.SalesPerson sp on h.SalesPersonID = sp.BusinessEntityID
+//inner join Sales.Store st on st.SalesPersonID = sp.BusinessEntityID
+//inner join HumanResources.Employee e on e.BusinessEntityID = sp.BusinessEntityID
+//inner join Person.Person p on p.BusinessEntityID = e.BusinessEntityID
+//where p.BusinessEntityID= 279
+
 namespace Z3_Donnees
 {
     internal class Repository
     {
         private string MessageErreur = null;
-        internal DataSet2 GetPersonnes()
+        internal DataSet2 GetEmployes()
         {
             var cnx = new SqlConnection();
             cnx.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=AdventureWorks2017;Integrated Security=true";
@@ -24,7 +32,9 @@ namespace Z3_Donnees
             var cmd = new SqlCommand();
             cmd.Connection = cnx;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select BusinessEntityId Id, FirstName prenom, LastName nom from Person.Person order by BusinessEntityId";
+            cmd.CommandText = @"select p.BusinessEntityID id, p.FirstName prenom, p.LastName nom  
+                                from HumanResources.Employee e inner join Person.Person p on p.BusinessEntityID = e.BusinessEntityID
+                                order by p.BusinessEntityID";
             SqlDataReader rd = null;
             try
             {
